@@ -79,15 +79,126 @@ boss install github.com/Setup4D/Setup4DCEP
 
 * A classe `TSetup4DCep` atua como um suporte fundamental para as funcionalidades do framework. Ela centraliza diversas funções e procedimentos que serão utilizados pelo framework, proporcionando uma programação dinâmica e simplificada, alinhada com a agilidade da programação inline do Delphi.
 
-### ⚙️ Métodos
+### ⚙️ Enumerados do Setup4DCep
+
+#### 💻 `TSetup4DCEPWebService`
+
+* Representa os serviços web disponíveis para consulta de CEP. O escopo está habilitado, para pode acessar os valores da enumeração tem que sempre inforamar `TSetup4DCEPWebService` antes do nome do enumerado, por exemplo, `TSetup4DCEPWebService.Nenhum`. Vou explicar o código em detalhes:
+
+   - `Nenhum`: Representa a ausência de um serviço web para consulta de CEP.
+   - `BuscarCep`: Representa o serviço web "BuscarCep".
+   - `CepLivre`: Representa o serviço web "CepLivre".
+   - `RepublicaVirtual`: Representa o serviço web "RepublicaVirtual".
+   - `Bases4you`: Representa o serviço web "Bases4you".
+   - `RNSolucoes`: Representa o serviço web "RNSolucoes".
+   - `KingHost`: Representa o serviço web "KingHost".
+   - `ByJG`: Representa o serviço web "ByJG".
+   - `Correios`: Representa o serviço web "Correios".
+   - `DevMedia`: Representa o serviço web "DevMedia".
+   - `ViaCep`: Representa o serviço web "ViaCep".
+   - `CorreiosSIGEP`: Representa o serviço web "CorreiosSIGEP".
+   - `CepAberto`: Representa o serviço web "CepAberto".
+   - `WSCep`: Representa o serviço web "WSCep".
+   - `OpenCep`: Representa o serviço web "OpenCep".
+   - `BrasilAPI`: Representa o serviço web "BrasilAPI".
+
+### ⚙️ Interfaces do Setup4DCep
+
+#### 💻 `ISetup4DCEP`
+
+* A interface principal do framework Setup4DCEP é o ponto de entrada para acessar as funcionalidades relacionadas ao **CEP (Código de Endereçamento Postal)** ou **IBGE (Instituto Brasileiro de Geografia e Estatística)**. Essa interface serve como o núcleo do framework, e todas as outras interfaces são dependentes dela. Ao utilizar esta interface principal, você pode acessar as demais funcionalidades do framework de forma organizada e simplificada.
+
+* Essa abordagem foi projetada para reduzir a complexidade e permitir que os desenvolvedores explorem as funcionalidades de forma flexível e adaptativa.
+
+#### 💻 `ISetup4DCEPConfiguration`
+
+* É responsável por configurar opções relacionadas à pesquisa de CEP ou IBGE. Ela oferece métodos para configurar o serviço da web e o proxy utilizados nas consultas de CEP ou IBGE.
+
+#### 💻 `ISetup4DCEPConfigurationWebService`
+
+* É usada para configurar as opções relacionadas ao serviço da web na pesquisa de CEP ou IBGE.
+
+#### 💻 `ISetup4DCEPConfigurationWebServiceZIPCode`
+
+* Se estende a interface `ISetup4DCEPConfigurationWebService` e fornece métodos específicos para configuração relacionada a consultas de CEP.
+
+#### 💻 `ISetup4DCEPConfigurationWebServiceIBGE`
+
+* Se estende a interface `ISetup4DCEPConfigurationWebService` e fornece métodos específicos para configuração relacionada a consultas do IBGE.
+
+#### 💻 `ISetup4DCEPConfigurationProxy`
+
+* É  usada para configurar as opções relacionadas ao proxy na pesquisa de CEP ou IBGE.
+
+#### 💻 `ISetup4DCEPSearch`
+
+* Oferece métodos para realizar pesquisas de CEP.
+
+#### 💻 `ISetup4DCEPSearchZipCode`
+
+* Se estende a interface `ISetup4DCEPSearch` e fornece métodos específicos para pesquisa de CEP.
+
+#### 💻 `ISetup4DCEPSearchZipCodeData`
+
+* É usada para obter dados relacionados a consultas do CEP.
+
+#### 💻 `ISetup4DCEPSearchZipCodeAddress`
+
+* É usada para obter informações do endereço relacionadas a consultas do CEP.
+
+#### 💻 `ISetup4DCEPSearchIBGE`
+
+* Se estende a interface `ISetup4DCEPSearch` e fornece métodos específicos para pesquisa do IBGE.
+
+#### 💻 `ISetup4DCEPSearchIBGEData`
+
+* É usada para obter dados relacionados a consultas do IBGE.
+
+#### 💻 `ISetup4DCEPSearchIBGEAddress`
+
+* É usada para obter informações de endereço relacionadas a consultas do IBGE.
+
+#### 💻 `ISetup4DCEPExecute`
+
+* Oferece métodos para executar ações relacionadas ao CEP ou IBGE.
+
+#### 💻 `ISetup4DCEPExecuteZipCode`
+
+* Se estende a interface `ISetup4DCEPExecute` e fornece métodos específicos para ações relacionadas a consultas de CEP.
+
+#### 💻 `ISetup4DCEPExecuteIBGE`
+
+* Se estende a interface `ISetup4DCEPExecute` e fornece métodos específicos para ações relacionadas a consultas do IBGE.
+
+#### 💻 `ISetup4DCEPResult`
+
+* Oferece métodos para obter resultados de ações relacionadas ao CEP.
+
+#### 💻 `ISetup4DCEPResultZipCode`
+
+* Se estende a interface `ISetup4DCEPResult` e fornece métodos específicos para obter resultados de ações relacionadas a consultas de CEP.
+
+#### 💻 `iSetup4DCEPResultZipCodeDisplay`
+
+* É usada para exibir os resultados de consultas de CEP.
+
+#### 💻 `ISetup4DCEPResultIBGE`
+
+* Se estende a interface `ISetup4DCEPResult` e fornece métodos específicos para obter resultados de ações relacionadas a consultas do IBGE.
+
+#### 💻 `iSetup4DCEPResultIBGEDisplay`
+
+* É usada para exibir os resultados de consultas do IBGE.
+
+### ⚙️ Métodos TSetup4DCEP
 
 #### 💻 `class function New: ISetup4DCEP;`
 
-   + Cria uma nova instância da interface, que é a entrada principal para acessar as funcionalidades do Setup4DCEP.
+   + Este é um método de classe, o que permite chamá-lo diretamente na classe, sem a necessidade de criar uma instância da classe. Ele retorna um tipo que implementa a interface ISetup4DCEP, indicando que o método cria e retorna uma instância da classe que implementa essa interface. O método cria uma nova instância da própria classe TSetup4DCEP usando o construtor, o que significa que o método New retorna uma nova instância de TSetup4DCEP. Esse padrão é empregado para criar novas instâncias de classes sem a necessidade de criar uma instância manualmente, simplificando a criação de objetos. A função New é uma maneira conveniente de criar instâncias dessa classe.
 
 #### 🧬 `function Configuration : ISetup4DCEPConfiguration;`
 
-   + Esta função obtém uma nova instância da classe de configuração do Setup4DCEP, a qual desempenha um papel crucial na configuração das opções relacionadas ao CEP e/ou IBGE. Ela oferece métodos para ajustar as configurações do serviço web e do proxy utilizadas nas consultas, proporcionando flexibilidade e personalização no uso da API de CEP ou IBGE.
+   + Este método retorna um tipo que implementa a interface [ISetup4DCEPConfiguration](isetup4dcepconfiguration), fornecendo acesso a configurações relacionadas ao CEP e IBGE. O método construtor está disponível para garantir que o mesmo objeto de configuração seja utilizado ao longo da execução do `TSetup4DCEP`, evitando criações repetidas.
 
 ##### ⚡️ `function WebService:ISetup4DCEPConfigurationWebService;`
 
@@ -254,3 +365,4 @@ boss install github.com/Setup4D/Setup4DCEP
 
 * Obtém uma instância da classe de resultado do Setup4DCEP, que permite apresentar os resultados da execução relacionadas ao CEP ou IBGE.
 
+  
