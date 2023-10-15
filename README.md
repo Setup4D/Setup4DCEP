@@ -194,15 +194,15 @@ boss install github.com/Setup4D/Setup4DCEP
 
 #### 💻 `class function New: ISetup4DCEP;`
 
-   + Este é um método de classe, o que permite chamá-lo diretamente na classe, sem a necessidade de criar uma instância da classe. Ele retorna um tipo que implementa a interface ISetup4DCEP, indicando que o método cria e retorna uma instância da classe que implementa essa interface. O método cria uma nova instância da própria classe TSetup4DCEP usando o construtor, o que significa que o método New retorna uma nova instância de TSetup4DCEP. Esse padrão é empregado para criar novas instâncias de classes sem a necessidade de criar uma instância manualmente, simplificando a criação de objetos. A função New é uma maneira conveniente de criar instâncias dessa classe.
+   + Este é um método de classe, o que permite chamá-lo diretamente na classe, sem a necessidade de criar uma instância da classe. Ele retorna um tipo que implementa a interface [ISetup4DCEP](#-isetup4dcep), indicando que o método cria e retorna uma instância da classe que implementa essa interface. O método cria uma nova instância da própria classe [TSetup4DCep](#-funções-do-tsetup4dcep) usando o construtor, o que significa que o método New retorna uma nova instância de TSetup4DCEP. Esse padrão é empregado para criar novas instâncias de classes sem a necessidade de criar uma instância manualmente, simplificando a criação de objetos. A função New é uma maneira conveniente de criar instâncias dessa classe.
 
 #### 🧬 `function Configuration : ISetup4DCEPConfiguration;`
 
-   + Este método retorna um tipo que implementa a interface [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration), fornecendo acesso a configurações relacionadas ao CEP e IBGE. O método construtor está disponível para garantir que o mesmo objeto de configuração seja utilizado ao longo da execução do `TSetup4DCEP`, evitando criações repetidas.
+   + Este método retorna um tipo que implementa a interface [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration), fornecendo acesso a configurações relacionadas ao CEP e IBGE. O método construtor está disponível para garantir que o mesmo objeto de configuração seja utilizado ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando criações repetidas.
 
 ##### ⚡️ `function WebService:ISetup4DCEPConfigurationWebService;`
 
-   + Obtém uma instância da classe de configuração do serviço da web, que permite configurar as opções relacionadas ao serviço de pesquisa da API do CEP ou IBGE.
+   + Este método retorna um tipo que implementa a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice), fornecendo acesso a configurações do serviços web. O método construtor está disponível para garantir que o mesmo objeto de configuração seja utilizado ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando criações repetidas. 
 
    1. `function ZipCode: ISetup4DCEPConfigurationWebServiceZIPCode;`
 
@@ -311,10 +311,9 @@ boss install github.com/Setup4D/Setup4DCEP
    9. `function Finish: ISetup4DCEPConfiguration;`
       - É usado para concluir a configuração do serviço da web e retornar para a classe de configuração.
 
+##### ⚡️ `function Proxy : ISetup4DCEPConfigurationProxy;`
 
-##### ⚡️ `function Proxy:ISetup4DCEPConfigurationProxy;`
-
-   + Obtém uma instância da classe de configuração do proxy, que permite configurar as opções relacionadas ao proxy de pesquisa do CEP ou IBGE. Esses parâmetros possibilitam a personalização das configurações do proxy para pesquisas.
+   + Este método retorna um tipo que implementa a interface [ISetup4DCEPConfigurationProxy](#-isetup4dcepconfigurationproxy), fornecendo acesso a configurações do serviços web. O método construtor está disponível para garantir que o mesmo objeto de configuração seja utilizado ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando criações repetidas. 
 
    1. `function Host(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
       - Configura o host (servidor) do proxy.
@@ -349,9 +348,9 @@ boss install github.com/Setup4D/Setup4DCEP
    11. `function Finish: ISetup4DCEPConfiguration;`
          - Conclui a configuração do proxy e retorna para a classe de configuração.
 
-##### ⚡️ `function Finish: ISetup4DCEP;`
+##### ⚡️ `function Finish: [ISetup4DCEP](#-isetup4dcep);`
 
-   + Conclui a configuração e retona para a classe principal.
+   + Este método retorna uma instância da interface [ISetup4DCEP](#-isetup4dcep). Esse método é usado para finalizar a configuração e obter uma referência à instância principal do [TSetup4DCep](#-funções-do-tsetup4dcep).  Portanto, essa linha simplesmente retorna a referência à instância principal.
 
 #### 🧬 `function Search : ISetup4DCEPSearch;`
 
