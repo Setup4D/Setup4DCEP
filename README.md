@@ -64,9 +64,7 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 * Este projeto depende do [**Setup4DUtility**](https://github.com/Setup4D/Setup4DUtility), desempenhando um papel crucial em suas funcionalidades operacionais. Quando você utiliza o [**Boss**](https://github.com/HashLoad/boss) como instalador do framework, a instalação do **Setup4DUtility** ocorre automaticamente. No entanto, se optar por uma instalação manual, siga os passos abaixo:
 
    1. Faça o [**download**](https://github.com/Setup4D/Setup4DUtility/archive/refs/heads/main.zip) do projeto ou acesse a  [**pagina do projeto**](https://github.com/Setup4D/Setup4DUtility) e realize o download.
-   
    2. Descompacte o arquivo baixado em uma pasta de sua escolha.
-   
    3. Adicione a pasta extraída ao seu projeto, indo para *Project > Options > Resource Compiler > Directories and Conditionals > Include file search path*.
    
    ```
@@ -281,58 +279,73 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
             - Conclui a configuração do serviço web e retorna para a classe de configuração do webservice.
 
    2. `function IBGE: ISetup4DCEPConfigurationWebServiceIBGE;`
-      - São funções que permitem acessar a configuração específica para o serviço de pesquisa do IBGE. E Todas essas funções abaixo são usadas para acessar configurações específicas para o serviço de pesquisa do IBGE:
+
+      - Este método permite obter uma instância da classe que fornece configurações específicas para o serviço de pesquisa do IBGE. Abaixo estão listadas todas as funções existentes:
 
          - `function CacheName(Const AValue: string): ISetup4DCEPConfigurationWebServiceIBGE; overload;`
-           - Configura o nome do cache utilizado para armazenar resultados de consultas ao IBGE.
+           
+           - Este é um método que permite configurar o nome do cache utilizado para armazenar os resultados das consultas ao IBGE.
 
          - `function CacheName: string; overload;`
-           - Obtém o nome do arquivo de cache.
+
+           - Este é um método retorna o nome do cache configurado para armazenar os resultados das consultas ao IBGE.
 
          - `function CacheValidity (Const AValue: Integer) : ISetup4DCEPConfigurationWebServiceIBGE; overload;`
-           - Configura o tempo de validade do cache em minutos para resultados de consultas ao IBGE.
+
+           - Este é um método que permite configurar o tempo de validade do cache para armazenar os resultados das consultas ao IBGE. Ele recebe um valor inteiro representando o tempo de validade em milissegundos.
          
          - `function CacheValidity (Const AValue: string) : ISetup4DCEPConfigurationWebServiceIBGE; overload;`
-           - Configura o tempo de validade do cache em formato de string para resultados de consultas ao IBGE.
+
+           - Este é um método que permite configurar o tempo de validade do cache para armazenar os resultados das consultas ao IBGE. Ele recebe uma string representando o tempo de validade em milissegundos.
          
          - `function CacheValidity : Integer; overload;`
-           - Obtém o tempo de validade do cache em minutos para resultados de consultas ao IBGE.
+
+           - Este é um método que permite obter o tempo de validade do cache configurado para armazenar os resultados das consultas relacionadas ao IBGE.
          
          - `function CacheValidityInStr : string; overload;`
-           - Obtém o tempo de validade do cache em formato de string para resultados de consultas ao IBGE.
+
+           - Este é um método que retorna o tempo de validade do cache configurado como uma string.
 
          - `function CacheClear : ISetup4DCEPConfigurationWebServiceIBGE;`
-           - Limpa o cache de resultados de consultas ao IBGE.
+
+           - Este é um método que permite limpar o cache de resultados de consultas. 
 
          - `function CaseSensitive(Const AValue: Boolean) : ISetup4DCEPConfigurationWebServiceIBGE;  overload;`
-           - Configura se a pesquisa no cache de consultas ao IBGE deve ser sensível a maiúsculas e minúsculas.
+
+           - Este é um método que permite configurar se a pesquisa é sensível a maiúsculas e minúsculas. 
          
          - `function CaseSensitive : Boolean;  overload;`
-           - Obtém o status de pesquisa sensível a maiúsculas e minúsculas no cache de consultas ao IBGE.
+
+           - Este é um método que permite obter o estado atual da sensibilidade a maiúsculas e minúsculas na pesquisa.
 
          - `function Finish: ISetup4DCEPConfigurationWebService;`
+
            - Conclui a configuração do serviço da web do IBGE e retrona para a configuração do Web Service.
+           - Este método é responsável por finalizar a configuração do serviço web do IBGE e retornar a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice). É utilizado para concluir a configuração do proxy e obter uma referência à instância TSetup4DCepConfigurationWebService. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
    
-   3. `function TimeOut(const AValue: string): ISetup4DCEPConfigurationWebService; overload;`
-      - Utilizado um valor em string para configurar o tempo limite para a pesquisa na API.
+   4. `function TimeOut(const AValue: string): ISetup4DCEPConfigurationWebService; overload;`
+      - Este método é utilizado para configurar o tempo limite para as solicitações no serviço web. Ele aceita um valor que deve ser uma string representando o tempo limite em milissegundos.
    
-   4. `function TimeOut(const AValue: Integer): ISetup4DCEPConfigurationWebService; overload;`
-      - Utilizado um valor inteiro para configurar o tempo limite para a pesquisa na API.
+   5. `function TimeOut(const AValue: Integer): ISetup4DCEPConfigurationWebService; overload;`
+      - Este método é utilizado para configurar o tempo limite para as solicitações no serviço web. Ele aceita um valor que deve ser um inteiro representando o tempo limite em milissegundos.
    
-   5. `function TimeOutInStr: string;`
-      - Permite obter o tempo limite configurado em formato de string.
+   6. `function TimeOutInStr: string;`
+      - Este método retorna o valor atual do tempo limite configurado para as solicitações no serviço web, representado como uma string.
    
-   6. `function TimeOut: Integer;`:
-      - Retorna o tempo limite como um valor inteiro.
+   7. `function TimeOut: Integer;`:
+      - Este método retorna o valor atual do tempo limite configurado para as solicitações no serviço web. 
    
-   7. `function ParseText(const AValue: Boolean): ISetup4DCEPConfigurationWebService; overload;`
-      - Define se deve analisar o texto nas respostas do serviço web.
+   8. `function ParseText(const AValue: Boolean): ISetup4DCEPConfigurationWebService; overload;`
+
+      - Este método é usado para configurar a propriedade do Parse Text, que determina se o serviço web deve analisar o texto da resposta. Ele aceita um parâmetro booleano 
    
-   8. `function ParseText: Boolean;`
-      - Obtém se deve analisar o texto nas respostas do serviço web.
+   9. `function ParseText: Boolean;`
+
+      - Este método é usado para obter o valor da propriedade ParseText, que representa se o serviço web deve analisar o texto da resposta.
    
-   9. `function Finish: ISetup4DCEPConfiguration;`
-      - É usado para concluir a configuração do serviço da web e retornar para a classe de configuração.
+   10. `function Finish: ISetup4DCEPConfiguration;`
+
+       - Este método é responsável por finalizar a configuração do proxy e retornar a interface [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration). É utilizado para concluir a configuração do proxy e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
 ##### ⚡️ `function Proxy : ISetup4DCEPConfigurationProxy;`
 
