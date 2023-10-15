@@ -227,9 +227,9 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
    1. `function ZipCode: ISetup4DCEPConfigurationWebServiceZIPCode;`
 
-      - São funções que permitem acessar a configuração específica para o serviço de pesquisa do IBGE. E Todas essas funções abaixo são usadas para acessar configurações específicas para o serviço de pesquisa do CEP:
+      - Este método permite obter uma instância da classe que fornece configurações específicas para o serviço de pesquisa do CEP. Abaixo estão listadas todas as funções existentes:
          
-         - Esses são os serviços web que você pode escolher para utilizar na pesquisa:
+         - Aqui estão os serviços web disponíveis para seleção na pesquisa de CEP:
          
             1. Nenhum (Não seleciona nenhum serviço)
             2. Buscar Cep
@@ -249,34 +249,44 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
             16. Brasil API
       
          - `function Index: Integer;`
-            - Retorna o índice do serviço web selecionado.
+            
+            - Esta função retorna um valor inteiro que corresponde à conversão de um valor do tipo enumerado [TSetup4DCEPWebService](#-tsetup4dcepwebservice) em um valor inteiro.
          
          - `function Key(const AValue: string): ISetup4DCEPConfigurationWebServiceZIPCode; overload;`
-            - Configura a chave de acesso ao serviço.
-         
+            
+            - Este é um método que permite configurar a chave a ser usada para autenticação ao acessar o serviço de consulta de CEP. 
+                    
          - `function Key: string; overload;`
-            - Obtém a chave de acesso ao serviço.
+            
+            - Este é um método que permite obter a chave atualmente configurada. Ele retorna a chave que será utilizada nas solicitações ao serviço de consulta de CEP para acessar informações específicas ou para autenticação, dependendo das necessidades do serviço.
          
          - `function User(const AValue: string): ISetup4DCEPConfigurationWebServiceZIPCode; overload;` 
-            - Configura o nome de usuário para autenticação no serviço web.
+
+            - Este é um método que permite configurar o nome de usuário a ser usado para autenticação ao acessar o serviço de consulta de CEP. 
          
          - `function User: string; overload;`
-            - Obtém o nome de usuário para autenticação no serviço web.
+            
+            - Este é um método que permite obter o nome de usuário atualmente configurado. Ele retorna o nome de usuário que será utilizado nas solicitações ao serviço de consulta de CEP para autenticação, se necessário.
          
          - `function Password(const AValue: string): ISetup4DCEPConfigurationWebServiceZIPCode; overload;` e
-            - Configura a senha para autenticação no serviço web.
+            
+            - Este é um método que permite configurar a senha a ser usada para autenticação ao acessar o serviço de consulta de CEP. 
          
          - `function Password: string; overload;`
-            - Obtém a senha para autenticação no serviço web.
+            
+            - Este é um método que permite obter a senha atualmente configurada. Ele retorna a senha que será utilizada nas solicitações ao serviço de consulta de CEP para autenticação, se necessário.
          
          - `function ReturnIBGE(const AValue: Boolean): ISetup4DCEPConfigurationWebServiceZIPCode; overload;` e
-            - Configura a opção de retorno dos códigos do IBGE na pesquisa de CEP.
+            
+            - Este é um método que possibilita a configuração do serviço de consulta de CEP para determinar se ele deve ou não retornar informações do IBGE.
          
          - `function ReturnIBGE: Boolean; overload;`
-            - Obtém a opção de retorno dos códigos do IBGE na pesquisa de CEP.
+            
+            - Este é um método que retorna um valor booleano que indica se o serviço de consulta de CEP também deve retornar informações do IBGE. Quando configurado como verdadeiro, o serviço irá fornecer informações adicionais do IBGE, além dos dados de CEP.
          
          - `function Finish: ISetup4DCEPConfigurationWebService;`
-            - Conclui a configuração do serviço web e retorna para a classe de configuração do webservice.
+
+           - Este método é responsável por finalizar a configuração do serviço web do CEP e retornar a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice). É utilizado para concluir a configuração do proxy e obter uma referência à instância TSetup4DCepConfigurationWebService. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
    2. `function IBGE: ISetup4DCEPConfigurationWebServiceIBGE;`
 
@@ -320,7 +330,6 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
          - `function Finish: ISetup4DCEPConfigurationWebService;`
 
-           - Conclui a configuração do serviço da web do IBGE e retrona para a configuração do Web Service.
            - Este método é responsável por finalizar a configuração do serviço web do IBGE e retornar a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice). É utilizado para concluir a configuração do proxy e obter uma referência à instância TSetup4DCepConfigurationWebService. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
    
    4. `function TimeOut(const AValue: string): ISetup4DCEPConfigurationWebService; overload;`
