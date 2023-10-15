@@ -203,18 +203,44 @@ boss install github.com/Setup4D/Setup4DCEP
 
 ##### ⚡️ `function Proxy:ISetup4DCEPConfigurationProxy;`
 
-   + Obtém uma instância da classe de configuração do proxy, que permite configurar as opções relacionadas ao proxy de pesquisa do CEP ou IBGE, com os seguintes parâmetros:
+   + Obtém uma instância da classe de configuração do proxy, que permite configurar as opções relacionadas ao proxy de pesquisa do CEP ou IBGE. Esses parâmetros possibilitam a personalização das configurações do proxy para pesquisas.
 
-      - `User`: Define o nome de usuário do proxy.
-      - `Password`: Define a senha do proxy.
-      - `Port`: Define a porta de conexão do proxy.
-      - `Host`: Define o host do proxy.
+   1. `function Host(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
+      - Configura o host (servidor) do proxy.
+   
+   2. `function Host : string; overload;`
+      - Obtém o host (servidor) do proxy.
 
-   + Esses parâmetros possibilitam a personalização das configurações do proxy para pesquisas de CEP e IBGE.
- 
+   3. `function Port(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
+      - Configura a porta do proxy como uma string.
+   
+   4. `function Port(Const AValue: integer) : ISetup4DCEPConfigurationProxy; overload;`
+      - Configura a porta do proxy como um número inteiro.
+   
+   5. `function Port : integer; overload;`
+      - Obtém a porta do proxy como um valor inteiro.
+
+   6. `function PortInStr : string; overload;`
+      - Obtém a porta do proxy em formato de string.
+
+   7. `function User(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
+      - Configura o nome de usuário do proxy.
+   
+   8. `function User : string; overload;`
+      - Obtém o nome de usuário do proxy.
+
+   9. `function Password(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
+      - Configura a senha do proxy.
+   
+   10.  `function Password : string; overload;`
+         - Obtém a senha do proxy.
+   
+   11. `function Finish: ISetup4DCEPConfiguration;`
+         - Conclui a configuração do proxy e retorna para a classe de configuração.
+
 ##### ⚡️ `function Finish: ISetup4DCEP;`
 
-   + Finaliza o método de configuração, retornando à classe principal TSetup4DCEP.
+   + Conclui a configuração e retona para a classe principal.
 
 #### 🧬 `function Search : ISetup4DCEPSearch;`
 
