@@ -198,7 +198,7 @@ boss install github.com/Setup4D/Setup4DCEP
 
 #### 🧬 `function Configuration : ISetup4DCEPConfiguration;`
 
-   + Este método retorna um tipo que implementa a interface [ISetup4DCEPConfiguration](isetup4dcepconfiguration), fornecendo acesso a configurações relacionadas ao CEP e IBGE. O método construtor está disponível para garantir que o mesmo objeto de configuração seja utilizado ao longo da execução do `TSetup4DCEP`, evitando criações repetidas.
+   + Este método retorna um tipo que implementa a interface [ISetup4DCEPConfiguration](#isetup4dcepconfiguration), fornecendo acesso a configurações relacionadas ao CEP e IBGE. O método construtor está disponível para garantir que o mesmo objeto de configuração seja utilizado ao longo da execução do `TSetup4DCEP`, evitando criações repetidas.
 
 ##### ⚡️ `function WebService:ISetup4DCEPConfigurationWebService;`
 
