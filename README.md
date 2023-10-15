@@ -338,42 +338,52 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
    + Este método retorna um tipo que implementa a interface [ISetup4DCEPConfigurationProxy](#-isetup4dcepconfigurationproxy), permitindo o acesso às configurações dos serviços web. Um construtor está disponível para assegurar que o mesmo objeto de configuração seja utilizado ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando criações repetidas. 
 
-   1. `function Host(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
-      -  Este método permite a configuração do host do proxy utilizado para consultas de CEP ou IBGE.
-   
-   2. `function Host : string; overload;`
-      - Obtém o host (servidor) do proxy.
+      1. `function Host(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
+      
+         -  Este método permite configurar o host do proxy utilizado para consultas de CEP ou IBGE. Ele aceita um valor de string.
+      
+      2. `function Host : string; overload;`
+      
+         - Este método permite obter o valor do host utilizado no proxy para consultas CEP ou IBGE. Retorna uma string que representa o host.
+      
+      3. `function Port(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
+      
+         - Este método permite configurar a porta do proxy utilizado para consultas CEP ou IBGE. Ele aceita um valor de string.
+      
+      4. `function Port(Const AValue: integer) : ISetup4DCEPConfigurationProxy; overload;`
 
-   3. `function Port(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
-      - Este método permite a configuração da porta usando um valor de string que representa o proxy utilizado para consultas de CEP ou IBGE.
-   
-   4. `function Port(Const AValue: integer) : ISetup4DCEPConfigurationProxy; overload;`
-      - Este método permite configurar a porta utilizando um valor inteiro que representa o proxy utilizado para consultas de CEP ou IBGE.
-   
-   5. `function Port : integer; overload;`
-      - Obtém a porta do proxy como um valor inteiro.
+         - Este método permite configurar a porta do proxy utilizado para consultas CEP ou IBGE. Ele aceita um valor de inteiro.
+      
+      5. `function Port : integer; overload;`
 
-   6. `function PortInStr : string; overload;`
-      - Obtém a porta do proxy em formato de string.
+         - Este método permite obter o valor da porta utilizado no proxy para consultas CEP ou IBGE. Retorna um inteiro que representa a porta.
+    
+      6. `function PortInStr : string; overload;`
+         - Este método permite obter o valor da porta utilizado no proxy para consultas CEP ou IBGE. Retorna uma string que representa a porta.
+      
+      7. `function User(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
+      
+         - Este método permite configurar o nome de usuário do proxy utilizado para consultas CEP ou IBGE. Ele aceita um valor de string.
+      
+      8. `function User : string; overload;`
+      
+         - Este método permite obter o nome do usuário utilizado no proxy para consultas de CEP ou IBGE. Retorna uma string que representa o usuário.
+      
+      9. `function Password(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
+      
+         - Este método permite configurar a senha do proxy utilizado para consultas CEP ou IBGE. Ele aceita um valor de string.
+      
+      10. `function Password : string; overload;`
 
-   7. `function User(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
-      - Configura o nome de usuário do proxy.
-   
-   8. `function User : string; overload;`
-      - Obtém o nome de usuário do proxy.
+          - Este método permite obter a senha do usuário utilizado no proxy para consultas de CEP ou IBGE. Retorna uma string que representa o senha.
 
-   9. `function Password(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
-      - Configura a senha do proxy.
-   
-   10.  `function Password : string; overload;`
-         - Obtém a senha do proxy.
-   
-   11. `function Finish: ISetup4DCEPConfiguration;`
-         - Conclui a configuração do proxy e retorna para a classe de configuração.
+      11. `function Finish: ISetup4DCEPConfiguration;`
+
+          - Este método é responsável por finalizar a configuração do proxy e retornar a interface [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration). É utilizado para concluir a configuração do proxy e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
 ##### ⚡️ `function Finish: [ISetup4DCEP](#-isetup4dcep);`
 
-   + Este método retorna uma instância da interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância principal.
+   + Este método retorna uma instância da interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
      
 #### 🧬 `function Search : ISetup4DCEPSearch;`
 
