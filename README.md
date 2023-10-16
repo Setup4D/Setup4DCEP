@@ -55,9 +55,9 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
             ./{Pasta}/src/Result
             ./{Pasta}/src/Result/IBGE
             ./{Pasta}/src/Result/Zip Code
-            ./{Pasta}/src/Search
-            ./{Pasta}/src/Search/IBGE
-            ./{Pasta}/src/Search/Zip Code
+            ./{Pasta}/src/Filter
+            ./{Pasta}/src/Filter/IBGE
+            ./{Pasta}/src/Filter/Zip Code
             ```
 ### ⚙️ Dependências
 
@@ -129,59 +129,59 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
 * A interface principal do framework Setup4DCEP é o ponto de entrada para acessar as funcionalidades relacionadas ao CEP (Código de Endereçamento Postal) e ao IBGE (Instituto Brasileiro de Geografia e Estatística). Essa interface serve como o núcleo do framework, e todas as outras interfaces são dependentes dela. Ao utilizar esta interface principal, você pode acessar as demais funcionalidades do framework de forma organizada e simplificada.
 
-* Essa abordagem foi projetada para reduzir a complexidade e permitir que os desenvolvedores explorem as funcionalidades de forma flexível e adaptativa.
+* Esta abordagem foi projetada para reduzir a complexidade e permitir que os desenvolvedores explorem as funcionalidades de forma flexível e adaptativa.
 
 #### 💻 `ISetup4DCEPConfiguration`
 
-* Essa interface é responsável por configurar opções relacionadas à pesquisa de CEP ou IBGE. Ela oferece métodos para configurar o serviço da web e o proxy utilizados nas consultas de CEP ou IBGE.
+* Esta interface estende a interface [ISetup4DCEP](#-isetup4dcep), fornecendo métodos específicos para a configuração relacionada ao serviço web e ao proxy.
 
 #### 💻 `ISetup4DCEPConfigurationWebService`
 
-* Esta interface é utilizada para configurar as opções relacionadas ao serviço da web na pesquisa de CEP ou IBGE.
+* Esta interface estende a interface [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration), fornecendo métodos específicos para a configuração relacionada ao serviço web.
 
 #### 💻 `ISetup4DCEPConfigurationWebServiceZIPCode`
 
-* Essa interface estende a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) e oferece métodos específicos para a configuração relacionada a consultas de CEP.
+* Esta interface estende a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) e oferece métodos específicos para a configuração relacionada a consultas de CEP.
 
 #### 💻 `ISetup4DCEPConfigurationWebServiceIBGE`
 
-* Essa interface se estende a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) e disponibiliza métodos específicos para a configuração relacionada a consultas do IBGE.
+* Esta interface se estende a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) e disponibiliza métodos específicos para a configuração relacionada a consultas do IBGE.
 
 #### 💻 `ISetup4DCEPConfigurationProxy`
 
-* Esta interface é usada para configurar as opções relacionadas ao proxy na pesquisa de CEP ou IBGE.
+* Esta interface estende a interface [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration), fornecendo métodos específicos para a configuração relacionada ao proxy.
 
-#### 💻 `ISetup4DCEPSearch`
+#### 💻 `ISetup4DCEPFilter`
 
-* Essa interface fornece métodos para realizar pesquisas de CEP.
+* Esta interface estende a interface [ISetup4DCEP](#-isetup4dcep), fornecendo métodos específicos para a configuração relacionada ao filtros do CEP ou IBGE.
 
-#### 💻 `ISetup4DCEPSearchZipCode`
+#### 💻 `ISetup4DCEPFilterZipCode`
 
-* Esta interface estende a interface [ISetup4DCEPSearch](#-isetup4dcepsearch) e oferece métodos específicos para a pesquisa de CEP.
+* Essa interface amplia a funcionalidade da interface [ISetup4DCEPFilter](#-isetup4dcepfilter), oferecendo métodos específicos para a inclusão de dados destinados a filtrar a pesquisa relacionada ao CEP.
 
-#### 💻 `ISetup4DCEPSearchZipCodeData`
+#### 💻 `ISetup4DCEPFilterZipCodeKey`
 
-* Esta interface é utilizada para obter dados relacionados a consultas do CEP.
+* Essa interface amplia a funcionalidade da interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode), oferecendo métodos específicos para a inclusão de informações relacionadas ao código do CEP a ser pesquisado.
 
-#### 💻 `ISetup4DCEPSearchZipCodeAddress`
+#### 💻 `ISetup4DCEPFilterZipCodeAddress`
 
-* Esta interface é usada para obter informações do endereço relacionadas a consultas do CEP.
+* Essa interface amplia a funcionalidade da interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode), oferecendo métodos específicos para a inclusão de informações relacionadas ao endereço do CEP a ser pesquisado.
   
-#### 💻 `ISetup4DCEPSearchIBGE`
+#### 💻 `ISetup4DCEPFilterIBGE`
 
-* Esta interface se estende a interface [ISetup4DCEPSearch](#-isetup4dcepsearch) e disponibiliza métodos específicos para a pesquisa do IBGE.
+* Essa interface amplia a funcionalidade da interface [ISetup4DCEPFilter](#-isetup4dcepfilter), oferecendo métodos específicos para a inclusão de dados destinados a filtrar a pesquisa relacionada ao IBGE.
 
-#### 💻 `ISetup4DCEPSearchIBGEData`
+#### 💻 `ISetup4DCEPFilterIBGEKey`
 
-* Essa interface é usada para obter dados relacionados a consultas do IBGE.
+* Essa interface amplia a funcionalidade da interface [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge), oferecendo métodos específicos para a inclusão de informações relacionadas ao código do CEP a ser pesquisado.
 
-#### 💻 `ISetup4DCEPSearchIBGEAddress`
+#### 💻 `ISetup4DCEPFilterIBGEAddress`
 
-* Essa interface é utilizada para obter informações de endereço relacionadas a consultas do IBGE.
+* Essa interface amplia a funcionalidade da interface [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge), oferecendo métodos específicos para a inclusão de informações relacionadas ao endereço do IBGE a ser pesquisado.
 
 #### 💻 `ISetup4DCEPExecute`
 
-* Esta interface disponibiliza métodos para executar ações relacionadas ao CEP ou IBGE.
+* Esta interface estende a interface [ISetup4DCEP](#-isetup4dcep), fornecendo métodos específicos para a realização de pesquisas com base nos filtros do CEP ou do IBGE.
 
 #### 💻 `ISetup4DCEPExecuteZipCode`
 
@@ -193,7 +193,7 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
 #### 💻 `ISetup4DCEPResult`
 
-* Esta interface fornece métodos para obter resultados de ações relacionadas ao CEP ou IBGE.
+* Esta interface estende a interface [ISetup4DCEP](#-isetup4dcep), fornecendo métodos específicos  para apresentar o resultado da pesquisaa executada.
 
 #### 💻 `ISetup4DCEPResultZipCode`
 
@@ -201,7 +201,7 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
 #### 💻 `iSetup4DCEPResultZipCodeDisplay`
 
-* Essa interface é utilizada para exibir os resultados de consultas de CEP.
+* Esta interface se estende a interface [ISetup4DCEPResultZipCode](#-isetup4dcepresultzipcode) e oferece métodos específicos para exibir os resultados de consultas de CEP.
 
 #### 💻 `ISetup4DCEPResultIBGE`
 
@@ -209,7 +209,7 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
 #### 💻 `iSetup4DCEPResultIBGEDisplay`
 
-* Essa função é utilizada para exibir os resultados de consultas ao IBGE.
+* Esta interface se estende a interface [ISetup4DCEPResultibge](#-isetup4dcepresultibge) e oferece métodos específicos para exibir os resultados de consultas do IBGE.
 
 ### ⚙️ Métodos TSetup4DCEP
 
@@ -407,19 +407,19 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
    + Este método fornece uma instância que implementa a interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
      
-#### 🧬 `function Search : ISetup4DCEPSearch;`
+#### 🧬 `function Filter : ISetup4DCEPFilter;`
 
-* Este método fornece uma instância que implementa a interface [ISetup4DCEPSearch](#-isetup4dcepsearch), permitindo o acesso às informações dos filtros para pesquisa relacionadas ao CEP e IBGE.É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+* Este método fornece uma instância que implementa a interface [ISetup4DCEPFilter](#-isetup4dcepfilter), permitindo o acesso às informações dos filtros para pesquisa relacionadas ao CEP e IBGE.É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
   
-##### ⚡️ `function ZipCode:ISetup4DCEPSearchZipCode;`
+##### ⚡️ `function ZipCode:ISetup4DCEPFilterZipCode;`
 
-   + Este método fornece uma instância que implementa a interface [ISetup4DCEPSearchZipCode](#-isetup4dcepsearchzipcode), permitindo o acesso aos filtros de pesquisa do CEP. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+   + Este método fornece uma instância que implementa a interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode), permitindo o acesso aos filtros de pesquisa do CEP. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
 
-##### ⚡️ `function IBGE:ISetup4DCEPSearchIBGE;`
+##### ⚡️ `function IBGE:ISetup4DCEPFilterIBGE;`
 
-   + Este método fornece uma instância que implementa a interface[ISetup4DCEPSearchIBGE](#-isetup4dcepsearchibge), permitindo o acesso aos filtros de pesquisa do IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+   + Este método fornece uma instância que implementa a interface[ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge), permitindo o acesso aos filtros de pesquisa do IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
 
-##### ⚡️ `function Clear : ISetup4DCEPSearch;`
+##### ⚡️ `function Clear : ISetup4DCEPFilter;`
 
    + Este método permite limpar todos os dados do filtro. É aconselhável usar esta função antes de informar o filtro de pesquisa para evitar resultados incorretos ou indesejados.
      
@@ -458,6 +458,3 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 ##### ⚡️ `function Finish: ISetup4DCEP;`
 
    + Este método fornece uma instância que implementa a interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
-
-
-  
