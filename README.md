@@ -219,11 +219,11 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
 #### 🧬 `function Configuration : ISetup4DCEPConfiguration;`
 
-   + Este método retorna um tipo que implementa a interface [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration), permitindo o acesso às configurações relacionadas ao CEP e IBGE. Um construtor está disponível para garantir que o mesmo objeto de configuração seja utilizado ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando criações repetidas.
+* Este método fornece uma instância que implementa a interface [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration), permitindo o acesso às configurações relacionadas ao CEP e IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
 
 ##### ⚡️ `function WebService:ISetup4DCEPConfigurationWebService;`
 
-   + Este método retorna um tipo que implementa a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice), permitindo o acesso às configurações dos serviços web. Um construtor está disponível para garantir que o mesmo objeto de configuração seja utilizado ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando criações repetidas.
+   + Este método fornece uma instância que implementa a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice), permitindo o acesso às configurações dos serviços web. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
 
    1. `function ZipCode: ISetup4DCEPConfigurationWebServiceZIPCode;`
 
@@ -358,7 +358,7 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
 ##### ⚡️ `function Proxy : ISetup4DCEPConfigurationProxy;`
 
-   + Este método retorna um tipo que implementa a interface [ISetup4DCEPConfigurationProxy](#-isetup4dcepconfigurationproxy), permitindo o acesso às configurações dos serviços web. Um construtor está disponível para assegurar que o mesmo objeto de configuração seja utilizado ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando criações repetidas. 
+   + Este método fornece uma instância que implementa a interface [ISetup4DCEPConfigurationProxy](#-isetup4dcepconfigurationproxy), permitindo o acesso às configurações dos serviços web. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento. 
 
       1. `function Host(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
       
@@ -403,20 +403,61 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
           - Este método é responsável por finalizar a configuração do proxy e retornar a interface [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration). É utilizado para concluir a configuração do proxy e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
-##### ⚡️ `function Finish: [ISetup4DCEP](#-isetup4dcep);`
+##### ⚡️ `function Finish: ISetup4DCEP;`
 
-   + Este método retorna uma instância da interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+   + Este método fornece uma instância que implementa a interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
      
 #### 🧬 `function Search : ISetup4DCEPSearch;`
 
-* Obtém uma nova instância da classe de pesquisa do Setup4DCEP para informar os dados a serem pesquisados.
+* Este método fornece uma instância que implementa a interface [ISetup4DCEPSearch](#-isetup4dcepsearch), permitindo o acesso às informações dos filtros para pesquisa relacionadas ao CEP e IBGE.É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+  
+##### ⚡️ `function ZipCode:ISetup4DCEPSearchZipCode;`
+
+   + Este método fornece uma instância que implementa a interface [ISetup4DCEPSearchZipCode](#-isetup4dcepsearchzipcode), permitindo o acesso aos filtros de pesquisa do CEP. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+
+##### ⚡️ `function IBGE:ISetup4DCEPSearchIBGE;`
+
+   + Este método fornece uma instância que implementa a interface[ISetup4DCEPSearchIBGE](#-isetup4dcepsearchibge), permitindo o acesso aos filtros de pesquisa do IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+
+##### ⚡️ `function Clear : ISetup4DCEPSearch;`
+
+   + Este método permite limpar todos os dados do filtro. É aconselhável usar esta função antes de informar o filtro de pesquisa para evitar resultados incorretos ou indesejados.
+     
+##### ⚡️ `function Finish: ISetup4DCEP;`
+
+   + Este método fornece uma instância que implementa a interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
 #### 🧬 `function Execute : ISetup4DCEPExecute;`
 
-* Obtém uma instância da classe de execução do Setup4DCEP, que permite executar ações relacionadas ao CEP e/ou IBGE.
+* Este método fornece uma instância que implementa a interface [ISetup4DCEPExecute](#-isetup4dcepexecute), permitindo o acesso à execução relacionada à pesquisa de CEP e IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+
+##### ⚡️ `function ZipCode: ISetup4DCEPExecuteZipCode;`
+
+   + Este método fornece uma instância que implementa a interface [ISetup4DCEPExecuteZipCode](#-isetup4dcepexecutezipcode), permitindo executar as informações referentes ao filtro da pesquisa do CEP. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+
+##### ⚡️ `function IBGE: ISetup4DCEPExecuteIBGE;`
+
+   + Este método fornece uma instância que implementa a interface [ISetup4DCEPExecuteIBGE](#-isetup4dcepexecuteibge), permitindo executar as informações referentes ao filtro da pesquisa do IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+
+##### ⚡️ `function Finish: ISetup4DCEP;`
+
+   + Este método fornece uma instância que implementa a interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
 #### 🧬 `function Result : ISetup4DCEPResult;`
 
-* Obtém uma instância da classe de resultado do Setup4DCEP, que permite apresentar os resultados da execução relacionadas ao CEP ou IBGE.
+* Este método fornece uma instância que implementa a interface [ISetup4DCEPResult](#-isetup4dcepresult), permitindo o acesso aos resultados relacionados à pesquisa de CEP e IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+
+##### ⚡️ `function ZipCode: ISetup4DCEPResultZipCode;`
+
+   + Este método fornece uma instância que implementa a interface [ISetup4DCEPResultZipCode](#-isetup4dcepresultzipcode), apresentando o resultado do CEP referente à execução dos filtros da pesquisa informados. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+
+##### ⚡️ `function IBGE: ISetup4DCEPResultIBGE;`
+
+   + Este método fornece uma instância que implementa a interface [ISetup4DCEPResultIBGE](#-isetup4dcepresultibge), apresentando o resultado do IBGE referente à execução dos filtros da pesquisa informados. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+
+##### ⚡️ `function Finish: ISetup4DCEP;`
+
+   + Este método fornece uma instância que implementa a interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+
 
   
