@@ -46,18 +46,20 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
             ```
             ./{Pasta}/src
+            ./{Pasta}/src/Enumerated
+            ./{Pasta}/src/Interfaces
             ./{Pasta}/src/Configuration
             ./{Pasta}/src/Configuration/Proxy
             ./{Pasta}/src/Configuration/Web Service
-            ./{Pasta}/src/Enumerated
-            ./{Pasta}/src/Execute
-            ./{Pasta}/src/Interfaces
-            ./{Pasta}/src/Result
-            ./{Pasta}/src/Result/IBGE
-            ./{Pasta}/src/Result/Zip Code
             ./{Pasta}/src/Filter
             ./{Pasta}/src/Filter/IBGE
             ./{Pasta}/src/Filter/Zip Code
+            ./{Pasta}/src/Searech
+            ./{Pasta}/src/Searech/IBGE
+            ./{Pasta}/src/Searech/Zip Code            
+            ./{Pasta}/src/Result
+            ./{Pasta}/src/Result/IBGE
+            ./{Pasta}/src/Result/Zip Code
             ```
 ### ⚙️ Dependências
 
@@ -179,17 +181,17 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
 * Essa interface amplia a funcionalidade da interface [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge), oferecendo métodos específicos para a inclusão de informações relacionadas ao endereço do IBGE a ser pesquisado.
 
-#### 💻 `ISetup4DCEPExecute`
+#### 💻 `ISetup4DCEPSearech`
 
 * Esta interface estende a interface [ISetup4DCEP](#-isetup4dcep), fornecendo métodos específicos para a realização de pesquisas com base nos filtros do CEP ou do IBGE.
 
-#### 💻 `ISetup4DCEPExecuteZipCode`
+#### 💻 `ISetup4DCEPSearechZipCode`
 
-* Essa interface se estende a interface [ISetup4DCEPExecute](#-isetup4dcepexecute) e oferece métodos específicos para ações relacionadas a consultas de CEP.
+* Essa interface se estende a interface [ISetup4DCEPSearech](#-isetup4dcepsearech) e oferece métodos específicos para ações relacionadas a consultas de CEP.
 
-#### 💻 `ISetup4DCEPExecuteIBGE`
+#### 💻 `ISetup4DCEPSearechIBGE`
 
-* Essa interface se estende a interface [ISetup4DCEPExecute](#-isetup4dcepexecute) e disponibiliza métodos específicos para ações relacionadas a consultas do IBGE.
+* Essa interface se estende a interface [ISetup4DCEPSearech](#-isetup4dcepsearech) e disponibiliza métodos específicos para ações relacionadas a consultas do IBGE.
 
 #### 💻 `ISetup4DCEPResult`
 
@@ -427,17 +429,17 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
    + Este método fornece uma instância que implementa a interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
-#### 🧬 `function Execute : ISetup4DCEPExecute;`
+#### 🧬 `function Searech : ISetup4DCEPSearech;`
 
-* Este método fornece uma instância que implementa a interface [ISetup4DCEPExecute](#-isetup4dcepexecute), permitindo o acesso à execução relacionada à pesquisa de CEP e IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+* Este método fornece uma instância que implementa a interface [ISetup4DCEPSearech](#-isetup4dcepsearech), permitindo o acesso à execução relacionada à pesquisa de CEP e IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
 
-##### ⚡️ `function ZipCode: ISetup4DCEPExecuteZipCode;`
+##### ⚡️ `function ZipCode: ISetup4DCEPSearechZipCode;`
 
-   + Este método fornece uma instância que implementa a interface [ISetup4DCEPExecuteZipCode](#-isetup4dcepexecutezipcode), permitindo executar as informações referentes ao filtro da pesquisa do CEP. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+   + Este método fornece uma instância que implementa a interface [ISetup4DCEPSearechZipCode](#-isetup4dcepsearechzipcode), permitindo executar as informações referentes ao filtro da pesquisa do CEP. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
 
-##### ⚡️ `function IBGE: ISetup4DCEPExecuteIBGE;`
+##### ⚡️ `function IBGE: ISetup4DCEPSearechIBGE;`
 
-   + Este método fornece uma instância que implementa a interface [ISetup4DCEPExecuteIBGE](#-isetup4dcepexecuteibge), permitindo executar as informações referentes ao filtro da pesquisa do IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+   + Este método fornece uma instância que implementa a interface [ISetup4DCEPSearechIBGE](#-isetup4dcepsearechibge), permitindo executar as informações referentes ao filtro da pesquisa do IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
 
 ##### ⚡️ `function Finish: ISetup4DCEP;`
 
