@@ -417,9 +417,69 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
    + Este método fornece uma instância que implementa a interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode), permitindo o acesso aos filtros de pesquisa do CEP. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
 
+      1. `function Key:ISetup4DCEPFilterZipCodeKey;`
+
+         1. `function Value(Const AValue: string) : ISetup4DCEPFilterZipCodeKey; overload;`
+         
+         2. `function Value : string; overload;`
+
+         3. `function Finish: ISetup4DCEPFilterIBGE;` 
+
+      2. `function Address:ISetup4DCEPFilterZipCodeAddress;` 
+
+         1. `function Types(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
+         
+         2. `function Street(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
+
+         3. `function City(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;` 
+
+         4. `function StateAbbreviated(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
+         
+         5. `function StateAbbreviated(Const AValue : TSetup4DUtilityEstadoAbreviado): ISetup4DCEPFilterZipCodeAddress; overload;`
+
+         6. `function District(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;` 
+
+         7. `function Types: string; overload;`
+         
+         8. `function Street: string; overload;`
+
+         9. `function City: string; overload;` 
+
+         10. `function StateAbbreviated: string; overload;`
+         
+         11. `function District: string; overload;`
+
+         12. `function Finish: ISetup4DCEPFilterIBGE;` 
+
+      3. `function Finish: ISetup4DCEPFilter;`
+
 ##### ⚡️ `function IBGE:ISetup4DCEPFilterIBGE;`
 
    + Este método fornece uma instância que implementa a interface[ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge), permitindo o acesso aos filtros de pesquisa do IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+
+      1. `function Key:ISetup4DCEPFilterIBGEKey;`
+
+         1. `function Value(Const AValue: string) : ISetup4DCEPFilterIBGEKey; overload;`
+         
+         2. `function Value : string; overload;`
+
+         3. `function Finish: ISetup4DCEPFilterIBGE;` 
+
+      2. `function Address:ISetup4DCEPFilterIBGEAddress;` 
+
+         1. `function City(Const AValue : string): ISetup4DCEPFilterIBGEAddress; overload;`
+         
+         2. `function StateAbbreviated(Const AValue : string): ISetup4DCEPFilterIBGEAddress; overload;`
+
+         3. `function StateAbbreviated(Const AValue : TSetup4DUtilityEstadoAbreviado): ISetup4DCEPFilterIBGEAddress; overload;` 
+
+         4. `function City: string; overload;`
+         
+         5. `function StateAbbreviated: string; overload;`
+
+         6. `function Finish: ISetup4DCEPFilterIBGE;` 
+
+      3. `function Finish: ISetup4DCEPFilter;`
 
 ##### ⚡️ `function Clear : ISetup4DCEPFilter;`
 
@@ -437,9 +497,31 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
    + Este método fornece uma instância que implementa a interface [ISetup4DCEPSearechZipCode](#-isetup4dcepsearechzipcode), permitindo executar as informações referentes ao filtro da pesquisa do CEP. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
 
+      1. `function Reconfiguration: ISetup4DCEPSearechZipCode;`
+
+      2. `function Code : ISetup4DCEPSearechZipCode;` 
+
+      3. `function Address : ISetup4DCEPSearechZipCode;`
+
+      4. `function Component : TComponent;` 
+
+      5. `function Finish: ISetup4DCEPSearech;`
+
 ##### ⚡️ `function IBGE: ISetup4DCEPSearechIBGE;`
 
    + Este método fornece uma instância que implementa a interface [ISetup4DCEPSearechIBGE](#-isetup4dcepsearechibge), permitindo executar as informações referentes ao filtro da pesquisa do IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+
+      1. `function Reconfiguration: ISetup4DCEPSearechIBGE;`
+
+      2. `function Code : ISetup4DCEPSearechIBGE;` 
+
+      3. `function State : ISetup4DCEPSearechIBGE;`
+
+      4. `function City : ISetup4DCEPSearechIBGE;` 
+
+      5. `function Component : TComponent;`
+
+      6. `function Finish: ISetup4DCEPSearech;`
 
 ##### ⚡️ `function Finish: ISetup4DCEP;`
 
@@ -453,9 +535,85 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
    + Este método fornece uma instância que implementa a interface [ISetup4DCEPResultZipCode](#-isetup4dcepresultzipcode), apresentando o resultado do CEP referente à execução dos filtros da pesquisa informados. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
 
+      1. `function Display: iSetup4DCEPResultZipCodeDisplay;`
+
+         1. `function CEP : string;` 
+
+         2. `function Tipo : string;` 
+
+         3. `function Rua : string;` 
+
+         4. `function RuaCompleta : string;` 
+
+         5. `function Complemento : string;` 
+
+         6. `function Bairro : string;` 
+
+         7. `function Cidade : string;` 
+
+         8. `function IBGECidade : string;` 
+
+         9. `function Estado : string;` 
+
+         10. `function IBGEEstado : string;` 
+
+         11. `function DDD : string;` 
+
+         12. `function GIA : string;` 
+
+         13. `function SIAFI : string;` 
+
+         14. `function Altitude : string;` 
+
+         15. `function Latitude : string;` 
+
+         16. `function Longitude : string;` 
+
+         17. `function JSON (Const AValue: TJSONObject) : iSetup4DCEPResultZipCodeDisplay; overload;` 
+
+         18. `function Finish: iSetup4DCEPResultZipCode;` 
+
+      2. `function JSONObject(out AValue : TJSONObject): ISetup4DCEPResultZipCode; overload;` 
+
+      3. `function JSONObject: TJSONObject; overload;`
+
+      4. `function JSONObjectInStr: String; overload;` 
+
+      5. `function JSONArray: TJSONArray; overload;`
+
+      6. `function RecordCount : Int64;`
+
+      7. `function RecordCountInStr : string;`
+
+      8. `function Finish: ISetup4DCEPResult;`
+
 ##### ⚡️ `function IBGE: ISetup4DCEPResultIBGE;`
 
    + Este método fornece uma instância que implementa a interface [ISetup4DCEPResultIBGE](#-isetup4dcepresultibge), apresentando o resultado do IBGE referente à execução dos filtros da pesquisa informados. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+
+      1. `function Display: iSetup4DCEPResultIBGEDisplay;`
+
+         1. `function CodigoUF : string;` 
+
+         2. `function UF : string;` 
+
+         3. `function CodigoMunicipio : string;` 
+
+         4. `function Municipio : string;` 
+
+         5. `function Area : string;` 
+
+         6. `function JSON (Const AValue: TJSONObject) : iSetup4DCEPResultIBGEDisplay; overload;` 
+
+         7. `function Finish: iSetup4DCEPResultIBGE;` 
+
+      2. `function JSONObject(out AValue : TJSONObject): ISetup4DCEPResultIBGE; overload;` 
+
+      3. `function JSONObject: TJSONObject; overload;`
+
+      4. `function JSONObjectInStr: String; overload;` 
+
+      5. `function Finish: ISetup4DCEPResult;`
 
 ##### ⚡️ `function Finish: ISetup4DCEP;`
 
