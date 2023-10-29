@@ -74,8 +74,7 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
    1. Faça o [**download**](https://github.com/Setup4D/Setup4DUtility/archive/refs/heads/main.zip) do projeto ou acesse a  [**pagina do projeto**](https://github.com/Setup4D/Setup4DUtility) e realize o download.
    2. Descompacte o arquivo baixado em uma pasta de sua escolha.
-   3. Adicione a pasta extraída ao seu projeto, indo para *Project > Options > Resource Compiler > Directories and Conditionals > Include file search path*.      
-   
+   3. Adicione a pasta extraída ao seu projeto, indo para *Project > Options > Resource Compiler > Directories and Conditionals > Include file search path*.<P>
    ```
    ./{Pasta}/src
    ```
