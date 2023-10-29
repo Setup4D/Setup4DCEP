@@ -12,236 +12,238 @@
 ![Delphi Supported Versions](https://img.shields.io/badge/Delphi%20Supported%20Versions-XE10.3..11-blue.svg)
 ![Platforms](https://img.shields.io/badge/Supported%20platforms-Win32%20and%20Win64-red.svg)
 
-Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvolvida para simplificar a pesquisa de CEP (Código de Endereçamento Postal) e dos Códigos do IBGE (Instituto Brasileiro de Geografia e Estatística). Com o Setup4DCEP, você pode realizar interações com procedimentos e funções em suas aplicações Delphi de maneira rápida, simples e confiável.
+Welcome to the Setup4DCEP project repository! This application was developed to streamline the search for CEP (Código de Endereçamento Postal) and IBGE codes (Instituto Brasileiro de Geografia e Estatística). With Setup4DCEP, you can perform interactions with procedures and functions in your Delphi applications quickly, simply, and reliably.
 
-## 📐 Como utilizar
+## 📐 How to Use
 
-### ⚙️ Instalação
+### ⚙️ Installation
 
-#### ⚡️ Automática (via boss)
+#### ⚡️ Automatic (via boss)
 
- * O uso do [**Boss**](https://github.com/HashLoad/boss) é recomendado para facilitar a instalação do Setup4DCEP. Basta executar o seguinte comando em um terminal, como o Windows PowerShell, para realizar a instalação de forma mais conveniente:
+* Using [**Boss**](https://github.com/HashLoad/boss) is recommended to simplify the installation of Setup4DCEP. Just run the following command in a terminal, such as Windows PowerShell, to perform the installation more conveniently:
 
    ```shell
    boss install github.com/Setup4D/Setup4DCEP
    ```
 
-   + Isso automatiza o processo de instalação e gerenciamento de dependências, tornando a configuração do Setup4DCEP mais simples. Certifique-se de que o Boss esteja configurado e pronto para uso em seu ambiente Delphi antes de executar esse comando.
+   + This automates the installation process and dependency management, making the Setup4DCEP configuration simpler. Make sure that Boss is set up and ready for use in your Delphi environment before running this command.
 
 #### ⚡️ Manual (Delphi)
 
-* Se você optar por realizar a instalação manualmente, siga os passos abaixo:
+* If you choose to install manually, follow the steps below:
 
-   1. Faça o [download](https://github.com/Setup4D/Setup4DCEP/archive/refs/heads/main.zip) do projeto.
-   2. Descompacte o arquivo baixado em uma pasta de sua escolha.
-   3. Adicione a pasta extraída ao seu projeto, seguindo os passos abaixo:
-   
-      1. No Delphi, acesse o menu "Project" (Projeto).
-      2. Selecione "Options" (Opções).
-      3. No painel de opções, vá para "Resource Compiler" (Compilador de Recursos).
-      4. Em "Directories and Conditionals" (Diretórios e Condicional), escolha "Include file search path" (Caminho de busca de arquivos de inclusão).
-      5. Clique em "Browse" (Navegar) e adicione a pasta extraída do projeto.
-   
-         + Isso permitirá que seu projeto tenha acesso aos arquivos e recursos necessários do Setup4DCEP. Certifique-se de salvar as configurações após seguir esses passos.
+   1. Download the project from [here](https://github.com/Setup4D/Setup4DCEP/archive/refs/heads/main.zip).
+   2. Unzip the downloaded file to a folder of your choice.
+   3. Add the extracted folder to your project by following the steps below:
+
+      1. In Delphi, go to the "Project" menu.
+      2. Select "Options."
+      3. In the options panel, navigate to "Resource Compiler."
+      4. Under "Directories and Conditionals," choose "Include file search path."
+      5. Click "Browse" and add the folder extracted from the project.
+
+         + This will enable your project to access the necessary files and resources from Setup4DCEP. Be sure to save the settings after following these steps.
 
             ```
-            .\{Pasta}\src
-            .\{Pasta}\src\requires\inc
-            .\{Pasta}\src\requires\ACBrComum
-            .\{Pasta}\src\requires\ACBrTCP
-            .\{Pasta}\src\requires\Terceiros\FastStringReplace
-            .\{Pasta}\src\requires\Terceiros\GZIPUtils
-            .\{Pasta}\src\requires\Terceiros\JsonDataObjects\Source
-            .\{Pasta}\src\requires\Terceiros\synalist
-            .\{Pasta}\src\Enumerated
-            .\{Pasta}\src\Interfaces
-            .\{Pasta}\src\Configuration
-            .\{Pasta}\src\Configuration\Proxy
-            .\{Pasta}\src\Configuration\Web Service
-            .\{Pasta}\src\Filter
-            .\{Pasta}\src\Filter\IBGE
-            .\{Pasta}\src\Filter\Zip Code
-            .\{Pasta}\src\Searech
-            .\{Pasta}\src\Searech\IBGE
-            .\{Pasta}\src\Searech\Zip Code            
-            .\{Pasta}\src\Result
-            .\{Pasta}\src\Result\IBGE
-            .\{Pasta}\src\Result\Zip Code
-            ```
-### ⚙️ Dependências
+            .\{Folder}\src
+            .\{Folder}\src\requires\inc
+            .\{Folder}\src\requires\ACBrComum
+            .\{Folder}\src\requires\ACBrTCP
+            .\{Folder}\src\requires\ThirdParty\FastStringReplace
+            .\{Folder}\src\requires\ThirdParty\GZIPUtils
+            .\{Folder}\src\requires\ThirdParty\JsonDataObjects\Source
+            .\{Folder}\src\requires\ThirdParty\synalist
+            .\{Folder}\src\Enumerated
+            .\{Folder}\src\Interfaces
+            .\{Folder}\src\Configuration
+            .\{Folder}\src\Configuration\Proxy
+            .\{Folder}\src\Configuration\Web Service
+            .\{Folder}\src\Filter
+            .\{Folder}\src\Filter\IBGE
+            .\{Folder}\src\Filter\Zip Code
+            .\{Folder}\src\Search
+            .\{Folder}\src\Search\IBGE
+            .\{Folder}\src\Search\Zip Code
+            .\{Folder}\src\Result
+            .\{Folder}\src\Result\IBGE
+            .\{Folder}\src\Result\Zip Code
+           ```
 
-* Este projeto depende do [**Setup4DUtility**](https://github.com/Setup4D/Setup4DUtility), desempenhando um papel crucial em suas funcionalidades operacionais. Quando você utiliza o [**Boss**](https://github.com/HashLoad/boss) como instalador do framework, a instalação do **Setup4DUtility** ocorre automaticamente. No entanto, se optar por uma instalação manual, siga os passos abaixo:
+### ⚙️ Dependencies
 
-   1. Faça o [**download**](https://github.com/Setup4D/Setup4DUtility/archive/refs/heads/main.zip) do projeto ou acesse a  [**pagina do projeto**](https://github.com/Setup4D/Setup4DUtility) e realize o download.
-   2. Descompacte o arquivo baixado em uma pasta de sua escolha.
-   3. Adicione a pasta extraída ao seu projeto, indo para *Project > Options > Resource Compiler > Directories and Conditionals > Include file search path*.<P>
+* This project relies on [**Setup4DUtility**](https://github.com/Setup4D/Setup4DUtility), playing a crucial role in its operational functionalities. When using [**Boss**](https://github.com/HashLoad/boss) as the framework installer, the installation of **Setup4DUtility** happens automatically. However, if you prefer a manual installation, follow the steps below:
+
+   1. Download the project from [**here**](https://github.com/Setup4D/Setup4DUtility/archive/refs/heads/main.zip) or visit the [**project page**](https://github.com/Setup4D/Setup4DUtility) and download it.
+   2. Unzip the downloaded file to a folder of your choice.
+   3. Add the extracted folder to your project by going to *Project > Options > Resource Compiler > Directories and Conditionals > Include file search path*.<p>
+
    ```
-   ./{Pasta}/src
+   ./{Folder}/src
    ```
 
-## 📐 Modo de uso
+## 📐 Usage Mode
 
-### ⚙️ Idioma das mensagens
+### ⚙️ Language of Messages
 
-* O sistema oferece suporte a dois idiomas, com o inglês sendo o idioma padrão. No entanto, é possível utilizar o aplicativo em português do Brasil. Para fazer isso, siga as etapas abaixo:
+* The system supports two languages, with English being the default language. However, it's possible to use the application in Brazilian Portuguese. To do so, follow the steps below:
 
-   * **Opção 1: Configuração via Delphi:**
+   * **Option 1: Configuration via Delphi:**
    
       ```
-      Acesse Project > Options > Delphi Compiler > Conditionals Defines
+      Go to Project > Options > Delphi Compiler > Conditionals Defines
       ```
 
-      1. No Delphi, acesse o menu "Project" (Projeto).
-      2. Selecione "Options" (Opções).
-      3. No painel de opções, vá para "Delphi Compiler" (Compilador Delphi).
-      4. Em "Conditionals Defines" (Definições Condicionais), adicione a diretiva *HAS_PORTUGUES*.
+      1. In Delphi, go to the "Project" menu.
+      2. Select "Options."
+      3. In the options panel, navigate to "Delphi Compiler."
+      4. Under "Conditionals Defines," add the directive *HAS_PORTUGUES*.
 
-         + Isso permitirá que o aplicativo seja utilizado em português do Brasil. Lembre-se de salvar as configurações e recompilar o projeto após fazer essas alterações.
+         + This will allow the application to be used in Brazilian Portuguese. Remember to save the settings and recompile the project after making these changes.
 
-   * **Opção 2: Configuração manual:**
+   * **Option 2: Manual Configuration:**
 
-      1. Certifique-se de que a linha *{$DEFINE HAS_PORTUGUES}* no arquivo *Setup4DCEPLanguage.inc*, localizado em *.\{pasta}\src\requires\inc*, esteja descomentada (ou seja, sem as barras duplas "//").
+      1. Ensure that the line *{$DEFINE HAS_PORTUGUES}* in the file *Setup4DCEPLanguage.inc*, located in *.\{folder}\src\requires\inc*, is uncommented (i.e., without the double slashes "//").
 
-         + Isso também permitirá que o aplicativo seja utilizado em português do Brasil. Não se esqueça de salvar as alterações e recompilar o projeto para que as configurações tenham efeito.
+         + This will also enable the application to be used in Brazilian Portuguese. Don't forget to save the changes and recompile the project for the settings to take effect.
 
-## 📐 Funções do TSetup4DCep
+## 📐 Functions of TSetup4DCep
 
-* A classe `TSetup4DCep` desempenha um papel fundamental como suporte para as funcionalidades do framework. Ela centraliza diversas funções e procedimentos que serão utilizados pelo framework, permitindo uma programação dinâmica e simplificada, alinhada com a agilidade da programação inline do Delphi.
+* The class `TSetup4DCep` plays a fundamental role in supporting the framework's functionalities. It centralizes various functions and procedures that will be used by the framework, allowing for dynamic and simplified programming, aligned with Delphi's inline programming agility.
 
-### ⚙️ Enumerados do Setup4DCep
+### ⚙️ Enumerations of Setup4DCep
 
 #### 💻 `TSetup4DCEPWebService`
 
-* Essa enumeração representa os serviços web disponíveis para consulta de CEP. O escopo está habilitado, o que significa que para acessar os valores da enumeração, você deve sempre informar `TSetup4DCEPWebService` antes do nome do enumerado. Por exemplo, `TSetup4DCEPWebService.Nenhum`. Vou explicar o código em detalhes:
+* This enumeration represents the web services available for CEP (Postal Addressing Code) lookup. The scope is enabled, which means that to access the enumeration values, you should always prefix with `TSetup4DCEPWebService`. For example, `TSetup4DCEPWebService.None`. I will explain the code in detail:
 
-   - `Nenhum`: Representa a ausência de um serviço web para consulta de CEP.
-   - `BuscarCep`: Representa o serviço web "BuscarCep".
-   - `CepLivre`: Representa o serviço web "CepLivre".
-   - `RepublicaVirtual`: Representa o serviço web "RepublicaVirtual".
-   - `Bases4you`: Representa o serviço web "Bases4you".
-   - `RNSolucoes`: Representa o serviço web "RNSolucoes".
-   - `KingHost`: Representa o serviço web "KingHost".
-   - `ByJG`: Representa o serviço web "ByJG".
-   - `Correios`: Representa o serviço web "Correios".
-   - `DevMedia`: Representa o serviço web "DevMedia".
-   - `ViaCep`: Representa o serviço web "ViaCep".
-   - `CorreiosSIGEP`: Representa o serviço web "CorreiosSIGEP".
-   - `CepAberto`: Representa o serviço web "CepAberto".
-   - `WSCep`: Representa o serviço web "WSCep".
-   - `OpenCep`: Representa o serviço web "OpenCep".
-   - `BrasilAPI`: Representa o serviço web "BrasilAPI".
+   - `None`: Represents the absence of a web service for CEP lookup.
+   - `BuscarCep`: Represents the "BuscarCep" web service.
+   - `CepLivre`: Represents the "CepLivre" web service.
+   - `RepublicaVirtual`: Represents the "RepublicaVirtual" web service.
+   - `Bases4you`: Represents the "Bases4you" web service.
+   - `RNSolucoes`: Represents the "RNSolucoes" web service.
+   - `KingHost`: Represents the "KingHost" web service.
+   - `ByJG`: Represents the "ByJG" web service.
+   - `Correios`: Represents the "Correios" web service.
+   - `DevMedia`: Represents the "DevMedia" web service.
+   - `ViaCep`: Represents the "ViaCep" web service.
+   - `CorreiosSIGEP`: Represents the "CorreiosSIGEP" web service.
+   - `CepAberto`: Represents the "CepAberto" web service.
+   - `WSCep`: Represents the "WSCep" web service.
+   - `OpenCep`: Represents the "OpenCep" web service.
+   - `BrasilAPI`: Represents the "BrasilAPI" web service.
 
-### ⚙️ Interfaces do Setup4DCep
+### ⚙️ Interfaces of Setup4DCep
 
 #### 💻 `ISetup4DCEP`
 
-* A interface principal do framework Setup4DCEP é o ponto de entrada para acessar as funcionalidades relacionadas ao CEP (Código de Endereçamento Postal) e ao IBGE (Instituto Brasileiro de Geografia e Estatística). Essa interface serve como o núcleo do framework, e todas as outras interfaces são dependentes dela. Ao utilizar esta interface principal, você pode acessar as demais funcionalidades do framework de forma organizada e simplificada.
+* The main interface of the Setup4DCEP framework is the entry point for accessing functionalities related to CEP (Postal Addressing Code) and IBGE (Brazilian Institute of Geography and Statistics). This interface serves as the core of the framework, and all other interfaces depend on it. By using this main interface, you can access the framework's other functionalities in an organized and simplified manner.
 
-* Esta abordagem foi projetada para reduzir a complexidade e permitir que os desenvolvedores explorem as funcionalidades de forma flexível e adaptativa.
+* This approach is designed to reduce complexity and allow developers to explore the functionalities flexibly and adaptively.
 
 #### 💻 `ISetup4DCEPConfiguration`
 
-* Esta interface estende a interface [ISetup4DCEP](#-isetup4dcep), fornecendo métodos específicos para a configuração relacionada ao serviço web e ao proxy.
+* This interface extends the [ISetup4DCEP](#-isetup4dcep) interface, providing specific methods for configuration related to web service and proxy.
 
 #### 💻 `ISetup4DCEPConfigurationWebService`
 
-* Esta interface estende a interface [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration), fornecendo métodos específicos para a configuração relacionada ao serviço web.
+* This interface extends the [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration), providing specific methods for configuration related to web service.
 
 #### 💻 `ISetup4DCEPConfigurationWebServiceZIPCode`
 
-* Esta interface estende a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) e oferece métodos específicos para a configuração relacionada a consultas de CEP.
+* This interface extends the [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) and offers specific methods for configuration related to CEP queries.
 
 #### 💻 `ISetup4DCEPConfigurationWebServiceIBGE`
 
-* Esta interface se estende a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) e disponibiliza métodos específicos para a configuração relacionada a consultas do IBGE.
+* This interface extends the [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) and provides specific methods for configuration related to IBGE queries.
 
 #### 💻 `ISetup4DCEPConfigurationProxy`
 
-* Esta interface estende a interface [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration), fornecendo métodos específicos para a configuração relacionada ao proxy.
+* This interface extends the [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration), providing specific methods for proxy configuration.
 
 #### 💻 `ISetup4DCEPFilter`
 
-* Esta interface estende a interface [ISetup4DCEP](#-isetup4dcep), fornecendo métodos específicos para a configuração relacionada ao filtros do CEP ou IBGE.
+* This interface extends the [ISetup4DCEP](#-isetup4dcep) interface, providing specific methods for configuring CEP or IBGE filters.
 
 #### 💻 `ISetup4DCEPFilterZipCode`
 
-* Essa interface amplia a funcionalidade da interface [ISetup4DCEPFilter](#-isetup4dcepfilter), oferecendo métodos específicos para a inclusão de dados destinados a filtrar a pesquisa relacionada ao CEP.
+* This interface extends the functionality of the [ISetup4DCEPFilter](#-isetup4dcepfilter), offering specific methods for including data related to filtering CEP searches.
 
 #### 💻 `ISetup4DCEPFilterZipCodeKey`
 
-* Essa interface amplia a funcionalidade da interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode), oferecendo métodos específicos para a inclusão de informações relacionadas ao código do CEP a ser pesquisado.
+* This interface extends the functionality of the [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode), offering specific methods for including information related to the CEP code to be searched.
 
 #### 💻 `ISetup4DCEPFilterZipCodeAddress`
 
-* Essa interface amplia a funcionalidade da interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode), oferecendo métodos específicos para a inclusão de informações relacionadas ao endereço do CEP a ser pesquisado.
-  
+* This interface extends the functionality of the [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode), offering specific methods for including information related to the address of the CEP to be searched.
+
 #### 💻 `ISetup4DCEPFilterIBGE`
 
-* Essa interface amplia a funcionalidade da interface [ISetup4DCEPFilter](#-isetup4dcepfilter), oferecendo métodos específicos para a inclusão de dados destinados a filtrar a pesquisa relacionada ao IBGE.
+* This interface extends the functionality of the [ISetup4DCEPFilter](#-isetup4dcepfilter), offering specific methods for including data related to filtering IBGE searches.
 
 #### 💻 `ISetup4DCEPFilterIBGEKey`
 
-* Essa interface amplia a funcionalidade da interface [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge), oferecendo métodos específicos para a inclusão de informações relacionadas ao código do CEP a ser pesquisado.
+* This interface extends the functionality of the [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge), offering specific methods for including information related to the CEP code to be searched.
 
 #### 💻 `ISetup4DCEPFilterIBGEAddress`
 
-* Essa interface amplia a funcionalidade da interface [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge), oferecendo métodos específicos para a inclusão de informações relacionadas ao endereço do IBGE a ser pesquisado.
+* This interface extends the functionality of the [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge), offering specific methods for including information related to the address of the IBGE to be searched.
 
 #### 💻 `ISetup4DCEPSearech`
 
-* Esta interface estende a interface [ISetup4DCEP](#-isetup4dcep), fornecendo métodos específicos para a realização de pesquisas com base nos filtros do CEP ou do IBGE.
+* This interface extends the [ISetup4DCEP](#-isetup4dcep) interface, providing specific methods for conducting searches based on CEP or IBGE filters.
 
 #### 💻 `ISetup4DCEPSearechZipCode`
 
-* Essa interface se estende a interface [ISetup4DCEPSearech](#-isetup4dcepsearech) e oferece métodos específicos para ações relacionadas a consultas de CEP.
+* This interface extends the [ISetup4DCEPSearech](#-isetup4dcepsearech) and offers specific methods for actions related to CEP queries.
 
 #### 💻 `ISetup4DCEPSearechIBGE`
 
-* Essa interface se estende a interface [ISetup4DCEPSearech](#-isetup4dcepsearech) e disponibiliza métodos específicos para ações relacionadas a consultas do IBGE.
+* This interface extends the [ISetup4DCEPSearech](#-isetup4dcepsearech) and provides specific methods for actions related to IBGE queries.
 
 #### 💻 `ISetup4DCEPResult`
 
-* Esta interface estende a interface [ISetup4DCEP](#-isetup4dcep), fornecendo métodos específicos  para apresentar o resultado da pesquisaa executada.
+* This interface extends the [ISetup4DCEP](#-isetup4dcep) interface, providing specific methods for presenting the results of the executed search.
 
 #### 💻 `ISetup4DCEPResultZipCode`
 
-* Esta interface se estende a interface [ISetup4DCEPResult](#-isetup4dcepresult) e oferece métodos específicos para obter resultados de ações relacionadas a consultas de CEP.
+* This interface extends the [ISetup4DCEPResult](#-isetup4dcepresult) and offers specific methods for obtaining results of actions related to CEP queries.
 
 #### 💻 `iSetup4DCEPResultZipCodeDisplay`
 
-* Esta interface se estende a interface [ISetup4DCEPResultZipCode](#-isetup4dcepresultzipcode) e oferece métodos específicos para exibir os resultados de consultas de CEP.
+* This interface extends the [ISetup4DCEPResultZipCode](#-isetup4dcepresultzipcode) and offers specific methods for displaying the results of CEP queries.
 
 #### 💻 `ISetup4DCEPResultIBGE`
 
-* Esta interface se estende a interface [ISetup4DCEPResult](#-isetup4dcepresult) e disponibiliza métodos específicos para obter resultados de ações relacionadas a consultas do IBGE.
+* This interface extends the [ISetup4DCEPResult](#-isetup4dcepresult) and provides specific methods for obtaining results of actions related to IBGE queries.
 
 #### 💻 `iSetup4DCEPResultIBGEDisplay`
 
-* Esta interface se estende a interface [ISetup4DCEPResultibge](#-isetup4dcepresultibge) e oferece métodos específicos para exibir os resultados de consultas do IBGE.
+* This interface extends the [ISetup4DCEPResultibge](#-isetup4dcepresultibge) and offers specific methods for displaying the results of IBGE queries.
 
-### ⚙️ Métodos TSetup4DCEP
+### ⚙️ Methods of TSetup4DCEP
 
-   - Esta função implementa a interface ISetup4DCEP juntamente com todas as dependências necessárias. Ela engloba informações cruciais para a execução de pesquisas de CEP, incluindo a configuração de Web Service, Proxy, filtros, pesquisas e a gestão de resultados relacionados ao IBGE e ao CEP.
+- This function implements the ISetup4DCEP interface along with all the necessary dependencies. It encompasses crucial information for conducting CEP searches, including the configuration of web services, proxies, filters, searches, and the management of results related to IBGE and CEP.
 
 #### 💻 `class function New: ISetup4DCEP;`
 
-   + Este é um método de classe, o que permite sua chamada direta na classe, sem a necessidade de criar uma instância da mesma. Ele retorna um tipo que implementa a interface [ISetup4DCEP](#-isetup4dcep), indicando que o método cria e retorna uma instância da classe que implementa essa interface. O método cria uma nova instância da própria classe [TSetup4DCep](#-funções-do-tsetup4dcep) utilizando o construtor, o que implica que o método New retorna uma nova instância de [TSetup4DCep](#-funções-do-tsetup4dcep). Esse padrão é empregado para criar novas instâncias de classes sem a necessidade de criar uma instância manualmente, simplificando a criação de objetos. A função New é uma maneira conveniente de instanciar essa classe.
+   + This is a class method, allowing its direct invocation on the class without the need to create an instance of it. It returns a type that implements the [ISetup4DCEP](#-isetup4dcep) interface, indicating that the method creates and returns an instance of the class implementing this interface. The method creates a new instance of the class itself [TSetup4DCep](#-funções-do-tsetup4dcep) using the constructor, implying that the New method returns a new instance of [TSetup4DCep](#-funções-do-tsetup4dcep). This pattern is employed to create new instances of classes without the need to manually create an instance, simplifying object creation. The New function is a convenient way to instantiate this class.
 
-#### 🧬 `function Configuration : ISetup4DCEPConfiguration;`
+#### 🧬 `function Configuration: ISetup4DCEPConfiguration;`
 
-* Este método fornece uma instância que implementa a interface [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration), permitindo o acesso às configurações relacionadas ao CEP e IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+* This method provides an instance that implements the [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration) interface, allowing access to settings related to CEP and IBGE. It is important to highlight that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
 
-##### ⚡️ `function WebService:ISetup4DCEPConfigurationWebService;`
+##### ⚡️ `function WebService: ISetup4DCEPConfigurationWebService;`
 
-   + Este método fornece uma instância que implementa a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice), permitindo o acesso às configurações dos serviços web. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+   + This method provides an instance that implements the [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) interface, allowing access to web service settings. It is important to highlight that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
 
    1. `function ZipCode: ISetup4DCEPConfigurationWebServiceZIPCode;`
 
-      - Este método permite obter uma instância da classe que fornece configurações específicas para o serviço de pesquisa do CEP. Abaixo estão listadas todas as funções existentes:
+      - This method allows you to obtain an instance of the class that provides specific settings for the CEP lookup service. Below are all the existing functions:
+
+         - Here are the web services available for selection in the CEP search:
          
-         - Aqui estão os serviços web disponíveis para seleção na pesquisa de CEP:
-         
-            1. Nenhum (Não seleciona nenhum serviço)
+            1. None (Selects no service)
             2. Buscar Cep
             3. Cep Livre
             4. Republica Virtual
@@ -257,529 +259,526 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
             14. WSCep
             15. Open Cep
             16. Brasil API
-      
-         - `function Index: Integer;`
-            
-            - Esta função retorna um valor inteiro que corresponde à conversão de um valor do tipo enumerado [TSetup4DCEPWebService](#-tsetup4dcepwebservice) em um valor inteiro.
-         
-         - `function Key(const AValue: string): ISetup4DCEPConfigurationWebServiceZIPCode; overload;`
-            
-            - Este é um método que permite configurar a chave a ser usada para autenticação ao acessar o serviço de consulta de CEP. 
-                    
-         - `function Key: string; overload;`
-            
-            - Este é um método que permite obter a chave atualmente configurada. Ele retorna a chave que será utilizada nas solicitações ao serviço de consulta de CEP para acessar informações específicas ou para autenticação, dependendo das necessidades do serviço.
-         
-         - `function User(const AValue: string): ISetup4DCEPConfigurationWebServiceZIPCode; overload;` 
 
-            - Este é um método que permite configurar o nome de usuário a ser usado para autenticação ao acessar o serviço de consulta de CEP. 
-         
+         - `function Index: Integer;`
+
+            - This function returns an integer value that corresponds to the conversion of a value of the [TSetup4DCEPWebService](#-tsetup4dcepwebservice) enumerated type into an integer value.
+
+         - `function Key(const AValue: string): ISetup4DCEPConfigurationWebServiceZIPCode; overload;`
+
+            - This is a method that allows you to configure the key to be used for authentication when accessing the CEP lookup service.
+
+         - `function Key: string; overload;`
+
+            - This is a method that allows you to retrieve the currently configured key. It returns the key that will be used in requests to the CEP lookup service to access specific information or for authentication, depending on the service's requirements.
+
+         - `function User(const AValue: string): ISetup4DCEPConfigurationWebServiceZIPCode; overload;`
+
+            - This is a method that allows you to configure the username to be used for authentication when accessing the CEP lookup service.
+
          - `function User: string; overload;`
-            
-            - Este é um método que permite obter o nome de usuário atualmente configurado. Ele retorna o nome de usuário que será utilizado nas solicitações ao serviço de consulta de CEP para autenticação, se necessário.
-         
-         - `function Password(const AValue: string): ISetup4DCEPConfigurationWebServiceZIPCode; overload;` e
-            
-            - Este é um método que permite configurar a senha a ser usada para autenticação ao acessar o serviço de consulta de CEP. 
-         
+
+            - This is a method that allows you to retrieve the currently configured username. It returns the username that will be used in requests to the CEP lookup service for authentication, if necessary.
+
+         - `function Password(const AValue: string): ISetup4DCEPConfigurationWebServiceZIPCode; overload;`
+
+            - This is a method that allows you to configure the password to be used for authentication when accessing the CEP lookup service.
+
          - `function Password: string; overload;`
-            
-            - Este é um método que permite obter a senha atualmente configurada. Ele retorna a senha que será utilizada nas solicitações ao serviço de consulta de CEP para autenticação, se necessário.
-         
-         - `function ReturnIBGE(const AValue: Boolean): ISetup4DCEPConfigurationWebServiceZIPCode; overload;` e
-            
-            - Este é um método que possibilita a configuração do serviço de consulta de CEP para determinar se ele deve ou não retornar informações do IBGE.
-         
+
+            - This is a method that allows you to retrieve the currently configured password. It returns the password that will be used in requests to the CEP lookup service for authentication, if necessary.
+
+         - `function ReturnIBGE(const AValue: Boolean): ISetup4DCEPConfigurationWebServiceZIPCode; overload;`
+
+            - This is a method that enables the configuration of the CEP lookup service to determine whether or not it should return IBGE information.
+
          - `function ReturnIBGE: Boolean; overload;`
-            
-            - Este é um método que retorna um valor booleano que indica se o serviço de consulta de CEP também deve retornar informações do IBGE. Quando configurado como verdadeiro, o serviço irá fornecer informações adicionais do IBGE, além dos dados de CEP.
-         
+
+            - This is a method that returns a boolean value indicating whether the CEP lookup service should also return IBGE information. When configured as true, the service will provide additional IBGE information in addition to the CEP data.
+
          - `function Finish: ISetup4DCEPConfigurationWebService;`
 
-            - Este método é responsável por finalizar a configuração do serviço web do CEP e retornar a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice). É utilizado para concluir a configuração do proxy e obter uma referência à instância TSetup4DCepConfigurationWebService. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
-
+            - This method is responsible for finalizing the configuration of the CEP web service and returning the [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) interface. It is used to complete the proxy configuration and obtain a reference to the TSetup4DCepConfigurationWebService instance. Therefore, this line simply returns the reference to the invoking instance.
+   
    2. `function IBGE: ISetup4DCEPConfigurationWebServiceIBGE;`
 
-      - Este método permite obter uma instância da classe que fornece configurações específicas para o serviço de pesquisa do IBGE. Abaixo estão listadas todas as funções existentes:
+      - This method allows you to obtain an instance of the class that provides specific settings for the IBGE lookup service. Below are all the existing functions:
 
-         - `function CacheName(Const AValue: string): ISetup4DCEPConfigurationWebServiceIBGE; overload;`
+         - `function CacheName(const AValue: string): ISetup4DCEPConfigurationWebServiceIBGE; overload;`
            
-           - Este é um método que permite configurar o nome do cache utilizado para armazenar os resultados das consultas ao IBGE.
+           - This is a method that allows you to configure the name of the cache used to store the results of IBGE queries.
 
          - `function CacheName: string; overload;`
 
-           - Este é um método retorna o nome do cache configurado para armazenar os resultados das consultas ao IBGE.
+           - This is a method that returns the name of the cache configured to store the results of IBGE queries.
 
-         - `function CacheValidity (Const AValue: Integer) : ISetup4DCEPConfigurationWebServiceIBGE; overload;`
+         - `function CacheValidity(const AValue: Integer): ISetup4DCEPConfigurationWebServiceIBGE; overload;`
 
-           - Este é um método que permite configurar o tempo de validade do cache para armazenar os resultados das consultas ao IBGE. Ele recebe um valor inteiro representando o tempo de validade em milissegundos.
+           - This is a method that allows you to configure the cache validity time to store the results of IBGE queries. It takes an integer value representing the validity time in milliseconds.
          
-         - `function CacheValidity (Const AValue: string) : ISetup4DCEPConfigurationWebServiceIBGE; overload;`
+         - `function CacheValidity(const AValue: string): ISetup4DCEPConfigurationWebServiceIBGE; overload;`
 
-           - Este é um método que permite configurar o tempo de validade do cache para armazenar os resultados das consultas ao IBGE. Ele recebe uma string representando o tempo de validade em milissegundos.
+           - This is a method that allows you to configure the cache validity time to store the results of IBGE queries. It takes a string representing the validity time in milliseconds.
          
-         - `function CacheValidity : Integer; overload;`
+         - `function CacheValidity: Integer; overload;`
 
-           - Este é um método que permite obter o tempo de validade do cache configurado para armazenar os resultados das consultas relacionadas ao IBGE.
+           - This is a method that allows you to retrieve the cache validity time configured to store the results of IBGE-related queries.
          
-         - `function CacheValidityInStr : string; overload;`
+         - `function CacheValidityInStr: string; overload;`
 
-           - Este é um método que retorna o tempo de validade do cache configurado como uma string.
+           - This is a method that returns the cache validity time configured as a string.
 
-         - `function CacheClear : ISetup4DCEPConfigurationWebServiceIBGE;`
+         - `function CacheClear: ISetup4DCEPConfigurationWebServiceIBGE;`
 
-           - Este é um método que permite limpar o cache de resultados de consultas. 
+           - This is a method that allows you to clear the cache of query results.
 
-         - `function CaseSensitive(Const AValue: Boolean) : ISetup4DCEPConfigurationWebServiceIBGE;  overload;`
+         - `function CaseSensitive(const AValue: Boolean): ISetup4DCEPConfigurationWebServiceIBGE; overload;`
 
-           - Este é um método que permite configurar se a pesquisa é sensível a maiúsculas e minúsculas. 
+           - This is a method that allows you to configure whether the search is case-sensitive or not.
          
-         - `function CaseSensitive : Boolean;  overload;`
+         - `function CaseSensitive: Boolean; overload;`
 
-           - Este é um método que permite obter o estado atual da sensibilidade a maiúsculas e minúsculas na pesquisa.
+           - This is a method that allows you to retrieve the current state of case sensitivity in the search.
 
          - `function Finish: ISetup4DCEPConfigurationWebService;`
 
-            - Este método é responsável por finalizar a configuração do serviço web do IBGE e retornar a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice). É utilizado para concluir a configuração do proxy e obter uma referência à instância TSetup4DCepConfigurationWebService. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+            - This method is responsible for finalizing the configuration of the IBGE web service and returning the [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) interface. It is used to complete the proxy configuration and obtain a reference to the TSetup4DCepConfigurationWebService instance. Therefore, this line simply returns the reference to the invoking instance.
    
-   4. `function TimeOut(const AValue: string): ISetup4DCEPConfigurationWebService; overload;`
-      - Este método é utilizado para configurar o tempo limite para as solicitações no serviço web. Ele aceita um valor que deve ser uma string representando o tempo limite em milissegundos.
-   
-   5. `function TimeOut(const AValue: Integer): ISetup4DCEPConfigurationWebService; overload;`
-      - Este método é utilizado para configurar o tempo limite para as solicitações no serviço web. Ele aceita um valor que deve ser um inteiro representando o tempo limite em milissegundos.
-   
-   6. `function TimeOutInStr: string;`
-      - Este método retorna o valor atual do tempo limite configurado para as solicitações no serviço web, representado como uma string.
-   
-   7. `function TimeOut: Integer;`:
-      - Este método retorna o valor atual do tempo limite configurado para as solicitações no serviço web. 
-   
-   8. `function ParseText(const AValue: Boolean): ISetup4DCEPConfigurationWebService; overload;`
+   3. `function TimeOut(const AValue: string): ISetup4DCEPConfigurationWebService; overload;`
+      
+      - This method is used to configure the timeout for requests in the web service. It accepts a value that should be a string representing the timeout in milliseconds.
 
-      - Este método é usado para configurar a propriedade do Parse Text, que determina se o serviço web deve analisar o texto da resposta. Ele aceita um parâmetro booleano 
-   
-   9. `function ParseText: Boolean;`
+   4. `function TimeOut(const AValue: Integer): ISetup4DCEPConfigurationWebService; overload;`
+      
+      - This method is used to configure the timeout for requests in the web service. It accepts a value that should be an integer representing the timeout in milliseconds.
 
-      - Este método é usado para obter o valor da propriedade ParseText, que representa se o serviço web deve analisar o texto da resposta.
-   
-   10. `function Finish: ISetup4DCEPConfiguration;`
+   5. `function TimeOutInStr: string;`
+      
+      - This method returns the current value of the timeout configured for requests in the web service, represented as a string.
 
-       - Este método é responsável por finalizar a configuração do proxy e retornar a interface [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration). É utilizado para concluir a configuração do proxy e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+   6. `function TimeOut: Integer;`
+      
+      - This method returns the current value of the timeout configured for requests in the web service.
+
+   7. `function ParseText(const AValue: Boolean): ISetup4DCEPConfigurationWebService; overload;`
+      
+      - This method is used to configure the Parse Text property, which determines whether the web service should parse the response text. It accepts a boolean parameter.
+
+   8. `function ParseText: Boolean;`
+      
+      - This method is used to retrieve the value of the ParseText property, which represents whether the web service should parse the response text.
+
+   9. `function Finish: ISetup4DCEPConfiguration;`
+      
+      - This method is responsible for finalizing the proxy configuration and returning the [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration) interface. It is used to complete the proxy configuration and obtain a reference to the TSetup4DCepConfiguration instance. Therefore, this line simply returns the reference to the invoking instance.   
 
 ##### ⚡️ `function Proxy : ISetup4DCEPConfigurationProxy;`
 
-   + Este método fornece uma instância que implementa a interface [ISetup4DCEPConfigurationProxy](#-isetup4dcepconfigurationproxy), permitindo o acesso às configurações dos serviços web. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento. 
+   + This method provides an instance that implements the [ISetup4DCEPConfigurationProxy](#-isetup4dcepconfigurationproxy) interface, allowing access to the web service settings. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
 
       1. `function Host(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
       
-         -  Este método permite configurar o host do proxy utilizado para consultas de CEP ou IBGE. Ele aceita um valor de string.
+         -  This method is used to configure the host of the proxy used for CEP or IBGE queries. It accepts a string value.
       
       2. `function Host : string; overload;`
       
-         - Este método permite obter o valor do host utilizado no proxy para consultas CEP ou IBGE. Retorna uma string que representa o host.
+         - This method is used to retrieve the host value used in the proxy for CEP or IBGE queries. It returns a string representing the host.
       
       3. `function Port(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
       
-         - Este método permite configurar a porta do proxy utilizado para consultas CEP ou IBGE. Ele aceita um valor de string.
+         - This method is used to configure the port of the proxy used for CEP or IBGE queries. It accepts a string value.
       
       4. `function Port(Const AValue: integer) : ISetup4DCEPConfigurationProxy; overload;`
 
-         - Este método permite configurar a porta do proxy utilizado para consultas CEP ou IBGE. Ele aceita um valor de inteiro.
+         - This method is used to configure the port of the proxy used for CEP or IBGE queries. It accepts an integer value.
       
       5. `function Port : integer; overload;`
 
-         - Este método permite obter o valor da porta utilizado no proxy para consultas CEP ou IBGE. Retorna um inteiro que representa a porta.
+         - This method is used to retrieve the port value used in the proxy for CEP or IBGE queries. It returns an integer representing the port.
     
       6. `function PortInStr : string; overload;`
-         - Este método permite obter o valor da porta utilizado no proxy para consultas CEP ou IBGE. Retorna uma string que representa a porta.
+
+         - This method is used to retrieve the port value used in the proxy for CEP or IBGE queries. It returns a string representing the port.
       
       7. `function User(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
       
-         - Este método permite configurar o nome de usuário do proxy utilizado para consultas CEP ou IBGE. Ele aceita um valor de string.
+         - This method is used to configure the username of the proxy used for CEP or IBGE queries. It accepts a string value.
       
       8. `function User : string; overload;`
       
-         - Este método permite obter o nome do usuário utilizado no proxy para consultas de CEP ou IBGE. Retorna uma string que representa o usuário.
+         - This method is used to retrieve the username used in the proxy for CEP or IBGE queries. It returns a string representing the username.
       
       9. `function Password(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
       
-         - Este método permite configurar a senha do proxy utilizado para consultas CEP ou IBGE. Ele aceita um valor de string.
+         - This method is used to configure the password of the proxy used for CEP or IBGE queries. It accepts a string value.
       
       10. `function Password : string; overload;`
 
-          - Este método permite obter a senha do usuário utilizado no proxy para consultas de CEP ou IBGE. Retorna uma string que representa o senha.
+          - This method is used to retrieve the password used in the proxy for CEP or IBGE queries. It returns a string representing the password.
 
       11. `function Finish: ISetup4DCEPConfiguration;`
 
-          - Este método é responsável por finalizar a configuração do proxy e retornar a interface [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration). É utilizado para concluir a configuração do proxy e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+          - This method is responsible for finalizing the proxy configuration and returning the [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration) interface. It is used to complete the proxy configuration and obtain a reference to the TSetup4DCepConfiguration instance. Therefore, this line simply returns the reference to the invoking instance.
 
 ##### ⚡️ `function Finish: ISetup4DCEP;`
 
-   + Este método fornece uma instância que implementa a interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+   + This method provides an instance that implements the [ISetup4DCEP](#-isetup4dcep) interface. It is used to complete the configuration and obtain a reference to the main instance of [TSetup4DCep](#-funções-do-tsetup4dcep). Therefore, this line simply returns the reference to the invoking instance.
      
 #### 🧬 `function Filter : ISetup4DCEPFilter;`
 
-* Este método fornece uma instância que implementa a interface [ISetup4DCEPFilter](#-isetup4dcepfilter), permitindo o acesso às informações dos filtros para pesquisa relacionadas ao CEP e IBGE.É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+* This method provides an instance that implements the [ISetup4DCEPFilter](#-isetup4dcepfilter) interface, allowing access to filter information for CEP and IBGE related searches. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
   
 ##### ⚡️ `function ZipCode:ISetup4DCEPFilterZipCode;`
 
-   + Este método fornece uma instância que implementa a interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode), permitindo o acesso aos filtros de pesquisa do CEP. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+   + This method provides an instance that implements the [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode) interface, allowing access to CEP search filters. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
 
       1. `function Key:ISetup4DCEPFilterZipCodeKey;`
 
-         + Este método fornece uma instância que implementa a interface [ISetup4DCEPFilterZipCodeKey](#-isetup4dcepfilterzipcodekey), permitindo o acesso às configuração do filtro pelo código postal. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento. 
+         + This method provides an instance that implements the [ISetup4DCEPFilterZipCodeKey](#-isetup4dcepfilterzipcodekey) interface, allowing access to key filter configuration for the ZIP code. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development. 
 
             1. `function Value(Const AValue: string) : ISetup4DCEPFilterZipCodeKey; overload;`
 
-               - Esta função permite configurar o valor de consulta para o filtro de CEP.
+               - This function allows you to configure the query value for the ZIP code filter.
             
             2. `function Value : string; overload;`
 
-               - Esta função é usado para obter o filtro definido para o código postal do CEP. Isto é útil para acessar e utilizar os critérios definidos.
+               - This function is used to retrieve the filter set for the ZIP code. This is useful for accessing and using the defined criteria.
 
             3. `function Finish: ISetup4DCEPFilterZipCode;` 
 
-               - Este método é responsável por finalizar a configuração do filtro Zip Code e retornar a interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCEPFilterZipCode. Portanto, esta linha simplesmente retorna a referência à instância que a invocou. 
+               - This method is responsible for finalizing the Zip Code filter configuration and returning the [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode) interface. It is used to complete the filter configuration and obtain a reference to the TSetup4DCEPFilterZipCode instance. Therefore, this line simply returns the reference to the invoking instance. 
             
       2. `function Address:ISetup4DCEPFilterZipCodeAddress;` 
 
-         + Este método fornece uma instância que implementa a interface [ISetup4DCEPFilterZipCodeAddress](#-isetup4dcepfilterzipcodeaddress), permitindo o acesso às configuração do filtro pelo endereço. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento. 
+         + This method provides an instance that implements the [ISetup4DCEPFilterZipCodeAddress](#-isetup4dcepfilterzipcodeaddress) interface, allowing access to address filter configuration. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development. 
 
             1. `function Types(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
 
-               - Está função permite configurar os tipos de logradouro (rua, avenida, praça, jardim, largo, caminho, etc...) a ser considerados na consulta de CEP.
+               - This function allows you to configure the types of street (street, avenue, square, garden, square, path, etc...) to be considered in the CEP query.
             
             2. `function Street(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
 
-               - Está função permite configurar o nome da rua a ser considerados na consulta de CEP.
+               - This function allows you to configure the street name to be considered in the CEP query.
             
             3. `function City(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;` 
 
-               - Está função permite configurar o nome da cidade a ser considerados na consulta de CEP.
+               - This function allows you to configure the city name to be considered in the CEP query.
 
             4. `function StateAbbreviated(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
 
-               - Está função permite configurar a abreviatura do estado a ser considerados na consulta de CEP.
+               - This function allows you to configure the abbreviated state to be considered in the CEP query.
                            
             5. `function StateAbbreviated(Const AValue : TSetup4DUtilityEstadoAbreviado): ISetup4DCEPFilterZipCodeAddress; overload;`
 
-               - Esta função permite configurar o enumerado do Setup4DUtility que contém as abreviaturas dos estados a serem considerados na consulta de CEP.
+               - This function allows you to configure the Setup4DUtility enumerator containing the state abbreviations to be considered in the CEP query.
                            
             6. `function District(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;` 
 
-               - Está função Está função permite configurar o nome da rua a ser considerados na consulta de CEP.
+               - This function allows you to configure the district name to be considered in the CEP query.
                            
             7. `function Types: string; overload;`
 
-               - Está função é usado para obter os tipos de logradouro configurado no filtro de endereço do CEP. Isso pode ser útil para acessar e utilizar os critérios de filtro definidos.
+               - This function is used to retrieve the street types configured in the CEP address filter. This can be useful to access and use the defined filter criteria.
             
             8. `function Street: string; overload;`
 
-               - Está função é usado para obter o nome da rua configurado no filtro de endereço do CEP. Isso pode ser útil para acessar e utilizar os critérios de filtro definidos.
+               - This function is used to retrieve the street name configured in the CEP address filter. This can be useful to access and use the defined filter criteria.
 
             9. `function City: string; overload;` 
 
-               - Está função é usado para obter o nome da cidade configurado no filtro de endereço do CEP. Isso pode ser útil para acessar e utilizar os critérios de filtro definidos.
+               - This function is used to retrieve the city name configured in the CEP address filter. This can be useful to access and use the defined filter criteria.
 
             10. `function StateAbbreviated: string; overload;`
 
-                - Está função é usado para obter a abreviatura do estado configurado no filtro de endereço do CEP. Isso pode ser útil para acessar e utilizar os critérios de filtro definidos.
+                - This function is used to retrieve the state abbreviation configured in the CEP address filter. This can be useful to access and use the defined filter criteria.
             
             11. `function District: string; overload;`
 
-                - Está função é usado para obter o nome do bairro configurado no filtro de endereço do CEP. Isso pode ser útil para acessar e utilizar os critérios de filtro definidos.
-
-            12. `function Finish: ISetup4DCEPFilterZipCode;` 
-
-                - Este método é responsável por finalizar a configuração do filtro do Zip code e retornar a interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCEPFilterZipCode. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
-
-      3. `function Finish: ISetup4DCEPFilter;`
-
-         - Este método é responsável por finalizar a configuração do filtro e retornar a interface [ISetup4DCEPFilter](#-isetup4dcepfilter). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCEPFilter. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+                - This function is used to retrieve the district name configured in the CEP address filter. This can be useful to access and use the defined filter
 
 ##### ⚡️ `function IBGE:ISetup4DCEPFilterIBGE;`
 
-   + Este método fornece uma instância que implementa a interface[ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge), permitindo o acesso aos filtros de pesquisa do IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+   + This method provides an instance that implements the [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge) interface, allowing access to IBGE search filters. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
 
       1. `function Key:ISetup4DCEPFilterIBGEKey;`
 
-         + Este método fornece uma instância que implementa a interface [ISetup4DCEPFilterIBGEKey](#-isetup4dcepfilteribgekey), permitindo o acesso às configuração do filtro pelo código do IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+         + This method provides an instance that implements the [ISetup4DCEPFilterIBGEKey](#-isetup4dcepfilteribgekey) interface, allowing access to key filter configuration for IBGE code. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development. 
 
             1. `function Value(Const AValue: string) : ISetup4DCEPFilterIBGEKey; overload;`
 
-               - Esta função permite configurar o valor de consulta para o filtro do codigo do IBGE.
+               - This function allows you to configure the query value for the IBGE code filter.
 
             2. `function Value : string; overload;`
 
-               - Esta função é usado para obter o filtro definido para o código do IBGE. Isto é útil para acessar e utilizar os critérios definidos.
+               - This function is used to retrieve the filter set for the IBGE code. This is useful for accessing and using the defined criteria.
 
             3. `function Finish: ISetup4DCEPFilterIBGE;` 
 
-               - Este método é responsável por finalizar a configuração do filtro do IBGE e retornar a interface [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCEPFilterIBGE. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+               - This method is responsible for finalizing the IBGE filter configuration and returning the [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge) interface. It is used to complete the filter configuration and obtain a reference to the TSetup4DCEPFilterIBGE instance. Therefore, this line simply returns the reference to the invoking instance.
 
       2. `function Address:ISetup4DCEPFilterIBGEAddress;`
 
-         + Este método fornece uma instância que implementa a interface [ISetup4DCEPFilterIBGEAddress](#-isetup4dcepfilteribgeaddress), permitindo o acesso às configuração do filtro pelo endereço. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.  
+         + This method provides an instance that implements the [ISetup4DCEPFilterIBGEAddress](#-isetup4dcepfilteribgeaddress) interface, allowing access to address filter configuration. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development. 
 
             1. `function City(Const AValue : string): ISetup4DCEPFilterIBGEAddress; overload;`
 
-               - Está função permite configurar o nome da cidade a ser considerados na consulta do IBGE.
+               - This function allows you to configure the city name to be considered in the IBGE query.
             
             2. `function StateAbbreviated(Const AValue : string): ISetup4DCEPFilterIBGEAddress; overload;`
 
-               - Está função permite configurar a abreviatura do estado a ser considerados na consulta do IBGE.
+               - This function allows you to configure the abbreviated state to be considered in the IBGE query.
 
             3. `function StateAbbreviated(Const AValue : TSetup4DUtilityEstadoAbreviado): ISetup4DCEPFilterIBGEAddress; overload;` 
 
-               - Esta função permite configurar o enumerado do Setup4DUtility que contém as abreviaturas dos estados a serem considerados na consulta do IBGE.
+               - This function allows you to configure the Setup4DUtility enumerator containing the state abbreviations to be considered in the IBGE query.
 
             4. `function City: string; overload;`
 
-               - Está função é usado para obter o nome da cidade configurado no filtro de endereço do IBGE. Isso pode ser útil para acessar e utilizar os critérios de filtro definidos.
+               - This function is used to retrieve the city name configured in the IBGE address filter. This can be useful to access and use the defined filter criteria.
             
             5. `function StateAbbreviated: string; overload;`
 
-               - Está função é usado para obter a abreviatura do estado configurado no filtro de endereço do CEP. Isso pode ser útil para acessar e utilizar os critérios de filtro definidos.
+               - This function is used to retrieve the state abbreviation configured in the IBGE address filter. This can be useful to access and use the defined filter criteria.
 
             6. `function Finish: ISetup4DCEPFilterIBGE;` 
 
-               - Este método é responsável por finalizar a configuração do filtro do IBGE e retornar a interface [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCEPFilterIBGE. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+               - This method is responsible for finalizing the IBGE filter configuration and returning the [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge) interface. It is used to complete the filter configuration and obtain a reference to the TSetup4DCEPFilterIBGE instance. Therefore, this line simply returns the reference to the invoking instance.
 
       3. `function Finish: ISetup4DCEPFilter;`
-         - Este método é responsável por finalizar a configuração do filtro e retornar a interface [ISetup4DCEPFilter](#-isetup4dcepfilter). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCEPFilter. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+         - This method is responsible for finalizing the filter configuration and returning the [ISetup4DCEPFilter](#-isetup4dcepfilter). It is used to complete the filter configuration and obtain a reference to the TSetup4DCEPFilter instance. Therefore, this line simply returns the reference to the invoking instance.
 
 ##### ⚡️ `function Clear : ISetup4DCEPFilter;`
 
-   + Este método permite limpar todos os dados do filtro. É aconselhável usar esta função antes de informar o filtro de pesquisa para evitar resultados incorretos ou indesejados.
+   + This method allows clearing all the filter data. It is advisable to use this function before specifying the search filter to avoid incorrect or unwanted results.
      
 ##### ⚡️ `function Finish: ISetup4DCEP;`
 
-   + Este método fornece uma instância que implementa a interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+   + This method provides an instance that implements the [ISetup4DCEP](#-isetup4dcep) interface. It is used to complete the configuration and obtain a reference to the main [TSetup4DCep](#-funções-do-tsetup4dcep) instance. Therefore, this line simply returns the reference to the invoking instance.
 
 #### 🧬 `function Searech : ISetup4DCEPSearech;`
 
-* Este método fornece uma instância que implementa a interface [ISetup4DCEPSearech](#-isetup4dcepsearech), permitindo o acesso à execução relacionada à pesquisa de CEP e IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+* This method provides an instance that implements the [ISetup4DCEPSearech](#-isetup4dcepsearech) interface, allowing access to the execution related to CEP and IBGE search. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
 
 ##### ⚡️ `function ZipCode: ISetup4DCEPSearechZipCode;`
 
-   + Este método fornece uma instância que implementa a interface [ISetup4DCEPSearechZipCode](#-isetup4dcepsearechzipcode), permitindo executar as informações referentes ao filtro da pesquisa do CEP. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+   + This method provides an instance that implements the [ISetup4DCEPSearechZipCode](#-isetup4dcepsearechzipcode) interface, allowing the execution of information related to the CEP search filter. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
 
       1. `function Reconfiguration: ISetup4DCEPSearechZipCode;`
 
-         - Está função reconfigura o proxy e o web service da pesquisa de CEP.
+         - This function reconfigures the proxy and web service for the CEP search.
 
       2. `function Code : ISetup4DCEPSearechZipCode;` 
 
-         - Esta função efetua a pesquisa do código postal referente ao CEP, validando sua existência e a presença de informações. Ademais, lida com exceções relacionadas à ausência de DLLs da OpenSSL.
+         - This function performs the search for the postal code related to the CEP, validating its existence and the presence of information. Additionally, it handles exceptions related to the absence of OpenSSL DLLs.
 
       3. `function Address : ISetup4DCEPSearechZipCode;`
 
-         - Esta função é encarregada de executar uma consulta do CEP com base nas informações do endereço fornecidas. Ela verifica se todos os dados essenciais foram informados e trata possíveis exceções que possam surgir durante a consulta. 
+         - This function is responsible for executing a CEP query based on the provided address information. It verifies if all essential data has been provided and handles any exceptions that may arise during the query.
 
       4. `function Component : TComponent;`
  
-         - Essa função permite adquirir um componente relacionado a consulta do CEP que possibilita o acesso a funcionalidades adicionais.
+         - This function allows you to acquire a component related to the CEP query, providing access to additional features.
 
       5. `function Finish: ISetup4DCEPSearech;`
 
-         - Este método fornece uma instância que implementa a interface [ISetup4DCEPSearech](#-isetup4dcepsearech). É utilizado para concluir a execução e obter uma referência à instância principal de TSetup4DCEPSearech. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+         - This method provides an instance that implements the [ISetup4DCEPSearech](#-isetup4dcepsearech) interface. It is used to complete the execution and obtain a reference to the main TSetup4DCEPSearech instance. Therefore, this line simply returns the reference to the invoking instance.
 
 ##### ⚡️ `function IBGE: ISetup4DCEPSearechIBGE;`
 
-   + Este método fornece uma instância que implementa a interface [ISetup4DCEPSearechIBGE](#-isetup4dcepsearechibge), permitindo executar as informações referentes ao filtro da pesquisa do IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+   + This method provides an instance that implements the [ISetup4DCEPSearechIBGE](#-isetup4dcepsearechibge) interface, allowing the execution of information related to the IBGE search filter. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
 
       1. `function Reconfiguration: ISetup4DCEPSearechIBGE;`
 
-         - Está função reconfigura o proxy e o web service da pesquisa do IBGE.
+         - This function reconfigures the proxy and web service for the IBGE search.
 
       2. `function Code : ISetup4DCEPSearechIBGE;`
 
-         - Esta função efetua a pesquisa do código referente ao IBGE, validando sua existência e a presença de informações. Ademais, lida com exceções relacionadas à ausência de DLLs da OpenSSL.
+         - This function performs the search for the IBGE code, validating its existence and the presence of information. Additionally, it handles exceptions related to the absence of OpenSSL DLLs.
 
       3. `function State : ISetup4DCEPSearechIBGE;`
 
-         - Está função permite buscar informações do IBGE relacionadas a um estado (UF) com base no filtro fornecido, tratando exceções específicas relacionadas a erros que podem ocorrer durante o processo de busca. 
+         - This function allows you to retrieve IBGE information related to a state (UF) based on the provided filter, handling specific exceptions related to errors that may occur during the search process.
 
       4. `function City : ISetup4DCEPSearechIBGE;` 
 
-         - Está função permite buscar informações do IBGE relacionadas a uma cidade com base no filtro fornecido, tratando exceções específicas relacionadas a erros que podem ocorrer durante o processo de busca. 
+         - This function allows you to retrieve IBGE information related to a city based on the provided filter, handling specific exceptions related to errors that may occur during the search process.
 
       5. `function Component : TComponent;`
 
-         - Está função permite adquirir um componente relacionado a consulta do IBGE que possibilita o acesso a funcionalidades adicionais.  
+         - This function allows you to acquire a component related to the IBGE query, providing access to additional features.
 
       6. `function Finish: ISetup4DCEPSearech;`
 
-         - Este método fornece uma instância que implementa a interface [ISetup4DCEPSearech](#-isetup4dcepsearech). É utilizado para concluir a execução e obter uma referência à instância principal de TSetup4DCEPSearech. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+         - This method provides an instance that implements the [ISetup4DCEPSearech](#-isetup4dcepsearech) interface. It is used to complete the execution and obtain a reference to the main TSetup4DCEPSearech instance. Therefore, this line simply returns the reference to the invoking instance.
 
 ##### ⚡️ `function Finish: ISetup4DCEP;`
 
-   + Este método fornece uma instância que implementa a interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+   + This method provides an instance that implements the [ISetup4DCEP](#-isetup4dcep) interface. It is used to complete the configuration and obtain a reference to the main [TSetup4DCep](#-funções-do-tsetup4dcep) instance. Therefore, this line simply returns the reference to the invoking instance.
 
 #### 🧬 `function Result : ISetup4DCEPResult;`
 
-* Este método fornece uma instância que implementa a interface [ISetup4DCEPResult](#-isetup4dcepresult), permitindo o acesso aos resultados relacionados à pesquisa de CEP e IBGE. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+* This method provides an instance that implements the [ISetup4DCEPResult](#-isetup4dcepresult) interface, allowing access to results related to the CEP and IBGE search. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
 
 ##### ⚡️ `function ZipCode: ISetup4DCEPResultZipCode;`
 
-   + Este método fornece uma instância que implementa a interface [ISetup4DCEPResultZipCode](#-isetup4dcepresultzipcode), apresentando o resultado do CEP referente à execução dos filtros da pesquisa informados. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+   + This method provides an instance that implements the [ISetup4DCEPResultZipCode](#-isetup4dcepresultzipcode) interface, presenting the result of the CEP regarding the execution of the specified search filters. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
 
       1. `function Display: iSetup4DCEPResultZipCodeDisplay;`
 
-         - Essa função exibe os resultados de uma consulta do CEP após realizar a conversão necessária. Ela retorna uma instância pronta para a exibição dos resultados, conforme as opções a seguir:
+         - This function displays the results of a CEP query after performing the necessary conversion. It returns an instance ready to display the results, as follows:
 
             1. `function Code : string;`
 
-               - Essa função obtém o código postal do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
+               - This function retrieves the postal code of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             2. `function Types : string;`
 
-               - Essa função obtém o tipo de logradouro (rua, avenida, praça, jardim, largo, caminho, etc...)  do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
+               - This function retrieves the type of street (e.g., street, avenue, square, garden, lane, etc.) of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             3. `function Street : string;` 
 
-               - Essa função obtém o nome da rua do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
+               - This function retrieves the street name of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             4. `function StreetComplete : string;` 
 
-               - Essa função obtém o tipo e nome da rua do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
+               - This function retrieves the type and name of the street of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             5. `function Complement : string;`
 
-               - Essa função obtém o complemento do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
+               - This function retrieves the complement of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             6. `function District : string;` 
 
-               - Essa função obtém o bairro do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
+               - This function retrieves the district of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             7. `function City : string;` 
 
-               - Essa função obtém a cidade do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
+               - This function retrieves the city of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             8. `function IBGECity : string;`
 
-               - Essa função obtém o código IBGE da cidade do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.    
+               - This function retrieves the IBGE code of the city of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             9. `function State : string;` 
 
-               - Essa função obtém o estado do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
+               - This function retrieves the state of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             10. `function IBGEState : string;`
 
-                - Essa função obtém o código IBGE do estado do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
+                - This function retrieves the IBGE code of the state of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             11. `function DDD : string;` 
 
-                - Essa função obtém o DDD (DISCAGEM DIRETA A DISTÂNCIA) do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
+                - This function retrieves the DDD (Direct Distance Dialing) of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             12. `function GIA : string;`
 
-                - Essa função obtém a GIA (Guia Nacional de Informação e Apuração do ICMS) do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
+                - This function retrieves the GIA (National Guide for Information and ICMS Assessment) of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             13. `function SIAFI : string;`
 
-                - Essa função obtém a SIAFI (Sistema Integrado de Administração Financeira) do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.  
+                - This function retrieves the SIAFI (Integrated Financial Administration System) of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             14. `function Altitude : string;` 
 
-                - Essa função obtém a altitude do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
+                - This function retrieves the altitude of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             15. `function Latitude : string;`
 
-                - Essa função obtém a latitude do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
+                - This function retrieves the latitude of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             16. `function Longitude : string;`
 
-                - Essa função obtém a longitude do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
+                - This function retrieves the longitude of the CEP contained in the JSON object, provided that the JSON object has been informed.
 
             17. `function JSON (Const AValue: TJSONObject) : iSetup4DCEPResultZipCodeDisplay; overload;` 
 
-                - Este método obtém o objeto JSON que contém os resultados da consulta do CEP e, em seguida, verifica se o objeto foi informado antes de realizar as atribuições nos campos.
+                - This method retrieves the JSON object containing the CEP query results and then checks if the object was provided before making assignments to the fields.
 
             18. `function Finish: iSetup4DCEPResultZipCode;` 
 
-                - Este método fornece uma instância que implementa a interface [iSetup4DCEPResultZipCode](#-isetup4dcepresultZipCode). É utilizado para concluir a execução e obter uma referência à instância principal de TSetup4DCEPResultZipCode. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+                - This method provides an instance that implements the [iSetup4DCEPResultZipCode](#-isetup4dcepresultZipCode) interface. It is used to complete the execution and obtain a reference to the main TSetup4DCEPResultZipCode instance. Therefore, this line simply returns the reference to the invoking instance.
 
       2. `function JSONObject(out AValue : TJSONObject): ISetup4DCEPResultZipCode; overload;` 
 
-         - Este método possibilita obter um objeto JSON contendo os resultados da consulta do CEP.
+         - This method allows you to obtain a JSON object containing the results of the CEP query.
 
       3. `function JSONObject: TJSONObject; overload;`
 
-         - Este método possibilita obter o objeto JSON com os resultados da consulta do CEP.
+         - This method allows you to obtain the JSON object with the results of the CEP query.
 
       4. `function JSONObjectInStr: String; overload;`
 
-         - Este método possibilita obter o objeto JSON String com os resultados da consulta do CEP. 
+         - This method allows you to obtain the JSON object as a JSON string with the results of the CEP query.
 
       5. `function JSONArray: TJSONArray; overload;`
 
-         - Este método possibilita obter o objeto JSON Array com os resultados da consulta do CEP.
+         - This method allows you to obtain the JSON object as a JSON array with the results of the CEP query.
 
       6. `function RecordCount : Int64;`
 
-         - Este método possibilita obter o total de endereços encontrado (Inteiro) com os resultados da consulta de CEP.
+         - This method allows you to obtain the total number of addresses found (Integer) with the CEP query results.
 
       7. `function RecordCountInStr : string;`
 
-         - Este método possibilita obter o total de endereços encontrado (String) com os resultados da consulta de CEP.
+         - This method allows you to obtain the total number of addresses found (String) with the CEP query results.
 
       8. `function Finish: ISetup4DCEPResult;`
 
-         - Este método fornece uma instância que implementa a interface [ISetup4DCEPResult](#-isetup4dcepresult). É utilizado para concluir a execução e obter uma referência à instância principal de TSetup4DCEPResult. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+         - This method provides an instance that implements the [ISetup4DCEPResult](#-isetup4dcepresult). It is used to complete the execution and obtain a reference to the main TSetup4DCEPResult instance. Therefore, this line simply returns the reference to the invoking instance.
 
 ##### ⚡️ `function IBGE: ISetup4DCEPResultIBGE;`
 
-   + Este método fornece uma instância que implementa a interface [ISetup4DCEPResultIBGE](#-isetup4dcepresultibge), apresentando o resultado do IBGE referente à execução dos filtros da pesquisa informados. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento.
+   + This method provides an instance that implements the [ISetup4DCEPResultIBGE](#-isetup4dcepresultibge) interface, presenting the result of the IBGE regarding the execution of the specified search filters. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
 
       1. `function Display: iSetup4DCEPResultIBGEDisplay;`
 
-         - Essa função exibe os resultados de uma consulta do IBGE após realizar a conversão necessária. Ela retorna uma instância pronta para a exibição dos resultados, conforme as opções a seguir:
+         - This function displays the results of an IBGE query after performing the necessary conversion. It returns an instance ready to display the results, as follows:
 
             1. `function StateCode : string;` 
 
-               - Essa função obtém o código do IBGE do estado contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
+               - This function retrieves the IBGE code of the state contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             2. `function State : string;` 
 
-               - Essa função obtém o estado do IBGE contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
+               - This function retrieves the state of the IBGE contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
 
             3. `function CityCode : string;`
 
-               - Essa função obtém o código do IBGE da cidade contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
+               - This function retrieves the IBGE code of the city contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown. 
 
             4. `function City : string;` 
 
-               - Essa função obtém a cidade do IBGE contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.    
+               - This function retrieves the city of the IBGE contained in the JSON object, provided that the JSON object has been informed.
 
             5. `function Zone : string;` 
 
-               - Essa função obtém o tamanho da área do IBGE contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
+               - This function retrieves the area size of the IBGE contained in the JSON object, provided that the JSON object has been informed. 
 
             6. `function JSON (Const AValue: TJSONObject) : iSetup4DCEPResultIBGEDisplay; overload;` 
 
-               - Este método obtém o objeto JSON que contém os resultados da consulta do CEP e, em seguida, verifica se o objeto foi informado antes de realizar as atribuições nos campos.
+               - This method retrieves the JSON object containing the IBGE query results and then checks if the object was provided before making assignments to the fields.
 
             7. `function Finish: iSetup4DCEPResultIBGE;`
 
-               - Este método fornece uma instância que implementa a interface [iSetup4DCEPResultIBGE](#-isetup4dcepresultibge). É utilizado para concluir a execução e obter uma referência à instância principal de TSetup4DCEPResultIBGE. Portanto, esta linha simplesmente retorna a referência à instância que a invocou. 
+               - This method provides an instance that implements the [iSetup4DCEPResultIBGE](#-isetup4dcepresultibge) interface. It is used to complete the execution and obtain a reference to the main TSetup4DCEPResultIBGE instance.
 
       2. `function JSONObject(out AValue : TJSONObject): ISetup4DCEPResultIBGE; overload;` 
 
-         - Este método possibilita obter um objeto JSON contendo os resultados da consulta do IBGE.
+         - This method allows you to obtain a JSON object containing the results of the IBGE query.
 
       3. `function JSONObject: TJSONObject; overload;`
 
-         - Este método possibilita obter o objeto JSON com os resultados da consulta do IBGW.
+         - This method allows you to obtain the JSON object with the results of the IBGE query.
 
       4. `function JSONObjectInStr: String; overload;` 
 
-         - Este método possibilita obter o objeto JSON String com os resultados da consulta do CEP.
+         - This method allows you to obtain the JSON object as a JSON string with the results of the IBGE query.
 
       5. `function Finish: ISetup4DCEPResult;`
 
-         - Este método fornece uma instância que implementa a interface [ISetup4DCEPResult](#-isetup4dcepresult). É utilizado para concluir a execução e obter uma referência à instância principal de TSetup4DCEPResult. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+         - This method provides an instance that implements the [ISetup4DCEPResult](#-isetup4dcepresult). It is used to complete the execution and obtain a reference to the main TSetup4DCEPResult instance. Therefore, this line simply returns the reference to the invoking instance.
 
 ##### ⚡️ `function Finish: ISetup4DCEP;`
 
-   + Este método fornece uma instância que implementa a interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+   + This method provides an instance that implements the [ISetup4DCEP](#-isetup4dcep) interface. It is used to complete the configuration and obtain a reference to the main [TSetup4DCep](#-funções-do-tsetup4dcep) instance. Therefore, this line simply returns the reference to the invoking instance.
