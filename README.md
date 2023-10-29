@@ -782,3 +782,442 @@ Welcome to the Setup4DCEP project repository! This application was developed to 
 ##### ⚡️ `function Finish: ISetup4DCEP;`
 
    + This method provides an instance that implements the [ISetup4DCEP](#-isetup4dcep) interface. It is used to complete the configuration and obtain a reference to the main [TSetup4DCep](#-funções-do-tsetup4dcep) instance. Therefore, this line simply returns the reference to the invoking instance.
+
+### ⚙️ Usage Example
+
+   - This example describes the initial configuration required to use the library.
+
+      ```Delphi
+      uses
+        Setup4D.CEP,
+        Setup4D.CEP.interf;
+      ```
+
+      ```Delphi
+      var
+        FCEP: ISetup4DCEP;
+      ```
+
+      ```Delphi
+      initialization
+         FCEP := TSetup4DCEP.New;
+
+      finalization
+         FCEP := Nil;
+      ```
+
+   - In this example, we demonstrate how to search for a ZIP code based on the postal code.
+
+      ```Delphi
+      begin
+        FCEP
+          .Configuration
+            .WebService
+               .ZipCode
+                  .WSCep // Other servers can be defined.
+                     .User('[ENTER YOUR WEB SERVICE USER]')
+                     .Password('[ENTER YOUR WEB SERVICE PASSWORD]')
+                     .Key('[ENTER YOUR WEB SERVICE KEY]')
+                     .ReturnIBGE('[INDICATE IBGE RETURN]')
+              .Finish
+              .TimeOut('[ENTER TIMEOUT]')
+              .ParseText('[ENTER TEXT PARSE TREATMENT]')
+            .Finish
+            .Proxy
+              .Host('[ENTER PROXY HOST]')
+              .Port('[ENTER PROXY PORT]')
+              .User('[ENTER PROXY USER]')
+              .Password('[ENTER PROXY PASSWORD]')
+            .Finish
+          .Finish
+          .Filter
+            .Clear
+            .ZipCode
+              .Key
+                .Value('[ENTER FILTER]')
+              .Finish
+            .Finish
+          .Finish
+          .Search
+            .ZipCode
+              .Reconfiguration
+              .Code
+            .Finish
+          .Finish;
+      end;
+      ```
+
+   - In this example, we demonstrate how to search for a ZIP code based on the address.
+
+      ```Delphi
+      begin
+        FCEP
+          .Configuration
+            .WebService
+              .ZipCode
+                  .WSCep // Other servers can be defined.
+                     .User('[ENTER YOUR WEB SERVICE USER]')
+                     .Password('[ENTER YOUR WEB SERVICE PASSWORD]')
+                     .Key('[ENTER YOUR WEB SERVICE KEY]')
+                     .ReturnIBGE('[INDICATE IBGE RETURN]')
+              .Finish
+              .TimeOut('[ENTER TIMEOUT]')
+              .ParseText('[ENTER TEXT PARSE TREATMENT]')
+            .Finish
+            .Proxy
+              .Host('[ENTER PROXY HOST]')
+              .Port('[ENTER PROXY PORT]')
+              .User('[ENTER PROXY USER]')
+              .Password('[ENTER PROXY PASSWORD]')
+            .Finish
+          .Finish
+          .Filter
+            .Clear
+            .ZipCode
+              .Address
+                .Types('[ENTER STREET TYPE]')
+                .Street('[ENTER STREET NAME]')
+                .City('[ENTER CITY]')
+                .StateAbbreviated('[ENTER STATE]')
+                .District('[ENTER DISTRICT]')
+              .Finish
+            .Finish
+          .Finish
+          .Search
+            .ZipCode
+              .Reconfiguration
+              .Code
+            .Finish
+          .Finish;
+      end;
+      ```
+
+   - In this example, we demonstrate how to search for IBGE information based on a specific code.
+
+      ```Delphi
+      begin
+         FCEP
+          .Configuration
+            .WebService
+               .IBGE
+                  .CaseSensitive('[INDICATE TEXT SENSITIVITY]')
+                  .CacheName('[ENTER CACHE LOCATION AND FILE NAME]')
+                  .CacheValidity('[ENTER CACHE VALIDITY]')
+               .Finish
+               .TimeOut('[ENTER TIMEOUT]')
+               .ParseText('[ENTER TEXT PARSE TREATMENT]')
+            .Finish
+            .Proxy
+              .Host('[ENTER PROXY HOST]')
+              .Port('[ENTER PROXY PORT]')
+              .User('[ENTER PROXY USER]')
+              .Password('[ENTER PROXY PASSWORD]')
+            .Finish
+          .Finish
+          .Filter
+            .Clear
+            .IBGE
+              .Key
+                .Value('[ENTER IBGE CODE]')
+              .Finish
+            .Finish
+          .Finish
+          .Search
+            .IBGE
+              .Reconfiguration
+              .Code
+            .Finish
+          .Finish
+          .Configuration
+            .WebService
+              .IBGE
+                .CacheClear
+              .Finish
+            .Finish
+          .Finish;
+      end;
+      ```
+
+   - In this example, we demonstrate how to search for IBGE information based on a specific state.
+
+      ```Delphi
+      begin
+         FCEP
+          .Configuration
+            .WebService
+               .IBGE
+                  .CaseSensitive('[INDICATE TEXT SENSITIVITY]')
+                  .CacheName('[ENTER CACHE LOCATION AND FILE NAME]')
+                  .CacheValidity('[ENTER CACHE VALIDITY]')
+               .Finish
+                 .TimeOut('[ENTER TIMEOUT]')
+                 .ParseText('[ENTER TEXT PARSE TREATMENT]')
+            .Finish
+            .Proxy
+              .Host('[ENTER PROXY HOST]')
+              .Port('[ENTER PROXY PORT]')
+              .User('[ENTER PROXY USER]')
+              .Password('[ENTER PROXY PASSWORD]')
+            .Finish
+          .Finish
+          .Filter
+            .Clear
+            .IBGE
+              .Address
+                .StateAbbreviated('[ENTER STATE]')
+              .Finish
+            .Finish
+          .Finish
+          .Search
+            .IBGE
+              .Reconfiguration
+              .Code
+            .Finish
+          .Finish
+          .Configuration
+            .WebService
+              .IBGE
+                .CacheClear
+              .Finish
+            .Finish
+          .Finish;
+      end;
+      ```
+
+   - In this example, we demonstrate how to search for IBGE information based on a specific city.
+
+      ```Delphi
+      begin
+         FCEP
+          .Configuration
+            .WebService
+               .IBGE
+                  .CaseSensitive('[INDICATE TEXT SENSITIVITY]')
+                  .CacheName('[ENTER CACHE LOCATION AND FILE NAME]')
+                  .CacheValidity('[ENTER CACHE VALIDITY]')
+               .Finish
+                 .TimeOut('[ENTER TIMEOUT]')
+                 .ParseText('[ENTER TEXT PARSE TREATMENT]')
+            .Finish
+            .Proxy
+              .Host('[ENTER PROXY HOST]')
+              .Port('[ENTER PROXY PORT]')
+              .User('[ENTER PROXY USER]')
+              .Password('[ENTER PROXY PASSWORD]')
+            .Finish
+          .Finish
+          .Filter
+            .Clear
+            .IBGE
+              .Address
+                .City('[ENTER CITY]')
+                .StateAbbreviated('[ENTER STATE]')
+              .Finish
+            .Finish
+          .Finish
+          .Search
+            .IBGE
+              .Reconfiguration
+              .Code
+            .Finish
+          .Finish
+          .Configuration
+            .WebService
+              .IBGE
+                .CacheClear
+              .Finish
+            .Finish
+          .Finish;
+      end;
+      ```
+
+   - In this example, we demonstrate how to obtain ZIP code results through fields.
+
+      ```Delphi
+      var
+         Memo: TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+
+         Memo.Lines.Clear;
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add('Variable Return');
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add('CEP: ' + FCEP.Result.ZIPCode.Display.Code);
+         Memo.Lines.Add('Type: ' + FCEP.Result.ZIPCode.Display.Types);
+         Memo.Lines.Add('Street: ' + FCEP.Result.ZIPCode.Display.Street);
+         Memo.Lines.Add('Complete Street: ' + FCEP.Result.ZIPCode.Display.StreetComplete);
+         Memo.Lines.Add('Complement: ' + FCEP.Result.ZIPCode.Display.Complement);
+         Memo.Lines.Add('District: ' + FCEP.Result.ZIPCode.Display.District);
+         Memo.Lines.Add('City: ' + FCEP.Result.ZIPCode.Display.City);
+         Memo.Lines.Add('IBGE City: ' + FCEP.Result.ZIPCode.Display.IBGECity);
+         Memo.Lines.Add('State: ' + FCEP.Result.ZIPCode.Display.State);
+         Memo.Lines.Add('IBGE State: ' + FCEP.Result.ZIPCode.Display.IBGEState);
+         Memo.Lines.Add('DDD: ' + FCEP.Result.ZIPCode.Display.DDD);
+         Memo.Lines.Add('GIA (Tax Collection Information Management): ' + FCEP.Result.ZIPCode.Display.GIA);
+         Memo.Lines.Add('SIAFI (Integrated Financial Administration System): ' + FCEP.Result.ZIPCode.Display.SIAFI);
+         Memo.Lines.Add('Altitude: ' + FCEP.Result.ZIPCode.Display.Altitude);
+         Memo.Lines.Add('Latitude: ' + FCEP.Result.ZIPCode.Display.Latitude);
+         Memo.Lines.Add('Longitude: ' + FCEP.Result.ZIPCode.Display.Longitude);
+      end;
+      ```
+
+   - In this example, we demonstrate how to obtain ZIP code results in formatted JSON.
+
+      ```Delphi
+      var
+         Memo: TMemo;
+         LJSON: TJSONObject;
+      begin
+         Memo := TMemo.Create(Self);
+
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add('Formatted JSON');
+         Memo.Lines.Add(FCEP.Result.ZIPCode.JSONObject.Format);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+
+   - In this example, we demonstrate how to obtain ZIP code results as a JSON object.
+
+      ```Delphi
+      var
+         Memo: TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add('JSON Object Return');
+         Memo.Lines.Add(FCEP.Result.ZIPCode.JSONObject.ToJSON);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+
+   - In this example, we demonstrate how to obtain ZIP code results as a JSON string.
+
+      ```Delphi
+      var
+         Memo: TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add('String Return');
+         Memo.Lines.Add(FCEP.Result.ZIPCode.JSONObjectInStr);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+
+   - In this example, we demonstrate how to obtain the total number of located ZIP codes.
+
+      ```Delphi
+      var
+         Memo: TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add('Record Count');
+         Memo.Lines.Add('Total: ' + FCEP.Result.ZIPCode.RecordCount.ToString);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+
+   - In this example, we demonstrate how to obtain the total number of located ZIP codes as a string.
+
+      ```Delphi
+      var
+         Memo: TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add('Record Count (String)');
+         Memo.Lines.Add('Total: ' + FCEP.Result.ZIPCode.RecordCountInStr);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+
+   - In this example, we demonstrate how to obtain IBGE results through fields.
+
+      ```Delphi
+      var
+         Memo: TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+
+         Memo.Lines.Clear;
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add('Variable Return');
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add('UF Code: ' + FCEP.Result.IBGE.Display.StateCode);
+         Memo.Lines.Add('State: ' + FCEP.Result.IBGE.Display.State);
+         Memo.Lines.Add('City Code: ' + FCEP.Result.IBGE.Display.CityCode);
+         Memo.Lines.Add('City: ' + FCEP.Result.IBGE.Display.City);
+         Memo.Lines.Add('Zone: ' + FCEP.Result.IBGE.Display.Zone);
+      end;
+      ```
+
+   - In this example, we demonstrate how to obtain IBGE results in formatted JSON.
+
+      ```Delphi
+      var
+         Memo: TMemo;
+         LJSON: TJSONObject;
+      begin
+         Memo := TMemo.Create(Self);
+
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add('Formatted JSON');
+         Memo.Lines.Add(FCEP.Result.IBGE.JSONObject.Format);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+
+   - In this example, we demonstrate how to obtain IBGE results as a JSON object.
+
+      ```Delphi
+      var
+         Memo: TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add('JSON Object Return');
+         Memo.Lines.Add(FCEP.Result.IBGE.JSONObject.ToJSON);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+
+   - In this example, we demonstrate how to obtain IBGE results as a JSON string.
+
+      ```Delphi
+      var
+         Memo: TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add('String Return');
+         Memo.Lines.Add(FCEP.Result.IBGE.JSONObjectInStr);
+         Memo.Lines.Add( StringOfChar('-', 20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
