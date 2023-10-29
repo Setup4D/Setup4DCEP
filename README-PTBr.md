@@ -855,7 +855,7 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
       end;
       ```
 
-   - Este exemplo demonstra como pesquisar um CEP com base no endereço
+   - Neste exemplo, demonstra como pesquisar um CEP com base no endereço
       
       ```Delphi
       begin
@@ -992,7 +992,7 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
       end;
       ```
 
-   - Neste último exemplo, é demonstrado como pesquisar informações do IBGE com base em uma cidade específica
+   - Neste exemplo, é demonstrado como pesquisar informações do IBGE com base em uma cidade específica
      
       ```Delphi
       begin
@@ -1036,5 +1036,249 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
               .Finish
             .Finish
           .Finish;
+      end;
+      ```
+
+  - Neste exemplo, é demonstrado como obter o resultado do cep pelos campos
+     
+      ```Delphi
+      var
+         Memo : TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+        
+         Memo.Lines.Clear;
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add('Retorno por variável');
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add('CEP: ' + FCEP.Result.ZIPCode.Display.Code);
+         Memo.Lines.Add('Tipo: '+ FCEP.Result.ZIPCode.Display.Types);
+         Memo.Lines.Add('Rua: ' + FCEP.Result.ZIPCode.Display.Street);
+         Memo.Lines.Add('Rua Completa: ' + FCEP.Result.ZIPCode.Display.StreetComplete);
+         Memo.Lines.Add('Complemento: ' + FCEP.Result.ZIPCode.Display.Complement);
+         Memo.Lines.Add('Bairro: ' + FCEP.Result.ZIPCode.Display.District);
+         Memo.Lines.Add('Cidade: '+ FCEP.Result.ZIPCode.Display.City);
+         Memo.Lines.Add('IBGE Cidade: ' + FCEP.Result.ZIPCode.Display.IBGECity);
+         Memo.Lines.Add('Estado: ' + FCEP.Result.ZIPCode.Display.State);
+         Memo.Lines.Add('IBGE Estado: ' + FCEP.Result.ZIPCode.Display.IBGEState);
+         Memo.Lines.Add('DDD: ' + FCEP.Result.ZIPCode.Display.DDD);
+         Memo.Lines.Add('GIA (Gerência de Informações de Arrecadação): ' + FCEP.Result.ZIPCode.Display.GIA);
+         Memo.Lines.Add('SIAFI (Sistema Integrado de Administração Financeira): ' + FCEP.Result.ZIPCode.Display.SIAFI);
+         Memo.Lines.Add('Altitude: ' + FCEP.Result.ZIPCode.Display.Altitude);
+         Memo.Lines.Add('Latitude: ' + FCEP.Result.ZIPCode.Display.Latitude);
+         Memo.Lines.Add('Longitude: ' + FCEP.Result.ZIPCode.Display.Longitude);
+      end;
+      ```
+
+  - Neste exemplo, é demonstrado como obter o resultado do cep pelos json formatado
+     
+      ```Delphi
+      var
+         Memo : TMemo;
+         LJSON : TJSONObject;
+      begin
+         Memo := TMemo.Create(Self);
+        
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add('JSON Formatado');
+         Memo.Lines.Add(FCEP.Result.ZIPCode.JSONObject.Format);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```     
+
+  - Neste exemplo, é demonstrado como obter o resultado do cep por uma saida JSON
+     
+      ```Delphi
+      var
+         Memo : TMemo;
+         LJSON : TJSONObject;
+      begin
+         Memo := TMemo.Create(Self);
+        
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add('Retorno TJSONObject por OUT');
+         FCEP.Result.ZIPCode.JSONObject(LJSON);
+         Memo.Lines.Add(LJSON.ToString);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+
+   - Neste exemplo, é demonstrado como obter o resultado do cep pelo JSON objeto
+     
+      ```Delphi
+      var
+         Memo : TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+        
+        Memo.Lines.Add(EmptyStr);
+        Memo.Lines.Add( StringOfChar('-',20) );
+        Memo.Lines.Add('Retorno do TJSONObject');
+        Memo.Lines.Add(FCEP.Result.ZIPCode.JSONObject.ToJSON);
+        Memo.Lines.Add( StringOfChar('-',20) );
+        Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+
+   - Neste exemplo, é demonstrado como obter o resultado do cep pelo JSON string
+     
+      ```Delphi
+      var
+         Memo : TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+        
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add('Retorno por String');
+         Memo.Lines.Add(FCEP.Result.ZIPCode.JSONObjectInStr);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+
+   - Neste exemplo, é demonstrado como obter o resultado do cep pelo JSON Array
+     
+      ```Delphi
+      var
+         Memo : TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+        
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add('JSON Array');
+         Memo.Lines.Add(FCEP.Result.ZIPCode.JSONArray.Format);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+
+   - Neste exemplo, é demonstrado como obter o total de cep localizado
+     
+      ```Delphi
+      var
+         Memo : TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+        
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add('Total de Registro');
+         Memo.Lines.Add('Total: ' + FCEP.Result.ZIPCode.RecordCount.ToString);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+   - Neste exemplo, é demonstrado como obter o total de cep localizado em string
+     
+      ```Delphi
+      var
+         Memo : TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+        
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add('Total de Registro (String)');
+         Memo.Lines.Add('Total: ' + FCEP.Result.ZIPCode.RecordCountInStr);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+  - Neste exemplo, é demonstrado como obter o resultado do IBGE pelos campos
+     
+      ```Delphi
+      var
+         Memo : TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+        
+         Memo.Lines.Clear;
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add('Retorno por variável');
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add('Código UF: ' + FCEP.Result.IBGE.Display.StateCode);
+         Memo.Lines.Add('UF: '+ FCEP.Result.IBGE.Display.State);
+         Memo.Lines.Add('Código Município: ' + FCEP.Result.IBGE.Display.CityCode);
+         Memo.Lines.Add('Município: ' + FCEP.Result.IBGE.Display.City);
+         Memo.Lines.Add('Área: ' + FCEP.Result.IBGE.Display.Zone);
+      end;
+      ```
+
+  - Neste exemplo, é demonstrado como obter o resultado do IBGE pelos json formatado
+     
+      ```Delphi
+      var
+         Memo : TMemo;
+         LJSON : TJSONObject;
+      begin
+         Memo := TMemo.Create(Self);
+        
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add('JSON Formatado');
+         Memo.Lines.Add(FCEP.Result.IBGE.JSONObject.Format);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```     
+
+  - Neste exemplo, é demonstrado como obter o resultado do cep por uma saida JSON
+     
+      ```Delphi
+      var
+         Memo : TMemo;
+         LJSON : TJSONObject;
+      begin
+         Memo := TMemo.Create(Self);
+        
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add('Retorno TJSONObject por OUT');
+         FCEP.Result.IBGE.JSONObject(LJSON);
+         Memo.Lines.Add(LJSON.ToString);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+
+   - Neste exemplo, é demonstrado como obter o resultado do IBGE pelo JSON objeto
+     
+      ```Delphi
+      var
+         Memo : TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+        
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add('Retorno do TJSONObject');
+         Memo.Lines.Add(FCEP.Result.IBGE.JSONObject.ToJSON);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add(EmptyStr);
+      end;
+      ```
+
+   - Neste exemplo, é demonstrado como obter o resultado do IBGE pelo JSON string
+     
+      ```Delphi
+      var
+         Memo : TMemo;
+      begin
+         Memo := TMemo.Create(Self);
+        
+         Memo.Lines.Add(EmptyStr);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add('Retorno por String');
+         Memo.Lines.Add(FCEP.Result.IBGE.JSONObjectInStr);
+         Memo.Lines.Add( StringOfChar('-',20) );
+         Memo.Lines.Add(EmptyStr);
       end;
       ```
