@@ -45,21 +45,28 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
          + Isso permitirá que seu projeto tenha acesso aos arquivos e recursos necessários do Setup4DCEP. Certifique-se de salvar as configurações após seguir esses passos.
 
             ```
-            ./{Pasta}/src
-            ./{Pasta}/src/Enumerated
-            ./{Pasta}/src/Interfaces
-            ./{Pasta}/src/Configuration
-            ./{Pasta}/src/Configuration/Proxy
-            ./{Pasta}/src/Configuration/Web Service
-            ./{Pasta}/src/Filter
-            ./{Pasta}/src/Filter/IBGE
-            ./{Pasta}/src/Filter/Zip Code
-            ./{Pasta}/src/Searech
-            ./{Pasta}/src/Searech/IBGE
-            ./{Pasta}/src/Searech/Zip Code            
-            ./{Pasta}/src/Result
-            ./{Pasta}/src/Result/IBGE
-            ./{Pasta}/src/Result/Zip Code
+            .\{Pasta}\src
+            .\{Pasta}\src\requires\inc
+            .\{Pasta}\src\requires\ACBrComum
+            .\{Pasta}\src\requires\ACBrTCP
+            .\{Pasta}\src\requires\Terceiros\FastStringReplace
+            .\{Pasta}\src\requires\Terceiros\GZIPUtils
+            .\{Pasta}\src\requires\Terceiros\JsonDataObjects\Source
+            .\{Pasta}\src\requires\Terceiros\synalist
+            .\{Pasta}\src\Enumerated
+            .\{Pasta}\src\Interfaces
+            .\{Pasta}\src\Configuration
+            .\{Pasta}\src\Configuration\Proxy
+            .\{Pasta}\src\Configuration\Web Service
+            .\{Pasta}\src\Filter
+            .\{Pasta}\src\Filter\IBGE
+            .\{Pasta}\src\Filter\Zip Code
+            .\{Pasta}\src\Searech
+            .\{Pasta}\src\Searech\IBGE
+            .\{Pasta}\src\Searech\Zip Code            
+            .\{Pasta}\src\Result
+            .\{Pasta}\src\Result\IBGE
+            .\{Pasta}\src\Result\Zip Code
             ```
 ### ⚙️ Dependências
 
@@ -288,7 +295,7 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
          
          - `function Finish: ISetup4DCEPConfigurationWebService;`
 
-           - Este método é responsável por finalizar a configuração do serviço web do CEP e retornar a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice). É utilizado para concluir a configuração do proxy e obter uma referência à instância TSetup4DCepConfigurationWebService. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+            - Este método é responsável por finalizar a configuração do serviço web do CEP e retornar a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice). É utilizado para concluir a configuração do proxy e obter uma referência à instância TSetup4DCepConfigurationWebService. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
    2. `function IBGE: ISetup4DCEPConfigurationWebServiceIBGE;`
 
@@ -332,7 +339,7 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
          - `function Finish: ISetup4DCEPConfigurationWebService;`
 
-           - Este método é responsável por finalizar a configuração do serviço web do IBGE e retornar a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice). É utilizado para concluir a configuração do proxy e obter uma referência à instância TSetup4DCepConfigurationWebService. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+            - Este método é responsável por finalizar a configuração do serviço web do IBGE e retornar a interface [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice). É utilizado para concluir a configuração do proxy e obter uma referência à instância TSetup4DCepConfigurationWebService. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
    
    4. `function TimeOut(const AValue: string): ISetup4DCEPConfigurationWebService; overload;`
       - Este método é utilizado para configurar o tempo limite para as solicitações no serviço web. Ele aceita um valor que deve ser uma string representando o tempo limite em milissegundos.
@@ -419,39 +426,75 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
       1. `function Key:ISetup4DCEPFilterZipCodeKey;`
 
-         1. `function Value(Const AValue: string) : ISetup4DCEPFilterZipCodeKey; overload;`
-         
-         2. `function Value : string; overload;`
+         + Este método fornece uma instância que implementa a interface [ISetup4DCEPFilterZipCodeKey](#-isetup4dcepfilterzipcodekey), permitindo o acesso às configuração do filtro pelo código postal. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento. 
 
-         3. `function Finish: ISetup4DCEPFilterIBGE;` 
+            1. `function Value(Const AValue: string) : ISetup4DCEPFilterZipCodeKey; overload;`
 
+               - Esta função permite configurar o valor de consulta para o filtro de CEP.
+            
+            2. `function Value : string; overload;`
+
+               - Esta função é usado para obter o filtro definido para o código postal do CEP. Isto é útil para acessar e utilizar os critérios definidos
+
+            3. `function Finish: ISetup4DCEPFilterZipCode;` 
+
+               - Este método é responsável por finalizar a configuração do filtro Zip Code e retornar a interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou. 
+            
       2. `function Address:ISetup4DCEPFilterZipCodeAddress;` 
 
-         1. `function Types(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
-         
-         2. `function Street(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
+         + Este método fornece uma instância que implementa a interface [ISetup4DCEPFilterZipCodeAddress](#-isetup4dcepfilterzipcodeaddress), permitindo o acesso às configuração do filtro pelo endereçp. É importante destacar que existe um construtor disponível para garantir a reutilização do mesmo objeto de configuração ao longo da execução do [TSetup4DCep](#-funções-do-tsetup4dcep), evitando a necessidade de criar instâncias adicionais. Isso contribui para uma gestão eficiente e reduz a complexidade no desenvolvimento. 
 
-         3. `function City(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;` 
+            1. `function Types(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
 
-         4. `function StateAbbreviated(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
-         
-         5. `function StateAbbreviated(Const AValue : TSetup4DUtilityEstadoAbreviado): ISetup4DCEPFilterZipCodeAddress; overload;`
+               - Está função permite configurar os tipos de logradouro (rua, avenida, praça, jardim, largo, caminho, etc...) a ser considerados na consulta de CEP.
+            
+            2. `function Street(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
 
-         6. `function District(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;` 
+               - Está função permite configurar o nome da rua a ser considerados na consulta de CEP.
+            
+            3. `function City(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;` 
 
-         7. `function Types: string; overload;`
-         
-         8. `function Street: string; overload;`
+               - Está função permite configurar o nome da cidade a ser considerados na consulta de CEP.
 
-         9. `function City: string; overload;` 
+            4. `function StateAbbreviated(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
 
-         10. `function StateAbbreviated: string; overload;`
-         
-         11. `function District: string; overload;`
+               - Está função permite configurar a abreviatura do estado a ser considerados na consulta de CEP.
+                           
+            5. `function StateAbbreviated(Const AValue : TSetup4DUtilityEstadoAbreviado): ISetup4DCEPFilterZipCodeAddress; overload;`
 
-         12. `function Finish: ISetup4DCEPFilterIBGE;` 
+               - Está função permite configurar o enumerado com a abreviatura do estado a ser considerados na consulta de CEP.
+                           
+            6. `function District(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;` 
+
+               - Está função Está função permite configurar o nome da rua a ser considerados na consulta de CEP.
+                           
+            7. `function Types: string; overload;`
+
+               - Está função é usado para obter os tipos de logradouro configurado no filtro de endereço do CEP. Isso pode ser útil para acessar e utilizar os critérios de filtro definidos.
+            
+            8. `function Street: string; overload;`
+
+               - Está função é usado para obter o nome da rua configurado no filtro de endereço do CEP. Isso pode ser útil para acessar e utilizar os critérios de filtro definidos.
+
+            9. `function City: string; overload;` 
+
+               - Está função é usado para obter o nome da cidade configurado no filtro de endereço do CEP. Isso pode ser útil para acessar e utilizar os critérios de filtro definidos.
+
+            10. `function StateAbbreviated: string; overload;`
+
+                - Está função é usado para obter a abreviatura do estado configurado no filtro de endereço do CEP. Isso pode ser útil para acessar e utilizar os critérios de filtro definidos.
+            
+            11. `function District: string; overload;`
+
+                - Está função é usado para obter o nome do bairro configurado no filtro de endereço do CEP. Isso pode ser útil para acessar e utilizar os critérios de filtro definidos.
+
+            12. `function Finish: ISetup4DCEPFilterZipCode;` 
+
+                - Este método é responsável por finalizar a configuração do filtro do Zip code e retornar a interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
       3. `function Finish: ISetup4DCEPFilter;`
+
+         - Este método é responsável por finalizar a configuração do filtro e retornar a interface [ISetup4DCEPFilter](#-isetup4dcepfilter). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
 ##### ⚡️ `function IBGE:ISetup4DCEPFilterIBGE;`
 
@@ -464,6 +507,8 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
          2. `function Value : string; overload;`
 
          3. `function Finish: ISetup4DCEPFilterIBGE;` 
+
+            - Este método é responsável por finalizar a configuração do filtro do IBGE e retornar a interface [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
       2. `function Address:ISetup4DCEPFilterIBGEAddress;` 
 
@@ -479,7 +524,10 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
          6. `function Finish: ISetup4DCEPFilterIBGE;` 
 
+            - Este método é responsável por finalizar a configuração do filtro do IBGE e retornar a interface [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+
       3. `function Finish: ISetup4DCEPFilter;`
+         - Este método é responsável por finalizar a configuração do filtro e retornar a interface [ISetup4DCEPFilter](#-isetup4dcepfilter). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
 ##### ⚡️ `function Clear : ISetup4DCEPFilter;`
 
