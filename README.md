@@ -36,11 +36,11 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
    2. Descompacte o arquivo baixado em uma pasta de sua escolha.
    3. Adicione a pasta extraída ao seu projeto, seguindo os passos abaixo:
    
-      a. No Delphi, acesse o menu "Project" (Projeto).
-      b. Selecione "Options" (Opções).
-      c. No painel de opções, vá para "Resource Compiler" (Compilador de Recursos).
-      d. Em "Directories and Conditionals" (Diretórios e Condicional), escolha "Include file search path" (Caminho de busca de arquivos de inclusão).
-      e. Clique em "Browse" (Navegar) e adicione a pasta extraída do projeto.
+      1. No Delphi, acesse o menu "Project" (Projeto).
+      2. Selecione "Options" (Opções).
+      3. No painel de opções, vá para "Resource Compiler" (Compilador de Recursos).
+      4. Em "Directories and Conditionals" (Diretórios e Condicional), escolha "Include file search path" (Caminho de busca de arquivos de inclusão).
+      5. Clique em "Browse" (Navegar) e adicione a pasta extraída do projeto.
    
          + Isso permitirá que seu projeto tenha acesso aos arquivos e recursos necessários do Setup4DCEP. Certifique-se de salvar as configurações após seguir esses passos.
 
@@ -74,7 +74,7 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
    1. Faça o [**download**](https://github.com/Setup4D/Setup4DUtility/archive/refs/heads/main.zip) do projeto ou acesse a  [**pagina do projeto**](https://github.com/Setup4D/Setup4DUtility) e realize o download.
    2. Descompacte o arquivo baixado em uma pasta de sua escolha.
-   3. Adicione a pasta extraída ao seu projeto, indo para *Project > Options > Resource Compiler > Directories and Conditionals > Include file search path*.
+   3. Adicione a pasta extraída ao seu projeto, indo para *Project > Options > Resource Compiler > Directories and Conditionals > Include file search path*.      
    
    ```
    ./{Pasta}/src
@@ -440,7 +440,7 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
             3. `function Finish: ISetup4DCEPFilterZipCode;` 
 
-               - Este método é responsável por finalizar a configuração do filtro Zip Code e retornar a interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou. 
+               - Este método é responsável por finalizar a configuração do filtro Zip Code e retornar a interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCEPFilterZipCode. Portanto, esta linha simplesmente retorna a referência à instância que a invocou. 
             
       2. `function Address:ISetup4DCEPFilterZipCodeAddress;` 
 
@@ -492,11 +492,11 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
             12. `function Finish: ISetup4DCEPFilterZipCode;` 
 
-                - Este método é responsável por finalizar a configuração do filtro do Zip code e retornar a interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+                - Este método é responsável por finalizar a configuração do filtro do Zip code e retornar a interface [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCEPFilterZipCode. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
       3. `function Finish: ISetup4DCEPFilter;`
 
-         - Este método é responsável por finalizar a configuração do filtro e retornar a interface [ISetup4DCEPFilter](#-isetup4dcepfilter). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+         - Este método é responsável por finalizar a configuração do filtro e retornar a interface [ISetup4DCEPFilter](#-isetup4dcepfilter). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCEPFilter. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
 ##### ⚡️ `function IBGE:ISetup4DCEPFilterIBGE;`
 
@@ -516,7 +516,7 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
             3. `function Finish: ISetup4DCEPFilterIBGE;` 
 
-               - Este método é responsável por finalizar a configuração do filtro do IBGE e retornar a interface [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+               - Este método é responsável por finalizar a configuração do filtro do IBGE e retornar a interface [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCEPFilterIBGE. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
       2. `function Address:ISetup4DCEPFilterIBGEAddress;`
 
@@ -544,10 +544,10 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
             6. `function Finish: ISetup4DCEPFilterIBGE;` 
 
-               - Este método é responsável por finalizar a configuração do filtro do IBGE e retornar a interface [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+               - Este método é responsável por finalizar a configuração do filtro do IBGE e retornar a interface [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCEPFilterIBGE. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
       3. `function Finish: ISetup4DCEPFilter;`
-         - Este método é responsável por finalizar a configuração do filtro e retornar a interface [ISetup4DCEPFilter](#-isetup4dcepfilter). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCepConfiguration. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+         - Este método é responsável por finalizar a configuração do filtro e retornar a interface [ISetup4DCEPFilter](#-isetup4dcepfilter). É utilizado para concluir a configuração do filtro e obter uma referência à instância TSetup4DCEPFilter. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
 ##### ⚡️ `function Clear : ISetup4DCEPFilter;`
 
@@ -567,13 +567,23 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
       1. `function Reconfiguration: ISetup4DCEPSearechZipCode;`
 
+         - Está função reconfigura o proxy e o web service da pesquisa de CEP.
+
       2. `function Code : ISetup4DCEPSearechZipCode;` 
+
+         - Esta função efetua a pesquisa do código postal referente ao CEP, validando sua existência e a presença de informações. Ademais, lida com exceções relacionadas à ausência de DLLs da OpenSSL.
 
       3. `function Address : ISetup4DCEPSearechZipCode;`
 
-      4. `function Component : TComponent;` 
+         - Esta função é encarregada de executar uma consulta do CEP com base nas informações do endereço fornecidas. Ela verifica se todos os dados essenciais foram informados e trata possíveis exceções que possam surgir durante a consulta. 
+
+      4. `function Component : TComponent;`
+ 
+         - Essa função permite adquirir um componente relacionado a consulta do CEP que possibilita o acesso a funcionalidades adicionais.
 
       5. `function Finish: ISetup4DCEPSearech;`
+
+         - Este método fornece uma instância que implementa a interface [ISetup4DCEPSearech](#-isetup4dcepsearech). É utilizado para concluir a execução e obter uma referência à instância principal de TSetup4DCEPSearech. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
 ##### ⚡️ `function IBGE: ISetup4DCEPSearechIBGE;`
 
@@ -581,15 +591,27 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
       1. `function Reconfiguration: ISetup4DCEPSearechIBGE;`
 
-      2. `function Code : ISetup4DCEPSearechIBGE;` 
+         - Está função reconfigura o proxy e o web service da pesquisa do IBGE.
+
+      2. `function Code : ISetup4DCEPSearechIBGE;`
+
+         - Esta função efetua a pesquisa do código referente ao IBGE, validando sua existência e a presença de informações. Ademais, lida com exceções relacionadas à ausência de DLLs da OpenSSL.
 
       3. `function State : ISetup4DCEPSearechIBGE;`
 
+         - Está função permite buscar informações do IBGE relacionadas a um estado (UF) com base no filtro fornecido, tratando exceções específicas relacionadas a erros que podem ocorrer durante o processo de busca. 
+
       4. `function City : ISetup4DCEPSearechIBGE;` 
+
+         - Está função permite buscar informações do IBGE relacionadas a uma cidade com base no filtro fornecido, tratando exceções específicas relacionadas a erros que podem ocorrer durante o processo de busca. 
 
       5. `function Component : TComponent;`
 
+         - Está função permite adquirir um componente relacionado a consulta do IBGE que possibilita o acesso a funcionalidades adicionais.  
+
       6. `function Finish: ISetup4DCEPSearech;`
+
+         - Este método fornece uma instância que implementa a interface [ISetup4DCEPSearech](#-isetup4dcepsearech). É utilizado para concluir a execução e obter uma referência à instância principal de TSetup4DCEPSearech. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
 ##### ⚡️ `function Finish: ISetup4DCEP;`
 
@@ -605,55 +627,107 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
       1. `function Display: iSetup4DCEPResultZipCodeDisplay;`
 
-         1. `function CEP : string;` 
+         - Essa função exibe os resultados de uma consulta do CEP após realizar a conversão necessária. Ela retorna uma instância pronta para a exibição dos resultados, conforme as opções a seguir:
 
-         2. `function Tipo : string;` 
+            1. `function Code : string;`
 
-         3. `function Rua : string;` 
+               - Essa função obtém o código postal do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
 
-         4. `function RuaCompleta : string;` 
+            2. `function Types : string;`
 
-         5. `function Complemento : string;` 
+               - Essa função obtém o tipo de logradouro (rua, avenida, praça, jardim, largo, caminho, etc...)  do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
 
-         6. `function Bairro : string;` 
+            3. `function Street : string;` 
 
-         7. `function Cidade : string;` 
+               - Essa função obtém o nome da rua do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
 
-         8. `function IBGECidade : string;` 
+            4. `function StreetComplete : string;` 
 
-         9. `function Estado : string;` 
+               - Essa função obtém o tipo e nome da rua do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
 
-         10. `function IBGEEstado : string;` 
+            5. `function Complement : string;`
 
-         11. `function DDD : string;` 
+               - Essa função obtém o complemento do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
 
-         12. `function GIA : string;` 
+            6. `function District : string;` 
 
-         13. `function SIAFI : string;` 
+               - Essa função obtém o bairro do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
 
-         14. `function Altitude : string;` 
+            7. `function City : string;` 
 
-         15. `function Latitude : string;` 
+               - Essa função obtém a cidade do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
 
-         16. `function Longitude : string;` 
+            8. `function IBGECity : string;`
 
-         17. `function JSON (Const AValue: TJSONObject) : iSetup4DCEPResultZipCodeDisplay; overload;` 
+               - Essa função obtém o código IBGE da cidade do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.    
 
-         18. `function Finish: iSetup4DCEPResultZipCode;` 
+            9. `function State : string;` 
+
+               - Essa função obtém o estado do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
+
+            10. `function IBGEState : string;`
+
+                - Essa função obtém o código IBGE do estado do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
+
+            11. `function DDD : string;` 
+
+                - Essa função obtém o DDD (DISCAGEM DIRETA A DISTÂNCIA) do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
+
+            12. `function GIA : string;`
+
+                - Essa função obtém a GIA (Guia Nacional de Informação e Apuração do ICMS) do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
+
+            13. `function SIAFI : string;`
+
+                - Essa função obtém a SIAFI (Sistema Integrado de Administração Financeira) do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.  
+
+            14. `function Altitude : string;` 
+
+                - Essa função obtém a altitude do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
+
+            15. `function Latitude : string;`
+
+                - Essa função obtém a latitude do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
+
+            16. `function Longitude : string;`
+
+                - Essa função obtém a longitude do CEP contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
+
+            17. `function JSON (Const AValue: TJSONObject) : iSetup4DCEPResultZipCodeDisplay; overload;` 
+
+                - Este método obtém o objeto JSON que contém os resultados da consulta do CEP e, em seguida, verifica se o objeto foi informado antes de realizar as atribuições nos campos.
+
+            18. `function Finish: iSetup4DCEPResultZipCode;` 
+
+                - Este método fornece uma instância que implementa a interface [iSetup4DCEPResultZipCode](#-isetup4dcepresultZipCode). É utilizado para concluir a execução e obter uma referência à instância principal de TSetup4DCEPResultZipCode. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
       2. `function JSONObject(out AValue : TJSONObject): ISetup4DCEPResultZipCode; overload;` 
 
+         - Este método possibilita obter um objeto JSON contendo os resultados da consulta do CEP.
+
       3. `function JSONObject: TJSONObject; overload;`
 
-      4. `function JSONObjectInStr: String; overload;` 
+         - Este método possibilita obter o objeto JSON com os resultados da consulta do CEP.
+
+      4. `function JSONObjectInStr: String; overload;`
+
+         - Este método possibilita obter o objeto JSON String com os resultados da consulta do CEP. 
 
       5. `function JSONArray: TJSONArray; overload;`
 
+         - Este método possibilita obter o objeto JSON Array com os resultados da consulta do CEP.
+
       6. `function RecordCount : Int64;`
+
+         - Este método possibilita obter o total de endereços encontrado (Inteiro) com os resultados da consulta de CEP.
 
       7. `function RecordCountInStr : string;`
 
+         - Este método possibilita obter o total de endereços encontrado (String) com os resultados da consulta de CEP.
+
       8. `function Finish: ISetup4DCEPResult;`
+
+         - Este método fornece uma instância que implementa a interface [ISetup4DCEPResult](#-isetup4dcepresult). É utilizado para concluir a execução e obter uma referência à instância principal de TSetup4DCEPResult. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
 ##### ⚡️ `function IBGE: ISetup4DCEPResultIBGE;`
 
@@ -661,27 +735,51 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 
       1. `function Display: iSetup4DCEPResultIBGEDisplay;`
 
-         1. `function CodigoUF : string;` 
+         - Essa função exibe os resultados de uma consulta do IBGE após realizar a conversão necessária. Ela retorna uma instância pronta para a exibição dos resultados, conforme as opções a seguir:
 
-         2. `function UF : string;` 
+            1. `function StateCode : string;` 
 
-         3. `function CodigoMunicipio : string;` 
+               - Essa função obtém o código do IBGE do estado contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
 
-         4. `function Municipio : string;` 
+            2. `function State : string;` 
 
-         5. `function Area : string;` 
+               - Essa função obtém o estado do IBGE contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.
 
-         6. `function JSON (Const AValue: TJSONObject) : iSetup4DCEPResultIBGEDisplay; overload;` 
+            3. `function CityCode : string;`
 
-         7. `function Finish: iSetup4DCEPResultIBGE;` 
+               - Essa função obtém o código do IBGE da cidade contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
+
+            4. `function City : string;` 
+
+               - Essa função obtém a cidade do IBGE contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada.    
+
+            5. `function Zone : string;` 
+
+               - Essa função obtém o tamanho da área do IBGE contido no objeto JSON, desde que o objeto JSON tenha sido informado. Se o objeto JSON não for informado, uma exceção é lançada. 
+
+            6. `function JSON (Const AValue: TJSONObject) : iSetup4DCEPResultIBGEDisplay; overload;` 
+
+               - Este método obtém o objeto JSON que contém os resultados da consulta do CEP e, em seguida, verifica se o objeto foi informado antes de realizar as atribuições nos campos.
+
+            7. `function Finish: iSetup4DCEPResultIBGE;`
+
+               - Este método fornece uma instância que implementa a interface [iSetup4DCEPResultIBGE](#-isetup4dcepresultibge). É utilizado para concluir a execução e obter uma referência à instância principal de TSetup4DCEPResultIBGE. Portanto, esta linha simplesmente retorna a referência à instância que a invocou. 
 
       2. `function JSONObject(out AValue : TJSONObject): ISetup4DCEPResultIBGE; overload;` 
 
+         - Este método possibilita obter um objeto JSON contendo os resultados da consulta do IBGE.
+
       3. `function JSONObject: TJSONObject; overload;`
+
+         - Este método possibilita obter o objeto JSON com os resultados da consulta do IBGW.
 
       4. `function JSONObjectInStr: String; overload;` 
 
+         - Este método possibilita obter o objeto JSON String com os resultados da consulta do CEP.
+
       5. `function Finish: ISetup4DCEPResult;`
+
+         - Este método fornece uma instância que implementa a interface [ISetup4DCEPResult](#-isetup4dcepresult). É utilizado para concluir a execução e obter uma referência à instância principal de TSetup4DCEPResult. Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
 
 ##### ⚡️ `function Finish: ISetup4DCEP;`
 
