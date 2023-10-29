@@ -12,7 +12,7 @@
 ![Delphi Supported Versions](https://img.shields.io/badge/Delphi%20Supported%20Versions-XE10.3..11-blue.svg)
 ![Platforms](https://img.shields.io/badge/Supported%20platforms-Win32%20and%20Win64-red.svg)
 
-Welcome to the Setup4DCEP project repository! This application was developed to streamline the search for CEP (Código de Endereçamento Postal) and IBGE codes (Instituto Brasileiro de Geografia e Estatística). With Setup4DCEP, you can perform interactions with procedures and functions in your Delphi applications quickly, simply, and reliably.
+Welcome to the Setup4DCEP project repository! This application was developed to streamline the search for CEP (ZIP code) and IBGE codes (Brazilian Institute of Geography and Statistics). With Setup4DCEP, you can perform interactions with procedures and functions in your Delphi applications quickly, simply, and reliably.
 
 ## 📐 How to Use
 
