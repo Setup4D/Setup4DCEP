@@ -790,3 +790,251 @@ Bem-vindo(a) ao repositório do projeto Setup4DCEP! Esta aplicação foi desenvo
 ##### ⚡️ `function Finish: ISetup4DCEP;`
 
    + Este método fornece uma instância que implementa a interface [ISetup4DCEP](#-isetup4dcep). É utilizado para concluir a configuração e obter uma referência à instância principal de [TSetup4DCep](#-funções-do-tsetup4dcep). Portanto, esta linha simplesmente retorna a referência à instância que a invocou.
+
+### ⚙️ Exemplo de Uso
+
+   - Este exemplo descreve a configuração inicial necessária para usar a biblioteca 
+
+      ```Delphi
+      uses
+        Setup4D.CEP,
+        Setup4D.CEP.interf;
+      ```
+   
+      ```Delphi
+      var
+        FCEP : ISetup4DCEP;
+      ```
+   
+      ```Delphi
+      initialization
+         FCEP := TSetup4DCEP.New;
+   
+      finalization
+         FCEP := Nil;
+      ```
+
+   - Neste exemplo, é demonstrado como pesquisar um CEP com base no código postal 
+      
+      ```Delphi
+      begin
+        FCEP
+          .Configuration
+            .WebService
+               .ZipCode
+                  .WSCep //Pode ser definido outros servidores.
+                     .User('[INFORMAR O USUARIO DO WEB SERVICE]')
+                     .Password('[INFORMAR A SENHA DO WEB SERVICE]')
+                     .Key('[INFORMAR A CHAVE KEY DO WEB SERVICE]')
+                     .ReturnIBGE('[INDICAR O RETORNO DO IBGE]')
+              .Finish
+              .TimeOut('[INFORMAR O TIME OUT]')
+              .ParseText('[INFORMAR O TRATAMENTO DO PARSE DO TEXO]')
+            .Finish
+            .Proxy
+              .Host('[INFORMAR O HOST PROXY]')
+              .Port('[INFORMAR A PORTA PROXY]')
+              .User('[INFORMAR O USUARIO PROXY]')
+              .Password('[INFORMAR A SENHA PROXY]')
+            .Finish
+          .Finish
+          .Filter
+            .Clear
+            .ZipCode
+              .Key
+                .Value('[INFORMAR O FILTRO]')
+              .Finish
+            .Finish
+          .Finish
+          .Searech
+            .ZipCode
+              .Reconfiguration
+              .Code
+            .Finish
+          .Finish;
+      end;
+      ```
+
+   - Este exemplo demonstra como pesquisar um CEP com base no endereço
+      
+      ```Delphi
+      begin
+        FCEP
+          .Configuration
+            .WebService
+              .ZipCode
+                  .WSCep //Pode ser definido outros servidores.
+                     .User('[INFORMAR O USUARIO DO WEB SERVICE]')
+                     .Password('[INFORMAR A SENHA DO WEB SERVICE]')
+                     .Key('[INFORMAR A CHAVE KEY DO WEB SERVICE]')
+                     .ReturnIBGE('[INDICAR O RETORNO DO IBGE]')
+              .Finish
+              .TimeOut('[INFORMAR O TIME OUT]')
+              .ParseText('[INFORMAR O TRATAMENTO DO PARSE DO TEXO]')
+            .Finish
+            .Proxy
+              .Host('[INFORMAR O HOST PROXY]')
+              .Port('[INFORMAR A PORTA PROXY]')
+              .User('[INFORMAR O USUARIO PROXY]')
+              .Password('[INFORMAR A SENHA PROXY]')
+            .Finish
+          .Finish
+          .Filter
+            .Clear
+            .ZipCode
+              .Address
+                .Types('[INFORMAR O TIPO DO LOGRADOURO]')
+                .Street('[INFOMRAR O NOME DA RUA]')
+                .City('[INFORAMAR A CIDADE]')
+                .StateAbbreviated('[INFORMAR O ESTADO]')
+                .District('[INFORMAR O BAIRRO]')
+              .Finish
+            .Finish
+          .Finish
+          .Searech
+            .ZipCode
+              .Reconfiguration
+              .Code
+            .Finish
+          .Finish;
+      end;
+      ```
+
+   - Neste exemplo, é mostrado como pesquisar informações do IBGE com base em um código específico
+     
+      ```Delphi
+      begin
+         FCEP
+          .Configuration
+            .WebService
+               .IBGE
+                  .CaseSensitive('[INFORMAR SENBILIDADE DO TEXTO]')
+                  .CacheName('[INFORMAR O LOCAL E O NOME ARQUIVO DE CACHE]')
+                  .CacheValidity('[INFORMAR A VALIDADE DO CACHE]')
+               .Finish
+               .TimeOut('[INFORMAR O TIME OUT]')
+               .ParseText('[INFORMAR O TRATAMENTO DO PARSE DO TEXO]')
+            .Finish
+            .Proxy
+              .Host('[INFORMAR O HOST PROXY]')
+              .Port('[INFORMAR A PORTA PROXY]')
+              .User('[INFORMAR O USUARIO PROXY]')
+              .Password('[INFORMAR A SENHA PROXY]')
+            .Finish
+          .Finish
+          .Filter
+            .Clear
+            .IBGE
+              .Key
+                .Value('[INFORAR O CODIGO DO IBGE]')
+              .Finish
+            .Finish
+          .Finish
+          .Searech
+            .IBGE
+              .Reconfiguration
+              .Code
+            .Finish
+          .Finish
+          .Configuration
+            .WebService
+              .IBGE
+                .CacheClear
+              .Finish
+            .Finish
+          .Finish;
+      end;
+      ```
+
+   - Neste exemplo, é explicado como pesquisar informações do IBGE com base em um estado específico
+
+      ```Delphi
+      begin
+         FCEP
+          .Configuration
+            .WebService
+               .IBGE
+                  .CaseSensitive('[INFORMAR SENBILIDADE DO TEXTO]')
+                  .CacheName('[INFORMAR O LOCAL E O NOME ARQUIVO DE CACHE]')
+                  .CacheValidity('[INFORMAR A VALIDADE DO CACHE]')
+               .Finish
+                 .TimeOut('[INFORMAR O TIME OUT]')
+                 .ParseText('[INFORMAR O TRATAMENTO DO PARSE DO TEXO]')
+            .Finish
+            .Proxy
+              .Host('[INFORMAR O HOST PROXY]')
+              .Port('[INFORMAR A PORTA PROXY]')
+              .User('[INFORMAR O USUARIO PROXY]')
+              .Password('[INFORMAR A SENHA PROXY]')
+            .Finish
+          .Finish
+          .Filter
+            .Clear
+            .IBGE
+              .Address
+                .StateAbbreviated('[INFORMAR O ESTADO]')
+              .Finish
+            .Finish
+          .Finish
+          .Searech
+            .IBGE
+              .Reconfiguration
+              .Code
+            .Finish
+          .Finish
+          .Configuration
+            .WebService
+              .IBGE
+                .CacheClear
+              .Finish
+            .Finish
+          .Finish;
+      end;
+      ```
+
+   - Neste último exemplo, é demonstrado como pesquisar informações do IBGE com base em uma cidade específica
+     
+      ```Delphi
+      begin
+         FCEP
+          .Configuration
+            .WebService
+               .IBGE
+                  .CaseSensitive('[INFORMAR SENBILIDADE DO TEXTO]')
+                  .CacheName('[INFORMAR O LOCAL E O NOME ARQUIVO DE CACHE]')
+                  .CacheValidity('[INFORMAR A VALIDADE DO CACHE]')
+               .Finish
+                 .TimeOut('[INFORMAR O TIME OUT]')
+                 .ParseText('[INFORMAR O TRATAMENTO DO PARSE DO TEXO]')
+            .Finish
+            .Proxy
+              .Host('[INFORMAR O HOST PROXY]')
+              .Port('[INFORMAR A PORTA PROXY]')
+              .User('[INFORMAR O USUARIO PROXY]')
+              .Password('[INFORMAR A SENHA PROXY]')
+            .Finish
+          .Finish
+          .Filter
+            .Clear
+            .IBGE
+              .Address
+                .City('[INFORMAR A CIDADE]')
+                .StateAbbreviated('[INFORMAR O ESTADO]')
+              .Finish
+            .Finish
+          .Finish
+          .Searech
+            .IBGE
+              .Reconfiguration
+              .Code
+            .Finish
+          .Finish
+          .Configuration
+            .WebService
+              .IBGE
+                .CacheClear
+              .Finish
+            .Finish
+          .Finish;
+      end;
+      ```
