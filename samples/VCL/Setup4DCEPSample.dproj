@@ -46,7 +46,7 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
-        <DCC_DcuOutput>.\..\..\..\Temp\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_DcuOutput>.\..\..\..\Temp\$(Platform)\$(Config)\Setup4DCep</DCC_DcuOutput>
         <DCC_ExeOutput>.\..\..\..\APP\$(Platform)\</DCC_ExeOutput>
         <DCC_E>false</DCC_E>
         <DCC_N>false</DCC_N>
