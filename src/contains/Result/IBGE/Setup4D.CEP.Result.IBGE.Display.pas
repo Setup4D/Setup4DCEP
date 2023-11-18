@@ -1,4 +1,4 @@
-unit Setup4D.CEP.Result.IBGE.Display;
+Ôªøunit Setup4D.CEP.Result.IBGE.Display;
 
 {$I Setup4DCEPLanguage.inc}
 
@@ -43,7 +43,7 @@ function TSetup4DCEPResultIBGEDisplay.Zone: string;
 begin
   if FJSON = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe do JSONObject n„o foi instanciada.');
+    raise EConvertError.Create('A classe do JSONObject n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The JSONObject class has not been instantiated.');
     {$ENDIF}
@@ -55,7 +55,7 @@ function TSetup4DCEPResultIBGEDisplay.CityCode: string;
 begin
   if FJSON = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe do JSONObject n„o foi instanciada.');
+    raise EConvertError.Create('A classe do JSONObject n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The JSONObject class has not been instantiated.');
     {$ENDIF}
@@ -67,7 +67,7 @@ function TSetup4DCEPResultIBGEDisplay.StateCode: string;
 begin
   if FJSON = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe do JSONObject n„o foi instanciada.');
+    raise EConvertError.Create('A classe do JSONObject n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The JSONObject class has not been instantiated.');
     {$ENDIF}
@@ -98,7 +98,7 @@ begin
 
   if AValue = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe do JSONObject n„o foi instanciada.');
+    raise EConvertError.Create('A classe do JSONObject n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The JSONObject class has not been instantiated.');
     {$ENDIF}
@@ -110,7 +110,7 @@ function TSetup4DCEPResultIBGEDisplay.City: string;
 begin
   if FJSON = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe do JSONObject n„o foi instanciada.');
+    raise EConvertError.Create('A classe do JSONObject n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The JSONObject class has not been instantiated.');
     {$ENDIF}
@@ -127,7 +127,7 @@ function TSetup4DCEPResultIBGEDisplay.State: string;
 begin
   if FJSON = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe do JSONObject n„o foi instanciada.');
+    raise EConvertError.Create('A classe do JSONObject n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The JSONObject class has not been instantiated.');
     {$ENDIF}

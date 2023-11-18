@@ -1,4 +1,4 @@
-unit Setup4D.CEP.Configuration;
+Ôªøunit Setup4D.CEP.Configuration;
 
 {$I Setup4DCEPLanguage.inc}
 
@@ -25,18 +25,18 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Cria uma nova inst‚ncia da interface ISetup4DCEPConfiguration.
+    /// Cria uma nova inst√¢ncia da interface ISetup4DCEPConfiguration.
     /// </summary>
     /// <param name="AValue">
-    /// A inst‚ncia da interface ISetup4DCEP a ser associada ‡ configuraÁ„o.
+    /// A inst√¢ncia da interface ISetup4DCEP a ser associada √† configura√ß√£o.
     /// </param>
     /// <remarks>
-    /// Esta funÁ„o cria uma nova inst‚ncia da interface ISetup4DCEPConfiguration e associa-a a uma inst‚ncia
-    /// da interface ISetup4DCEP. A interface de configuraÁ„o È usada para configurar opÁıes relacionadas
-    /// ‡ consulta do CEP.
+    /// Esta fun√ß√£o cria uma nova inst√¢ncia da interface ISetup4DCEPConfiguration e associa-a a uma inst√¢ncia
+    /// da interface ISetup4DCEP. A interface de configura√ß√£o √© usada para configurar op√ß√µes relacionadas
+    /// √† consulta do CEP.
     /// </remarks>
     /// <returns>
-    /// Uma nova inst‚ncia da interface ISetup4DCEPConfiguration associada ‡ inst‚ncia AValue da interface ISetup4DCEP.
+    /// Uma nova inst√¢ncia da interface ISetup4DCEPConfiguration associada √† inst√¢ncia AValue da interface ISetup4DCEP.
     /// </returns>
     {$ELSE}
     /// <summary>

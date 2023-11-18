@@ -1,4 +1,4 @@
-unit Setup4D.CEP.Result.ZIpCode;
+Ôªøunit Setup4D.CEP.Result.ZIpCode;
 
 {$I Setup4DCEPLanguage.inc}
 
@@ -28,7 +28,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// FunÁ„o para poder validar o endereÁo
+    /// Fun√ß√£o para poder validar o endere√ßo
     /// </summary>
     {$ELSE}
     /// <summary>
@@ -39,7 +39,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Realizar a convers„o do TACBr para o formato JSON.
+    /// Realizar a convers√£o do TACBr para o formato JSON.
     /// </summary>
     {$ELSE}
     /// <summary>
@@ -50,7 +50,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Executar a pesquisa no IBGE caso n„o haja correspondÍncia nos resultados da pesquisa.
+    /// Executar a pesquisa no IBGE caso n√£o haja correspond√™ncia nos resultados da pesquisa.
     /// </summary>
     {$ELSE}
     /// <summary>
@@ -127,21 +127,21 @@ procedure TSetup4DCEPResultZipCode.PrepareJSON;
 begin
   if FExecute = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de ExecuÁ„o n„o foi instanciada.');
+    raise EConvertError.Create('A classe de Execu√ß√£o n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The Execute class has not been instantiated.');
     {$ENDIF}
 
   if FFilter = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de pesquisa n„o foi instanciada.');
+    raise EConvertError.Create('A classe de pesquisa n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The search class has not been instantiated.');
     {$ENDIF}
 
   if FConfiguration = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de configuraÁ„o n„o foi instanciada.');
+    raise EConvertError.Create('A classe de configura√ß√£o n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('"The Configuration class has not been instantiated."');
     {$ENDIF}
@@ -432,7 +432,7 @@ begin
   Result := False;
   if FConfiguration = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de configuraÁ„o n„o foi instanciada.');
+    raise EConvertError.Create('A classe de configura√ß√£o n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('"The Configuration class has not been instantiated."');
     {$ENDIF}
@@ -507,7 +507,7 @@ function TSetup4DCEPResultZipCode.ValidAddress(
 begin
   if FACBrCEP = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de CEP n„o foi instanciada.');
+    raise EConvertError.Create('A classe de CEP n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The Zip Code class has not been instantiated.');
     {$ENDIF}

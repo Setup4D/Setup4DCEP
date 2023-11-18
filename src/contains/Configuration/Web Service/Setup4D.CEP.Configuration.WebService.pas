@@ -1,4 +1,4 @@
-unit Setup4D.CEP.Configuration.WebService;
+Ôªøunit Setup4D.CEP.Configuration.WebService;
 
 {$I Setup4DCEPLanguage.inc}
 
@@ -23,7 +23,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define as configuraÁıes relacionadas ao serviÁo web para consulta de CEP.
+    /// Define as configura√ß√µes relacionadas ao servi√ßo web para consulta de CEP.
     /// </summary>
     {$ELSE}
     /// <summary>
@@ -52,10 +52,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Cria uma nova inst‚ncia da interface `ISetup4DCEPConfigurationWebService`.
+    /// Cria uma nova inst√¢ncia da interface `ISetup4DCEPConfigurationWebService`.
     /// </summary>
-    /// <param name="AValue">A inst‚ncia da interface `ISetup4DCEPConfiguration` que contÈm configuraÁıes relacionadas a um serviÁo web.</param>
-    /// <returns>Uma nova inst‚ncia da interface `ISetup4DCEPConfigurationWebService` associada ‡ inst‚ncia `AValue` da interface `ISetup4DCEPConfiguration`.</returns>
+    /// <param name="AValue">A inst√¢ncia da interface `ISetup4DCEPConfiguration` que cont√©m configura√ß√µes relacionadas a um servi√ßo web.</param>
+    /// <returns>Uma nova inst√¢ncia da interface `ISetup4DCEPConfigurationWebService` associada √† inst√¢ncia `AValue` da interface `ISetup4DCEPConfiguration`.</returns>
     {$ELSE}
     /// <summary>
     /// Creates a new instance of the `ISetup4DCEPConfigurationWebService` interface.
@@ -131,7 +131,7 @@ begin
       FTimeOut := AValue.ToInteger;
   except
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A Time Out informada n„o corresponde a um n˙mero');
+    raise EConvertError.Create('A Time Out informada n√£o corresponde a um n√∫mero');
     {$ELSE}
     raise EConvertError.Create('The Time Out provided does not correspond to a number.');
     {$ENDIF}

@@ -1,4 +1,4 @@
-unit Setup4D.CEP.Filter;
+Ôªøunit Setup4D.CEP.Filter;
 
 {$I Setup4DCEPLanguage.inc}
 
@@ -51,17 +51,17 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Cria uma nova inst‚ncia da classe de configuraÁıes para o filtro de pesquisa.
+    /// Cria uma nova inst√¢ncia da classe de configura√ß√µes para o filtro de pesquisa.
     /// </summary>
     /// <param name="AValue">
-    /// A inst‚ncia de ISetup4DCEP que ser· associada a esta configuraÁ„o.
+    /// A inst√¢ncia de ISetup4DCEP que ser√° associada a esta configura√ß√£o.
     /// </param>
     /// <returns>
-    /// A interface para configuraÁ„o do filtro de consulta.
+    /// A interface para configura√ß√£o do filtro de consulta.
     /// </returns>
     /// <remarks>
-    /// Esta classe permite configurar opÁıes especÌficas para os filtros de consultas de CEP ou IBGE.
-    /// Para criar uma inst‚ncia desta classe, utilize o mÈtodo New.
+    /// Esta classe permite configurar op√ß√µes espec√≠ficas para os filtros de consultas de CEP ou IBGE.
+    /// Para criar uma inst√¢ncia desta classe, utilize o m√©todo New.
     /// </remarks>
     {$ELSE}
     /// <summary>

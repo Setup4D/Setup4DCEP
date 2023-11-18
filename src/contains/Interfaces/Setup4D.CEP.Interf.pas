@@ -1,4 +1,4 @@
-unit Setup4D.CEP.Interf;
+Ôªøunit Setup4D.CEP.Interf;
 
 {$I Setup4DCEPLanguage.inc}
 
@@ -35,7 +35,7 @@ type
 
   {$IFDEF HAS_PORTUGUES}
   /// <summary>
-  /// Interface que define a utilizaÁ„o do framework de pesquisa de CEP.
+  /// Interface que define a utiliza√ß√£o do framework de pesquisa de CEP.
   /// </summary>
   {$ELSE}
   /// <summary>
@@ -47,13 +47,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define a configuraÁ„o de pesquisa de CEP.
+    /// Define a configura√ß√£o de pesquisa de CEP.
     /// </summary>
     /// <returns>
-    /// Interface de configuraÁ„o.
+    /// Interface de configura√ß√£o.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo configura o web service de pesquisa do cep.
+    /// Este m√©todo configura o web service de pesquisa do cep.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -73,7 +73,7 @@ type
     /// Interface de pesquisa.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo configura a pesquisa do cep e do IBGE.
+    /// Este m√©todo configura a pesquisa do cep e do IBGE.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -90,13 +90,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Especifica mÛdulo a ser pesquisado.
+    /// Especifica m√≥dulo a ser pesquisado.
     /// </summary>
     /// <returns>
-    /// Interface de execuÁ„o do mÛdulo.
+    /// Interface de execu√ß√£o do m√≥dulo.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo executa o mÛdulo de para pesquisa do IBGE ou CEP.
+    /// Este m√©todo executa o m√≥dulo de para pesquisa do IBGE ou CEP.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -119,7 +119,7 @@ type
     /// Interface de resultado.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo retorna o resultado da pesquisa do cep e do IBGE.
+    /// Este m√©todo retorna o resultado da pesquisa do cep e do IBGE.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -138,7 +138,7 @@ type
 
   {$IFDEF HAS_PORTUGUES}
   /// <summary>
-  /// Interface que define a configuraÁ„o do framework de pesquisa de CEP.
+  /// Interface que define a configura√ß√£o do framework de pesquisa de CEP.
   /// </summary>
   {$ELSE}
   /// <summary>
@@ -150,13 +150,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define a configuraÁ„o do web service
+    /// Define a configura√ß√£o do web service
     /// </summary>
     /// <returns>
-    /// Interface de configuraÁ„o do web service.
+    /// Interface de configura√ß√£o do web service.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo configura o web service de pesquisa do CEP.
+    /// Este m√©todo configura o web service de pesquisa do CEP.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -173,13 +173,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define a configuraÁ„o do proxy
+    /// Define a configura√ß√£o do proxy
     /// </summary>
     /// <returns>
-    /// Interface de configuraÁ„o do proxy.
+    /// Interface de configura√ß√£o do proxy.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo configura o proxy de pesquisa do CEP.
+    /// Este m√©todo configura o proxy de pesquisa do CEP.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -197,13 +197,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Conclui a configuraÁ„o do framework de pesquisa de CEP.
+    /// Conclui a configura√ß√£o do framework de pesquisa de CEP.
     /// </summary>
     /// <returns>
     /// Uma interface do framework de pesquisa de CEP.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza a configuraÁ„o do framework de pesquisa de CEP.
+    /// Este m√©todo finaliza a configura√ß√£o do framework de pesquisa de CEP.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -239,7 +239,7 @@ type
     /// Interface de pesquisa do CEP
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo configura a pesquisa pelo CEP.
+    /// Este m√©todo configura a pesquisa pelo CEP.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -262,7 +262,7 @@ type
     /// Interface de pesquisa do IBGE
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo configura a pesquisa pelo IBGE.
+    /// Este m√©todo configura a pesquisa pelo IBGE.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -279,14 +279,14 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Limpa os critÈrios de pesquisa de CEP, redefinindo todas as configuraÁıes anteriores.
+    /// Limpa os crit√©rios de pesquisa de CEP, redefinindo todas as configura√ß√µes anteriores.
     /// </summary>
     /// <returns>
-    /// A interface que permite configurar os critÈrios de pesquisa de CEP.
+    /// A interface que permite configurar os crit√©rios de pesquisa de CEP.
     /// </returns>
     /// <remarks>
-    /// Esta funÁ„o remove todos os critÈrios de pesquisa previamente definidos, permitindo iniciar uma nova consulta.
-    /// Use esta funÁ„o para redefinir qualquer configuraÁ„o anterior e iniciar uma nova pesquisa de CEP com um estado limpo.
+    /// Esta fun√ß√£o remove todos os crit√©rios de pesquisa previamente definidos, permitindo iniciar uma nova consulta.
+    /// Use esta fun√ß√£o para redefinir qualquer configura√ß√£o anterior e iniciar uma nova pesquisa de CEP com um estado limpo.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -310,7 +310,7 @@ type
     /// Uma interface do framework de pesquisa de CEP.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza a pesquisa do framework de pesquisa de CEP.
+    /// Este m√©todo finaliza a pesquisa do framework de pesquisa de CEP.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -343,10 +343,10 @@ type
     /// Define a pesquisa pelo CEP
     /// </summary>
     /// <returns>
-    /// Interface de pesquisa do CEP pelo cÛdigo
+    /// Interface de pesquisa do CEP pelo c√≥digo
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo configura a pesquisa pelo CEP filtrando o cÛdigo.
+    /// Este m√©todo configura a pesquisa pelo CEP filtrando o c√≥digo.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -363,13 +363,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define a pesquisa pelo EndereÁo
+    /// Define a pesquisa pelo Endere√ßo
     /// </summary>
     /// <returns>
-    /// Interface de pesquisa do CEP pelo endereÁp
+    /// Interface de pesquisa do CEP pelo endere√ßp
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo configura a pesquisa pelo CEP filtrando o endereÁo.
+    /// Este m√©todo configura a pesquisa pelo CEP filtrando o endere√ßo.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -392,7 +392,7 @@ type
     /// Uma interface do framework de pesquisa de CEP.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza a pesquisa do framework de pesquisa de CEP.
+    /// Este m√©todo finaliza a pesquisa do framework de pesquisa de CEP.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -410,7 +410,7 @@ type
 
   {$IFDEF HAS_PORTUGUES}
   /// <summary>
-  /// Interface que define a pesquisa do cÛdigo do IBGE no framework de pesquisa de CEP.
+  /// Interface que define a pesquisa do c√≥digo do IBGE no framework de pesquisa de CEP.
   /// </summary>
   {$ELSE}
   /// <summary>
@@ -422,14 +422,14 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define a pesquisa do IBGE pelo cÛdigo
+    /// Define a pesquisa do IBGE pelo c√≥digo
     /// </summary>
     /// <returns>
-    /// Interface de pesquisa do IBGE pelo cÛdigo
+    /// Interface de pesquisa do IBGE pelo c√≥digo
     /// </returns>
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo configura a pesquisa do IBGE filtrando o cÛdigo.
+    /// Este m√©todo configura a pesquisa do IBGE filtrando o c√≥digo.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -446,13 +446,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define a pesquisa do IBGE pelo endereÁo
+    /// Define a pesquisa do IBGE pelo endere√ßo
     /// </summary>
     /// <returns>
-    /// Interface de pesquisa do IBGE pelo endereÁo
+    /// Interface de pesquisa do IBGE pelo endere√ßo
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo configura a pesquisa do IBGE filtrando o endereÁo.
+    /// Este m√©todo configura a pesquisa do IBGE filtrando o endere√ßo.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -469,13 +469,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Conclui a pesquisa do cÛdigo do IBGE do framework de pesquisa de CEP.
+    /// Conclui a pesquisa do c√≥digo do IBGE do framework de pesquisa de CEP.
     /// </summary>
     /// <returns>
     /// Uma interface do framework de pesquisa de CEP.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza a pesquisa do cÛdigo do IBGE do framework de pesquisa de CEP.
+    /// Este m√©todo finaliza a pesquisa do c√≥digo do IBGE do framework de pesquisa de CEP.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -493,7 +493,7 @@ type
 
   {$IFDEF HAS_PORTUGUES}
   /// <summary>
-  /// Interface que executa o mÛdulo de pesquisa do IBGE ou CEP
+  /// Interface que executa o m√≥dulo de pesquisa do IBGE ou CEP
   /// </summary>
   {$ELSE}
   /// <summary>
@@ -512,7 +512,7 @@ type
     /// </returns>
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo executa a pesquisa do CEP.
+    /// Este m√©todo executa a pesquisa do CEP.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -536,7 +536,7 @@ type
     /// </returns>
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo executa a pesquisa do IBGE.
+    /// Este m√©todo executa a pesquisa do IBGE.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -553,13 +553,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Finaliza a execuÁ„o do mÛdulo de pesquisa do CEP ou IBGE.
+    /// Finaliza a execu√ß√£o do m√≥dulo de pesquisa do CEP ou IBGE.
     /// </summary>
     /// <returns>
-    /// Uma interface do mÈtodo que executa a pesquisa do CEP ou do IBGE.
+    /// Uma interface do m√©todo que executa a pesquisa do CEP ou do IBGE.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza a execuÁ„o da pesquisa do CEP ou CNPJ.
+    /// Este m√©todo finaliza a execu√ß√£o da pesquisa do CEP ou CNPJ.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -596,7 +596,7 @@ type
     /// </returns>
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo retorna o resultado referente a pesquisa do CEP.
+    /// Este m√©todo retorna o resultado referente a pesquisa do CEP.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -619,7 +619,7 @@ type
     /// Interface do resultado da pesquisa do IBGE
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo retorna o resultado referente a pesquisa do IBGE.
+    /// Este m√©todo retorna o resultado referente a pesquisa do IBGE.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -643,7 +643,7 @@ type
     /// Uma interface do framework de pesquisa de CEP.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo conclui o resultado obtido pela pesquisa de CEP.
+    /// Este m√©todo conclui o resultado obtido pela pesquisa de CEP.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -673,9 +673,9 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ConfiguraÁıes para a pesquisa de CEP.
+    /// Configura√ß√µes para a pesquisa de CEP.
     /// </summary>
-    /// <returns>A interface de configuraÁ„o de CEP.</returns>
+    /// <returns>A interface de configura√ß√£o de CEP.</returns>
     {$ELSE}
     /// <summary>
     /// Settings for zip code search
@@ -688,9 +688,9 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ConfiguraÁıes para a pesquisa de IBGE.
+    /// Configura√ß√µes para a pesquisa de IBGE.
     /// </summary>
-    /// <returns>A interface de configuraÁ„o de IBGE.</returns>
+    /// <returns>A interface de configura√ß√£o de IBGE.</returns>
     {$ELSE}
     /// <summary>
     /// Settings for IBGE search.
@@ -703,13 +703,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define o valor de timeout para a configuraÁ„o do serviÁo web usando uma representaÁ„o em string.
+    /// Define o valor de timeout para a configura√ß√£o do servi√ßo web usando uma representa√ß√£o em string.
     /// </summary>
     /// <param name="AValue">
     /// O valor de timeout como uma string.
     /// </param>
     /// <returns>
-    /// A interface de configuraÁ„o do serviÁo web.
+    /// A interface de configura√ß√£o do servi√ßo web.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -726,13 +726,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define o valor de timeout para a configuraÁ„o do serviÁo web usando um valor inteiro.
+    /// Define o valor de timeout para a configura√ß√£o do servi√ßo web usando um valor inteiro.
     /// </summary>
     /// <param name="AValue">
     /// O valor de timeout como um inteiro (em milesegundos).
     /// </param>
     /// <returns>
-    /// A interface de configuraÁ„o do serviÁo web.
+    /// A interface de configura√ß√£o do servi√ßo web.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -749,7 +749,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o valor de timeout como uma representaÁ„o em string.
+    /// Obt√©m o valor de timeout como uma representa√ß√£o em string.
     /// </summary>
     /// <returns>O valor de timeout como uma string.</returns>
     {$ELSE}
@@ -764,7 +764,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o valor de timeout como um inteiro (em segundos).
+    /// Obt√©m o valor de timeout como um inteiro (em segundos).
     /// </summary>
     /// <returns>
     /// O valor de timeout como um inteiro.
@@ -781,13 +781,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define se deve analisar o texto nas respostas do serviÁo web.
+    /// Define se deve analisar o texto nas respostas do servi√ßo web.
     /// </summary>
     /// <param name="AValue">
-    /// Se True, o texto ser· analisado; caso contr·rio, False.
+    /// Se True, o texto ser√° analisado; caso contr√°rio, False.
     /// </param>
     /// <returns>
-    /// A interface de configuraÁ„o do serviÁo web.
+    /// A interface de configura√ß√£o do servi√ßo web.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -804,10 +804,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm se deve analisar o texto nas respostas do serviÁo web.
+    /// Obt√©m se deve analisar o texto nas respostas do servi√ßo web.
     /// </summary>
     /// <returns>
-    /// True se o texto ser· analisado; caso contr·rio, False.
+    /// True se o texto ser√° analisado; caso contr√°rio, False.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -821,13 +821,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Conclui a configuraÁ„o do web service no framework.
+    /// Conclui a configura√ß√£o do web service no framework.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza a configuraÁ„o do web service no framework.
+    /// Este m√©todo finaliza a configura√ß√£o do web service no framework.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -858,13 +858,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// N„o seleciona nenhum web service.
+    /// N√£o seleciona nenhum web service.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -884,10 +884,10 @@ type
     /// Seleciona o web serice BuscarCep.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -907,10 +907,10 @@ type
     /// Seleciona o web serice CepLivre.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -930,10 +930,10 @@ type
     /// Seleciona o web serice RepublicaVirtual.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -953,10 +953,10 @@ type
     /// Seleciona o web serice Bases4you.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -976,10 +976,10 @@ type
     /// Seleciona o web serice RNSolucoes.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -999,10 +999,10 @@ type
     /// Seleciona o web serice KingHost.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1022,10 +1022,10 @@ type
     /// Seleciona o web serice ByJG.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1045,10 +1045,10 @@ type
     /// Seleciona o web serice Correios.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1068,10 +1068,10 @@ type
     /// Seleciona o web serice DevMedia.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1091,10 +1091,10 @@ type
     /// Seleciona o web serice ViaCep.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1114,10 +1114,10 @@ type
     /// Seleciona o web serice CorreiosSIGEP.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1137,10 +1137,10 @@ type
     /// Seleciona o web serice CepAberto.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1160,10 +1160,10 @@ type
     /// Seleciona o web serice WSCep.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1183,10 +1183,10 @@ type
     /// Seleciona o web serice OpenCep.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1206,10 +1206,10 @@ type
     /// Seleciona o web serice BrasilAPI.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo seleciona o web service a ser utilizado.
+    /// Este m√©todo seleciona o web service a ser utilizado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1229,10 +1229,10 @@ type
     /// Retornar o indice do web service selecionado
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo para retornar o indice do web service.
+    /// Este m√©todo para retornar o indice do web service.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1255,10 +1255,10 @@ type
     /// A chave de acesso desejada.
     /// </param>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo para informar a chave de acesso do web service.
+    /// Este m√©todo para informar a chave de acesso do web service.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1281,10 +1281,10 @@ type
     /// Retornar a chave de acesso do webservice
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo para retornar a chave de acesso do web service.
+    /// Este m√©todo para retornar a chave de acesso do web service.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1301,13 +1301,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define o nome de usu·rio do servidor web para consulta de CEP.
+    /// Define o nome de usu√°rio do servidor web para consulta de CEP.
     /// </summary>
     /// <param name="AValue">
-    /// O nome de usu·rio do servidor web.
+    /// O nome de usu√°rio do servidor web.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface ISetup4DCEPConfigurationProxy.
+    /// Uma inst√¢ncia da interface ISetup4DCEPConfigurationProxy.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1324,10 +1324,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o nome de usu·rio do servidor web para consulta de CEP.
+    /// Obt√©m o nome de usu√°rio do servidor web para consulta de CEP.
     /// </summary>
     /// <returns>
-    /// O nome de usu·rio do servidor web.
+    /// O nome de usu√°rio do servidor web.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1341,13 +1341,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define o senha de usu·rio do servidor web para consulta de CEP.
+    /// Define o senha de usu√°rio do servidor web para consulta de CEP.
     /// </summary>
     /// <param name="AValue">
     /// A senha do servidor web.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface ISetup4DCEPConfigurationProxy.
+    /// Uma inst√¢ncia da interface ISetup4DCEPConfigurationProxy.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1364,7 +1364,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm a senha do servidor web para consulta de CEP.
+    /// Obt√©m a senha do servidor web para consulta de CEP.
     /// </summary>
     /// <returns>
     /// O nome de senha do servidor web.
@@ -1381,13 +1381,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define se deve retornar informaÁıes do IBGE.
+    /// Define se deve retornar informa√ß√µes do IBGE.
     /// </summary>
     /// <param name="AValue">
-    /// Se True, as informaÁıes do IBGE ser„o retornadas; caso contr·rio, False.
+    /// Se True, as informa√ß√µes do IBGE ser√£o retornadas; caso contr√°rio, False.
     /// </param>
     /// <returns>
-    /// A interface de configuraÁ„o do serviÁo web.
+    /// A interface de configura√ß√£o do servi√ßo web.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1404,10 +1404,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm se deve retornar informaÁıes do IBGE.
+    /// Obt√©m se deve retornar informa√ß√µes do IBGE.
     /// </summary>
     /// <returns>
-    /// True se as informaÁıes do IBGE ser„o retornadas; caso contr·rio, False.
+    /// True se as informa√ß√µes do IBGE ser√£o retornadas; caso contr√°rio, False.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1421,13 +1421,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Conclui a configuraÁ„o do Web Servide CEP no framework.
+    /// Conclui a configura√ß√£o do Web Servide CEP no framework.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza a configuraÁ„o do Web Servide CEP no framework.
+    /// Este m√©todo finaliza a configura√ß√£o do Web Servide CEP no framework.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1464,7 +1464,7 @@ type
     /// O nome do arquivo de cache.
     /// </param>
     /// <returns>
-    /// A interface de configuraÁ„o de CEP por IBGE.
+    /// A interface de configura√ß√£o de CEP por IBGE.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1481,7 +1481,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o nome do arquivo de cache atualmente definido para consultas por IBGE.
+    /// Obt√©m o nome do arquivo de cache atualmente definido para consultas por IBGE.
     /// </summary>
     /// <returns>
     /// O nome do arquivo de cache atualmente definido.
@@ -1501,10 +1501,10 @@ type
     /// Define a validade do cache em dias para consultas por IBGE.
     /// </summary>
     /// <param name="AValue">
-    /// O n˙mero de dias de validade do cache.
+    /// O n√∫mero de dias de validade do cache.
     /// </param>
     /// <returns>
-    /// A interface de configuraÁ„o de CEP por IBGE.
+    /// A interface de configura√ß√£o de CEP por IBGE.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1527,7 +1527,7 @@ type
     /// O nome do arquivo de cache como string.
     /// </param>
     /// <returns>
-    /// A interface de configuraÁ„o de CEP por IBGE.
+    /// A interface de configura√ß√£o de CEP por IBGE.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1544,7 +1544,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm a validade do cache atualmente definida para consultas por IBGE.
+    /// Obt√©m a validade do cache atualmente definida para consultas por IBGE.
     /// </summary>
     /// <returns>
     /// A validade do cache em dias.
@@ -1561,7 +1561,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm a validade do cache atualmente definida para consultas por IBGE em formato de string.
+    /// Obt√©m a validade do cache atualmente definida para consultas por IBGE em formato de string.
     /// </summary>
     /// <returns>
     /// A validade do cache como string.
@@ -1581,7 +1581,7 @@ type
     /// Executa a limpeza do cache para dados do IBGE.
     /// </summary>
     /// <returns>
-    /// A inst‚ncia de execuÁ„o do IBGE.
+    /// A inst√¢ncia de execu√ß√£o do IBGE.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1595,13 +1595,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define se a pesquisa por IBGE deve ser sensÌvel a mai˙sculas e min˙sculas.
+    /// Define se a pesquisa por IBGE deve ser sens√≠vel a mai√∫sculas e min√∫sculas.
     /// </summary>
     /// <param name="AValue">
     /// True para habilitar a pesquisa case sensitive, False para desabilitar.
     /// </param>
     /// <returns>
-    /// A interface de configuraÁ„o de CEP por IBGE.
+    /// A interface de configura√ß√£o de CEP por IBGE.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1618,10 +1618,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o status atual da pesquisa por IBGE, se È sensÌvel a mai˙sculas e min˙sculas.
+    /// Obt√©m o status atual da pesquisa por IBGE, se √© sens√≠vel a mai√∫sculas e min√∫sculas.
     /// </summary>
     /// <returns>
-    /// True se a pesquisa por IBGE È case sensitive, False se n„o È.
+    /// True se a pesquisa por IBGE √© case sensitive, False se n√£o √©.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1635,10 +1635,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Finaliza a configuraÁ„o para pesquisa por IBGE.
+    /// Finaliza a configura√ß√£o para pesquisa por IBGE.
     /// </summary>
     /// <returns>
-    /// A interface de configuraÁ„o de serviÁos web de CEP.
+    /// A interface de configura√ß√£o de servi√ßos web de CEP.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1666,13 +1666,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define o host do servidor proxy para o serviÁo web de consulta de CEP.
+    /// Define o host do servidor proxy para o servi√ßo web de consulta de CEP.
     /// </summary>
     /// <param name="AValue">
     /// O host do servidor proxy.
     ///</param>
     /// <returns>
-    /// Uma inst‚ncia da interface ISetup4DCEPConfigurationProxy.
+    /// Uma inst√¢ncia da interface ISetup4DCEPConfigurationProxy.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1689,13 +1689,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define a porta do servidor proxy para o serviÁo web de consulta de CEP.
+    /// Define a porta do servidor proxy para o servi√ßo web de consulta de CEP.
     /// </summary>
     /// <param name="AValue">
     /// A porta do servidor proxy como uma string.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface ISetup4DCEPConfigurationProxy.
+    /// Uma inst√¢ncia da interface ISetup4DCEPConfigurationProxy.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1712,12 +1712,12 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define a porta do servidor proxy para o serviÁo web de consulta de CEP.
+    /// Define a porta do servidor proxy para o servi√ßo web de consulta de CEP.
     /// </summary>
     /// <param name="AValue">
-    /// A porta do servidor proxy como um n˙mero inteiro.
+    /// A porta do servidor proxy como um n√∫mero inteiro.
     /// </param>
-    /// <returns>Uma inst‚ncia da interface ISetup4DCEPConfigurationProxy.</returns>
+    /// <returns>Uma inst√¢ncia da interface ISetup4DCEPConfigurationProxy.</returns>
     {$ELSE}
     /// <summary>
     /// Sets the port of the proxy server for the CEP query web service.
@@ -1733,13 +1733,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define o nome de usu·rio do servidor proxy para o serviÁo web de consulta de CEP.
+    /// Define o nome de usu√°rio do servidor proxy para o servi√ßo web de consulta de CEP.
     /// </summary>
     /// <param name="AValue">
-    /// O nome de usu·rio do servidor proxy.
+    /// O nome de usu√°rio do servidor proxy.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface ISetup4DCEPConfigurationProxy.
+    /// Uma inst√¢ncia da interface ISetup4DCEPConfigurationProxy.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1756,13 +1756,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define a senha do servidor proxy para o serviÁo web de consulta de CEP.
+    /// Define a senha do servidor proxy para o servi√ßo web de consulta de CEP.
     /// </summary>
     /// <param name="AValue">
     /// A senha do servidor proxy.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface ISetup4DCEPConfigurationProxy.
+    /// Uma inst√¢ncia da interface ISetup4DCEPConfigurationProxy.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1779,7 +1779,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o host do servidor proxy para o serviÁo web de consulta de CEP.
+    /// Obt√©m o host do servidor proxy para o servi√ßo web de consulta de CEP.
     /// </summary>
     /// <returns>
     /// O host do servidor proxy.
@@ -1796,10 +1796,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm a porta do servidor proxy para o serviÁo web de consulta de CEP.
+    /// Obt√©m a porta do servidor proxy para o servi√ßo web de consulta de CEP.
     /// </summary>
     /// <returns>
-    /// A porta do servidor proxy como um n˙mero inteiro.
+    /// A porta do servidor proxy como um n√∫mero inteiro.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1813,10 +1813,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm a porta do servidor proxy para o serviÁo web de consulta de CEP.
+    /// Obt√©m a porta do servidor proxy para o servi√ßo web de consulta de CEP.
     /// </summary>
     /// <returns>
-    /// A porta do servidor proxy como um n˙mero string.
+    /// A porta do servidor proxy como um n√∫mero string.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1830,10 +1830,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o nome de usu·rio do servidor proxy para o serviÁo web de consulta de CEP.
+    /// Obt√©m o nome de usu√°rio do servidor proxy para o servi√ßo web de consulta de CEP.
     /// </summary>
     /// <returns>
-    /// O nome de usu·rio do servidor proxy.
+    /// O nome de usu√°rio do servidor proxy.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1847,7 +1847,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm a senha do servidor proxy para o serviÁo web de consulta de CEP.
+    /// Obt√©m a senha do servidor proxy para o servi√ßo web de consulta de CEP.
     /// </summary>
     /// <returns>
     /// A senha do servidor proxy.
@@ -1864,13 +1864,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Conclui a configuraÁ„o do proxy no framework.
+    /// Conclui a configura√ß√£o do proxy no framework.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza a configuraÁ„o do proxy no framework.
+    /// Este m√©todo finaliza a configura√ß√£o do proxy no framework.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1888,7 +1888,7 @@ type
 
   {$IFDEF HAS_PORTUGUES}
   /// <summary>
-  /// Interface de busca de CEP (CÛdigo de EndereÁamento Postal) por meio do cÛdigo postal.
+  /// Interface de busca de CEP (C√≥digo de Endere√ßamento Postal) por meio do c√≥digo postal.
   /// </summary>
   {$ELSE}
   /// <summary>
@@ -1906,7 +1906,7 @@ type
     /// O valor do CEP.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface ISetup4DCEPFilterZipCodeKey.
+    /// Uma inst√¢ncia da interface ISetup4DCEPFilterZipCodeKey.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -1923,7 +1923,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o valor do CEP a ser pesquisado.
+    /// Obt√©m o valor do CEP a ser pesquisado.
     /// </summary>
     /// <returns>
     /// O valor do CEP.
@@ -1940,13 +1940,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Conclui a configuraÁ„o de pesquisa pelo CEP no framework.
+    /// Conclui a configura√ß√£o de pesquisa pelo CEP no framework.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza a pesquisa pelo CEP no framework.
+    /// Este m√©todo finaliza a pesquisa pelo CEP no framework.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -1964,7 +1964,7 @@ type
 
   {$IFDEF HAS_PORTUGUES}
   /// <summary>
-  /// Interface de busca de CEP (CÛdigo de EndereÁamento Postal) por meio do endereÁo.
+  /// Interface de busca de CEP (C√≥digo de Endere√ßamento Postal) por meio do endere√ßo.
   /// </summary>
   {$ELSE}
   /// <summary>
@@ -1976,13 +1976,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define o tipo de endereÁo a ser pesquisado no CEP.
+    /// Define o tipo de endere√ßo a ser pesquisado no CEP.
     /// </summary>
     /// <param name="AValue">
-    /// O tipo de endereÁo a ser pesquisado.
+    /// O tipo de endere√ßo a ser pesquisado.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface para continuar a configuraÁ„o da pesquisa.
+    /// Uma inst√¢ncia da interface para continuar a configura√ß√£o da pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2005,7 +2005,7 @@ type
     /// O nome da rua.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface para continuar a configuraÁ„o da pesquisa.
+    /// Uma inst√¢ncia da interface para continuar a configura√ß√£o da pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2028,7 +2028,7 @@ type
     /// O nome da cidade.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface para continuar a configuraÁ„o da pesquisa.
+    /// Uma inst√¢ncia da interface para continuar a configura√ß√£o da pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2051,7 +2051,7 @@ type
     /// A sigla do estado.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface para continuar a configuraÁ„o da pesquisa.
+    /// Uma inst√¢ncia da interface para continuar a configura√ß√£o da pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2074,7 +2074,7 @@ type
     /// A sigla do estado.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface para continuar a configuraÁ„o da pesquisa.
+    /// Uma inst√¢ncia da interface para continuar a configura√ß√£o da pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2097,7 +2097,7 @@ type
     /// O nome do bairro.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface para continuar a configuraÁ„o da pesquisa.
+    /// Uma inst√¢ncia da interface para continuar a configura√ß√£o da pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2114,10 +2114,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o tipo de endereÁo atualmente definido na pesquisa de CEP.
+    /// Obt√©m o tipo de endere√ßo atualmente definido na pesquisa de CEP.
     /// </summary>
     /// <returns>
-    /// O tipo de endereÁo atualmente definido.
+    /// O tipo de endere√ßo atualmente definido.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2131,7 +2131,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o nome da rua atualmente definido na pesquisa de CEP.
+    /// Obt√©m o nome da rua atualmente definido na pesquisa de CEP.
     /// </summary>
     /// <returns>
     /// O nome da rua atualmente definido.
@@ -2148,7 +2148,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o nome da cidade atualmente definido na pesquisa de CEP.
+    /// Obt√©m o nome da cidade atualmente definido na pesquisa de CEP.
     /// </summary>
     /// <returns>
     /// O nome da cidade atualmente definido.
@@ -2165,7 +2165,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm a sigla do estado atualmente definida na pesquisa de CEP.
+    /// Obt√©m a sigla do estado atualmente definida na pesquisa de CEP.
     /// </summary>
     /// <returns>
     /// A sigla do estado atualmente definida.
@@ -2182,7 +2182,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o nome do bairro atualmente definido na pesquisa de CEP.
+    /// Obt√©m o nome do bairro atualmente definido na pesquisa de CEP.
     /// </summary>
     /// <returns>
     /// O nome do bairro atualmente definido.
@@ -2199,13 +2199,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Conclui a configuraÁ„o de pesquisa pelo EndereÁp no framework.
+    /// Conclui a configura√ß√£o de pesquisa pelo Endere√ßp no framework.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza a pesquisa pelo EndereÁp no framework.
+    /// Este m√©todo finaliza a pesquisa pelo Endere√ßp no framework.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -2223,7 +2223,7 @@ type
 
   {$IFDEF HAS_PORTUGUES}
   /// <summary>
-  /// Interface para a busca do cÛdigo do IBGE a partir do cÛdigo informado.
+  /// Interface para a busca do c√≥digo do IBGE a partir do c√≥digo informado.
   /// </summary>
   {$ELSE}
   /// <summary>
@@ -2235,13 +2235,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define o valor do cÛdigo do IBGE a ser pesquisado.
+    /// Define o valor do c√≥digo do IBGE a ser pesquisado.
     /// </summary>
     /// <param name="AValue">
-    /// O valor do cÛdigo do IBGE a ser pesquisado.
+    /// O valor do c√≥digo do IBGE a ser pesquisado.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface para continuar a configuraÁ„o da pesquisa.
+    /// Uma inst√¢ncia da interface para continuar a configura√ß√£o da pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2258,7 +2258,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o valor do cÛdigo IBGE atualmente definido na pesquisa.
+    /// Obt√©m o valor do c√≥digo IBGE atualmente definido na pesquisa.
     /// </summary>
     /// <returns>
     /// O valor do dado IBGE atualmente definido.
@@ -2275,13 +2275,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Finaliza a configuraÁ„o da pesquisa pelo cÛdigo do IBGE com base no cÛdigo, no framework.
+    /// Finaliza a configura√ß√£o da pesquisa pelo c√≥digo do IBGE com base no c√≥digo, no framework.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza a cda pesquisa do cÛdigo do IBGE, no framework.
+    /// Este m√©todo finaliza a cda pesquisa do c√≥digo do IBGE, no framework.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -2299,7 +2299,7 @@ type
 
   {$IFDEF HAS_PORTUGUES}
   /// <summary>
-  /// Interface para a busca do cÛdigo do IBGE a partir do EndereÁo informado.
+  /// Interface para a busca do c√≥digo do IBGE a partir do Endere√ßo informado.
   /// </summary>
   {$ELSE}
   /// <summary>
@@ -2317,7 +2317,7 @@ type
     /// O nome da cidade a ser pesquisada.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface para continuar a configuraÁ„o da pesquisa.
+    /// Uma inst√¢ncia da interface para continuar a configura√ß√£o da pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2340,7 +2340,7 @@ type
     /// A sigla do estado a ser pesquisada.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface para continuar a configuraÁ„o da pesquisa.
+    /// Uma inst√¢ncia da interface para continuar a configura√ß√£o da pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2363,7 +2363,7 @@ type
     /// A sigla do estado a ser pesquisada.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface para continuar a configuraÁ„o da pesquisa.
+    /// Uma inst√¢ncia da interface para continuar a configura√ß√£o da pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2380,7 +2380,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o nome da cidade atualmente definido na pesquisa do IBGE.
+    /// Obt√©m o nome da cidade atualmente definido na pesquisa do IBGE.
     /// </summary>
     /// <returns>
     /// O nome da cidade atualmente definido.
@@ -2397,7 +2397,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm a sigla do estado atualmente definida na pesquisa do IBGE.
+    /// Obt√©m a sigla do estado atualmente definida na pesquisa do IBGE.
     /// </summary>
     /// <returns>
     /// A sigla do estado atualmente definida.
@@ -2415,13 +2415,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Finaliza a configuraÁ„o da pesquisa pelo cÛdigo do IBGE com base no endereÁo, no framework.
+    /// Finaliza a configura√ß√£o da pesquisa pelo c√≥digo do IBGE com base no endere√ßo, no framework.
     /// </summary>
     /// <returns>
-    /// Uma interface de configuraÁ„o do framework.
+    /// Uma interface de configura√ß√£o do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza a pesquisa pelo cÛdigo do IBGE, no framework.
+    /// Este m√©todo finaliza a pesquisa pelo c√≥digo do IBGE, no framework.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -2451,10 +2451,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define se deve ser realizada uma nova configuraÁ„o antes da execuÁ„o.
+    /// Define se deve ser realizada uma nova configura√ß√£o antes da execu√ß√£o.
     /// </summary>
     /// <returns>
-    /// A interface de execuÁ„o de CEP com cÛdigo.
+    /// A interface de execu√ß√£o de CEP com c√≥digo.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2468,10 +2468,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Executa a pesquisa de CEP por cÛdigo.
+    /// Executa a pesquisa de CEP por c√≥digo.
     /// </summary>
     /// <returns>
-    /// A interface de execuÁ„o de CEP com cÛdigo.
+    /// A interface de execu√ß√£o de CEP com c√≥digo.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2485,9 +2485,9 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Executa a pesquisa de CEP por endereÁo.
+    /// Executa a pesquisa de CEP por endere√ßo.
     /// </summary>
-    /// <returns>A interface de execuÁ„o de CEP com cÛdigo.</returns>
+    /// <returns>A interface de execu√ß√£o de CEP com c√≥digo.</returns>
     {$ELSE}
     /// <summary>
     /// Executes the zip code search by address.
@@ -2500,13 +2500,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o componente interno associado a esta inst‚ncia.
+    /// Obt√©m o componente interno associado a esta inst√¢ncia.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o componente interno associado a esta inst‚ncia.
+    /// Esta fun√ß√£o retorna o componente interno associado a esta inst√¢ncia.
     /// </remarks>
     /// <returns>
-    /// O componente interno associado a esta inst‚ncia.
+    /// O componente interno associado a esta inst√¢ncia.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2523,13 +2523,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Conclui a execuÁ„o da pesquisa por CEP
+    /// Conclui a execu√ß√£o da pesquisa por CEP
     /// </summary>
     /// <returns>
     /// Uma interface que executa a pesquisa por CEP.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza execuÁ„o de pesquisa por CEP.
+    /// Este m√©todo finaliza execu√ß√£o de pesquisa por CEP.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -2559,10 +2559,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Reconfigura as configuraÁıes de proxy e cache para execuÁ„o do IBGE.
+    /// Reconfigura as configura√ß√µes de proxy e cache para execu√ß√£o do IBGE.
     /// </summary>
     /// <returns>
-    /// A inst‚ncia de execuÁ„o do IBGE.
+    /// A inst√¢ncia de execu√ß√£o do IBGE.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2576,10 +2576,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Executa uma pesquisa com base em cÛdigo para dados do IBGE.
+    /// Executa uma pesquisa com base em c√≥digo para dados do IBGE.
     /// </summary>
     /// <returns>
-    /// A inst‚ncia de execuÁ„o do IBGE.
+    /// A inst√¢ncia de execu√ß√£o do IBGE.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2596,7 +2596,7 @@ type
     /// Executa uma pesquisa com base em estado para dados do IBGE.
     /// </summary>
     /// <returns>
-    /// A inst‚ncia de execuÁ„o do IBGE.
+    /// A inst√¢ncia de execu√ß√£o do IBGE.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2613,7 +2613,7 @@ type
     /// Executa uma pesquisa com base em cidade para dados do IBGE.
     /// </summary>
     /// <returns>
-    /// A inst‚ncia de execuÁ„o do IBGE.
+    /// A inst√¢ncia de execu√ß√£o do IBGE.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2627,13 +2627,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o componente interno associado a esta inst‚ncia.
+    /// Obt√©m o componente interno associado a esta inst√¢ncia.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o componente interno associado a esta inst‚ncia.
+    /// Esta fun√ß√£o retorna o componente interno associado a esta inst√¢ncia.
     /// </remarks>
     /// <returns>
-    /// O componente interno associado a esta inst‚ncia.
+    /// O componente interno associado a esta inst√¢ncia.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2650,13 +2650,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Conclui a execuÁ„o da pesquisa por IBGE
+    /// Conclui a execu√ß√£o da pesquisa por IBGE
     /// </summary>
     /// <returns>
     /// Uma interface que executa a pesquisa por IBGE.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza execuÁ„o de pesquisa por IBGE.
+    /// Este m√©todo finaliza execu√ß√£o de pesquisa por IBGE.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -2686,13 +2686,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm um objeto que permite o acesso ‡ interface de exibiÁ„o dos resultados de pesquisa de CEP.
+    /// Obt√©m um objeto que permite o acesso √† interface de exibi√ß√£o dos resultados de pesquisa de CEP.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna um objeto que oferece acesso ‡s informaÁıes detalhadas do resultado de pesquisa de CEP.
+    /// Esta fun√ß√£o retorna um objeto que oferece acesso √†s informa√ß√µes detalhadas do resultado de pesquisa de CEP.
     /// </remarks>
     /// <returns>
-    /// Um objeto que permite o acesso ‡ interface de exibiÁ„o dos resultados de pesquisa de CEP.
+    /// Um objeto que permite o acesso √† interface de exibi√ß√£o dos resultados de pesquisa de CEP.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2709,11 +2709,11 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o objeto JSON correspondente a este resultado de pesquisa de CEP.
+    /// Obt√©m o objeto JSON correspondente a este resultado de pesquisa de CEP.
     /// </summary>
     /// <param name="AValue">O objeto JSON correspondente a este resultado de pesquisa de CEP.</param>
     /// <remarks>
-    /// Esta funÁ„o retorna o objeto JSON que corresponde a este resultado de pesquisa de CEP.
+    /// Esta fun√ß√£o retorna o objeto JSON que corresponde a este resultado de pesquisa de CEP.
     /// </remarks>
     /// <returns>
     /// O objeto JSON correspondente a este resultado de pesquisa de CEP.
@@ -2734,10 +2734,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o objeto JSON correspondente a este resultado de pesquisa de CEP.
+    /// Obt√©m o objeto JSON correspondente a este resultado de pesquisa de CEP.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o objeto JSON que corresponde a este resultado de pesquisa de CEP.
+    /// Esta fun√ß√£o retorna o objeto JSON que corresponde a este resultado de pesquisa de CEP.
     /// </remarks>
     /// <returns>
     /// O objeto JSON correspondente a este resultado de pesquisa de CEP.
@@ -2757,10 +2757,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o objeto JSON correspondente a este resultado de pesquisa de CEP em formato de string.
+    /// Obt√©m o objeto JSON correspondente a este resultado de pesquisa de CEP em formato de string.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o objeto JSON que corresponde a este resultado de pesquisa de CEP em formato de string.
+    /// Esta fun√ß√£o retorna o objeto JSON que corresponde a este resultado de pesquisa de CEP em formato de string.
     /// </remarks>
     /// <returns>O objeto JSON correspondente a este resultado de pesquisa de CEP em formato de string.</returns>
     {$ELSE}
@@ -2778,10 +2778,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm um JSONArray da resposta do CEP.
+    /// Obt√©m um JSONArray da resposta do CEP.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna um JSONArray contendo os dados da resposta do CEP, se disponÌvel.
+    /// Esta fun√ß√£o retorna um JSONArray contendo os dados da resposta do CEP, se dispon√≠vel.
     /// </remarks>
     /// <returns>
     /// Um JSONArray com os dados do CEP.
@@ -2801,13 +2801,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o n˙mero total de registros na resposta do CEP.
+    /// Obt√©m o n√∫mero total de registros na resposta do CEP.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o n˙mero total de registros contidos na resposta do CEP, se disponÌvel.
+    /// Esta fun√ß√£o retorna o n√∫mero total de registros contidos na resposta do CEP, se dispon√≠vel.
     /// </remarks>
     /// <returns>
-    /// O n˙mero total de registros na resposta do CEP.
+    /// O n√∫mero total de registros na resposta do CEP.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2824,13 +2824,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o n˙mero total de registros na resposta do CEP como uma string.
+    /// Obt√©m o n√∫mero total de registros na resposta do CEP como uma string.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o n˙mero total de registros na resposta do CEP como uma string, se disponÌvel.
+    /// Esta fun√ß√£o retorna o n√∫mero total de registros na resposta do CEP como uma string, se dispon√≠vel.
     /// </remarks>
     /// <returns>
-    /// O n˙mero total de registros na resposta do CEP como uma string.
+    /// O n√∫mero total de registros na resposta do CEP como uma string.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -2853,7 +2853,7 @@ type
     /// Uma interface de resultado do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza o resultado da pesquisa do CEP no framework.
+    /// Este m√©todo finaliza o resultado da pesquisa do CEP no framework.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -2883,10 +2883,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o CEP (CÛdigo de EndereÁamento Postal) associado a este resultado de pesquisa.
+    /// Obt√©m o CEP (C√≥digo de Endere√ßamento Postal) associado a este resultado de pesquisa.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o CEP (CÛdigo de EndereÁamento Postal) do endereÁo encontrado durante a pesquisa.
+    /// Esta fun√ß√£o retorna o CEP (C√≥digo de Endere√ßamento Postal) do endere√ßo encontrado durante a pesquisa.
     /// </remarks>
     /// <returns>
     /// O CEP associado a este resultado de pesquisa.
@@ -2906,10 +2906,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o tipo de logradouro (por exemplo, "Rua", "Avenida") associado a este resultado de pesquisa.
+    /// Obt√©m o tipo de logradouro (por exemplo, "Rua", "Avenida") associado a este resultado de pesquisa.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o tipo de logradouro (por exemplo, "Rua" ou "Avenida") do endereÁo encontrado durante a pesquisa.
+    /// Esta fun√ß√£o retorna o tipo de logradouro (por exemplo, "Rua" ou "Avenida") do endere√ßo encontrado durante a pesquisa.
     /// </remarks>
     /// <returns>
     /// O tipo de logradouro associado a este resultado de pesquisa.
@@ -2929,10 +2929,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o nome da rua associado a este resultado de pesquisa.
+    /// Obt√©m o nome da rua associado a este resultado de pesquisa.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o nome da rua do endereÁo encontrado durante a pesquisa.
+    /// Esta fun√ß√£o retorna o nome da rua do endere√ßo encontrado durante a pesquisa.
     /// </remarks>
     /// <returns>
     /// O nome da rua associado a este resultado de pesquisa.
@@ -2952,10 +2952,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o nome completo da rua, incluindo o tipo (por exemplo, "Rua Main" ou "Avenida Central").
+    /// Obt√©m o nome completo da rua, incluindo o tipo (por exemplo, "Rua Main" ou "Avenida Central").
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o nome completo da rua, incluindo o tipo (por exemplo, "Rua Main" ou "Avenida Central"), do endereÁo encontrado durante a pesquisa.
+    /// Esta fun√ß√£o retorna o nome completo da rua, incluindo o tipo (por exemplo, "Rua Main" ou "Avenida Central"), do endere√ßo encontrado durante a pesquisa.
     /// </remarks>
     /// <returns>O nome completo da rua associado a este resultado de pesquisa.</returns>
     {$ELSE}
@@ -2973,12 +2973,12 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm informaÁıes adicionais sobre o endereÁo, como complemento, apartamento, bloco, etc.
+    /// Obt√©m informa√ß√µes adicionais sobre o endere√ßo, como complemento, apartamento, bloco, etc.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna informaÁıes adicionais sobre o endereÁo, como complemento, apartamento, bloco, etc., encontradas durante a pesquisa.
+    /// Esta fun√ß√£o retorna informa√ß√µes adicionais sobre o endere√ßo, como complemento, apartamento, bloco, etc., encontradas durante a pesquisa.
     /// </remarks>
-    /// <returns>InformaÁıes adicionais de endereÁo associadas a este resultado de pesquisa.</returns>
+    /// <returns>Informa√ß√µes adicionais de endere√ßo associadas a este resultado de pesquisa.</returns>
     {$ELSE}
     /// <summary>
     /// Gets additional address information, such as complement, apartment, block, etc. associated with this search result.
@@ -2994,10 +2994,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o nome do bairro associado a este resultado de pesquisa.
+    /// Obt√©m o nome do bairro associado a este resultado de pesquisa.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o nome do bairro do endereÁo encontrado durante a pesquisa.
+    /// Esta fun√ß√£o retorna o nome do bairro do endere√ßo encontrado durante a pesquisa.
     /// </remarks>
     /// <returns>
     /// O nome do bairro associado a este resultado de pesquisa.
@@ -3017,10 +3017,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o nome da cidade associado a este resultado de pesquisa.
+    /// Obt√©m o nome da cidade associado a este resultado de pesquisa.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o nome da cidade do endereÁo encontrado durante a pesquisa.
+    /// Esta fun√ß√£o retorna o nome da cidade do endere√ßo encontrado durante a pesquisa.
     /// </remarks>
     /// <returns>
     /// O nome da cidade associado a este resultado de pesquisa.
@@ -3040,13 +3040,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o cÛdigo da cidade no padr„o do IBGE associado a este resultado de pesquisa.
+    /// Obt√©m o c√≥digo da cidade no padr√£o do IBGE associado a este resultado de pesquisa.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o cÛdigo da cidade no padr„o do IBGE do endereÁo encontrado durante a pesquisa.
+    /// Esta fun√ß√£o retorna o c√≥digo da cidade no padr√£o do IBGE do endere√ßo encontrado durante a pesquisa.
     /// </remarks>
     /// <returns>
-    /// O cÛdigo da cidade no padr„o do IBGE associado a este resultado de pesquisa.
+    /// O c√≥digo da cidade no padr√£o do IBGE associado a este resultado de pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -3063,10 +3063,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o nome do estado associado a este resultado de pesquisa.
+    /// Obt√©m o nome do estado associado a este resultado de pesquisa.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o nome do estado do endereÁo encontrado durante a pesquisa.
+    /// Esta fun√ß√£o retorna o nome do estado do endere√ßo encontrado durante a pesquisa.
     /// </remarks>
     /// <returns>
     /// O nome do estado associado a este resultado de pesquisa.
@@ -3086,13 +3086,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o cÛdigo do estado no padr„o do IBGE associado a este resultado de pesquisa.
+    /// Obt√©m o c√≥digo do estado no padr√£o do IBGE associado a este resultado de pesquisa.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o cÛdigo do estado no padr„o do IBGE do endereÁo encontrado durante a pesquisa.
+    /// Esta fun√ß√£o retorna o c√≥digo do estado no padr√£o do IBGE do endere√ßo encontrado durante a pesquisa.
     /// </remarks>
     /// <returns>
-    /// O cÛdigo do estado no padr„o do IBGE associado a este resultado de pesquisa.
+    /// O c√≥digo do estado no padr√£o do IBGE associado a este resultado de pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -3109,13 +3109,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o cÛdigo de discagem direta a dist‚ncia (DDD) associado a este resultado de pesquisa.
+    /// Obt√©m o c√≥digo de discagem direta a dist√¢ncia (DDD) associado a este resultado de pesquisa.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o cÛdigo de discagem direta a dist‚ncia (DDD) associado ao estado deste resultado de pesquisa.
+    /// Esta fun√ß√£o retorna o c√≥digo de discagem direta a dist√¢ncia (DDD) associado ao estado deste resultado de pesquisa.
     /// </remarks>
     /// <returns>
-    /// O cÛdigo DDD associado a este resultado de pesquisa.
+    /// O c√≥digo DDD associado a este resultado de pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -3132,14 +3132,14 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o cÛdigo GIA (GerÍncia de InformaÁıes de ArrecadaÁ„o) associado a este resultado de pesquisa.
-    /// … uma declaraÁ„o acessÛria obrigatÛria para apuraÁ„o de valores a tÌtulo de ICMS.
+    /// Obt√©m o c√≥digo GIA (Ger√™ncia de Informa√ß√µes de Arrecada√ß√£o) associado a este resultado de pesquisa.
+    /// √â uma declara√ß√£o acess√≥ria obrigat√≥ria para apura√ß√£o de valores a t√≠tulo de ICMS.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o cÛdigo GIA (GerÍncia de InformaÁıes de ArrecadaÁ„o) associado a este resultado de pesquisa.
+    /// Esta fun√ß√£o retorna o c√≥digo GIA (Ger√™ncia de Informa√ß√µes de Arrecada√ß√£o) associado a este resultado de pesquisa.
     /// </remarks>
     /// <returns>
-    /// O cÛdigo GIA associado a este resultado de pesquisa.
+    /// O c√≥digo GIA associado a este resultado de pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -3147,7 +3147,7 @@ type
     /// This is a mandatory ancillary statement for the calculation of ICMS (Value Added Tax) amounts.
     /// </summary>
     /// <remarks>
-    /// This function returns the GIA (GerÍncia de InformaÁıes de ArrecadaÁ„o) code associated with this search result.
+    /// This function returns the GIA (Ger√™ncia de Informa√ß√µes de Arrecada√ß√£o) code associated with this search result.
     /// </remarks>
     /// <returns>
     /// The GIA code associated with this search result.
@@ -3157,15 +3157,15 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o cÛdigo SIAFI (Sistema Integrado de AdministraÁ„o Financeira) associado a este resultado de pesquisa.
-    /// … o principal instrumento utilizado para registro, acompanhamento e
-    /// controle da execuÁ„o orÁament·ria, financeira, patrimonial e cont·bil do Governo Federal
+    /// Obt√©m o c√≥digo SIAFI (Sistema Integrado de Administra√ß√£o Financeira) associado a este resultado de pesquisa.
+    /// √â o principal instrumento utilizado para registro, acompanhamento e
+    /// controle da execu√ß√£o or√ßament√°ria, financeira, patrimonial e cont√°bil do Governo Federal
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna o cÛdigo SIAFI (Sistema Integrado de AdministraÁ„o Financeira) associado a este resultado de pesquisa.
+    /// Esta fun√ß√£o retorna o c√≥digo SIAFI (Sistema Integrado de Administra√ß√£o Financeira) associado a este resultado de pesquisa.
     /// </remarks>
     /// <returns>
-    /// O cÛdigo SIAFI associado a este resultado de pesquisa.
+    /// O c√≥digo SIAFI associado a este resultado de pesquisa.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -3174,7 +3174,7 @@ type
     /// control of the budgetary, financial, patrimonial, and accounting execution of the Federal Government.
     /// </summary>
     /// <remarks>
-    /// This function returns the SIAFI (Sistema Integrado de AdministraÁ„o Financeira) code associated with this search result.
+    /// This function returns the SIAFI (Sistema Integrado de Administra√ß√£o Financeira) code associated with this search result.
     /// </remarks>
     /// <returns>
     /// The SIAFI code associated with this search result.
@@ -3184,10 +3184,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm a altitude associada a este resultado de pesquisa de CEP.
+    /// Obt√©m a altitude associada a este resultado de pesquisa de CEP.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna a altitude associada ao local correspondente ao resultado de pesquisa de CEP.
+    /// Esta fun√ß√£o retorna a altitude associada ao local correspondente ao resultado de pesquisa de CEP.
     /// </remarks>
     /// <returns>
     /// A altitude associada a este resultado de pesquisa de CEP.
@@ -3207,10 +3207,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm a latitude associada a este resultado de pesquisa de CEP.
+    /// Obt√©m a latitude associada a este resultado de pesquisa de CEP.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna a latitude associada ao local correspondente ao resultado de pesquisa de CEP.
+    /// Esta fun√ß√£o retorna a latitude associada ao local correspondente ao resultado de pesquisa de CEP.
     /// </remarks>
     /// <returns>
     /// A latitude associada a este resultado de pesquisa de CEP.
@@ -3230,10 +3230,10 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm a longitude associada a este resultado de pesquisa de CEP.
+    /// Obt√©m a longitude associada a este resultado de pesquisa de CEP.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o retorna a longitude associada ao local correspondente ao resultado de pesquisa de CEP.
+    /// Esta fun√ß√£o retorna a longitude associada ao local correspondente ao resultado de pesquisa de CEP.
     /// </remarks>
     /// <returns>
     /// A longitude associada a este resultado de pesquisa de CEP.
@@ -3253,16 +3253,16 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define um objeto JSON para esta inst‚ncia a partir de um TJSONObject.
+    /// Define um objeto JSON para esta inst√¢ncia a partir de um TJSONObject.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o define um objeto JSON para esta inst‚ncia a partir de um TJSONObject.
+    /// Esta fun√ß√£o define um objeto JSON para esta inst√¢ncia a partir de um TJSONObject.
     /// </remarks>
     /// <param name="AValue">
     /// O objeto JSON a ser definido.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface que fornece mÈtodos para exibir o JSON.
+    /// Uma inst√¢ncia da interface que fornece m√©todos para exibir o JSON.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -3288,7 +3288,7 @@ type
     /// Uma interface de resultado do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza a apresentaÁ„o da pesquisa do CEP no framework.
+    /// Este m√©todo finaliza a apresenta√ß√£o da pesquisa do CEP no framework.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -3318,13 +3318,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm a interface para configuraÁ„o da exibiÁ„o dos resultados das consultas por IBGE.
+    /// Obt√©m a interface para configura√ß√£o da exibi√ß√£o dos resultados das consultas por IBGE.
     /// </summary>
     /// <returns>
-    /// A interface de configuraÁ„o da exibiÁ„o de resultados por IBGE.
+    /// A interface de configura√ß√£o da exibi√ß√£o de resultados por IBGE.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo retorna a funÁ„o que exibe o resultado.
+    /// Este m√©todo retorna a fun√ß√£o que exibe o resultado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -3341,14 +3341,14 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o objeto JSON associado a este resultado.
+    /// Obt√©m o objeto JSON associado a este resultado.
     /// </summary>
     /// <param name="AValue">
     /// O objeto JSON associado a este resultado.
     /// </param>
     /// <remarks>
-    /// Esta funÁ„o fornece acesso ao objeto JSON que contÈm informaÁıes detalhadas sobre a consulta do IBGE.
-    /// VocÍ pode usar esse objeto para obter informaÁıes especÌficas, como cÛdigos de UF, municÌpio e outras informaÁıes do IBGE.
+    /// Esta fun√ß√£o fornece acesso ao objeto JSON que cont√©m informa√ß√µes detalhadas sobre a consulta do IBGE.
+    /// Voc√™ pode usar esse objeto para obter informa√ß√µes espec√≠ficas, como c√≥digos de UF, munic√≠pio e outras informa√ß√µes do IBGE.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -3366,12 +3366,12 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o objeto JSON associado a este resultado.
+    /// Obt√©m o objeto JSON associado a este resultado.
     /// </summary>
     /// <returns>O objeto JSON associado a este resultado.</returns>
     /// <remarks>
-    /// Esta funÁ„o fornece acesso ao objeto JSON que contÈm informaÁıes detalhadas sobre a consulta do IBGE.
-    /// VocÍ pode usar esse objeto para obter informaÁıes especÌficas, como cÛdigos de UF, municÌpio e outras informaÁıes do IBGE.
+    /// Esta fun√ß√£o fornece acesso ao objeto JSON que cont√©m informa√ß√µes detalhadas sobre a consulta do IBGE.
+    /// Voc√™ pode usar esse objeto para obter informa√ß√µes espec√≠ficas, como c√≥digos de UF, munic√≠pio e outras informa√ß√µes do IBGE.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -3387,14 +3387,14 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm uma representaÁ„o em string do objeto JSON associado a este resultado.
+    /// Obt√©m uma representa√ß√£o em string do objeto JSON associado a este resultado.
     /// </summary>
     /// <returns>
-    /// Uma representaÁ„o em string do objeto JSON associado a este resultado.
+    /// Uma representa√ß√£o em string do objeto JSON associado a este resultado.
     /// </returns>
     /// <remarks>
-    /// Esta funÁ„o fornece uma representaÁ„o em formato de string do objeto JSON associado a este resultado.
-    /// Isso pode ser ˙til para depuraÁ„o ou exibiÁ„o de informaÁıes do resultado.
+    /// Esta fun√ß√£o fornece uma representa√ß√£o em formato de string do objeto JSON associado a este resultado.
+    /// Isso pode ser √∫til para depura√ß√£o ou exibi√ß√£o de informa√ß√µes do resultado.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -3419,7 +3419,7 @@ type
     /// Uma interface de resultado do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza o resultado da pesquisa do IBGE no framework.
+    /// Este m√©todo finaliza o resultado da pesquisa do IBGE no framework.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -3449,13 +3449,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o cÛdigo da Unidade Federativa (UF) relacionado ao resultado da consulta por IBGE.
+    /// Obt√©m o c√≥digo da Unidade Federativa (UF) relacionado ao resultado da consulta por IBGE.
     /// </summary>
     /// <returns>
-    /// O cÛdigo da UF relacionado ao resultado.
+    /// O c√≥digo da UF relacionado ao resultado.
     /// </returns>
     /// <remarks>
-    /// Esta funÁ„o retorna o cÛdigo da Unidade Federativa (UF) associado ao resultado da consulta por IBGE.
+    /// Esta fun√ß√£o retorna o c√≥digo da Unidade Federativa (UF) associado ao resultado da consulta por IBGE.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -3472,13 +3472,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o nome da Unidade Federativa (UF) relacionado ao resultado da consulta por IBGE.
+    /// Obt√©m o nome da Unidade Federativa (UF) relacionado ao resultado da consulta por IBGE.
     /// </summary>
     /// <returns>
     /// O nome da UF relacionado ao resultado.
     /// </returns>
     /// <remarks>
-    /// Esta funÁ„o retorna o nome da Unidade Federativa (UF) associado ao resultado da consulta por IBGE.
+    /// Esta fun√ß√£o retorna o nome da Unidade Federativa (UF) associado ao resultado da consulta por IBGE.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -3495,13 +3495,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o cÛdigo do municÌpio relacionado ao resultado da consulta por IBGE.
+    /// Obt√©m o c√≥digo do munic√≠pio relacionado ao resultado da consulta por IBGE.
     /// </summary>
     /// <returns>
-    /// O cÛdigo do municÌpio relacionado ao resultado.
+    /// O c√≥digo do munic√≠pio relacionado ao resultado.
     /// </returns>
     /// <remarks>
-    /// Esta funÁ„o retorna o cÛdigo do municÌpio associado ao resultado da consulta por IBGE.
+    /// Esta fun√ß√£o retorna o c√≥digo do munic√≠pio associado ao resultado da consulta por IBGE.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -3518,13 +3518,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm o nome do municÌpio relacionado ao resultado da consulta por IBGE.
+    /// Obt√©m o nome do munic√≠pio relacionado ao resultado da consulta por IBGE.
     /// </summary>
     /// <returns>
-    /// O nome do municÌpio relacionado ao resultado.
+    /// O nome do munic√≠pio relacionado ao resultado.
     /// </returns>
     /// <remarks>
-    /// Esta funÁ„o retorna o nome do municÌpio associado ao resultado da consulta por IBGE.
+    /// Esta fun√ß√£o retorna o nome do munic√≠pio associado ao resultado da consulta por IBGE.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -3541,13 +3541,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ObtÈm a ·rea relacionada ao resultado da consulta por IBGE.
+    /// Obt√©m a √°rea relacionada ao resultado da consulta por IBGE.
     /// </summary>
     /// <returns>
-    /// A ·rea relacionada ao resultado.
+    /// A √°rea relacionada ao resultado.
     /// </returns>
     /// <remarks>
-    /// Esta funÁ„o retorna a ·rea associada ao resultado da consulta por IBGE.
+    /// Esta fun√ß√£o retorna a √°rea associada ao resultado da consulta por IBGE.
     /// </remarks>
     {$ELSE}
     /// <summary>
@@ -3564,16 +3564,16 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Define um objeto JSON para esta inst‚ncia a partir de um TJSONObject.
+    /// Define um objeto JSON para esta inst√¢ncia a partir de um TJSONObject.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o define um objeto JSON para esta inst‚ncia a partir de um TJSONObject.
+    /// Esta fun√ß√£o define um objeto JSON para esta inst√¢ncia a partir de um TJSONObject.
     /// </remarks>
     /// <param name="AValue">
     /// O objeto JSON a ser definido.
     /// </param>
     /// <returns>
-    /// Uma inst‚ncia da interface que fornece mÈtodos para exibir o JSON.
+    /// Uma inst√¢ncia da interface que fornece m√©todos para exibir o JSON.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -3599,7 +3599,7 @@ type
     /// Uma interface de resultado do framework.
     /// </returns>
     /// <remarks>
-    /// Este mÈtodo finaliza a apresentaÁ„o da pesquisa do IBGE no framework.
+    /// Este m√©todo finaliza a apresenta√ß√£o da pesquisa do IBGE no framework.
     /// </remarks>
     {$ELSE}
     /// <summary>

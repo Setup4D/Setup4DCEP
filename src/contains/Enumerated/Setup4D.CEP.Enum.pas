@@ -1,14 +1,14 @@
-unit Setup4D.CEP.Enum;
+ï»¿unit Setup4D.CEP.Enum;
 
 interface
 
 type
 {$SCOPEDENUMS ON}
   /// <summary>
-  /// Enumeração que representa os serviços web de consulta de CEP disponíveis.
+  /// EnumeraÃ§Ã£o que representa os serviÃ§os web de consulta de CEP disponÃ­veis.
   /// </summary>
   /// <remarks>
-  /// Esta enumeração lista os diferentes serviços web que podem ser usados para consultar informações de CEP.
+  /// Esta enumeraÃ§Ã£o lista os diferentes serviÃ§os web que podem ser usados para consultar informaÃ§Ãµes de CEP.
   /// </remarks>
   TSetup4DCEPWebService = (Nenhum, BuscarCep, CepLivre, RepublicaVirtual,
     Bases4you, RNSolucoes, KingHost, ByJG, Correios, DevMedia, ViaCep,

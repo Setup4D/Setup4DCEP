@@ -1,4 +1,4 @@
-unit Setup4D.CEP.Filter.IBGE;
+﻿unit Setup4D.CEP.Filter.IBGE;
 
 {$I Setup4DCEPLanguage.inc}
 

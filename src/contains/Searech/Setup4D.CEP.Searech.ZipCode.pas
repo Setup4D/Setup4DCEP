@@ -1,4 +1,4 @@
-unit Setup4D.CEP.Searech.ZipCode;
+Ôªøunit Setup4D.CEP.Searech.ZipCode;
 
 {$I Setup4DCEPLanguage.inc}
 
@@ -22,7 +22,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Inicia a configuraÁ„o para execuÁ„o do CEP.
+    /// Inicia a configura√ß√£o para execu√ß√£o do CEP.
     /// </summary>
     {$ELSE}
     /// <summary>
@@ -33,7 +33,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ConfiguraÁ„o inicial do proxy para execuÁ„o do CEP.
+    /// Configura√ß√£o inicial do proxy para execu√ß√£o do CEP.
     /// </summary>
     {$ELSE}
     /// <summary>
@@ -44,7 +44,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ConfiguraÁ„o inicial do Web Service para execuÁ„o do CEP.
+    /// Configura√ß√£o inicial do Web Service para execu√ß√£o do CEP.
     /// </summary>
     {$ELSE}
     /// <summary>
@@ -73,19 +73,19 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Cria uma nova inst‚ncia de execuÁ„o do CEP.
+    /// Cria uma nova inst√¢ncia de execu√ß√£o do CEP.
     /// </summary>
     /// <param name="AValue">
-    /// A inst‚ncia pai ISetup4DCEPSearech.
+    /// A inst√¢ncia pai ISetup4DCEPSearech.
     /// </param>
     /// <param name="AConfiguration">
-    /// A inst‚ncia de configuraÁ„o, ISetup4DCEPConfiguration.
+    /// A inst√¢ncia de configura√ß√£o, ISetup4DCEPConfiguration.
     /// </param>
     /// <param name="ASearch">
-    /// A inst‚ncia de pesquisa, ISetup4DCEPFilter.
+    /// A inst√¢ncia de pesquisa, ISetup4DCEPFilter.
     /// </param>
     /// <returns>
-    /// A nova inst‚ncia de execuÁ„o do CEP.
+    /// A nova inst√¢ncia de execu√ß√£o do CEP.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -194,25 +194,25 @@ begin
   except on E: Exception do
     if E.Message.Contains('Error loading OpenSSL lib') then
       {$IFDEF HAS_PORTUGUES}
-      raise EConvertError.Create('As DLLs da OpenSSL est„o ausentes no computador.')
+      raise EConvertError.Create('As DLLs da OpenSSL est√£o ausentes no computador.')
       {$ELSE}
       raise EConvertError.Create('The OpenSSL DLLs are missing on the computer.')
       {$ENDIF}
-    else if E.Message.Contains('n„o implementa o mÈtodo') then
+    else if E.Message.Contains('n√£o implementa o m√©todo') then
       {$IFDEF HAS_PORTUGUES}
-      raise EConvertError.Create('MÈtodo n„o implementado nesta API')
+      raise EConvertError.Create('M√©todo n√£o implementado nesta API')
       {$ELSE}
       raise EConvertError.Create('Method not implemented in this API.')
       {$ENDIF}
     else if E.Message.Contains('400 Bad Request') then
       {$IFDEF HAS_PORTUGUES}
-      raise EConvertError.Create('O mÈtodo n„o est· implementado nesta API. Portanto, n„o È possÌvel processar a informaÁ„o')
+      raise EConvertError.Create('O m√©todo n√£o est√° implementado nesta API. Portanto, n√£o √© poss√≠vel processar a informa√ß√£o')
       {$ELSE}
       raise EConvertError.Create('The method is not implemented in this API. Therefore, it''s not possible to process the information.')
       {$ENDIF}
-    else if E.Message.Contains('n„o encontrada') then
+    else if E.Message.Contains('n√£o encontrada') then
       {$IFDEF HAS_PORTUGUES}
-      raise EConvertError.Create('Dados n„o localizados na base de dados da API')
+      raise EConvertError.Create('Dados n√£o localizados na base de dados da API')
       {$ELSE}
       raise EConvertError.Create('Data not found in the API''s database.')
       {$ENDIF}
@@ -234,7 +234,7 @@ begin
 
     if not (FFilter.ZipCode.Key.Value.Trim.Length = 8) then
       {$IFDEF HAS_PORTUGUES}
-      raise Exception.Create('O CEP informado, "' + FFilter.ZipCode.Key.Value + '", È inv·lido.');
+      raise Exception.Create('O CEP informado, "' + FFilter.ZipCode.Key.Value + '", √© inv√°lido.');
       {$ELSE}
       raise Exception.Create('The provided ZIP code, "' + FFilter.ZipCode.Key.Value + '", is invalid.');
       {$ENDIF}
@@ -253,13 +253,13 @@ begin
   except on E: Exception do
     if E.Message.Contains('Error loading OpenSSL lib') then
       {$IFDEF HAS_PORTUGUES}
-      raise EConvertError.Create('As DLLs da OpenSSL est„o ausentes no computador.')
+      raise EConvertError.Create('As DLLs da OpenSSL est√£o ausentes no computador.')
       {$ELSE}
       raise EConvertError.Create('The OpenSSL DLLs are missing on the computer.')
       {$ENDIF}
     else if E.Message.Contains('400 Bad Request') then
       {$IFDEF HAS_PORTUGUES}
-      raise EConvertError.Create('O mÈtodo n„o est· implementado nesta API. Portanto, n„o È possÌvel processar a informaÁ„o')
+      raise EConvertError.Create('O m√©todo n√£o est√° implementado nesta API. Portanto, n√£o √© poss√≠vel processar a informa√ß√£o')
       {$ELSE}
       raise EConvertError.Create('The method is not implemented in this API. Therefore, it''s not possible to process the information.')
       {$ENDIF}
@@ -284,14 +284,14 @@ procedure TSetup4DCEPSearechZipCode.StartConfiguration;
 begin
   if FConfiguration = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de configuraÁ„o n„o foi instanciada.');
+    raise EConvertError.Create('A classe de configura√ß√£o n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The configuration class has not been instantiated.');
     {$ENDIF}
 
   if FFilter = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de pesquisa n„o foi instanciada.');
+    raise EConvertError.Create('A classe de pesquisa n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The search class has not been instantiated.');
     {$ENDIF}
@@ -339,7 +339,7 @@ begin
     15: FACBrCEP.WebService := TACBrCEPWebService.wsBrasilAPI;
   else
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('O Web Service informado n„o est· disponÌvel ou n„o existe.');
+    raise EConvertError.Create('O Web Service informado n√£o est√° dispon√≠vel ou n√£o existe.');
     {$ELSE}
     raise EConvertError.Create('The provided Web Service is not available or does not exist.');
     {$ENDIF}

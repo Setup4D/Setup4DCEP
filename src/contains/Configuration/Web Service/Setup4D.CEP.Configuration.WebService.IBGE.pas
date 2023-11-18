@@ -1,4 +1,4 @@
-unit Setup4D.CEP.Configuration.WebService.IBGE;
+ï»¿unit Setup4D.CEP.Configuration.WebService.IBGE;
 
  {$I Setup4DCEPLanguage.inc}
 
@@ -40,13 +40,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Cria uma nova instância de configurações relacionadas ao serviço web de consulta de CEP para códigos IBGE.
+    /// Cria uma nova instÃ¢ncia de configuraÃ§Ãµes relacionadas ao serviÃ§o web de consulta de CEP para cÃ³digos IBGE.
     /// </summary>
     /// <remarks>
-    /// Esta instância é usada para configurar opções específicas para consultas de CEP com códigos IBGE.
+    /// Esta instÃ¢ncia Ã© usada para configurar opÃ§Ãµes especÃ­ficas para consultas de CEP com cÃ³digos IBGE.
     /// </remarks>
     /// <returns>
-    /// A interface para configuração do serviço web de consulta de CEP para códigos IBGE.
+    /// A interface para configuraÃ§Ã£o do serviÃ§o web de consulta de CEP para cÃ³digos IBGE.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -103,7 +103,7 @@ begin
       FCacheValidity := AValue.ToInteger;
   except
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A porta informada não corresponde a um número');
+    raise EConvertError.Create('A porta informada nÃ£o corresponde a um nÃºmero');
     {$ELSE}
     raise EConvertError.Create('The port provided does not correspond to a number.');
     {$ENDIF}

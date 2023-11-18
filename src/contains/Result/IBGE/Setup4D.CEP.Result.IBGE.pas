@@ -1,4 +1,4 @@
-unit Setup4D.CEP.Result.IBGE;
+Ôªøunit Setup4D.CEP.Result.IBGE;
 
 {$I Setup4DCEPLanguage.inc}
 
@@ -74,21 +74,21 @@ function TSetup4DCEPResultIBGE.Display: iSetup4DCEPResultIBGEDisplay;
 begin
   if FExecute = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de ExecuÁ„o n„o foi instanciada.');
+    raise EConvertError.Create('A classe de Execu√ß√£o n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The Execute class has not been instantiated.');
     {$ENDIF}
 
   if FFilter = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de pesquisa n„o foi instanciada.');
+    raise EConvertError.Create('A classe de pesquisa n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The search class has not been instantiated.');
     {$ENDIF}
 
   if FConfiguration = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de configuraÁ„o n„o foi instanciada.');
+    raise EConvertError.Create('A classe de configura√ß√£o n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The Configuration class has not been instantiated.');
     {$ENDIF}

@@ -1,4 +1,4 @@
-unit Setup4D.CEP.Configuration.WebService.ZipCode;
+ï»¿unit Setup4D.CEP.Configuration.WebService.ZipCode;
 
  {$I Setup4DCEPLanguage.inc}
 
@@ -61,12 +61,12 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Cria uma nova instância de configurações relacionadas ao serviço web de consulta de CEP para Códigos Postais.
+    /// Cria uma nova instÃ¢ncia de configuraÃ§Ãµes relacionadas ao serviÃ§o web de consulta de CEP para CÃ³digos Postais.
     /// </summary>
     /// <remarks>
-    /// Esta instância é usada para configurar opções específicas para consultas de CEP.
+    /// Esta instÃ¢ncia Ã© usada para configurar opÃ§Ãµes especÃ­ficas para consultas de CEP.
     /// </remarks>
-    /// <returns>A interface para configuração do serviço web de consulta de CEP para Códigos Postais.</returns>
+    /// <returns>A interface para configuraÃ§Ã£o do serviÃ§o web de consulta de CEP para CÃ³digos Postais.</returns>
     {$ELSE}
     /// <summary>
     /// Creates a new instance of settings related to the web service for ZIP code lookup.
@@ -90,7 +90,7 @@ begin
   Result := Self;
 
   {$IFDEF HAS_PORTUGUES}
-  raise EConvertError.Create('Este serviço encontra-se temporariamente indisponível.');
+  raise EConvertError.Create('Este serviÃ§o encontra-se temporariamente indisponÃ­vel.');
   {$ELSE}
   raise EConvertError.Create('This service is temporarily unavailable.');
   {$ENDIF}
@@ -157,7 +157,7 @@ function TSetup4DCepConfigurationWebServiceZipCode.DevMedia: ISetup4DCEPConfigur
 begin
   Result := Self;
   {$IFDEF HAS_PORTUGUES}
-  raise EConvertError.Create('Este serviço encontra-se temporariamente indisponível.');
+  raise EConvertError.Create('Este serviÃ§o encontra-se temporariamente indisponÃ­vel.');
   {$ELSE}
   raise EConvertError.Create('This service is temporarily unavailable.');
   {$ENDIF}
@@ -221,7 +221,7 @@ begin
   Result := Self;
 
   {$IFDEF HAS_PORTUGUES}
-  raise EConvertError.Create('Este serviço encontra-se temporariamente indisponível.');
+  raise EConvertError.Create('Este serviÃ§o encontra-se temporariamente indisponÃ­vel.');
   {$ELSE}
   raise EConvertError.Create('This service is temporarily unavailable.');
   {$ENDIF}
@@ -239,7 +239,7 @@ function TSetup4DCepConfigurationWebServiceZipCode.WSCep: ISetup4DCEPConfigurati
 begin
   Result := Self;
   {$IFDEF HAS_PORTUGUES}
-  raise EConvertError.Create('Este serviço encontra-se temporariamente indisponível.');
+  raise EConvertError.Create('Este serviÃ§o encontra-se temporariamente indisponÃ­vel.');
   {$ELSE}
   raise EConvertError.Create('This service is temporarily unavailable.');
   {$ENDIF}

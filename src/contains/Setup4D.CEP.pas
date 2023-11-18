@@ -1,4 +1,4 @@
-unit Setup4D.CEP;
+Ôªøunit Setup4D.CEP;
 
 {$I Setup4DCEPLanguage.inc}
 
@@ -26,13 +26,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Cria uma nova inst‚ncia da interface ISetup4DCEP.
+    /// Cria uma nova inst√¢ncia da interface ISetup4DCEP.
     /// </summary>
     /// <remarks>
-    /// Esta funÁ„o cria uma nova inst‚ncia da interface, que È a entrada principal para acessar
+    /// Esta fun√ß√£o cria uma nova inst√¢ncia da interface, que √© a entrada principal para acessar
     /// as funcionalidades do Setup4DCEP.
     /// </remarks>
-    /// <returns>Uma nova inst‚ncia da interface ISetup4DCEP.</returns>
+    /// <returns>Uma nova inst√¢ncia da interface ISetup4DCEP.</returns>
     {$ELSE}
     /// <summary>
     /// Creates a new instance of the ISetup4DCEP interface.
@@ -80,14 +80,14 @@ function TSetup4DCEP.Searech: ISetup4DCEPSearech;
 begin
   if FConfiguration = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de configuraÁ„o n„o foi instanciada.');
+    raise EConvertError.Create('A classe de configura√ß√£o n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('"The Configuration class has not been instantiated."');
     {$ENDIF}
 
   if FFilter = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de pesquisa n„o foi instanciada.');
+    raise EConvertError.Create('A classe de pesquisa n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('"The search class has not been instantiated."');
     {$ENDIF}
@@ -107,21 +107,21 @@ function TSetup4DCEP.Result: ISetup4DCEPResult;
 begin
   if FSearech = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de ExecuÁ„o n„o foi instanciada.');
+    raise EConvertError.Create('A classe de Execu√ß√£o n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('"The Execute class has not been instantiated."');
     {$ENDIF}
 
   if FFilter = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de pesquisa n„o foi instanciada.');
+    raise EConvertError.Create('A classe de pesquisa n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('"The search class has not been instantiated."');
     {$ENDIF}
 
   if FConfiguration = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de configuraÁ„o n„o foi instanciada.');
+    raise EConvertError.Create('A classe de configura√ß√£o n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('"The Configuration class has not been instantiated."');
     {$ENDIF}

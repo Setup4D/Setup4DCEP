@@ -1,4 +1,4 @@
-unit Setup4D.CEP.Configuration.Proxy;
+Ôªøunit Setup4D.CEP.Configuration.Proxy;
 
 {$I Setup4DCEPLanguage.inc}
 
@@ -38,13 +38,13 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Cria uma nova inst‚ncia da interface `ISetup4DCEPConfigurationProxy`.
+    /// Cria uma nova inst√¢ncia da interface `ISetup4DCEPConfigurationProxy`.
     /// </summary>
     /// <param name="AValue">
-    /// A inst‚ncia da interface `ISetup4DCEPConfiguration` que contÈm configuraÁıes relacionadas a um servidor proxy.
+    /// A inst√¢ncia da interface `ISetup4DCEPConfiguration` que cont√©m configura√ß√µes relacionadas a um servidor proxy.
     /// </param>
     /// <returns>
-    /// Uma nova inst‚ncia da interface `ISetup4DCEPConfigurationProxy` associada ‡ inst‚ncia `AValue` da interface `ISetup4DCEPConfiguration`.
+    /// Uma nova inst√¢ncia da interface `ISetup4DCEPConfigurationProxy` associada √† inst√¢ncia `AValue` da interface `ISetup4DCEPConfiguration`.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -140,7 +140,7 @@ begin
       FPort := AValue.ToInteger;
   except
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A porta informada n„o corresponde a um n˙mero');
+    raise EConvertError.Create('A porta informada n√£o corresponde a um n√∫mero');
     {$ELSE}
     raise EConvertError.Create('The port provided does not correspond to a number.');
     {$ENDIF}

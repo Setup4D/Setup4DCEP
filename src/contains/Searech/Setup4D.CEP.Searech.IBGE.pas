@@ -1,4 +1,4 @@
-unit Setup4D.CEP.Searech.IBGE;
+Ôªøunit Setup4D.CEP.Searech.IBGE;
 
 {$I Setup4DCEPLanguage.inc}
 
@@ -23,7 +23,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Inicia a configuraÁ„o para execuÁ„o do IBGE.
+    /// Inicia a configura√ß√£o para execu√ß√£o do IBGE.
     /// </summary>
     {$ELSE}
     /// <summary>
@@ -34,7 +34,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ConfiguraÁ„o inicial do proxy para execuÁ„o do IBGE.
+    /// Configura√ß√£o inicial do proxy para execu√ß√£o do IBGE.
     /// </summary>
     {$ELSE}
     /// <summary>
@@ -45,7 +45,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ConfiguraÁ„o inicial do cache para execuÁ„o do IBGE.
+    /// Configura√ß√£o inicial do cache para execu√ß√£o do IBGE.
     /// </summary>
     {$ELSE}
     /// <summary>
@@ -56,7 +56,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ConfiguraÁ„o para sensibilidade de caracteres na pesquisa.
+    /// Configura√ß√£o para sensibilidade de caracteres na pesquisa.
     /// </summary>
     {$ELSE}
     /// <summary>
@@ -67,7 +67,7 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// ConfiguraÁ„o do servidor web para pesquisa.
+    /// Configura√ß√£o do servidor web para pesquisa.
     /// </summary>
     {$ELSE}
     /// <summary>
@@ -96,19 +96,19 @@ type
 
     {$IFDEF HAS_PORTUGUES}
     /// <summary>
-    /// Cria uma nova inst‚ncia de execuÁ„o do IBGE.
+    /// Cria uma nova inst√¢ncia de execu√ß√£o do IBGE.
     /// </summary>
     /// <param name="AValue">
-    /// A inst‚ncia pai.
+    /// A inst√¢ncia pai.
     /// </param>
     /// <param name="AConfiguration">
-    /// A inst‚ncia de configuraÁ„o.
+    /// A inst√¢ncia de configura√ß√£o.
     /// </param>
     /// <param name="ASearch">
-    /// A inst‚ncia de pesquisa.
+    /// A inst√¢ncia de pesquisa.
     /// </param>
     /// <returns>
-    /// A nova inst‚ncia de execuÁ„o do IBGE.
+    /// A nova inst√¢ncia de execu√ß√£o do IBGE.
     /// </returns>
     {$ELSE}
     /// <summary>
@@ -191,11 +191,11 @@ begin
   except on E: Exception do
     if E.Message.Contains('Error loading OpenSSL lib') then
       {$IFDEF HAS_PORTUGUES}
-      raise EConvertError.Create('As DLLs da OpenSSL est„o ausentes no computador.')
+      raise EConvertError.Create('As DLLs da OpenSSL est√£o ausentes no computador.')
       {$ELSE}
       raise EConvertError.Create('The OpenSSL DLLs are missing on the computer.')
       {$ENDIF}
-    else if E.Message.Contains('CÛdigo do MunicÌpio deve ser informado') then
+    else if E.Message.Contains('C√≥digo do Munic√≠pio deve ser informado') then
       {$IFDEF HAS_PORTUGUES}
       raise EConvertError.Create(E.Message)
       {$ELSE}
@@ -203,7 +203,7 @@ begin
       {$ENDIF}
     else if E.Message.Contains('400 Bad Request') then
       {$IFDEF HAS_PORTUGUES}
-      raise EConvertError.Create('N„o È possÌvel processar a informaÁ„o')
+      raise EConvertError.Create('N√£o √© poss√≠vel processar a informa√ß√£o')
       {$ELSE}
       raise EConvertError.Create('it''s not possible to process the information.')
       {$ENDIF}
@@ -218,7 +218,7 @@ begin
   try
     if FFilter.IBGE.Key.Value.Trim.IsEmpty then
       {$IFDEF HAS_PORTUGUES}
-      raise Exception.Create('Nenhum cÛdigo foi informado.');
+      raise Exception.Create('Nenhum c√≥digo foi informado.');
       {$ELSE}
       raise Exception.Create('No code has been provided.');
       {$ENDIF}
@@ -236,11 +236,11 @@ begin
   except on E: Exception do
     if E.Message.Contains('Error loading OpenSSL lib') then
       {$IFDEF HAS_PORTUGUES}
-      raise EConvertError.Create('As DLLs da OpenSSL est„o ausentes no computador.')
+      raise EConvertError.Create('As DLLs da OpenSSL est√£o ausentes no computador.')
       {$ELSE}
       raise EConvertError.Create('The OpenSSL DLLs are missing on the computer.')
       {$ENDIF}
-    else if E.Message.Contains('CÛdigo do MunicÌpio deve ser informado') then
+    else if E.Message.Contains('C√≥digo do Munic√≠pio deve ser informado') then
       {$IFDEF HAS_PORTUGUES}
       raise EConvertError.Create(E.Message)
       {$ELSE}
@@ -248,7 +248,7 @@ begin
       {$ENDIF}
     else if E.Message.Contains('400 Bad Request') then
       {$IFDEF HAS_PORTUGUES}
-      raise EConvertError.Create('N„o È possÌvel processar a informaÁ„o')
+      raise EConvertError.Create('N√£o √© poss√≠vel processar a informa√ß√£o')
       {$ELSE}
       raise EConvertError.Create('it''s not possible to process the information.')
       {$ENDIF}
@@ -281,11 +281,11 @@ begin
   except on E: Exception do
     if E.Message.Contains('Error loading OpenSSL lib') then
       {$IFDEF HAS_PORTUGUES}
-      raise EConvertError.Create('As DLLs da OpenSSL est„o ausentes no computador.')
+      raise EConvertError.Create('As DLLs da OpenSSL est√£o ausentes no computador.')
       {$ELSE}
       raise EConvertError.Create('The OpenSSL DLLs are missing on the computer.')
       {$ENDIF}
-    else if E.Message.Contains('CÛdigo do MunicÌpio deve ser informado') then
+    else if E.Message.Contains('C√≥digo do Munic√≠pio deve ser informado') then
       {$IFDEF HAS_PORTUGUES}
       raise EConvertError.Create(E.Message)
       {$ELSE}
@@ -293,7 +293,7 @@ begin
       {$ENDIF}
     else if E.Message.Contains('400 Bad Request') then
       {$IFDEF HAS_PORTUGUES}
-      raise EConvertError.Create('N„o È possÌvel processar a informaÁ„o')
+      raise EConvertError.Create('N√£o √© poss√≠vel processar a informa√ß√£o')
       {$ELSE}
       raise EConvertError.Create('it''s not possible to process the information.')
       {$ENDIF}
@@ -339,14 +339,14 @@ procedure TSetup4DCEPSearechIBGE.StartConfigurationProxy;
 begin
   if FConfiguration = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de configuraÁ„o n„o foi instanciada.');
+    raise EConvertError.Create('A classe de configura√ß√£o n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The configuration class has not been instantiated.');
     {$ENDIF}
 
   if FFilter = nil then
     {$IFDEF HAS_PORTUGUES}
-    raise EConvertError.Create('A classe de pesquisa n„o foi instanciada.');
+    raise EConvertError.Create('A classe de pesquisa n√£o foi instanciada.');
     {$ELSE}
     raise EConvertError.Create('The search class has not been instantiated.');
     {$ENDIF}
