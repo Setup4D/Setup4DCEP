@@ -59,7 +59,7 @@
         <DCC_K>false</DCC_K>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
         <SanitizedProjectName>Setup4DCEP</SanitizedProjectName>
-        <DCC_UnitSearchPath>.\src\requires\ACBrComum;.\src\requires\ACBrTCP;.\src\requires\Terceiros\synalist;.\src\requires\Terceiros\FastStringReplace;.\src\requires\Terceiros\GZIPUtils;.\src\requires\Terceiros\JsonDataObjects\Source;.\src\requires\inc\;modules\.dcp;modules\.dcu;modules;modules\setup4dutility\src;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_UnitSearchPath>modules\.dcp;modules\.dcu;modules;modules\handle-exception\src;modules\horse\src;modules\jhonson\src;modules\restrequest4delphi\src;modules\setup4drest\src;modules\setup4dutility\src;.\src\inc;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
         <VerInfo_Locale>1046</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
@@ -143,29 +143,20 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="src\contains\Interfaces\Setup4D.CEP.Interf.pas"/>
-        <DCCReference Include="src\contains\Setup4D.CEP.pas"/>
-        <DCCReference Include="src\contains\Configuration\Setup4D.CEP.Configuration.pas"/>
-        <DCCReference Include="src\contains\Configuration\Proxy\Setup4D.CEP.Configuration.Proxy.pas"/>
-        <DCCReference Include="src\contains\Configuration\Web Service\Setup4D.CEP.Configuration.WebService.pas"/>
-        <DCCReference Include="src\contains\Configuration\Web Service\Setup4D.CEP.Configuration.WebService.ZipCode.pas"/>
-        <DCCReference Include="src\contains\Configuration\Web Service\Setup4D.CEP.Configuration.WebService.IBGE.pas"/>
-        <DCCReference Include="src\contains\Filter\Setup4D.CEP.Filter.pas"/>
-        <DCCReference Include="src\contains\Filter\IBGE\Setup4D.CEP.Filter.IBGE.pas"/>
-        <DCCReference Include="src\contains\Filter\IBGE\Setup4D.CEP.Filter.IBGE.Key.pas"/>
-        <DCCReference Include="src\contains\Filter\IBGE\Setup4D.CEP.Filter.IBGE.Address.pas"/>
-        <DCCReference Include="src\contains\Filter\Zip Code\Setup4D.CEP.Filter.ZipCode.pas"/>
-        <DCCReference Include="src\contains\Filter\Zip Code\Setup4D.CEP.Filter.ZipCode.Key.pas"/>
-        <DCCReference Include="src\contains\Filter\Zip Code\Setup4D.CEP.Filter.ZipCode.Address.pas"/>
-        <DCCReference Include="src\contains\Searech\Setup4D.CEP.Searech.pas"/>
-        <DCCReference Include="src\contains\Searech\Setup4D.CEP.Searech.ZipCode.pas"/>
-        <DCCReference Include="src\contains\Searech\Setup4D.CEP.Searech.IBGE.pas"/>
-        <DCCReference Include="src\contains\Result\Setup4D.CEP.Result.pas"/>
-        <DCCReference Include="src\contains\Result\IBGE\Setup4D.CEP.Result.IBGE.pas"/>
-        <DCCReference Include="src\contains\Result\Zip Code\Setup4D.CEP.Result.ZIpCode.pas"/>
-        <DCCReference Include="src\contains\Enumerated\Setup4D.CEP.Enum.pas"/>
-        <DCCReference Include="src\contains\Result\Zip Code\Setup4D.CEP.Result.ZIpCode.Display.pas"/>
-        <DCCReference Include="src\contains\Result\IBGE\Setup4D.CEP.Result.IBGE.Display.pas"/>
+        <DCCReference Include="src\Setup4D.CEP.pas"/>
+        <DCCReference Include="src\Interfaces\Setup4D.CEP.Interf.pas"/>
+        <DCCReference Include="src\Configuration\Proxy\Setup4D.CEP.Configuration.Proxy.pas"/>
+        <DCCReference Include="src\Configuration\Web Service\Setup4D.CEP.Configuration.WebService.pas"/>
+        <DCCReference Include="src\Configuration\Setup4D.CEP.Configuration.pas"/>
+        <DCCReference Include="src\Filter\Setup4D.CEP.Filter.pas"/>
+        <DCCReference Include="src\Filter\Zip Code\Setup4D.CEP.Filter.ZipCode.pas"/>
+        <DCCReference Include="src\Filter\IBGE\Setup4D.CEP.Filter.IBGE.pas"/>
+        <DCCReference Include="src\Searech\Setup4D.CEP.Searech.pas"/>
+        <DCCReference Include="src\Searech\IBGE\Setup4D.CEP.Searech.IBGE.pas"/>
+        <DCCReference Include="src\Searech\Zip Code\Setup4D.CEP.Searech.ZipCode.pas"/>
+        <DCCReference Include="src\Result\Setup4D.CEP.Result.pas"/>
+        <DCCReference Include="src\Result\Zip Code\Setup4D.CEP.Result.ZIpCode.pas"/>
+        <DCCReference Include="src\Result\IBGE\Setup4D.CEP.Result.IBGE.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

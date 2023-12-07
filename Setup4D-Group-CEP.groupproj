@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{57954AD4-92FB-4D4C-A003-4BFC2979FF28}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Setup4DCEP.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="samples\VCL\Setup4DCEPSample.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Setup4DCEP">
+        <MSBuild Projects="Setup4DCEP.dproj"/>
+    </Target>
+    <Target Name="Setup4DCEP:Clean">
+        <MSBuild Projects="Setup4DCEP.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Setup4DCEP:Make">
+        <MSBuild Projects="Setup4DCEP.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Setup4DCEPSample">
+        <MSBuild Projects="samples\VCL\Setup4DCEPSample.dproj"/>
+    </Target>
+    <Target Name="Setup4DCEPSample:Clean">
+        <MSBuild Projects="samples\VCL\Setup4DCEPSample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Setup4DCEPSample:Make">
+        <MSBuild Projects="samples\VCL\Setup4DCEPSample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Setup4DCEP;Setup4DCEPSample"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Setup4DCEP:Clean;Setup4DCEPSample:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Setup4DCEP:Make;Setup4DCEPSample:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

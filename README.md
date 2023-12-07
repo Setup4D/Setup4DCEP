@@ -28,32 +28,24 @@ Welcome to the Setup4DCEP project repository! This application was developed to 
 
    + This automates the installation process and dependency management, making the Setup4DCEP configuration simpler. Make sure that Boss is set up and ready for use in your Delphi environment before running this command.
 
-#### ⚡️ Manual (Delphi)
+#### 🚧 Manual (Delphi)
 
-* If you choose to install manually, follow the steps below:
+* If you choose to perform the installation manually, follow the steps below:
 
-   1. Download the project from [here](https://github.com/Setup4D/Setup4DCEP/archive/refs/heads/main.zip).
+   1. [Download](https://github.com/Setup4D/Setup4DCEP/archive/refs/heads/main.zip) the project.
    2. Unzip the downloaded file to a folder of your choice.
-   3. Add the extracted folder to your project by following the steps below:
-
+   3. Add the extracted folder to your project by following these steps:
+   
       1. In Delphi, go to the "Project" menu.
       2. Select "Options."
-      3. In the options panel, navigate to "Resource Compiler."
+      3. In the options panel, go to "Resource Compiler."
       4. Under "Directories and Conditionals," choose "Include file search path."
-      5. Click "Browse" and add the folder extracted from the project.
-
-         + This will enable your project to access the necessary files and resources from Setup4DCEP. Be sure to save the settings after following these steps.
+      5. Click on "Browse" and add the extracted project folder.
+   
+         + This will allow your project to access the necessary files and resources from Setup4DCEP. Make sure to save the settings after following these steps.
 
             ```
             .\{Folder}\src
-            .\{Folder}\src\requires\inc
-            .\{Folder}\src\requires\ACBrComum
-            .\{Folder}\src\requires\ACBrTCP
-            .\{Folder}\src\requires\ThirdParty\FastStringReplace
-            .\{Folder}\src\requires\ThirdParty\GZIPUtils
-            .\{Folder}\src\requires\ThirdParty\JsonDataObjects\Source
-            .\{Folder}\src\requires\ThirdParty\synalist
-            .\{Folder}\src\Enumerated
             .\{Folder}\src\Interfaces
             .\{Folder}\src\Configuration
             .\{Folder}\src\Configuration\Proxy
@@ -61,31 +53,30 @@ Welcome to the Setup4DCEP project repository! This application was developed to 
             .\{Folder}\src\Filter
             .\{Folder}\src\Filter\IBGE
             .\{Folder}\src\Filter\Zip Code
-            .\{Folder}\src\Search
-            .\{Folder}\src\Search\IBGE
-            .\{Folder}\src\Search\Zip Code
+            .\{Folder}\src\Searech
+            .\{Folder}\src\Searech\IBGE
+            .\{Folder}\src\Searech\Zip Code            
             .\{Folder}\src\Result
             .\{Folder}\src\Result\IBGE
             .\{Folder}\src\Result\Zip Code
-           ```
+            ```
+### 📚 Dependencies
 
-### ⚙️ Dependencies
+* This project depends on [**Setup4DUtility**](https://github.com/Setup4D/Setup4DUtility), playing a crucial role in its operational functionalities. When using [**Boss**](https://github.com/HashLoad/boss) as the framework installer, the installation of **Setup4DUtility** occurs automatically. However, if you choose a manual installation, follow the steps below:
 
-* This project relies on [**Setup4DUtility**](https://github.com/Setup4D/Setup4DUtility), playing a crucial role in its operational functionalities. When using [**Boss**](https://github.com/HashLoad/boss) as the framework installer, the installation of **Setup4DUtility** happens automatically. However, if you prefer a manual installation, follow the steps below:
-
-   1. Download the project from [**here**](https://github.com/Setup4D/Setup4DUtility/archive/refs/heads/main.zip) or visit the [**project page**](https://github.com/Setup4D/Setup4DUtility) and download it.
+   1. [**Download**](https://github.com/Setup4D/Setup4DUtility/archive/refs/heads/main.zip) the project or access the [**project page**](https://github.com/Setup4D/Setup4DUtility) and download it.
    2. Unzip the downloaded file to a folder of your choice.
-   3. Add the extracted folder to your project by going to *Project > Options > Resource Compiler > Directories and Conditionals > Include file search path*.<p>
-
+   3. Add the extracted folder to your project by going to *Project > Options > Resource Compiler > Directories and Conditionals > Include file search path*.<p>      
+   
    ```
    ./{Folder}/src
    ```
 
-## 📐 Usage Mode
+## 🌐 Usage Mode
 
-### ⚙️ Language of Messages
+### 🎤 Message Language
 
-* The system supports two languages, with English being the default language. However, it's possible to use the application in Brazilian Portuguese. To do so, follow the steps below:
+* The system supports two languages, with English being the default language. However, it is possible to use the application in Brazilian Portuguese. To do this, follow the steps below:
 
    * **Option 1: Configuration via Delphi:**
    
@@ -95,1129 +86,1943 @@ Welcome to the Setup4DCEP project repository! This application was developed to 
 
       1. In Delphi, go to the "Project" menu.
       2. Select "Options."
-      3. In the options panel, navigate to "Delphi Compiler."
+      3. In the options panel, go to "Delphi Compiler."
       4. Under "Conditionals Defines," add the directive *HAS_PORTUGUES*.
 
          + This will allow the application to be used in Brazilian Portuguese. Remember to save the settings and recompile the project after making these changes.
 
    * **Option 2: Manual Configuration:**
 
-      1. Ensure that the line *{$DEFINE HAS_PORTUGUES}* in the file *Setup4DCEPLanguage.inc*, located in *.\{folder}\src\requires\inc*, is uncommented (i.e., without the double slashes "//").
+      1. Make sure that the line *{$DEFINE HAS_PORTUGUES}* in the file *Setup4DCEPLanguage.inc*, located in *.\{folder}\src\requires\inc*, is uncommented (i.e., without the double slashes "//").
 
-         + This will also enable the application to be used in Brazilian Portuguese. Don't forget to save the changes and recompile the project for the settings to take effect.
+         + This will also allow the application to be used in Brazilian Portuguese. Don't forget to save the changes and recompile the project for the settings to take effect.
 
 ## 📐 Functions of TSetup4DCep
 
-* The class `TSetup4DCep` plays a fundamental role in supporting the framework's functionalities. It centralizes various functions and procedures that will be used by the framework, allowing for dynamic and simplified programming, aligned with Delphi's inline programming agility.
+* The class `TSetup4DCep` plays a fundamental role in supporting the framework's functionalities. It centralizes various functions and procedures that will be used by the framework, allowing dynamic and simplified programming, aligned with the agility of Delphi's inline programming.
 
-### ⚙️ Enumerations of Setup4DCep
+### 🎯 Methods
 
-#### 💻 `TSetup4DCEPWebService`
+#### 📦 `function Configuration: ISetup4DCEPConfiguration`
 
-* This enumeration represents the web services available for CEP (Postal Addressing Code) lookup. The scope is enabled, which means that to access the enumeration values, you should always prefix with `TSetup4DCEPWebService`. For example, `TSetup4DCEPWebService.None`. I will explain the code in detail:
+This method returns or creates an instance of the configuration associated with the CEP service.
 
-   - `None`: Represents the absence of a web service for CEP lookup.
-   - `BuscarCep`: Represents the "BuscarCep" web service.
-   - `CepLivre`: Represents the "CepLivre" web service.
-   - `RepublicaVirtual`: Represents the "RepublicaVirtual" web service.
-   - `Bases4you`: Represents the "Bases4you" web service.
-   - `RNSolucoes`: Represents the "RNSolucoes" web service.
-   - `KingHost`: Represents the "KingHost" web service.
-   - `ByJG`: Represents the "ByJG" web service.
-   - `Correios`: Represents the "Correios" web service.
-   - `DevMedia`: Represents the "DevMedia" web service.
-   - `ViaCep`: Represents the "ViaCep" web service.
-   - `CorreiosSIGEP`: Represents the "CorreiosSIGEP" web service.
-   - `CepAberto`: Represents the "CepAberto" web service.
-   - `WSCep`: Represents the "WSCep" web service.
-   - `OpenCep`: Represents the "OpenCep" web service.
-   - `BrasilAPI`: Represents the "BrasilAPI" web service.
+- **Return:**
+  - An instance of `ISetup4DCEPConfiguration` associated with the CEP service.
 
-### ⚙️ Interfaces of Setup4DCep
+---
 
-#### 💻 `ISetup4DCEP`
+#### 🧹 `function Filter: ISetup4DCEPFilter`
 
-* The main interface of the Setup4DCEP framework is the entry point for accessing functionalities related to CEP (Postal Addressing Code) and IBGE (Brazilian Institute of Geography and Statistics). This interface serves as the core of the framework, and all other interfaces depend on it. By using this main interface, you can access the framework's other functionalities in an organized and simplified manner.
+This method returns or creates an instance of the filter associated with the CEP service.
 
-* This approach is designed to reduce complexity and allow developers to explore the functionalities flexibly and adaptively.
+- **Return:**
+  - An instance of `ISetup4DCEPFilter` associated with the CEP service.
 
-#### 💻 `ISetup4DCEPConfiguration`
+---
 
-* This interface extends the [ISetup4DCEP](#-isetup4dcep) interface, providing specific methods for configuration related to web service and proxy.
+#### 🕵️‍♂️ `function Search: ISetup4DCEPSearch`
 
-#### 💻 `ISetup4DCEPConfigurationWebService`
+This method returns or creates an instance of the search associated with the CEP service.
 
-* This interface extends the [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration), providing specific methods for configuration related to web service.
+- **Exceptions:**
+  - `EConvertError`: Thrown if the configuration, filter, or result is not instantiated.
 
-#### 💻 `ISetup4DCEPConfigurationWebServiceZIPCode`
+- **Return:**
+  - An instance of `ISetup4DCEPSearch` associated with the CEP service.
 
-* This interface extends the [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) and offers specific methods for configuration related to CEP queries.
+---
 
-#### 💻 `ISetup4DCEPConfigurationWebServiceIBGE`
+#### 🎯 `function Result: ISetup4DCEPResult`
 
-* This interface extends the [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) and provides specific methods for configuration related to IBGE queries.
+This method returns or creates an instance of the result associated with the CEP service.
 
-#### 💻 `ISetup4DCEPConfigurationProxy`
+- **Return:**
+  - An instance of `ISetup4DCEPResult` associated with the CEP service.
 
-* This interface extends the [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration), providing specific methods for proxy configuration.
+---
 
-#### 💻 `ISetup4DCEPFilter`
+#### 📡 `Example`
 
-* This interface extends the [ISetup4DCEP](#-isetup4dcep) interface, providing specific methods for configuring CEP or IBGE filters.
+  ```delphi
+  uses
+    Setup4D.CEP,
+    Setup4D.CEP.interf;
 
-#### 💻 `ISetup4DCEPFilterZipCode`
-
-* This interface extends the functionality of the [ISetup4DCEPFilter](#-isetup4dcepfilter), offering specific methods for including data related to filtering CEP searches.
-
-#### 💻 `ISetup4DCEPFilterZipCodeKey`
-
-* This interface extends the functionality of the [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode), offering specific methods for including information related to the CEP code to be searched.
-
-#### 💻 `ISetup4DCEPFilterZipCodeAddress`
-
-* This interface extends the functionality of the [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode), offering specific methods for including information related to the address of the CEP to be searched.
-
-#### 💻 `ISetup4DCEPFilterIBGE`
-
-* This interface extends the functionality of the [ISetup4DCEPFilter](#-isetup4dcepfilter), offering specific methods for including data related to filtering IBGE searches.
-
-#### 💻 `ISetup4DCEPFilterIBGEKey`
-
-* This interface extends the functionality of the [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge), offering specific methods for including information related to the CEP code to be searched.
-
-#### 💻 `ISetup4DCEPFilterIBGEAddress`
-
-* This interface extends the functionality of the [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge), offering specific methods for including information related to the address of the IBGE to be searched.
-
-#### 💻 `ISetup4DCEPSearech`
-
-* This interface extends the [ISetup4DCEP](#-isetup4dcep) interface, providing specific methods for conducting searches based on CEP or IBGE filters.
-
-#### 💻 `ISetup4DCEPSearechZipCode`
-
-* This interface extends the [ISetup4DCEPSearech](#-isetup4dcepsearech) and offers specific methods for actions related to CEP queries.
-
-#### 💻 `ISetup4DCEPSearechIBGE`
-
-* This interface extends the [ISetup4DCEPSearech](#-isetup4dcepsearech) and provides specific methods for actions related to IBGE queries.
-
-#### 💻 `ISetup4DCEPResult`
-
-* This interface extends the [ISetup4DCEP](#-isetup4dcep) interface, providing specific methods for presenting the results of the executed search.
-
-#### 💻 `ISetup4DCEPResultZipCode`
-
-* This interface extends the [ISetup4DCEPResult](#-isetup4dcepresult) and offers specific methods for obtaining results of actions related to CEP queries.
-
-#### 💻 `iSetup4DCEPResultZipCodeDisplay`
-
-* This interface extends the [ISetup4DCEPResultZipCode](#-isetup4dcepresultzipcode) and offers specific methods for displaying the results of CEP queries.
-
-#### 💻 `ISetup4DCEPResultIBGE`
-
-* This interface extends the [ISetup4DCEPResult](#-isetup4dcepresult) and provides specific methods for obtaining results of actions related to IBGE queries.
-
-#### 💻 `iSetup4DCEPResultIBGEDisplay`
-
-* This interface extends the [ISetup4DCEPResultibge](#-isetup4dcepresultibge) and offers specific methods for displaying the results of IBGE queries.
-
-### ⚙️ Methods of TSetup4DCEP
-
-- This function implements the ISetup4DCEP interface along with all the necessary dependencies. It encompasses crucial information for conducting CEP searches, including the configuration of web services, proxies, filters, searches, and the management of results related to IBGE and CEP.
-
-#### 💻 `class function New: ISetup4DCEP;`
-
-   + This is a class method, allowing its direct invocation on the class without the need to create an instance of it. It returns a type that implements the [ISetup4DCEP](#-isetup4dcep) interface, indicating that the method creates and returns an instance of the class implementing this interface. The method creates a new instance of the class itself [TSetup4DCep](#-funções-do-tsetup4dcep) using the constructor, implying that the New method returns a new instance of [TSetup4DCep](#-funções-do-tsetup4dcep). This pattern is employed to create new instances of classes without the need to manually create an instance, simplifying object creation. The New function is a convenient way to instantiate this class.
-
-#### 🧬 `function Configuration: ISetup4DCEPConfiguration;`
-
-* This method provides an instance that implements the [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration) interface, allowing access to settings related to CEP and IBGE. It is important to highlight that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
-
-##### ⚡️ `function WebService: ISetup4DCEPConfigurationWebService;`
-
-   + This method provides an instance that implements the [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) interface, allowing access to web service settings. It is important to highlight that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
-
-   1. `function ZipCode: ISetup4DCEPConfigurationWebServiceZIPCode;`
-
-      - This method allows you to obtain an instance of the class that provides specific settings for the CEP lookup service. Below are all the existing functions:
-
-         - Here are the web services available for selection in the CEP search:
-         
-            1. None (Selects no service)
-            2. Buscar Cep
-            3. Cep Livre
-            4. Republica Virtual
-            5. Bases4 you
-            6. RN Solucoes
-            7. KingHost
-            8. ByJG
-            9. Correios
-            10. DevMedia
-            11. Via Cep
-            12. Correios SIGEP
-            13. Cep Aberto
-            14. WSCep
-            15. Open Cep
-            16. Brasil API
-
-         - `function Index: Integer;`
-
-            - This function returns an integer value that corresponds to the conversion of a value of the [TSetup4DCEPWebService](#-tsetup4dcepwebservice) enumerated type into an integer value.
-
-         - `function Key(const AValue: string): ISetup4DCEPConfigurationWebServiceZIPCode; overload;`
-
-            - This is a method that allows you to configure the key to be used for authentication when accessing the CEP lookup service.
-
-         - `function Key: string; overload;`
-
-            - This is a method that allows you to retrieve the currently configured key. It returns the key that will be used in requests to the CEP lookup service to access specific information or for authentication, depending on the service's requirements.
-
-         - `function User(const AValue: string): ISetup4DCEPConfigurationWebServiceZIPCode; overload;`
-
-            - This is a method that allows you to configure the username to be used for authentication when accessing the CEP lookup service.
-
-         - `function User: string; overload;`
-
-            - This is a method that allows you to retrieve the currently configured username. It returns the username that will be used in requests to the CEP lookup service for authentication, if necessary.
-
-         - `function Password(const AValue: string): ISetup4DCEPConfigurationWebServiceZIPCode; overload;`
-
-            - This is a method that allows you to configure the password to be used for authentication when accessing the CEP lookup service.
-
-         - `function Password: string; overload;`
-
-            - This is a method that allows you to retrieve the currently configured password. It returns the password that will be used in requests to the CEP lookup service for authentication, if necessary.
-
-         - `function ReturnIBGE(const AValue: Boolean): ISetup4DCEPConfigurationWebServiceZIPCode; overload;`
-
-            - This is a method that enables the configuration of the CEP lookup service to determine whether or not it should return IBGE information.
-
-         - `function ReturnIBGE: Boolean; overload;`
-
-            - This is a method that returns a boolean value indicating whether the CEP lookup service should also return IBGE information. When configured as true, the service will provide additional IBGE information in addition to the CEP data.
-
-         - `function Finish: ISetup4DCEPConfigurationWebService;`
-
-            - This method is responsible for finalizing the configuration of the CEP web service and returning the [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) interface. It is used to complete the proxy configuration and obtain a reference to the TSetup4DCepConfigurationWebService instance. Therefore, this line simply returns the reference to the invoking instance.
-   
-   2. `function IBGE: ISetup4DCEPConfigurationWebServiceIBGE;`
-
-      - This method allows you to obtain an instance of the class that provides specific settings for the IBGE lookup service. Below are all the existing functions:
-
-         - `function CacheName(const AValue: string): ISetup4DCEPConfigurationWebServiceIBGE; overload;`
-           
-           - This is a method that allows you to configure the name of the cache used to store the results of IBGE queries.
-
-         - `function CacheName: string; overload;`
-
-           - This is a method that returns the name of the cache configured to store the results of IBGE queries.
-
-         - `function CacheValidity(const AValue: Integer): ISetup4DCEPConfigurationWebServiceIBGE; overload;`
-
-           - This is a method that allows you to configure the cache validity time to store the results of IBGE queries. It takes an integer value representing the validity time in milliseconds.
-         
-         - `function CacheValidity(const AValue: string): ISetup4DCEPConfigurationWebServiceIBGE; overload;`
-
-           - This is a method that allows you to configure the cache validity time to store the results of IBGE queries. It takes a string representing the validity time in milliseconds.
-         
-         - `function CacheValidity: Integer; overload;`
-
-           - This is a method that allows you to retrieve the cache validity time configured to store the results of IBGE-related queries.
-         
-         - `function CacheValidityInStr: string; overload;`
-
-           - This is a method that returns the cache validity time configured as a string.
-
-         - `function CacheClear: ISetup4DCEPConfigurationWebServiceIBGE;`
-
-           - This is a method that allows you to clear the cache of query results.
-
-         - `function CaseSensitive(const AValue: Boolean): ISetup4DCEPConfigurationWebServiceIBGE; overload;`
-
-           - This is a method that allows you to configure whether the search is case-sensitive or not.
-         
-         - `function CaseSensitive: Boolean; overload;`
-
-           - This is a method that allows you to retrieve the current state of case sensitivity in the search.
-
-         - `function Finish: ISetup4DCEPConfigurationWebService;`
-
-            - This method is responsible for finalizing the configuration of the IBGE web service and returning the [ISetup4DCEPConfigurationWebService](#-isetup4dcepconfigurationwebservice) interface. It is used to complete the proxy configuration and obtain a reference to the TSetup4DCepConfigurationWebService instance. Therefore, this line simply returns the reference to the invoking instance.
-   
-   3. `function TimeOut(const AValue: string): ISetup4DCEPConfigurationWebService; overload;`
-      
-      - This method is used to configure the timeout for requests in the web service. It accepts a value that should be a string representing the timeout in milliseconds.
-
-   4. `function TimeOut(const AValue: Integer): ISetup4DCEPConfigurationWebService; overload;`
-      
-      - This method is used to configure the timeout for requests in the web service. It accepts a value that should be an integer representing the timeout in milliseconds.
-
-   5. `function TimeOutInStr: string;`
-      
-      - This method returns the current value of the timeout configured for requests in the web service, represented as a string.
-
-   6. `function TimeOut: Integer;`
-      
-      - This method returns the current value of the timeout configured for requests in the web service.
-
-   7. `function ParseText(const AValue: Boolean): ISetup4DCEPConfigurationWebService; overload;`
-      
-      - This method is used to configure the Parse Text property, which determines whether the web service should parse the response text. It accepts a boolean parameter.
-
-   8. `function ParseText: Boolean;`
-      
-      - This method is used to retrieve the value of the ParseText property, which represents whether the web service should parse the response text.
-
-   9. `function Finish: ISetup4DCEPConfiguration;`
-      
-      - This method is responsible for finalizing the proxy configuration and returning the [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration) interface. It is used to complete the proxy configuration and obtain a reference to the TSetup4DCepConfiguration instance. Therefore, this line simply returns the reference to the invoking instance.   
-
-##### ⚡️ `function Proxy : ISetup4DCEPConfigurationProxy;`
-
-   + This method provides an instance that implements the [ISetup4DCEPConfigurationProxy](#-isetup4dcepconfigurationproxy) interface, allowing access to the web service settings. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
-
-      1. `function Host(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
-      
-         -  This method is used to configure the host of the proxy used for CEP or IBGE queries. It accepts a string value.
-      
-      2. `function Host : string; overload;`
-      
-         - This method is used to retrieve the host value used in the proxy for CEP or IBGE queries. It returns a string representing the host.
-      
-      3. `function Port(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
-      
-         - This method is used to configure the port of the proxy used for CEP or IBGE queries. It accepts a string value.
-      
-      4. `function Port(Const AValue: integer) : ISetup4DCEPConfigurationProxy; overload;`
-
-         - This method is used to configure the port of the proxy used for CEP or IBGE queries. It accepts an integer value.
-      
-      5. `function Port : integer; overload;`
-
-         - This method is used to retrieve the port value used in the proxy for CEP or IBGE queries. It returns an integer representing the port.
+  var
+    FCEP : ISetup4DCEP;
     
-      6. `function PortInStr : string; overload;`
+  begin
+    FCEP := TSetup4DCEP.New;
+  end;
+  ```   
 
-         - This method is used to retrieve the port value used in the proxy for CEP or IBGE queries. It returns a string representing the port.
-      
-      7. `function User(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
-      
-         - This method is used to configure the username of the proxy used for CEP or IBGE queries. It accepts a string value.
-      
-      8. `function User : string; overload;`
-      
-         - This method is used to retrieve the username used in the proxy for CEP or IBGE queries. It returns a string representing the username.
-      
-      9. `function Password(Const AValue: string) : ISetup4DCEPConfigurationProxy; overload;`
-      
-         - This method is used to configure the password of the proxy used for CEP or IBGE queries. It accepts a string value.
-      
-      10. `function Password : string; overload;`
+---
 
-          - This method is used to retrieve the password used in the proxy for CEP or IBGE queries. It returns a string representing the password.
+## 📐 Functions of TSetup4DCepConfiguration
 
-      11. `function Finish: ISetup4DCEPConfiguration;`
+The class `TSetup4DCepConfiguration` plays a crucial role in configuring TSetup4DCep, providing a set of functionalities to customize and adjust the framework's behavior. It implements the `ISetup4DCEPConfiguration` interface and serves as an essential reference for configuring TSetup4DCep.
 
-          - This method is responsible for finalizing the proxy configuration and returning the [ISetup4DCEPConfiguration](#-isetup4dcepconfiguration) interface. It is used to complete the proxy configuration and obtain a reference to the TSetup4DCepConfiguration instance. Therefore, this line simply returns the reference to the invoking instance.
+### 🎯 Methods
 
-##### ⚡️ `function Finish: ISetup4DCEP;`
+#### 🌐 `function Proxy: ISetup4DCEPConfigurationProxy`
 
-   + This method provides an instance that implements the [ISetup4DCEP](#-isetup4dcep) interface. It is used to complete the configuration and obtain a reference to the main instance of [TSetup4DCep](#-funções-do-tsetup4dcep). Therefore, this line simply returns the reference to the invoking instance.
-     
-#### 🧬 `function Filter : ISetup4DCEPFilter;`
+This method returns or creates an instance of the proxy associated with the configuration of the CEP service.
 
-* This method provides an instance that implements the [ISetup4DCEPFilter](#-isetup4dcepfilter) interface, allowing access to filter information for CEP and IBGE related searches. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
-  
-##### ⚡️ `function ZipCode:ISetup4DCEPFilterZipCode;`
+- **Return:**
+  - An instance of `ISetup4DCEPConfigurationProxy` associated with the CEP service configuration.
 
-   + This method provides an instance that implements the [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode) interface, allowing access to CEP search filters. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
+---
 
-      1. `function Key:ISetup4DCEPFilterZipCodeKey;`
+#### 🚀 `function WebService: ISetup4DCEPConfigurationWebService`
 
-         + This method provides an instance that implements the [ISetup4DCEPFilterZipCodeKey](#-isetup4dcepfilterzipcodekey) interface, allowing access to key filter configuration for the ZIP code. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development. 
+This method returns or creates an instance of the web service configurations associated with the configuration of the CEP service.
 
-            1. `function Value(Const AValue: string) : ISetup4DCEPFilterZipCodeKey; overload;`
+- **Return:**
+  - An instance of `ISetup4DCEPConfigurationWebService` associated with the CEP service configuration.
 
-               - This function allows you to configure the query value for the ZIP code filter.
-            
-            2. `function Value : string; overload;`
+---
 
-               - This function is used to retrieve the filter set for the ZIP code. This is useful for accessing and using the defined criteria.
+#### 🏁 `function Finish: ISetup4DCEP`
 
-            3. `function Finish: ISetup4DCEPFilterZipCode;` 
+This method returns the main instance of the CEP service.
 
-               - This method is responsible for finalizing the Zip Code filter configuration and returning the [ISetup4DCEPFilterZipCode](#-isetup4dcepfilterzipcode) interface. It is used to complete the filter configuration and obtain a reference to the TSetup4DCEPFilterZipCode instance. Therefore, this line simply returns the reference to the invoking instance. 
-            
-      2. `function Address:ISetup4DCEPFilterZipCodeAddress;` 
+- **Return:**
+  - An instance of `ISetup4DCEP` associated with the CEP service.
 
-         + This method provides an instance that implements the [ISetup4DCEPFilterZipCodeAddress](#-isetup4dcepfilterzipcodeaddress) interface, allowing access to address filter configuration. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development. 
+## 📐 Functions of TSetup4DCepConfigurationProxy
 
-            1. `function Types(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
+The class `TSetup4DCepConfigurationProxy` plays a crucial role in configuring TSetup4DCep, providing functionalities to customize and adjust options related to the proxy. It implements the `ISetup4DCEPConfigurationProxy` interface and serves as an essential reference for proxy configuration.
 
-               - This function allows you to configure the types of street (street, avenue, square, garden, square, path, etc...) to be considered in the CEP query.
-            
-            2. `function Street(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
+### 🎯 Methods
 
-               - This function allows you to configure the street name to be considered in the CEP query.
-            
-            3. `function City(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;` 
+#### ⚙️ `function Host(const AValue: string): ISetup4DCEPConfigurationProxy`
 
-               - This function allows you to configure the city name to be considered in the CEP query.
+This method allows configuring the host associated with the CEP service proxy.
 
-            4. `function StateAbbreviated(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;`
+- **Parameters:**
+  - `AValue`: The value of the host to be configured.
+- **Return:**
+  - An instance of `ISetup4DCEPConfigurationProxy` with the updated host configuration.
 
-               - This function allows you to configure the abbreviated state to be considered in the CEP query.
-                           
-            5. `function StateAbbreviated(Const AValue : TSetup4DUtilityEstadoAbreviado): ISetup4DCEPFilterZipCodeAddress; overload;`
+---
 
-               - This function allows you to configure the Setup4DUtility enumerator containing the state abbreviations to be considered in the CEP query.
-                           
-            6. `function District(Const AValue : string): ISetup4DCEPFilterZipCodeAddress; overload;` 
+#### ⚙️ `function Port(const AValue: string): ISetup4DCEPConfigurationProxy`
 
-               - This function allows you to configure the district name to be considered in the CEP query.
-                           
-            7. `function Types: string; overload;`
+This method allows configuring the port associated with the CEP service proxy.
 
-               - This function is used to retrieve the street types configured in the CEP address filter. This can be useful to access and use the defined filter criteria.
-            
-            8. `function Street: string; overload;`
+- **Parameters:**
+  - `AValue`: The value of the port to be configured.
+- **Return:**
+  - An instance of `ISetup4DCEPConfigurationProxy` with the updated port configuration.
 
-               - This function is used to retrieve the street name configured in the CEP address filter. This can be useful to access and use the defined filter criteria.
+---
 
-            9. `function City: string; overload;` 
+#### ⚙️ `function Port(const AValue: Integer): ISetup4DCEPConfigurationProxy`
 
-               - This function is used to retrieve the city name configured in the CEP address filter. This can be useful to access and use the defined filter criteria.
+This method allows configuring the port associated with the CEP service proxy.
 
-            10. `function StateAbbreviated: string; overload;`
+- **Parameters:**
+  - `AValue`: The value of the port to be configured.
+- **Return:**
+  - An instance of `ISetup4DCEPConfigurationProxy` with the updated port configuration.
 
-                - This function is used to retrieve the state abbreviation configured in the CEP address filter. This can be useful to access and use the defined filter criteria.
-            
-            11. `function District: string; overload;`
+---
 
-                - This function is used to retrieve the district name configured in the CEP address filter. This can be useful to access and use the defined filter
+#### ⚙️ `function User(const AValue: string): ISetup4DCEPConfigurationProxy`
 
-##### ⚡️ `function IBGE:ISetup4DCEPFilterIBGE;`
+This method allows configuring the username associated with the CEP service proxy.
 
-   + This method provides an instance that implements the [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge) interface, allowing access to IBGE search filters. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
+- **Parameters:**
+  - `AValue`: The value of the username to be configured.
+- **Return:**
+  - An instance of `ISetup4DCEPConfigurationProxy` with the updated username configuration.
 
-      1. `function Key:ISetup4DCEPFilterIBGEKey;`
+---
 
-         + This method provides an instance that implements the [ISetup4DCEPFilterIBGEKey](#-isetup4dcepfilteribgekey) interface, allowing access to key filter configuration for IBGE code. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development. 
+#### ⚙️ `function Password(const AValue: string): ISetup4DCEPConfigurationProxy`
 
-            1. `function Value(Const AValue: string) : ISetup4DCEPFilterIBGEKey; overload;`
+This method allows configuring the password associated with the CEP service proxy.
 
-               - This function allows you to configure the query value for the IBGE code filter.
+- **Parameters:**
+  - `AValue`: The value of the password to be configured.
+- **Return:**
+  - An instance of `ISetup4DCEPConfigurationProxy` with the updated password configuration.
 
-            2. `function Value : string; overload;`
+---
 
-               - This function is used to retrieve the filter set for the IBGE code. This is useful for accessing and using the defined criteria.
+#### ⚙️ `function Host: string`
 
-            3. `function Finish: ISetup4DCEPFilterIBGE;` 
+This method returns the currently configured value for the host associated with the CEP service proxy.
 
-               - This method is responsible for finalizing the IBGE filter configuration and returning the [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge) interface. It is used to complete the filter configuration and obtain a reference to the TSetup4DCEPFilterIBGE instance. Therefore, this line simply returns the reference to the invoking instance.
+- **Return:**
+  - A string containing the currently configured value for the proxy's host.
 
-      2. `function Address:ISetup4DCEPFilterIBGEAddress;`
+---
 
-         + This method provides an instance that implements the [ISetup4DCEPFilterIBGEAddress](#-isetup4dcepfilteribgeaddress) interface, allowing access to address filter configuration. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development. 
+#### ⚙️ `function Port: Integer`
 
-            1. `function City(Const AValue : string): ISetup4DCEPFilterIBGEAddress; overload;`
+This method returns the currently configured value for the port associated with the CEP service proxy.
 
-               - This function allows you to configure the city name to be considered in the IBGE query.
-            
-            2. `function StateAbbreviated(Const AValue : string): ISetup4DCEPFilterIBGEAddress; overload;`
+- **Return:**
+  - An integer containing the currently configured value for the proxy's port.
 
-               - This function allows you to configure the abbreviated state to be considered in the IBGE query.
+---
 
-            3. `function StateAbbreviated(Const AValue : TSetup4DUtilityEstadoAbreviado): ISetup4DCEPFilterIBGEAddress; overload;` 
+#### ⚙️ `function User: string`
 
-               - This function allows you to configure the Setup4DUtility enumerator containing the state abbreviations to be considered in the IBGE query.
+This method returns the currently configured value for the username associated with the CEP service proxy.
 
-            4. `function City: string; overload;`
+- **Return:**
+  - A string containing the currently configured value for the proxy's username.
 
-               - This function is used to retrieve the city name configured in the IBGE address filter. This can be useful to access and use the defined filter criteria.
-            
-            5. `function StateAbbreviated: string; overload;`
+---
 
-               - This function is used to retrieve the state abbreviation configured in the IBGE address filter. This can be useful to access and use the defined filter criteria.
+#### ⚙️ `function Password: string`
 
-            6. `function Finish: ISetup4DCEPFilterIBGE;` 
+This method returns the currently configured value for the password associated with the CEP service proxy.
 
-               - This method is responsible for finalizing the IBGE filter configuration and returning the [ISetup4DCEPFilterIBGE](#-isetup4dcepfilteribge) interface. It is used to complete the filter configuration and obtain a reference to the TSetup4DCEPFilterIBGE instance. Therefore, this line simply returns the reference to the invoking instance.
+- **Return:**
+  - A string containing the currently configured value for the proxy's password.
 
-      3. `function Finish: ISetup4DCEPFilter;`
-         - This method is responsible for finalizing the filter configuration and returning the [ISetup4DCEPFilter](#-isetup4dcepfilter). It is used to complete the filter configuration and obtain a reference to the TSetup4DCEPFilter instance. Therefore, this line simply returns the reference to the invoking instance.
+---
 
-##### ⚡️ `function Clear : ISetup4DCEPFilter;`
+#### ⚙️ `function Finish: ISetup4DCEPConfiguration`
 
-   + This method allows clearing all the filter data. It is advisable to use this function before specifying the search filter to avoid incorrect or unwanted results.
-     
-##### ⚡️ `function Finish: ISetup4DCEP;`
+This method finishes the configuration of the CEP service proxy, returning to the main configuration interface.
 
-   + This method provides an instance that implements the [ISetup4DCEP](#-isetup4dcep) interface. It is used to complete the configuration and obtain a reference to the main [TSetup4DCep](#-funções-do-tsetup4dcep) instance. Therefore, this line simply returns the reference to the invoking instance.
+- **Return:**
+  - An instance of `ISetup4DCEPConfiguration` to allow further configuration.
 
-#### 🧬 `function Searech : ISetup4DCEPSearech;`
+---
 
-* This method provides an instance that implements the [ISetup4DCEPSearech](#-isetup4dcepsearech) interface, allowing access to the execution related to CEP and IBGE search. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
+#### 📡 `Example`
 
-##### ⚡️ `function ZipCode: ISetup4DCEPSearechZipCode;`
+- **Insert:**
 
-   + This method provides an instance that implements the [ISetup4DCEPSearechZipCode](#-isetup4dcepsearechzipcode) interface, allowing the execution of information related to the CEP search filter. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
+  ```delphi
+  begin
+    FCEP
+      .Configuration
+        .Proxy
+          .Host([PROXY HOST AS STRING])
+          .Port([PROXY PORT AS INTEGER])
+          .User([USER NAME AS STRING])
+          .Password([USER PASSWORD AS STRING])
+        .Finish
+      .Finish
+    .Finish
+  end;
+  ```   
 
-      1. `function Reconfiguration: ISetup4DCEPSearechZipCode;`
+- **Read:**
 
-         - This function reconfigures the proxy and web service for the CEP search.
+  ```delphi
+  begin
+    ShowMessage(FCEP.Configuration.Proxy.Host);
+    ShowMessage(FCEP.Configuration.Proxy.Port.ToString);
+    ShowMessage(FCEP.Configuration.Proxy.User);
+    ShowMessage(FCEP.Configuration.Proxy.Password);
+  end;
+  ```   
 
-      2. `function Code : ISetup4DCEPSearechZipCode;` 
+---
 
-         - This function performs the search for the postal code related to the CEP, validating its existence and the presence of information. Additionally, it handles exceptions related to the absence of OpenSSL DLLs.
+## 📐 Functions of TSetup4DCepConfigurationWebService
 
-      3. `function Address : ISetup4DCEPSearechZipCode;`
+The class `TSetup4DCepConfigurationWebService` plays a crucial role in configuring TSetup4DCep, providing functionalities to customize and adjust options related to the web service. It implements the `ISetup4DCEPConfigurationWebService` interface and serves as an essential reference for web service configuration.
 
-         - This function is responsible for executing a CEP query based on the provided address information. It verifies if all essential data has been provided and handles any exceptions that may arise during the query.
+### 🎯 Methods
 
-      4. `function Component : TComponent;`
- 
-         - This function allows you to acquire a component related to the CEP query, providing access to additional features.
+#### ⚙️ `function BaseURL(const AValue: string): ISetup4DCEPConfigurationWebService`
 
-      5. `function Finish: ISetup4DCEPSearech;`
+This method allows setting the base URL associated with the CEP service web service.
 
-         - This method provides an instance that implements the [ISetup4DCEPSearech](#-isetup4dcepsearech) interface. It is used to complete the execution and obtain a reference to the main TSetup4DCEPSearech instance. Therefore, this line simply returns the reference to the invoking instance.
+- **Parameters:**
+  - `AValue`: A string containing the base URL to be associated with the web service.
 
-##### ⚡️ `function IBGE: ISetup4DCEPSearechIBGE;`
+- **Return:**
+  - The current instance of the CEP service web service configuration (`ISetup4DCEPConfigurationWebService`).
 
-   + This method provides an instance that implements the [ISetup4DCEPSearechIBGE](#-isetup4dcepsearechibge) interface, allowing the execution of information related to the IBGE search filter. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
+---
 
-      1. `function Reconfiguration: ISetup4DCEPSearechIBGE;`
+#### ⚙️ `function BaseURL: string`
 
-         - This function reconfigures the proxy and web service for the IBGE search.
+This method returns the currently configured value for the base URL associated with the CEP service web service.
 
-      2. `function Code : ISetup4DCEPSearechIBGE;`
+- **Return:**
+  - A string containing the currently configured value for the web service's base URL.
 
-         - This function performs the search for the IBGE code, validating its existence and the presence of information. Additionally, it handles exceptions related to the absence of OpenSSL DLLs.
+---
 
-      3. `function State : ISetup4DCEPSearechIBGE;`
+#### ⚙️ `function Key(const AValue: string): ISetup4DCEPConfigurationWebService`
 
-         - This function allows you to retrieve IBGE information related to a state (UF) based on the provided filter, handling specific exceptions related to errors that may occur during the search process.
+This method allows setting the key associated with the CEP service web service.
 
-      4. `function City : ISetup4DCEPSearechIBGE;` 
+- **Parameters:**
+  - `AValue`: A string containing the key to be associated with the web service.
 
-         - This function allows you to retrieve IBGE information related to a city based on the provided filter, handling specific exceptions related to errors that may occur during the search process.
+- **Return:**
+  - The current instance of the CEP service web service configuration (`ISetup4DCEPConfigurationWebService`).
 
-      5. `function Component : TComponent;`
+---
 
-         - This function allows you to acquire a component related to the IBGE query, providing access to additional features.
+#### ⚙️ `function Key: string`
 
-      6. `function Finish: ISetup4DCEPSearech;`
+This method returns the currently configured value for the key associated with the CEP service web service.
 
-         - This method provides an instance that implements the [ISetup4DCEPSearech](#-isetup4dcepsearech) interface. It is used to complete the execution and obtain a reference to the main TSetup4DCEPSearech instance. Therefore, this line simply returns the reference to the invoking instance.
+- **Return:**
+  - A string containing the currently configured value for the web service's key.
 
-##### ⚡️ `function Finish: ISetup4DCEP;`
+---
 
-   + This method provides an instance that implements the [ISetup4DCEP](#-isetup4dcep) interface. It is used to complete the configuration and obtain a reference to the main [TSetup4DCep](#-funções-do-tsetup4dcep) instance. Therefore, this line simply returns the reference to the invoking instance.
+#### ⚙️ `function User(const AValue: string): ISetup4DCEPConfigurationWebService`
 
-#### 🧬 `function Result : ISetup4DCEPResult;`
+This method allows setting the username associated with the CEP service web service.
 
-* This method provides an instance that implements the [ISetup4DCEPResult](#-isetup4dcepresult) interface, allowing access to results related to the CEP and IBGE search. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
+- **Parameters:**
+  - `AValue`: A string containing the username to be associated with the web service.
 
-##### ⚡️ `function ZipCode: ISetup4DCEPResultZipCode;`
+- **Return:**
+  - The current instance of the CEP service web service configuration (`ISetup4DCEPConfigurationWebService`).
 
-   + This method provides an instance that implements the [ISetup4DCEPResultZipCode](#-isetup4dcepresultzipcode) interface, presenting the result of the CEP regarding the execution of the specified search filters. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
+---
 
-      1. `function Display: iSetup4DCEPResultZipCodeDisplay;`
+#### ⚙️ `function User: string`
 
-         - This function displays the results of a CEP query after performing the necessary conversion. It returns an instance ready to display the results, as follows:
+This method returns the currently configured value for the username associated with the CEP service web service.
 
-            1. `function Code : string;`
+- **Return:**
+  - A string containing the currently configured value for the web service's username.
 
-               - This function retrieves the postal code of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+---
 
-            2. `function Types : string;`
+#### ⚙️ `function Password(const AValue: string): ISetup4DCEPConfigurationWebService`
 
-               - This function retrieves the type of street (e.g., street, avenue, square, garden, lane, etc.) of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+This method allows setting the password associated with the CEP service web service.
 
-            3. `function Street : string;` 
+- **Parameters:**
+  - `AValue`: A string containing the password to be associated with the web service.
 
-               - This function retrieves the street name of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+- **Return:**
+  - The current instance of the CEP service web service configuration (`ISetup4DCEPConfigurationWebService`).
 
-            4. `function StreetComplete : string;` 
+---
 
-               - This function retrieves the type and name of the street of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+#### ⚙️ `function Password: string`
 
-            5. `function Complement : string;`
+This method returns the currently configured value for the password associated with the CEP service web service.
 
-               - This function retrieves the complement of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+- **Return:**
+  - A string containing the currently configured value for the web service's password.
 
-            6. `function District : string;` 
+---
 
-               - This function retrieves the district of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+#### ⚙️ `function UpperText(const AValue: Boolean): ISetup4DCEPConfigurationWebService`
 
-            7. `function City : string;` 
+This method allows setting whether text formatting (such as the street name) should be converted to uppercase.
 
-               - This function retrieves the city of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+- **Parameters:**
+  - `AValue`: A boolean value indicating whether text formatting should be converted to uppercase.
 
-            8. `function IBGECity : string;`
+- **Return:**
+  - The current instance of the CEP service web service configuration (`ISetup4DCEPConfigurationWebService`).
 
-               - This function retrieves the IBGE code of the city of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+---
 
-            9. `function State : string;` 
+#### ⚙️ `function UpperText: Boolean`
 
-               - This function retrieves the state of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+This method returns the currently configured value for the uppercase text conversion.
 
-            10. `function IBGEState : string;`
+- **Return:**
+  - A boolean value indicating whether text formatting should be converted to uppercase.
 
-                - This function retrieves the IBGE code of the state of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+---
 
-            11. `function DDD : string;` 
+#### ⚙️ `function UpperTextInString: string`
 
-                - This function retrieves the DDD (Direct Distance Dialing) of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+This method returns a string representation of the currently configured value for uppercase text conversion.
 
-            12. `function GIA : string;`
+- **Return:**
+  - A string containing "True" if the conversion to uppercase is enabled or "False" if it is disabled.
 
-                - This function retrieves the GIA (National Guide for Information and ICMS Assessment) of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+---
 
-            13. `function SIAFI : string;`
+#### ⌛ `function TimeOut(const AValue: Integer): ISetup4DCEPConfigurationWebService`
 
-                - This function retrieves the SIAFI (Integrated Financial Administration System) of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+This method allows configuring the timeout for requests to the CEP service web service.
 
-            14. `function Altitude : string;` 
+- **Parameters:**
+  - `AValue`: The timeout value in milliseconds.
 
-                - This function retrieves the altitude of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+- **Return:**
+  - The current instance of the CEP service web service configuration (`ISetup4DCEPConfigurationWebService`).
 
-            15. `function Latitude : string;`
+---
 
-                - This function retrieves the latitude of the CEP contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+#### ⌛ `function TimeOut(const AValue: string): ISetup4DCEPConfigurationWebService`
 
-            16. `function Longitude : string;`
+This method allows configuring the timeout for requests to the CEP service web service, where `AValue` is a string that will be converted to an integer value representing the timeout in milliseconds.
 
-                - This function retrieves the longitude of the CEP contained in the JSON object, provided that the JSON object has been informed.
+- **Parameters:**
+  - `AValue`: The string representing the timeout value in milliseconds.
 
-            17. `function JSON (Const AValue: TJSONObject) : iSetup4DCEPResultZipCodeDisplay; overload;` 
+- **Return:**
+  - The current instance of the CEP service web service configuration (`
 
-                - This method retrieves the JSON object containing the CEP query results and then checks if the object was provided before making assignments to the fields.
+ISetup4DCEPConfigurationWebService`).
 
-            18. `function Finish: iSetup4DCEPResultZipCode;` 
+---
 
-                - This method provides an instance that implements the [iSetup4DCEPResultZipCode](#-isetup4dcepresultZipCode) interface. It is used to complete the execution and obtain a reference to the main TSetup4DCEPResultZipCode instance. Therefore, this line simply returns the reference to the invoking instance.
+#### ⌛ `function TimeOut: Integer`
 
-      2. `function JSONObject(out AValue : TJSONObject): ISetup4DCEPResultZipCode; overload;` 
+This method returns the currently configured value for the timeout of requests to the CEP service web service.
 
-         - This method allows you to obtain a JSON object containing the results of the CEP query.
+- **Return:**
+  - An integer value representing the timeout in milliseconds.
 
-      3. `function JSONObject: TJSONObject; overload;`
+---
 
-         - This method allows you to obtain the JSON object with the results of the CEP query.
+### 🔧 `function Finish: ISetup4DCEPConfiguration`
 
-      4. `function JSONObjectInStr: String; overload;`
+Este método conclui a configuração do serviço web no contexto do `Setup4DCEP`.
 
-         - This method allows you to obtain the JSON object as a JSON string with the results of the CEP query.
+- **Retorno:**
+  - Uma instância de `ISetup4DCEPConfiguration` para permitir métodos encadeados na configuração do serviço web.
 
-      5. `function JSONArray: TJSONArray; overload;`
+---
 
-         - This method allows you to obtain the JSON object as a JSON array with the results of the CEP query.
+#### 📡 `Example`
 
-      6. `function RecordCount : Int64;`
+- **Insert:**
 
-         - This method allows you to obtain the total number of addresses found (Integer) with the CEP query results.
+  ```delphi
+  begin
+    FCEP
+      .Configuration
+        .WebService
+            .User([USER NAME AS STRING])
+            .Password([USER PASSWORD AS STRING])
+            .Key([ACCESS KEY AS STRING])
+            .TimeOut([WAITING TIME IN INTEGER])
+            .UpperText([UPPERCASE LETTERS IN BOOLEAN])
+        .Finish
+      .Finish
+    .Finish
+  end;
+  ```   
 
-      7. `function RecordCountInStr : string;`
+- **Read:**
 
-         - This method allows you to obtain the total number of addresses found (String) with the CEP query results.
+  ```delphi
+  begin
+    ShowMessage(FCEP.Configuration.Proxy.Key);
+    ShowMessage(FCEP.Configuration.Proxy.TimeOut.ToString);
+    ShowMessage(FCEP.Configuration.Proxy.User);
+    ShowMessage(FCEP.Configuration.Proxy.Password);
+    ShowMessage(BoolToStr(FCEP.Configuration.Proxy.UpperText));
+  end;
+  ```   
 
-      8. `function Finish: ISetup4DCEPResult;`
+---
 
-         - This method provides an instance that implements the [ISetup4DCEPResult](#-isetup4dcepresult). It is used to complete the execution and obtain a reference to the main TSetup4DCEPResult instance. Therefore, this line simply returns the reference to the invoking instance.
+## 📐 Functions of TSetup4DCEPFilter
 
-##### ⚡️ `function IBGE: ISetup4DCEPResultIBGE;`
+The class `TSetup4DCEPFilter` plays a crucial role in TSetup4DCep, offering functionalities to apply filters and customize the framework's behavior. It implements the `ISetup4DCEPFilter` interface and serves as an essential reference for applying filters in TSetup4DCep.
 
-   + This method provides an instance that implements the [ISetup4DCEPResultIBGE](#-isetup4dcepresultibge) interface, presenting the result of the IBGE regarding the execution of the specified search filters. It is important to note that there is a constructor available to ensure the reuse of the same configuration object throughout the execution of [TSetup4DCep](#-funções-do-tsetup4dcep), avoiding the need to create additional instances. This contributes to efficient management and reduces complexity in development.
+### 🎯 Methods
 
-      1. `function Display: iSetup4DCEPResultIBGEDisplay;`
+#### 📍 `function ZipCode: ISetup4DCEPFilterZipCode`
 
-         - This function displays the results of an IBGE query after performing the necessary conversion. It returns an instance ready to display the results, as follows:
+This method allows configuring filters related to CEP, more specifically to the zip code.
 
-            1. `function StateCode : string;` 
+- **Return:**
+  - An instance of `ISetup4DCEPFilterZipCode` that provides additional methods for configuring specific filters related to the zip code.
 
-               - This function retrieves the IBGE code of the state contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+---
 
-            2. `function State : string;` 
+#### 📍 `function IBGE: ISetup4DCEPFilterIBGE`
 
-               - This function retrieves the state of the IBGE contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown.
+This method allows configuring filters related to the IBGE code (Brazilian Institute of Geography and Statistics).
 
-            3. `function CityCode : string;`
+- **Return:**
+  - An instance of `ISetup4DCEPFilterIBGE` that provides additional methods for configuring specific filters related to the IBGE code.
 
-               - This function retrieves the IBGE code of the city contained in the JSON object, provided that the JSON object has been informed. If the JSON object is not provided, an exception is thrown. 
+---
 
-            4. `function City : string;` 
+#### 📍 `function Clear: ISetup4DCEPFilter`
 
-               - This function retrieves the city of the IBGE contained in the JSON object, provided that the JSON object has been informed.
+This method clears all filters previously configured in the object.
 
-            5. `function Zone : string;` 
+- **Return:**
+  - The current instance of the CEP web service filter configuration (`ISetup4DCEPFilter`).
 
-               - This function retrieves the area size of the IBGE contained in the JSON object, provided that the JSON object has been informed. 
+---
 
-            6. `function JSON (Const AValue: TJSONObject) : iSetup4DCEPResultIBGEDisplay; overload;` 
+#### 📍 `function Finish: ISetup4DCEP`
 
-               - This method retrieves the JSON object containing the IBGE query results and then checks if the object was provided before making assignments to the fields.
+This method finishes the configuration of filters for the CEP web service and returns to the main instance (`ISetup4DCEP`) to allow further general configuration.
 
-            7. `function Finish: iSetup4DCEPResultIBGE;`
+- **Return:**
+  - The main instance of the CEP web service (`ISetup4DCEP`).
 
-               - This method provides an instance that implements the [iSetup4DCEPResultIBGE](#-isetup4dcepresultibge) interface. It is used to complete the execution and obtain a reference to the main TSetup4DCEPResultIBGE instance.
+---
 
-      2. `function JSONObject(out AValue : TJSONObject): ISetup4DCEPResultIBGE; overload;` 
+## 📐 Functions of TSetup4DCEPFilterZipCode
 
-         - This method allows you to obtain a JSON object containing the results of the IBGE query.
+The class `TSetup4DCEPFilterZipCode` plays a crucial role in TSetup4DCep, providing specific functionalities to filter and customize the framework's behavior regarding CEPs. It implements the `ISetup4DCEPFilterZipCode` interface and serves as an essential reference for applying CEP filters in TSetup4DCep.
 
-      3. `function JSONObject: TJSONObject; overload;`
+### 🎯 Methods
 
-         - This method allows you to obtain the JSON object with the results of the IBGE query.
+#### 📍 `function Value: string`
 
-      4. `function JSONObjectInStr: String; overload;` 
+This method returns the currently configured value for the CEP filter.
 
-         - This method allows you to obtain the JSON object as a JSON string with the results of the IBGE query.
+- **Return:**
+  - A string containing the current value of the CEP filter.
 
-      5. `function Finish: ISetup4DCEPResult;`
+---
 
-         - This method provides an instance that implements the [ISetup4DCEPResult](#-isetup4dcepresult). It is used to complete the execution and obtain a reference to the main TSetup4DCEPResult instance. Therefore, this line simply returns the reference to the invoking instance.
+#### 📍 `function Value(const AValue: string): ISetup4DCEPFilterZipCode`
 
-##### ⚡️ `function Finish: ISetup4DCEP;`
+This method allows setting the value of the CEP filter.
 
-   + This method provides an instance that implements the [ISetup4DCEP](#-isetup4dcep) interface. It is used to complete the configuration and obtain a reference to the main [TSetup4DCep](#-funções-do-tsetup4dcep) instance. Therefore, this line simply returns the reference to the invoking instance.
+- **Parameters:**
+  - `AValue`: A string representing the value of the CEP filter.
 
-### ⚙️ Usage Example
+- **Return:**
+  - The current instance of the CEP filter configuration (`ISetup4DCEPFilterZipCode`).
 
-   - This example describes the initial configuration required to use the library.
+---
 
-      ```Delphi
-      uses
-        Setup4D.CEP,
-        Setup4D.CEP.interf;
-      ```
+#### 📍 `function Street: string`
 
-      ```Delphi
-      var
-        FCEP: ISetup4DCEP;
-      ```
+This method returns the currently configured value for the street filter.
 
-      ```Delphi
-      initialization
-         FCEP := TSetup4DCEP.New;
+- **Return:**
+  - A string containing the current value of the street filter.
 
-      finalization
-         FCEP := Nil;
-      ```
+---
 
-   - In this example, we demonstrate how to search for a ZIP code based on the postal code.
+#### 📍 `function Street(const AValue: string): ISetup4DCEPFilterZipCode`
 
-      ```Delphi
-      begin
-        FCEP
-          .Configuration
-            .WebService
-               .ZipCode
-                  .WSCep // Other servers can be defined.
-                     .User('[ENTER YOUR WEB SERVICE USER]')
-                     .Password('[ENTER YOUR WEB SERVICE PASSWORD]')
-                     .Key('[ENTER YOUR WEB SERVICE KEY]')
-                     .ReturnIBGE('[INDICATE IBGE RETURN]')
-              .Finish
-              .TimeOut('[ENTER TIMEOUT]')
-              .ParseText('[ENTER TEXT PARSE TREATMENT]')
-            .Finish
-            .Proxy
-              .Host('[ENTER PROXY HOST]')
-              .Port('[ENTER PROXY PORT]')
-              .User('[ENTER PROXY USER]')
-              .Password('[ENTER PROXY PASSWORD]')
-            .Finish
-          .Finish
-          .Filter
-            .Clear
-            .ZipCode
-              .Key
-                .Value('[ENTER FILTER]')
-              .Finish
-            .Finish
-          .Finish
-          .Search
-            .ZipCode
-              .Reconfiguration
-              .Code
-            .Finish
-          .Finish;
-      end;
-      ```
+This method allows setting the value of the street filter.
 
-   - In this example, we demonstrate how to search for a ZIP code based on the address.
+- **Parameters:**
+  - `AValue`: A string representing the value of the street filter.
 
-      ```Delphi
-      begin
-        FCEP
-          .Configuration
-            .WebService
-              .ZipCode
-                  .WSCep // Other servers can be defined.
-                     .User('[ENTER YOUR WEB SERVICE USER]')
-                     .Password('[ENTER YOUR WEB SERVICE PASSWORD]')
-                     .Key('[ENTER YOUR WEB SERVICE KEY]')
-                     .ReturnIBGE('[INDICATE IBGE RETURN]')
-              .Finish
-              .TimeOut('[ENTER TIMEOUT]')
-              .ParseText('[ENTER TEXT PARSE TREATMENT]')
-            .Finish
-            .Proxy
-              .Host('[ENTER PROXY HOST]')
-              .Port('[ENTER PROXY PORT]')
-              .User('[ENTER PROXY USER]')
-              .Password('[ENTER PROXY PASSWORD]')
-            .Finish
-          .Finish
-          .Filter
-            .Clear
-            .ZipCode
-              .Address
-                .Types('[ENTER STREET TYPE]')
-                .Street('[ENTER STREET NAME]')
-                .City('[ENTER CITY]')
-                .StateAbbreviated('[ENTER STATE]')
-                .District('[ENTER DISTRICT]')
-              .Finish
-            .Finish
-          .Finish
-          .Search
-            .ZipCode
-              .Reconfiguration
-              .Code
-            .Finish
-          .Finish;
-      end;
-      ```
+- **Return:**
+  - The current instance of the CEP filter configuration (`ISetup4DCEPFilterZipCode`).
 
-   - In this example, we demonstrate how to search for IBGE information based on a specific code.
+---
 
-      ```Delphi
-      begin
-         FCEP
-          .Configuration
-            .WebService
-               .IBGE
-                  .CaseSensitive('[INDICATE TEXT SENSITIVITY]')
-                  .CacheName('[ENTER CACHE LOCATION AND FILE NAME]')
-                  .CacheValidity('[ENTER CACHE VALIDITY]')
-               .Finish
-               .TimeOut('[ENTER TIMEOUT]')
-               .ParseText('[ENTER TEXT PARSE TREATMENT]')
-            .Finish
-            .Proxy
-              .Host('[ENTER PROXY HOST]')
-              .Port('[ENTER PROXY PORT]')
-              .User('[ENTER PROXY USER]')
-              .Password('[ENTER PROXY PASSWORD]')
-            .Finish
-          .Finish
-          .Filter
-            .Clear
-            .IBGE
-              .Key
-                .Value('[ENTER IBGE CODE]')
-              .Finish
-            .Finish
-          .Finish
-          .Search
-            .IBGE
-              .Reconfiguration
-              .Code
-            .Finish
-          .Finish
-          .Configuration
-            .WebService
-              .IBGE
-                .CacheClear
-              .Finish
-            .Finish
-          .Finish;
-      end;
-      ```
+#### 📍 `function District: string`
 
-   - In this example, we demonstrate how to search for IBGE information based on a specific state.
+This method returns the currently configured value for the district filter.
 
-      ```Delphi
-      begin
-         FCEP
-          .Configuration
-            .WebService
-               .IBGE
-                  .CaseSensitive('[INDICATE TEXT SENSITIVITY]')
-                  .CacheName('[ENTER CACHE LOCATION AND FILE NAME]')
-                  .CacheValidity('[ENTER CACHE VALIDITY]')
-               .Finish
-                 .TimeOut('[ENTER TIMEOUT]')
-                 .ParseText('[ENTER TEXT PARSE TREATMENT]')
-            .Finish
-            .Proxy
-              .Host('[ENTER PROXY HOST]')
-              .Port('[ENTER PROXY PORT]')
-              .User('[ENTER PROXY USER]')
-              .Password('[ENTER PROXY PASSWORD]')
-            .Finish
-          .Finish
-          .Filter
-            .Clear
-            .IBGE
-              .Address
-                .StateAbbreviated('[ENTER STATE]')
-              .Finish
-            .Finish
-          .Finish
-          .Search
-            .IBGE
-              .Reconfiguration
-              .Code
-            .Finish
-          .Finish
-          .Configuration
-            .WebService
-              .IBGE
-                .CacheClear
-              .Finish
-            .Finish
-          .Finish;
-      end;
-      ```
+- **Return:**
+  - A string containing the current value of the district filter.
 
-   - In this example, we demonstrate how to search for IBGE information based on a specific city.
+---
 
-      ```Delphi
-      begin
-         FCEP
-          .Configuration
-            .WebService
-               .IBGE
-                  .CaseSensitive('[INDICATE TEXT SENSITIVITY]')
-                  .CacheName('[ENTER CACHE LOCATION AND FILE NAME]')
-                  .CacheValidity('[ENTER CACHE VALIDITY]')
-               .Finish
-                 .TimeOut('[ENTER TIMEOUT]')
-                 .ParseText('[ENTER TEXT PARSE TREATMENT]')
-            .Finish
-            .Proxy
-              .Host('[ENTER PROXY HOST]')
-              .Port('[ENTER PROXY PORT]')
-              .User('[ENTER PROXY USER]')
-              .Password('[ENTER PROXY PASSWORD]')
-            .Finish
-          .Finish
-          .Filter
-            .Clear
-            .IBGE
-              .Address
-                .City('[ENTER CITY]')
-                .StateAbbreviated('[ENTER STATE]')
-              .Finish
-            .Finish
-          .Finish
-          .Search
-            .IBGE
-              .Reconfiguration
-              .Code
-            .Finish
-          .Finish
-          .Configuration
-            .WebService
-              .IBGE
-                .CacheClear
-              .Finish
-            .Finish
-          .Finish;
-      end;
-      ```
+#### 📍 `function District(const AValue: string): ISetup4DCEPFilterZipCode`
 
-   - In this example, we demonstrate how to obtain ZIP code results through fields.
+This method allows setting the value of the district filter.
 
-      ```Delphi
-      var
-         Memo: TMemo;
-      begin
-         Memo := TMemo.Create(Self);
+- **Parameters:**
+  - `AValue`: A string representing the value of the district filter.
 
-         Memo.Lines.Clear;
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add('Variable Return');
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add(EmptyStr);
-         Memo.Lines.Add('CEP: ' + FCEP.Result.ZIPCode.Display.Code);
-         Memo.Lines.Add('Type: ' + FCEP.Result.ZIPCode.Display.Types);
-         Memo.Lines.Add('Street: ' + FCEP.Result.ZIPCode.Display.Street);
-         Memo.Lines.Add('Complete Street: ' + FCEP.Result.ZIPCode.Display.StreetComplete);
-         Memo.Lines.Add('Complement: ' + FCEP.Result.ZIPCode.Display.Complement);
-         Memo.Lines.Add('District: ' + FCEP.Result.ZIPCode.Display.District);
-         Memo.Lines.Add('City: ' + FCEP.Result.ZIPCode.Display.City);
-         Memo.Lines.Add('IBGE City: ' + FCEP.Result.ZIPCode.Display.IBGECity);
-         Memo.Lines.Add('State: ' + FCEP.Result.ZIPCode.Display.State);
-         Memo.Lines.Add('IBGE State: ' + FCEP.Result.ZIPCode.Display.IBGEState);
-         Memo.Lines.Add('DDD: ' + FCEP.Result.ZIPCode.Display.DDD);
-         Memo.Lines.Add('GIA (Tax Collection Information Management): ' + FCEP.Result.ZIPCode.Display.GIA);
-         Memo.Lines.Add('SIAFI (Integrated Financial Administration System): ' + FCEP.Result.ZIPCode.Display.SIAFI);
-         Memo.Lines.Add('Altitude: ' + FCEP.Result.ZIPCode.Display.Altitude);
-         Memo.Lines.Add('Latitude: ' + FCEP.Result.ZIPCode.Display.Latitude);
-         Memo.Lines.Add('Longitude: ' + FCEP.Result.ZIPCode.Display.Longitude);
-      end;
-      ```
+- **Return:**
+  - The current instance of the CEP filter configuration (`ISetup4DCEPFilterZipCode`).
 
-   - In this example, we demonstrate how to obtain ZIP code results in formatted JSON.
+---
 
-      ```Delphi
-      var
-         Memo: TMemo;
-         LJSON: TJSONObject;
-      begin
-         Memo := TMemo.Create(Self);
+#### 📍 `function City: string`
 
-         Memo.Lines.Add(EmptyStr);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add('Formatted JSON');
-         Memo.Lines.Add(FCEP.Result.ZIPCode.JSONObject.Format);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add(EmptyStr);
-      end;
-      ```
+This method returns the currently configured value for the city filter.
 
-   - In this example, we demonstrate how to obtain ZIP code results as a JSON object.
+- **Return:**
+  - A string containing the current value of the city filter.
 
-      ```Delphi
-      var
-         Memo: TMemo;
-      begin
-         Memo := TMemo.Create(Self);
+---
 
-         Memo.Lines.Add(EmptyStr);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add('JSON Object Return');
-         Memo.Lines.Add(FCEP.Result.ZIPCode.JSONObject.ToJSON);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add(EmptyStr);
-      end;
-      ```
+#### 📍 `function City(const AValue: string): ISetup4DCEPFilterZipCode`
 
-   - In this example, we demonstrate how to obtain ZIP code results as a JSON string.
+This method allows setting the value of the city filter.
 
-      ```Delphi
-      var
-         Memo: TMemo;
-      begin
-         Memo := TMemo.Create(Self);
+- **Parameters:**
+  - `AValue`: A string representing the value of the city filter.
 
-         Memo.Lines.Add(EmptyStr);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add('String Return');
-         Memo.Lines.Add(FCEP.Result.ZIPCode.JSONObjectInStr);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add(EmptyStr);
-      end;
-      ```
+- **Return:**
+  - The current instance of the CEP filter configuration (`ISetup4DCEPFilterZipCode`).
 
-   - In this example, we demonstrate how to obtain the total number of located ZIP codes.
+---
 
-      ```Delphi
-      var
-         Memo: TMemo;
-      begin
-         Memo := TMemo.Create(Self);
+#### 📍 `function State: string`
 
-         Memo.Lines.Add(EmptyStr);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add('Record Count');
-         Memo.Lines.Add('Total: ' + FCEP.Result.ZIPCode.RecordCount.ToString);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add(EmptyStr);
-      end;
-      ```
+This method returns the currently configured value for the state filter.
 
-   - In this example, we demonstrate how to obtain the total number of located ZIP codes as a string.
+- **Return:**
+  - A string containing the current value of the state filter.
 
-      ```Delphi
-      var
-         Memo: TMemo;
-      begin
-         Memo := TMemo.Create(Self);
+---
 
-         Memo.Lines.Add(EmptyStr);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add('Record Count (String)');
-         Memo.Lines.Add('Total: ' + FCEP.Result.ZIPCode.RecordCountInStr);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add(EmptyStr);
-      end;
-      ```
+#### 📍 `function State(const AValue: string): ISetup4DCEPFilterZipCode`
 
-   - In this example, we demonstrate how to obtain IBGE results through fields.
+This method allows setting the value of the state filter.
 
-      ```Delphi
-      var
-         Memo: TMemo;
-      begin
-         Memo := TMemo.Create(Self);
+- **Parameters:**
+  - `AValue`: A string representing the value of the state filter.
 
-         Memo.Lines.Clear;
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add('Variable Return');
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add(EmptyStr);
-         Memo.Lines.Add('UF Code: ' + FCEP.Result.IBGE.Display.StateCode);
-         Memo.Lines.Add('State: ' + FCEP.Result.IBGE.Display.State);
-         Memo.Lines.Add('City Code: ' + FCEP.Result.IBGE.Display.CityCode);
-         Memo.Lines.Add('City: ' + FCEP.Result.IBGE.Display.City);
-         Memo.Lines.Add('Zone: ' + FCEP.Result.IBGE.Display.Zone);
-      end;
-      ```
+- **Return:**
+  - The current instance of the CEP filter configuration (`ISetup4DCEPFilterZipCode`).
 
-   - In this example, we demonstrate how to obtain IBGE results in formatted JSON.
+---
 
-      ```Delphi
-      var
-         Memo: TMemo;
-         LJSON: TJSONObject;
-      begin
-         Memo := TMemo.Create(Self);
+#### 📍 `function State(const AValue: TSetup4DUtilityEstadoAbreviado): ISetup4DCEPFilterZipCode`
 
-         Memo.Lines.Add(EmptyStr);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add('Formatted JSON');
-         Memo.Lines.Add(FCEP.Result.IBGE.JSONObject.Format);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add(EmptyStr);
-      end;
-      ```
+This method allows setting the value of the state filter using the `TSetup4DUtilityEstadoAbreviado` enumeration.
 
-   - In this example, we demonstrate how to obtain IBGE results as a JSON object.
+- **Parameters:**
+  - `AValue`: A value from the `TSetup4DUtilityEstadoAbreviado` enumeration.
 
-      ```Delphi
-      var
-         Memo: TMemo;
-      begin
-         Memo := TMemo.Create(Self);
+- **Return:**
+  - The current instance of the CEP filter configuration (`ISetup4DCEPFilterZipCode`).
 
-         Memo.Lines.Add(EmptyStr);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add('JSON Object Return');
-         Memo.Lines.Add(FCEP.Result.IBGE.JSONObject.ToJSON);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add(EmptyStr);
-      end;
-      ```
+---
 
-   - In this example, we demonstrate how to obtain IBGE results as a JSON string.
+#### 📍 `function State(const AValue: TSetup4DUtilityEstado): ISetup4DCEPFilterZipCode`
 
-      ```Delphi
-      var
-         Memo: TMemo;
-      begin
-         Memo := TMemo.Create(Self);
+This method allows setting the value of the state filter using the `TSetup4DUtilityEstado` enumeration.
 
-         Memo.Lines.Add(EmptyStr);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add('String Return');
-         Memo.Lines.Add(FCEP.Result.IBGE.JSONObjectInStr);
-         Memo.Lines.Add( StringOfChar('-', 20) );
-         Memo.Lines.Add(EmptyStr);
-      end;
-      ```
+- **Parameters:**
+  - `AValue`: A value from the `TSetup4DUtilityEstado` enumeration.
+
+- **Return:**
+  - The current instance of the CEP filter configuration (`ISetup4DCEPFilterZipCode`).
+
+---
+
+#### 🚀 `function Finish: ISetup4DCEPFilter`
+
+This method returns the parent instance, allowing the conclusion of the specific configuration for the CEP filter by zip code.
+
+- **Return:**
+  - The instance of the CEP filter configuration (`ISetup4DCEPFilter`).
+
+---
+
+#### 📡 `Example`
+
+- **Filter CEP:**
+
+  ```delphi
+  begin
+    FCEP
+      .Filter
+        .Clear
+        .ZipCode
+          .Value([CEP TO FILTER AS STRING])
+        .Finish
+      .Finish
+    .Finish
+  end;
+  ```   
+
+- **Filter Address:**
+
+  ```delphi
+  begin
+    FCEP
+      .Filter
+        .Clear
+        .ZipCode
+          .Street([STREET NAME AS STRING])
+          .District([NEIGHBORHOOD NAME AS STRING])
+          .City([CITY NAME AS STRING])
+          .State([STATE NAME AS STRING])
+        .Finish
+      .Finish
+    .Finish
+  end;
+  ```   
+
+- **Read:**
+
+  ```delphi
+
+
+  begin
+    ShowMessage(FCEP.Filter.ZipCode.Value);
+    ShowMessage(FCEP.Filter.ZipCode.Street);
+    ShowMessage(FCEP.Filter.ZipCode.District);
+    ShowMessage(FCEP.Filter.ZipCode.City);
+    ShowMessage(FCEP.Filter.ZipCode.State);
+  end;
+  ``` 
+
+---
+
+## 📐 Functions of TSetup4DCEPFilterIBGE
+
+The class `TSetup4DCEPFilterIBGE` plays a crucial role in TSetup4DCep, offering specific functionalities to filter and customize the framework's behavior regarding IBGE codes. It implements the `ISetup4DCEPFilterIBGE` interface and serves as an essential reference for applying IBGE code filters in TSetup4DCep.
+
+### 🎯 Methods
+
+#### 📍 `function Code: string`
+
+This method returns the currently configured value for the IBGE code filter.
+
+- **Return:**
+  - A string containing the current value of the IBGE code filter.
+
+---
+
+#### 📍 `function Code(const AValue: string): ISetup4DCEPFilterIBGE`
+
+This method allows setting the value of the IBGE code filter.
+
+- **Parameters:**
+  - `AValue`: A string representing the value of the IBGE code filter.
+
+- **Return:**
+  - The current instance of the CEP filter configuration (`ISetup4DCEPFilterIBGE`).
+
+---
+
+#### 📍 `function Country: string`
+
+This method returns the currently configured value for the country filter in the IBGE code.
+
+- **Return:**
+  - A string containing the current value of the country filter in the IBGE code.
+
+---
+
+#### 📍 `function Country(const AValue: string): ISetup4DCEPFilterIBGE`
+
+This method allows setting the value of the country filter in the IBGE code.
+
+- **Parameters:**
+  - `AValue`: A string representing the value of the country filter in the IBGE code.
+
+- **Return:**
+  - The current instance of the CEP filter configuration (`ISetup4DCEPFilterIBGE`).
+
+---
+
+#### 📍 `function City: string`
+
+This method returns the currently configured value for the city filter in the IBGE code.
+
+- **Return:**
+  - A string containing the current value of the city filter in the IBGE code.
+
+---
+
+#### 📍 `function City(const AValue: string): ISetup4DCEPFilterIBGE`
+
+This method allows setting the value of the city filter in the IBGE code.
+
+- **Parameters:**
+  - `AValue`: A string representing the value of the city filter in the IBGE code.
+
+- **Return:**
+  - The current instance of the CEP filter configuration (`ISetup4DCEPFilterIBGE`).
+
+---
+
+#### 📍 `function State: string`
+
+This method returns the currently configured value for the state filter in the IBGE code.
+
+- **Return:**
+  - A string containing the current value of the state filter in the IBGE code.
+
+---
+
+#### 📍 `function State(const AValue: string): ISetup4DCEPFilterIBGE`
+
+This method allows setting the value of the state filter in the IBGE code.
+
+- **Parameters:**
+  - `AValue`: A string representing the value of the state filter in the IBGE code.
+
+- **Return:**
+  - The current instance of the CEP filter configuration (`ISetup4DCEPFilterIBGE`).
+
+---
+
+#### 📍 `function State(const AValue: TSetup4DUtilityEstado): ISetup4DCEPFilterIBGE`
+
+This method allows setting the value of the state filter in the IBGE code using the `TSetup4DUtilityEstado` enumeration.
+
+- **Parameters:**
+  - `AValue`: A value from the `TSetup4DUtilityEstado` enumeration representing the state in the IBGE code.
+
+- **Return:**
+  - The current instance of the CEP filter configuration (`ISetup4DCEPFilterIBGE`).
+
+---
+
+#### 📍 `function State(const AValue: TSetup4DUtilityEstadoAbreviado): ISetup4DCEPFilterIBGE`
+
+This method allows setting the value of the state filter in the IBGE code using the `TSetup4DUtilityEstadoAbreviado` enumeration.
+
+- **Parameters:**
+  - `AValue`: A value from the `TSetup4DUtilityEstadoAbreviado` enumeration representing the state in the IBGE code.
+
+- **Return:**
+  - The current instance of the CEP filter configuration (`ISetup4DCEPFilterIBGE`).
+
+---
+
+#### 🚀 `function Finish: ISetup4DCEPFilter`
+
+This method returns the parent instance, allowing the conclusion of the configuration of the CEP filter.
+
+- **Return:**
+  - The instance of the CEP filter configuration (`ISetup4DCEPFilter`).
+
+---
+
+#### 📡 `Example`
+
+- **Filter Code:**
+
+  ```delphi
+  begin
+    FCEP
+      .Filter
+        .Clear
+        .IBGE
+          .Code([IBGE CODE TO FILTER AS STRING])
+        .Finish
+      .Finish
+    .Finish
+  end;
+  ```   
+
+- **Filter City:**
+
+  ```delphi
+  begin
+    FCEP
+      .Filter
+        .Clear
+        .IBGE
+          .City([CITY NAME AS STRING])
+          .State([STATE NAME AS STRING])
+        .Finish
+      .Finish
+    .Finish
+  end;
+  ```   
+
+- **Filter State:**
+
+  ```delphi
+  begin
+    FCEP
+      .Filter
+        .Clear
+        .IBGE
+          .State([STATE NAME AS STRING])
+        .Finish
+      .Finish
+    .Finish
+  end;
+  ```   
+
+- **Filter Country:**
+
+  ```delphi
+  begin
+    FCEP
+      .Filter
+        .Clear
+        .IBGE
+          .Country([COUNTRY NAME AS STRING])
+        .Finish
+      .Finish
+    .Finish
+  end;
+  ```   
+
+- **Read:**
+
+  ```delphi
+  begin
+    ShowMessage(FCEP.Filter.IBGE.Code);
+    ShowMessage(FCEP.Filter.IBGE.City);
+    ShowMessage(FCEP.Filter.IBGE.State);
+    ShowMessage(FCEP.Filter.IBGE.Country);
+  end;
+  ``` 
+
+---
+
+## 📐 Functions of TSetup4DCEPSearch
+
+The `TSetup4DCEPSearch` class plays a crucial role in TSetup4DCep, providing functionalities for conducting searches and queries related to ZIP codes. It implements the `ISetup4DCEPSearch` interface and serves as an essential reference for conducting searches in TSetup4DCep.
+
+### 🎯 Methods
+
+#### 🏠 `function ZipCode: ISetup4DCEPSearchZipCode`
+
+This method returns the instance for conducting ZIP code searches.
+
+- **Return:**
+  - The instance for ZIP code searches (`ISetup4DCEPSearchZipCode`).
+
+This method throws an exception of type `EConvertError` if the configuration (`ISetup4DCEPConfiguration`), filter (`ISetup4DCEPFilter`), or result (`ISetup4DCEPResult`) instances are not properly instantiated.
+
+#### 🌍 `function IBGE: ISetup4DCEPSearchIBGE`
+
+This method returns the instance for conducting searches based on IBGE codes.
+
+- **Return:**
+  - The instance for IBGE code searches (`ISetup4DCEPSearchIBGE`).
+
+This method throws an exception of type `EConvertError` if the configuration (`ISetup4DCEPConfiguration`), filter (`ISetup4DCEPFilter`), or result (`ISetup4DCEPResult`) instances are not properly instantiated.
+
+---
+
+#### 🏁 `function Finish: ISetup4DCEP`
+
+This method finalizes the CEP search configuration and returns to the main instance (`ISetup4DCEP`).
+
+- **Return:**
+  - The main instance of CEP configuration (`ISetup4DCEP`).
+
+---
+
+## 📐 Functions of TSetup4DCEPSearchZipCode
+
+The `TSetup4DCEPSearchZipCode` class plays a crucial role in TSetup4DCep, providing specific functionalities for conducting searches related to ZIP codes. It implements the `ISetup4DCEPSearchZipCode` interface and serves as an essential reference for conducting ZIP code searches in TSetup4DCep.
+
+### 🎯 Methods
+
+#### 🚀 `function Value: ISetup4DCEPSearchZipCode`
+
+This method conducts a ZIP code search based on the specified ZIP code.
+
+- **Requirements:**
+  - The ZIP code must be specified in the search filter.
+
+- **Response Codes:**
+  - **200 OK:** The ZIP code data was found and is available.
+  - **400 Bad Request:** The server could not understand the request. The response body contains details about the error.
+  - **404 Not Found:** The specified ZIP code was not found.
+
+- **Exceptions:**
+  - If the ZIP code is not specified, an exception will be thrown indicating the required information.
+
+- **Return:**
+  - The instance of the ZIP code search (`ISetup4DCEPSearchZipCode`).
+
+---
+
+#### 📡 `Example`
+
+  ```delphi
+  begin
+    FCEP
+      .Search
+        .ZipCode
+          .Value
+        .Finish
+      .Finish;
+  end;
+  ```
+
+---
+
+#### 🚀 `function Address(AAll: Boolean): ISetup4DCEPSearchZipCode`
+
+This method conducts a ZIP code search based on the address filter information.
+
+- **Requirements:**
+  - The mandatory fields for the search must be specified in the filter:
+
+    - **Street:** This field refers to the name of the street where the address is located. It is crucial to include this field for the search to be specific to the desired street.
+
+    - **District:** The district is another important part of an address. Including this field allows for a more refined search, especially in urban areas with multiple districts.
+
+    - **City:** The name of the city is a fundamental component of any address. Including this field in the search is essential to limit the results to a specific city.
+
+    - **State:** The state provides a broader geographical location. Including this field is necessary to restrict the search to a specific region of the country.
+
+- **Parameters:**
+  - `AAll`: Indicates whether all address information should be retrieved (optional).
+
+- **Response Codes:**
+  - **200 OK:** The address data was found and is available, either as a JSON object or a JSON array, depending on the `AAll` option.
+  - **400 Bad Request:** The server could not understand the request. The response body contains details about the error.
+  - **404 Not Found:** The specified address was not found.
+
+- **Exceptions:**
+  - If any mandatory field for the search is not specified, an exception will be thrown indicating the required information.
+
+---
+
+#### 📡 `Example`
+
+  ```delphi
+  begin
+    FCEP
+      .Search
+        .ZipCode
+          .Address([ALL RECORDS AS BOOLEAN])
+        .Finish
+      .Finish;
+  end;
+  ```
+
+---
+
+#### 🚀 `function Finish: ISetup4DCEPSearch`
+
+This method concludes the configuration of the ZIP code search, returning to the main ZIP code search instance (`ISetup4DCEPSearch`).
+
+- **Return:**
+  - The main ZIP code search instance (`ISetup4DCEPSearch`).
+
+---
+
+## 📐 Functions of TSetup4DCEPSearchIBGE
+
+The `TSetup4DCEPSearchIBGE` class plays a crucial role in TSetup4DCep, providing specific functionalities for conducting searches related to IBGE codes. It implements the `ISetup4DCEPSearchIBGE` interface and serves as an essential reference for conducting IBGE code searches in TSetup4DCep.
+
+### 🎯 Methods
+
+#### 🌍 `function Country: ISetup4DCEPSearchIBGE`
+
+This method conducts a detailed search for information related to the country based on the information provided in the filter.
+
+#### Requirements:
+
+  - The mandatory fields for the search must be specified in the filter:
+
+    - **Country:** This is the essential field that must be filled in by the user when conducting a search. It represents the geographical location of interest for the search. Including this field is crucial to ensure that the results are limited to the specified country, providing a more targeted search.
+
+#### Response Codes:
+
+  - **200 OK:** Country data was found and is available in JSON format.
+  - **400 Bad Request:** The server could not understand the request. The response body contains details about the error.
+  - **404 Not Found:** Information about the specified country was not found.
+
+#### Exceptions:
+
+  - If the mandatory field for the search is not specified, an exception will be thrown indicating the required information.
+
+---
+
+#### 📡 `Example`
+
+  ```delphi
+  begin
+    FCEP
+      .Search
+        .IBGE
+          .Country
+        .Finish
+      .Finish;
+  end;
+  ```
+
+---
+
+####
+
+ 🌍 `function State: ISetup4DCEPSearchIBGE`
+
+This method conducts a detailed search for information related to the state based on the information provided in the filter.
+
+#### Requirements:
+
+  - The mandatory fields for the search must be specified in the filter:
+
+    - **State:** This is the essential field that must be filled in by the user when conducting a search. It represents the geographical subdivision of interest for the search. Including this field is crucial to ensure that the results are limited to the specified state, providing a more targeted search.
+
+#### Response Codes:
+
+  - **200 OK:** State data was found and is available in JSON format.
+  - **400 Bad Request:** The server could not understand the request. The response body contains details about the error.
+  - **404 Not Found:** Information about the specified state was not found.
+
+#### Exceptions:
+
+  - If the mandatory field for the search is not specified, an exception will be thrown indicating the required information.
+
+---
+
+#### 📡 `Example`
+
+  ```delphi
+  begin
+    FCEP
+      .Search
+        .IBGE
+          .State
+        .Finish
+      .Finish;
+  end;
+  ```
+
+---
+
+#### 🌍 `function City: ISetup4DCEPSearchIBGE`
+
+This method conducts a detailed search for information related to the city based on the information provided in the filter.
+
+#### Requirements:
+
+  - The mandatory fields for the search must be specified in the filter:
+
+    - **City:** This is the essential field that must be filled in by the user when conducting a search. It represents the geographical area of interest for the search. Including this field is crucial to ensure that the results are limited to the specified city, providing a more targeted search.
+
+    - **State:** The state to which the city belongs is also a mandatory requirement. It helps to refine the search and ensure accurate results.
+
+#### Response Codes:
+
+  - **200 OK:** City data was found and is available in JSON format.
+  - **400 Bad Request:** The server could not understand the request. The response body contains details about the error.
+  - **404 Not Found:** Information about the specified city was not found.
+
+#### Exceptions:
+
+  - If any of the mandatory fields for the search are not specified, an exception will be thrown indicating the required information.
+
+---
+
+#### 📡 `Example`
+
+  ```delphi
+  begin
+    FCEP
+      .Search
+        .IBGE
+          .City
+        .Finish
+      .Finish;
+  end;
+  ```
+
+---
+
+#### 🌍 `function Code: ISetup4DCEPSearchIBGE`
+
+This method conducts a detailed search for information related to the code based on the information provided in the filter.
+
+#### Requirements:
+
+  - The mandatory fields for the search must be specified in the filter:
+
+    - **Code:** This is the essential field that must be filled in by the user when conducting a search. It represents a unique identifier associated with the location of interest. Including this field is crucial to ensure that the results are specific to the provided code, providing a more targeted search.
+
+#### Response Codes:
+
+  - **200 OK:** Data associated with the code was found and is available in JSON format.
+  - **400 Bad Request:** The server could not understand the request. The response body contains details about the error.
+  - **404 Not Found:** Information associated with the specified code was not found.
+
+#### Exceptions:
+
+  - If the mandatory field for the search is not specified, an exception will be thrown indicating the required information.
+
+---
+
+#### 🚀 `function Finish: ISetup4DCEPSearchIBGE`
+
+This method concludes the configuration of the CEP search by IBGE code for the country, returning to the main instance of CEP search by IBGE code (`ISetup4DCEPSearchIBGE`).
+
+- **Parameters:**
+  - None.
+
+- **Return:**
+  - The main instance of CEP search by IBGE code (`ISetup4DCEPSearchIBGE`).
+
+---
+
+#### 📡 `Example`
+
+  ```delphi
+  begin
+    FCEP
+      .Search
+        .IBGE
+          .Code
+        .Finish
+      .Finish;
+  end;
+  ```
+
+---
+
+## 📐 Functions of TSetup4DCEPResult
+
+The `TSetup4DCEPResult` class plays a crucial role in TSetup4DCep, providing functionalities to manage and present the results of CEP queries. It implements the `ISetup4DCEPResult` interface and serves as an essential reference for result management in TSetup4DCep.
+
+### 🎯 Methods
+
+#### 🚀 `function ZipCode: ISetup4DCEPResultZipCode`
+
+This method allows retrieving the result related to the ZIP code, more specifically the postal code.
+
+- **Return:**
+  - An instance of `ISetup4DCEPResultZipCode` that provides additional methods for configuring specific postal code filters.
+
+---
+
+#### 🚀 `function IBGE: ISetup4DCEPResultIBGE`
+
+This method allows retrieving the result related to the IBGE code (Brazilian Institute of Geography and Statistics).
+
+- **Return:**
+  - An instance of `ISetup4DCEPResultIBGE` that provides additional methods for configuring and obtaining specific information about the IBGE code.
+
+---
+
+#### 🏁 `function Finish: ISetup4DCEP`
+
+This method returns the main instance of the CEP service.
+
+- **Return:**
+  - An instance of `ISetup4DCEP` associated with the CEP service.
+
+---
+
+## 📐 Functions of TSetup4DCEPResultZipCode
+
+The `TSetup4DCEPResultZipCode` class plays a crucial role in TSetup4DCep, providing specific functionalities to manage and present the results of CEP queries. It implements the `ISetup4DCEPResultZipCode` interface and serves as an essential reference for managing CEP results in TSetup4DCep.
+
+### 🎯 Methods
+
+#### 🔄 `function JSONObject(AJSONString: string; AOwner: Boolean): ISetup4DCEPResultZipCode`
+
+This method allows configuring and parsing a JSON object associated with the postal code.
+
+- **Parameters:**
+  - `AJSONString`: The string containing the JSON representation to be parsed.
+  - `AOwner`: Indicates whether the resulting object is owned (optional).
+
+- **Return:**
+  - An instance of `ISetup4DCEPResultZipCode` configured with information extracted from the JSON.
+
+---
+
+#### 🔄 `function JSONArray(AJSONString: string; AOwner: Boolean): ISetup4DCEPResultZipCode`
+
+This method allows configuring and parsing a JSON array associated with the postal code.
+
+- **Parameters:**
+  - `AJSONString`: The string containing the JSON array representation to be parsed.
+  - `AOwner`: Indicates whether the resulting JSON array is owned (optional).
+
+- **Return:**
+  - An instance of `ISetup4DCEPResultZipCode` configured with information extracted from the JSON array.
+
+---
+
+#### 🔤 `function Code: string`
+
+This method returns the postal code associated with the object.
+
+- **Return:**
+  - A string containing the postal code value in the JSON object associated with the postal code.
+
+---
+
+#### 🔤 `function Code(const AItem: Integer): string`
+
+This method returns the postal code associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the postal code value at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🏠 `function Street: string`
+
+This method returns the street information associated with the object.
+
+- **Return:**
+  - A string containing the street value in the JSON object associated with the postal code.
+
+---
+
+#### 🏠 `function Street(const AItem: Integer): string`
+
+This method returns the street information associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the street value at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🏡 `function StreetComplement: string`
+
+This method returns the street complement information associated with the object.
+
+- **Return:**
+  - A string containing the street complement value in the JSON object associated with the postal code.
+
+---
+
+#### 🏡 `function StreetComplement(const AItem: Integer): string`
+
+This method returns the street complement information associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the street complement value at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🏠 `function District: string`
+
+This method returns the district information associated with the object.
+
+- **Return:**
+  - A string containing the district value in the JSON object associated with the postal code.
+
+---
+
+#### 🏠 `function District(const AItem: Integer): string`
+
+This method returns the district information associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the district value at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🌆 `function City: string`
+
+This method returns the name of the city associated with the object.
+
+- **Return:**
+  - A string containing the city name in the JSON object associated with the postal code.
+
+---
+
+#### 🌆 `function City(const AItem: Integer): string`
+
+This method returns the name of the city associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the city name at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🌆 `function CityIBGE: string`
+
+This method returns the IBGE code of the city associated with the object.
+
+- **Return:**
+  - A string containing the IBGE code of the city in the JSON object associated with the postal code.
+
+---
+
+#### 🌆 `function CityIBGE(const AItem: Integer): string`
+
+This method returns the IBGE code of the city associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the IBGE code of the city at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🏠 `function State: string`
+
+This method returns the name of the state associated with the object.
+
+- **Return:**
+  - A string containing the name of the state in the JSON object associated with the postal code.
+
+---
+
+#### 🏠 `function State(const AItem: Integer): string`
+
+This method returns the name of the state associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the name of the state at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🏠 `function StateSigla: string`
+
+This method returns the state abbreviation associated with the object.
+
+- **Return:**
+  - A string containing the state abbreviation in the JSON object associated with the postal code.
+
+---
+
+#### 🏠 `function StateSigla(const AItem: Integer): string`
+
+This method returns the state abbreviation associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the state abbreviation at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🏠 `function StateIBGE: string`
+
+This method returns the IBGE code of the state associated with the object.
+
+- **Return:**
+  - A string containing the IBGE code of the state in the JSON object associated with the postal code.
+
+---
+
+#### 🏠 `function StateIBGE(const AItem: Integer): string`
+
+This method returns the IBGE code of the state associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the IBGE code of the state at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 📞 `function DDD: string`
+
+This method returns the area code (DDD) associated with the object.
+
+- **Return:**
+  - A string containing the area code (DDD) in the JSON object associated with the postal code.
+
+---
+
+#### 📞 `function DDD(const AItem: Integer): string`
+
+This method returns the area code (DDD) associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the area code (DDD) at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🌍 `function Region: string`
+
+This method returns the region associated with the object.
+
+- **Return:**
+  - A string containing the region in the JSON object associated with the postal code.
+
+---
+
+#### 🌍 `function Region(const AItem: Integer): string`
+
+This method returns the region associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the region at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🌐 `function Country: string`
+
+This method returns the name of the country associated with the object.
+
+- **Return:**
+  - A string containing the name of the country in the JSON object associated with the postal code.
+
+---
+
+#### 🌐 `function Country(const AItem: Integer): string`
+
+This method returns the name of the country associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the name of the country at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🌐 `function CountrySigla: string`
+
+This method returns the country abbreviation associated with the object.
+
+- **Return:**
+  - A string containing the country abbreviation in the JSON object associated with the postal code.
+
+---
+
+#### 🌐 `function CountrySigla(const AItem: Integer): string`
+
+This method returns the country abbreviation associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the country abbreviation at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🌐 `function CountryIBGE: string`
+
+This method returns the IBGE code of the country associated with the object.
+
+- **Return:**
+  - A string containing the IBGE code of the country in the JSON object associated with the postal code.
+
+---
+
+#### 🌐 `function CountryIBGE(const AItem: Integer): string`
+
+This method returns the IBGE code of the country associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the IBGE code of the country at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 📞 `function DDI: string`
+
+This method returns the Direct Dial International (DDI) code associated with the country.
+
+- **Return:**
+  - A string containing the DDI code in the JSON object associated with the postal code.
+
+---
+
+#### 📞 `function DDI(const AItem: Integer): string`
+
+This method returns the Direct Dial International (DDI) code associated with the country at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the DDI code at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🌍 `function Continent: string`
+
+This method returns the continent associated with the object.
+
+- **Return:**
+  - A string containing the continent in the JSON object associated with the postal code.
+
+---
+
+#### 🌍 `function Continent(const AItem: Integer): string`
+
+This method returns the continent associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the continent at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🗺️ `function Altitude: string`
+
+This method returns the altitude associated with the object.
+
+- **Return:**
+  - A string containing the altitude in the JSON object associated with the postal code.
+
+---
+
+#### 🗺️ `function Altitude(const AItem: Integer): string`
+
+This method returns the altitude associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the altitude at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🌐 `function Latitude: string`
+
+This method returns the latitude associated with the object.
+
+- **Return:**
+  - A string containing the latitude in the JSON object associated with the postal code.
+
+---
+
+#### 🌐 `function Latitude(const AItem: Integer): string`
+
+This method returns the latitude associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the latitude at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 🌐 `function Longitude: string`
+
+This method returns the longitude associated with the object.
+
+- **Return:**
+  - A string containing the longitude in the JSON object associated with the postal code.
+
+---
+
+#### 🌐 `function Longitude(const AItem: Integer): string`
+
+This method returns the longitude associated with the object at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the longitude at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 💼 `function SIAFICode: string`
+
+This method returns the SIAFI (Integrated Financial Administration System) code associated with the address.
+
+- **Return:**
+  - A string containing the SIAFI code in the JSON object associated with the postal code.
+
+---
+
+#### 💼 `function SIAFICode(const AItem: Integer): string`
+
+This method returns the SIAFI code associated with the address at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the SIAFI code at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 💼 `function SIAFIName: string`
+
+This method returns the SIAFI name (Integrated Financial Administration System) associated with the address.
+
+- **Return:**
+  - A string containing the SIAFI name in the JSON object associated with the postal code.
+
+---
+
+#### 💼 `function SIAFIName(const AItem: Integer): string`
+
+This method returns the SIAFI name associated with the address at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the SIAFI name at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 💼 `function SIAFICNPJ: string`
+
+This method returns the CNPJ (National Register of Legal Entities) associated with the address in the SIAFI.
+
+- **Return:**
+  - A string containing the CNPJ in the JSON object associated with the postal code.
+
+---
+
+#### 💼 `function SIAFICNPJ(const AItem: Integer): string`
+
+This method returns the CNPJ associated with the address in the SIAFI at a specific position in the array.
+
+- **Parameters:**
+  - `AItem`: The desired position in the array.
+
+- **Return:**
+  - A string containing the CNPJ at the specified position in the JSON array associated with the postal code.
+
+---
+
+#### 📄 `function JSONObject: TJSONObject`
+
+This method returns the JSON object associated with the CEP result.
+
+- **Return:**
+  - An instance of `TJSONObject` containing the address information in JSON format.
+
+---
+
+#### 📄 `function JSONObjectInString: string`
+
+This method returns the string representation of the JSON object associated with the CEP result.
+
+- **Return:**
+  - A string containing the JSON representation of the address.
+
+---
+
+#### 📄 `function JSONArray: TJSONArray`
+
+This method returns the JSON array associated with the CEP result.
+
+- **Return:**
+  - An instance of `TJSONArray` containing the address information in JSON array format.
+
+---
+
+#### 📄 `function JSONArrayInString: string`
+
+This method returns the string representation of the JSON array associated with the CEP result.
+
+- **Return:**
+  - A string containing the JSON representation of the array of addresses.
+
+---
+
+#### 📡 `Example`
+
+```delphi
+  var
+    Memo: TMemo;
+    
+  begin
+    Memo : TMemo.Create(Self);
+
+    Memo.Lines.Clear;
+    Memo.Lines.Add( StringOfChar('-',20) );
+    Memo.Lines.Add('Return via variable');
+    Memo.Lines.Add( StringOfChar('-',20) );
+    Memo.Lines.Add(EmptyStr);
+    Memo.Lines.Add('CEP: ' + FCEP.Result.ZIPCode.Code(0));
+    Memo.Lines.Add('Street: ' + FCEP.Result.ZIPCode.Street(0));
+    Memo.Lines.Add('Complement: ' + FCEP.Result.ZIPCode.StreetComplent(0));
+    Memo.Lines.Add('District: ' + FCEP.Result.ZIPCode.District(0));
+    Memo.Lines.Add('City: '+ FCEP.Result.ZIPCode.City(0));
+    Memo.Lines.Add('City IBGE: ' + FCEP.Result.ZIPCode.CityIBGE(0));
+    Memo.Lines.Add('State: ' + FCEP.Result.ZIPCode.State(0));
+    Memo.Lines.Add('State Abbreviation: ' + FCEP.Result.ZIPCode.StateSigla(0));
+    Memo.Lines.Add('State IBGE: ' + FCEP.Result.ZIPCode.StateIBGE(0));
+    Memo.Lines.Add('Region: ' + FCEP.Result.ZIPCode.Region(0));
+    Memo.Lines.Add('DDD: ' + FCEP.Result.ZIPCode.DDD(0));
+    Memo.Lines.Add('Country: ' + FCEP.Result.ZIPCode.Country(0));
+    Memo.Lines.Add('Country Abbreviation: '+ FCEP.Result.ZIPCode.CountrySigla(0));
+    Memo.Lines.Add('Country IBGE: ' + FCEP.Result.ZIPCode.CountryIBGE(0));
+    Memo.Lines.Add('DDI: ' + FCEP.Result.ZIPCode.DDI(0));
+    Memo.Lines.Add('Continent: ' + FCEP.Result.ZIPCode
+
+.Continent(0));
+    Memo.Lines.Add('Altitude: ' + FCEP.Result.ZIPCode.Altitude(0));
+    Memo.Lines.Add('Latitude: ' + FCEP.Result.ZIPCode.Latitude(0));
+    Memo.Lines.Add('Longitude: ' + FCEP.Result.ZIPCode.Longitude(0));
+    Memo.Lines.Add('SIAFI (Integrated Financial Administration System) - Code: ' + FCEP.Result.ZIPCode.SIAFICode(0));
+    Memo.Lines.Add('SIAFI (Integrated Financial Administration System) - CNPJ: ' + FCEP.Result.ZIPCode.SIAFICNPJ(0));
+    Memo.Lines.Add('SIAFI (Integrated Financial Administration System) - City: ' + FCEP.Result.ZIPCode.SIAFIName(0));
+
+    Memo.Lines.Add(EmptyStr);
+    Memo.Lines.Add( StringOfChar('-',20) );
+    Memo.Lines.Add('JSON Array');
+    Memo.Lines.Add(FCEP.Result.ZIPCode.JSONArray.Format);
+    Memo.Lines.Add( StringOfChar('-',20) );
+    Memo.Lines.Add(EmptyStr);
+
+    Memo.Lines.Add(EmptyStr);
+    Memo.Lines.Add( StringOfChar('-',20) );
+    Memo.Lines.Add('JSON Array');
+    Memo.Lines.Add(FCEP.Result.ZIPCode.JSONArrayInString);
+    Memo.Lines.Add( StringOfChar('-',20) );
+    Memo.Lines.Add(EmptyStr);
+
+    Memo.Lines.Add(EmptyStr);
+    Memo.Lines.Add( StringOfChar('-',20) );
+    Memo.Lines.Add('JSON Object');
+    Memo.Lines.Add(FCEP.Result.ZIPCode.JSONObject.Format);
+    Memo.Lines.Add( StringOfChar('-',20) );
+    Memo.Lines.Add(EmptyStr);
+
+    Memo.Lines.Add(EmptyStr);
+    Memo.Lines.Add( StringOfChar('-',20) );
+    Memo.Lines.Add('JSON String');
+    Memo.Lines.Add(FCEP.Result.ZIPCode.JSONObjectInString);
+    Memo.Lines.Add( StringOfChar('-',20) );
+    Memo.Lines.Add(EmptyStr);
+
+  end;
+```
+
+---
+
+#### 📐 Funções do `TSetup4DCEPResultIBGE`
+
+A classe `TSetup4DCEPResultIBGE` desempenha um papel crucial no `TSetup4DCep`, oferecendo funcionalidades específicas para gerenciar e apresentar os resultados das consultas de códigos IBGE. Implementa a interface `ISetup4DCEPResultIBGE` e serve como uma referência essencial para o gerenciamento de resultados de código IBGE no `TSetup4DCep`.
+
+### 🎯 Métodos
+
+#### 📄 `function JSONObject(AJSONString: string; AOwner: Boolean): ISetup4DCEPResultIBGE`
+
+Este método permite associar um objeto JSON ao resultado do CEP relacionado ao código IBGE.
+
+- **Parâmetros:**
+  - `AJSONString`: A representação em string do objeto JSON a ser associado.
+  - `AOwner`: Indica se o objeto resultante é o proprietário (opcional).
+
+- **Retorno:**
+  - Uma instância de `ISetup4DCEPResultIBGE` para permitir métodos encadeados.
+
+---
+
+#### 🔤 `function CountryCode: string`
+
+Este método retorna o código IBGE associado ao país no resultado do CEP.
+
+- **Retorno:**
+  - Uma string contendo o código IBGE do país no objeto JSON associado ao código IBGE.
+
+---
+
+#### 🌐 `function Country: string`
+
+Este método retorna o nome do país associado ao resultado do CEP.
+
+- **Retorno:**
+  - Uma string contendo o nome do país no objeto JSON associado ao código IBGE.
+
+---
+
+#### 🔤 `function StateCode: string`
+
+Este método retorna o código IBGE do estado associado ao resultado do CEP.
+
+- **Retorno:**
+  - Uma string contendo o código IBGE do estado no objeto JSON associado ao código IBGE.
+
+---
+
+#### 🔤 `function State: string`
+
+Este método retorna o nome do estado associado ao resultado do CEP.
+
+- **Retorno:**
+  - Uma string contendo o nome do estado no objeto JSON associado ao código IBGE.
+
+---
+
+#### 🔤 `function CityCode: string`
+
+Este método retorna o código IBGE da cidade associado ao resultado do CEP.
+
+- **Retorno:**
+  - Uma string contendo o código IBGE da cidade no objeto JSON associado ao código IBGE.
+
+---
+
+#### 🔤 `function City: string`
+
+Este método retorna o nome da cidade associado ao resultado do CEP.
+
+- **Retorno:**
+  - Uma string contendo o nome da cidade no objeto JSON associado ao código IBGE.
+
+---
+
+#### 📄 `function JSONObject: TJSONObject`
+
+Este método retorna o objeto JSON associado ao resultado do CEP relacionado ao código IBGE.
+
+- **Retorno:**
+  - Uma instância de `TJSONObject` contendo as informações do endereço em formato JSON.
+
+---
+
+#### 📄 `function JSONObjectInString: string`
+
+Este método retorna a representação em string do objeto JSON associado ao resultado do CEP relacionado ao código IBGE.
+
+- **Retorno:**
+  - Uma string contendo a representação JSON do endereço.
+
+---
+
+#### 📡 `Exemplo`
+
+```delphi
+  var
+    Memo: TMemo;
+    
+  begin
+    Memo : TMemo.Create(Self);
+
+        Memo.Lines.Clear;
+        Memo.Lines.Add( StringOfChar('-',20) );
+        Memo.Lines.Add('Retorno por variável');
+        Memo.Lines.Add( StringOfChar('-',20) );
+        Memo.Lines.Add(EmptyStr);
+
+        Memo.Lines.Add(EmptyStr);
+        Memo.Lines.Add('Código do País: ' + FCEP.Result.IBGE.CountryCode);
+        Memo.Lines.Add('País: '+ FCEP.Result.IBGE.Country);
+        Memo.Lines.Add('Código do Estado: ' + FCEP.Result.IBGE.StateCode);
+        Memo.Lines.Add('Estado: '+ FCEP.Result.IBGE.State);
+        Memo.Lines.Add('Código da Cidade: ' + FCEP.Result.IBGE.CityCode);
+        Memo.Lines.Add('Cidade: '+ FCEP.Result.IBGE.City);
+
+        Memo.Lines.Add(EmptyStr);
+        Memo.Lines.Add( StringOfChar('-',20) );
+        Memo.Lines.Add('JSON Object');
+        Memo.Lines.Add(FCEP.Result.IBGE.JSONObject.Format);
+        Memo.Lines.Add( StringOfChar('-',20) );
+        Memo.Lines.Add(EmptyStr);
+
+        Memo.Lines.Add(EmptyStr);
+        Memo.Lines.Add( StringOfChar('-',20) );
+        Memo.Lines.Add('JSON String');
+        Memo.Lines.Add(FCEP.Result.IBGE.JSONObjectInString);
+        Memo.Lines.Add( StringOfChar('-',20) );
+        Memo.Lines.Add(EmptyStr);
+  end;
+```
+
+---

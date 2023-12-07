@@ -1,11 +1,12 @@
 {
-	"name": "boss install",
+	"name": "Setup4DCEP",
 	"description": "In English - This Delphi framework simplifies the task of quickly and efficiently retrieving ZIP code information. Em Português - Este framework em Delphi simplifica a tarefa de buscar informações de CEP de forma rápida e eficiente.",
-	"version": "1.0.1",
+	"version": "2.0.1",
 	"homepage": "www.setup4d.com.br",
 	"mainsrc": "./src",
 	"projects": [],
 	"dependencies": {
-		"https://github.com/setup4d/setup4dutility": "^1.0.3"
+		"https://github.com/setup4d/setup4drest": "^1.0.3",
+		"https://github.com/setup4d/setup4dutility": "^1.0.8"
 	}
 }

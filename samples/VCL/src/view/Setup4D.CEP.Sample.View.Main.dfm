@@ -5,7 +5,7 @@ object PageMain: TPageMain
   BorderStyle = bsSingle
   Caption = 'Setup4DCEP - Sample VCL'
   ClientHeight = 441
-  ClientWidth = 1052
+  ClientWidth = 895
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -3844,14 +3844,13 @@ object PageMain: TPageMain
   object PageControl: TPageControl
     Left = 0
     Top = 0
-    Width = 1052
+    Width = 895
     Height = 209
-    ActivePage = tsIBGE
+    ActivePage = tsCEP
     Align = alTop
     MultiLine = True
     TabOrder = 0
     TabPosition = tpBottom
-    ExplicitWidth = 1048
     object tsConfiguration: TTabSheet
       Caption = 'Configura'#231#227'o'
       object gbWebSevice: TGroupBox
@@ -3865,37 +3864,15 @@ object PageMain: TPageMain
         Padding.Left = 5
         Padding.Right = 5
         TabOrder = 0
-        object lblWebService: TLabel
-          Left = 16
-          Top = 23
-          Width = 71
-          Height = 17
-          Caption = 'Web Service'
-          Layout = tlCenter
-        end
-        object cbxWebService: TComboBox
-          Left = 16
-          Top = 42
-          Width = 200
-          Height = 26
-          Style = csOwnerDrawFixed
-          CharCase = ecUpperCase
-          ItemHeight = 20
-          TabOrder = 0
-          OnSelect = cbxWebServiceSelect
-          Items.Strings = (
-            'TESTE 1'
-            'TESTE 2')
-        end
         object edtChave: TLabeledEdit
-          Left = 222
+          Left = 17
           Top = 42
-          Width = 200
+          Width = 405
           Height = 25
           EditLabel.Width = 35
           EditLabel.Height = 17
           EditLabel.Caption = 'Chave'
-          TabOrder = 1
+          TabOrder = 0
           Text = ''
         end
         object edtUserWebService: TLabeledEdit
@@ -3906,7 +3883,7 @@ object PageMain: TPageMain
           EditLabel.Width = 45
           EditLabel.Height = 17
           EditLabel.Caption = 'Usu'#225'rio'
-          TabOrder = 2
+          TabOrder = 1
           Text = ''
         end
         object edtPassWebService: TLabeledEdit
@@ -3918,46 +3895,45 @@ object PageMain: TPageMain
           EditLabel.Height = 17
           EditLabel.Caption = 'Senha'
           PasswordChar = '*'
-          TabOrder = 3
+          TabOrder = 2
           Text = ''
         end
         object edtTimeOutWebService: TLabeledEdit
           Left = 17
           Top = 141
-          Width = 200
+          Width = 289
           Height = 25
           EditLabel.Width = 53
           EditLabel.Height = 17
           EditLabel.Caption = 'Time Out'
           NumbersOnly = True
-          TabOrder = 4
+          TabOrder = 3
           Text = ''
         end
-        object cbParseText: TCheckBox
-          Left = 223
-          Top = 141
-          Width = 170
+        object cbUpper: TCheckBox
+          Left = 320
+          Top = 145
+          Width = 103
           Height = 17
-          Caption = 'Verifica o Texto resposta'
+          Caption = 'Upper Texto'
           Checked = True
           State = cbChecked
-          TabOrder = 5
+          TabOrder = 4
         end
       end
       object gbProxy: TGroupBox
         AlignWithMargins = True
         Left = 440
         Top = 3
-        Width = 601
+        Width = 444
         Height = 173
         Align = alClient
         Caption = ' Proxy '
         TabOrder = 1
-        ExplicitWidth = 597
         object edtHost: TLabeledEdit
-          Left = 17
+          Left = 16
           Top = 42
-          Width = 580
+          Width = 417
           Height = 25
           EditLabel.Width = 27
           EditLabel.Height = 17
@@ -3966,9 +3942,9 @@ object PageMain: TPageMain
           Text = ''
         end
         object edtUserProxy: TLabeledEdit
-          Left = 17
+          Left = 16
           Top = 141
-          Width = 285
+          Width = 201
           Height = 25
           EditLabel.Width = 45
           EditLabel.Height = 17
@@ -3977,9 +3953,9 @@ object PageMain: TPageMain
           Text = ''
         end
         object edtPassProxy: TLabeledEdit
-          Left = 313
+          Left = 223
           Top = 141
-          Width = 285
+          Width = 210
           Height = 25
           EditLabel.Width = 35
           EditLabel.Height = 17
@@ -3989,9 +3965,9 @@ object PageMain: TPageMain
           Text = ''
         end
         object edtPort: TLabeledEdit
-          Left = 17
+          Left = 16
           Top = 93
-          Width = 580
+          Width = 417
           Height = 25
           EditLabel.Width = 31
           EditLabel.Height = 17
@@ -4042,17 +4018,18 @@ object PageMain: TPageMain
         AlignWithMargins = True
         Left = 282
         Top = 3
-        Width = 548
+        Width = 602
         Height = 173
         Align = alClient
         Caption = ' Pesquisar por Endere'#231'o '
         TabOrder = 1
         object lblUF: TLabel
-          Left = 240
+          Left = 212
           Top = 73
           Width = 15
           Height = 17
           Caption = 'UF'
+          Enabled = False
           Layout = tlCenter
         end
         object edtTipo: TLabeledEdit
@@ -4067,31 +4044,31 @@ object PageMain: TPageMain
           Text = ''
         end
         object edtCidade: TLabeledEdit
-          Left = 17
-          Top = 93
-          Width = 215
+          Left = 274
+          Top = 94
+          Width = 168
           Height = 25
           EditLabel.Width = 41
           EditLabel.Height = 17
           EditLabel.Caption = 'Cidade'
-          TabOrder = 2
+          TabOrder = 4
           Text = ''
         end
         object edtBairo: TLabeledEdit
-          Left = 319
-          Top = 93
-          Width = 215
+          Left = 17
+          Top = 94
+          Width = 187
           Height = 25
           EditLabel.Width = 35
           EditLabel.Height = 17
           EditLabel.Caption = 'Bairro'
-          TabOrder = 4
+          TabOrder = 2
           Text = ''
         end
         object edtLogradouro: TLabeledEdit
           Left = 103
           Top = 42
-          Width = 434
+          Width = 474
           Height = 25
           EditLabel.Width = 70
           EditLabel.Height = 17
@@ -4100,9 +4077,9 @@ object PageMain: TPageMain
           Text = ''
         end
         object btPersquisarEndereco: TButton
-          Left = 16
+          Left = 17
           Top = 125
-          Width = 520
+          Width = 561
           Height = 37
           Cursor = crHandPoint
           Caption = '&Pesquisar Endere'#231'o'
@@ -4111,9 +4088,9 @@ object PageMain: TPageMain
           OnClick = btPersquisarEnderecoClick
         end
         object cbxUF: TComboBox
-          Left = 238
+          Left = 210
           Top = 93
-          Width = 75
+          Width = 58
           Height = 26
           Style = csOwnerDrawFixed
           CharCase = ecUpperCase
@@ -4123,31 +4100,13 @@ object PageMain: TPageMain
             'TESTE 1'
             'TESTE 2')
         end
-      end
-      object GroupBox1: TGroupBox
-        AlignWithMargins = True
-        Left = 836
-        Top = 3
-        Width = 205
-        Height = 173
-        Align = alRight
-        Caption = ' Configura'#231#227'o '
-        Padding.Left = 5
-        Padding.Right = 5
-        TabOrder = 2
-        object cbPesquisarIBGE: TCheckBox
-          AlignWithMargins = True
-          Left = 10
-          Top = 29
-          Width = 185
-          Height = 89
-          Margins.Top = 10
-          Align = alTop
-          Caption = 'Pesquisar c'#243'digo do IBGE'
-          Checked = True
-          State = cbChecked
-          TabOrder = 0
-          WordWrap = True
+        object cbTodosEnderecos: TCheckBox
+          Left = 448
+          Top = 97
+          Width = 127
+          Height = 17
+          Caption = 'Todos endere'#231'os'
+          TabOrder = 6
         end
       end
     end
@@ -4191,7 +4150,7 @@ object PageMain: TPageMain
         AlignWithMargins = True
         Left = 282
         Top = 3
-        Width = 404
+        Width = 602
         Height = 173
         Align = alClient
         Caption = ' Pesquisar pela Cidade/Estado'
@@ -4216,10 +4175,10 @@ object PageMain: TPageMain
           Text = ''
         end
         object btPesquisarCidadeIBGE: TButton
-          Left = 27
+          Left = 15
           Top = 74
-          Width = 354
-          Height = 45
+          Width = 180
+          Height = 88
           Cursor = crHandPoint
           Caption = '&Pesquisar Cidade'
           TabOrder = 2
@@ -4240,77 +4199,38 @@ object PageMain: TPageMain
             'TESTE 2')
         end
         object btPesquisarEstadoIBGE: TButton
-          Left = 27
-          Top = 125
-          Width = 354
-          Height = 45
+          Left = 213
+          Top = 74
+          Width = 180
+          Height = 88
           Cursor = crHandPoint
           Caption = '&Pesquisar Estado'
           TabOrder = 3
           WordWrap = True
           OnClick = btPesquisarEstadoIBGEClick
         end
-      end
-      object GroupBox2: TGroupBox
-        AlignWithMargins = True
-        Left = 692
-        Top = 3
-        Width = 349
-        Height = 173
-        Align = alRight
-        Caption = ' Configura'#231#227'o '
-        Padding.Left = 5
-        Padding.Right = 5
-        TabOrder = 2
-        object cbCaseSensitive: TCheckBox
-          AlignWithMargins = True
-          Left = 10
-          Top = 29
-          Width = 329
-          Height = 38
-          Margins.Top = 10
-          Align = alTop
-          Caption = 'Sens'#237'vel a mai'#250'sculas, min'#250'sculas, e acentua'#231#227'o'
-          TabOrder = 0
-          WordWrap = True
-        end
-        object edtCacheName: TLabeledEdit
-          AlignWithMargins = True
-          Left = 10
-          Top = 90
-          Width = 199
+        object edtPaisIBGE: TLabeledEdit
+          Left = 399
+          Top = 43
+          Width = 186
           Height = 25
-          Margins.Top = 20
-          EditLabel.Width = 121
+          EditLabel.Width = 23
           EditLabel.Height = 17
-          EditLabel.Caption = 'Nome arquivo cache'
-          TabOrder = 1
+          EditLabel.Caption = 'Pa'#237's'
+          ImeName = 'edtPaisIBGE'
+          TabOrder = 4
           Text = ''
         end
-        object edtCacheValid: TLabeledEdit
-          AlignWithMargins = True
-          Left = 8
-          Top = 138
-          Width = 201
-          Height = 25
-          Margins.Top = 20
-          EditLabel.Width = 149
-          EditLabel.Height = 17
-          EditLabel.Caption = 'Validade do arquivo cahe'
-          NumbersOnly = True
-          TabOrder = 2
-          Text = ''
-        end
-        object btLimparCahe: TButton
-          Left = 215
-          Top = 73
-          Width = 126
+        object btPais: TButton
+          Left = 411
+          Top = 74
+          Width = 180
           Height = 88
           Cursor = crHandPoint
-          Caption = '&Limpar Cache'
-          DisabledImageName = 'btLimparCache'
-          TabOrder = 3
-          OnClick = btLimparCaheClick
+          Caption = '&Pesquisar Pa'#237's'
+          TabOrder = 5
+          WordWrap = True
+          OnClick = btPaisClick
         end
       end
     end
@@ -4318,7 +4238,7 @@ object PageMain: TPageMain
   object Memo: TMemo
     Left = 0
     Top = 209
-    Width = 1052
+    Width = 895
     Height = 232
     Align = alClient
     ImeName = 'Portuguese (Brazilian ABNT)'
@@ -4327,7 +4247,7 @@ object PageMain: TPageMain
     ReadOnly = True
     ScrollBars = ssBoth
     TabOrder = 1
-    ExplicitWidth = 1048
+    ExplicitWidth = 891
     ExplicitHeight = 227
   end
 end

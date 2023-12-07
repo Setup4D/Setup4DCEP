@@ -3,6 +3,8 @@ unit Setup4D.CEP.Sample.Comum.Controller;
 interface
 
 uses
+  Setup4D.Utility,
+
   System.IniFiles;
 
 type
@@ -50,7 +52,7 @@ type
     function Chave(Const AValue : string): iWebService; overload;
     function TimeOut(Const AValue : Integer): iWebService; overload;
     function TimeOut(Const AValue : string): iWebService; overload;
-    function ParseText(Const AValue : Boolean): iWebService; overload;
+    function UpperText(Const AValue : Boolean): iWebService; overload;
     function Index(Const AValue : Integer): iWebService; overload;
 
     function users: string; overload;
@@ -59,7 +61,7 @@ type
     function TimeOut: Integer; overload;
     function TimeOutInStr: string; overload;
     function Index: Integer; overload;
-    function ParseText: Boolean; overload;
+    function UpperText: Boolean; overload;
 
     function Finish : iController;
   end;
@@ -67,8 +69,8 @@ type
   iCEP = interface
     ['{7EC95ED0-5145-452C-B74F-D86C5B489979}']
 
-    function ForcarIBGE(Const AValue: Boolean) : iCEP; overload;
-    function ForcarIBGE : Boolean; overload;
+    function TodosEnderecos(Const AValue: Boolean) : iCEP; overload;
+    function TodosEnderecos : Boolean; overload;
 
     function Finish : iController;
   end;
@@ -103,10 +105,10 @@ type
     FPassWebService: string;
     FChaveWebService: string;
     FTimeOutWebService: Integer;
-    FParseTextWebService: Boolean;
+    FUpperTextWebService: Boolean;
     FIndexWebService: Integer;
 
-    FForcarIBGE : Boolean;
+    FTodosEnderecos : Boolean;
 
     FCaseSensitive : Boolean;
     FNomeCache : string;
@@ -136,7 +138,7 @@ type
     function Chave(Const AValue : string): iWebService; overload;
     function TimeOut(Const AValue : Integer): iWebService; overload;
     function TimeOut(Const AValue : string): iWebService; overload;
-    function ParseText(Const AValue : Boolean): iWebService; overload;
+    function UpperText(Const AValue : Boolean): iWebService; overload;
     function Index(Const AValue : Integer): iWebService; overload;
 
     function users: string; overload;
@@ -145,11 +147,11 @@ type
     function TimeOut: Integer; overload;
     function TimeOutInStr: string; overload;
     function Index: Integer; overload;
-    function ParseText: Boolean; overload;
+    function UpperText: Boolean; overload;
 
     function CEP : iCEP;
-    function ForcarIBGE(Const AValue: Boolean) : iCEP; overload;
-    function ForcarIBGE : Boolean; overload;
+    function TodosEnderecos(Const AValue: Boolean) : iCEP; overload;
+    function TodosEnderecos : Boolean; overload;
 
     function IBGE : iIBGE;
     function CaseSensitive(Const AValue: Boolean) : iIBGE; overload;
@@ -240,7 +242,7 @@ function TController.ValidadeCache(const AValue: string): iIBGE;
 begin
   Result := Self;
 
-  if AValue.Trim.IsEmpty then
+  if TSetup4DUtility.IsEmpty(AValue) then
   begin
     FValidadeCache := 0;
     Exit;
@@ -259,15 +261,15 @@ begin
   Result := Self;
 end;
 
-function TController.ForcarIBGE: Boolean;
+function TController.TodosEnderecos: Boolean;
 begin
-  Result := FForcarIBGE;
+  Result := FTodosEnderecos;
 end;
 
-function TController.ForcarIBGE(const AValue: Boolean): iCEP;
+function TController.TodosEnderecos(const AValue: Boolean): iCEP;
 begin
   Result := Self;
-  FForcarIBGE := AValue;
+  FTodosEnderecos := AValue;
 end;
 
 function TController.GravarINI: iController;
@@ -281,7 +283,7 @@ begin
   FINI.WriteString('CONFIGURACAO_WEBSERVICE', 'Senha', FPassWebService);
   FINI.WriteString('CONFIGURACAO_WEBSERVICE', 'Chave', FChaveWebService);
   FINI.WriteInteger('CONFIGURACAO_WEBSERVICE', 'TimeOut', FTimeOutWebService);
-  FINI.WriteBool('CONFIGURACAO_WEBSERVICE', 'ParseText', FParseTextWebService);
+  FINI.WriteBool('CONFIGURACAO_WEBSERVICE', 'ParseText', FUpperTextWebService);
   FINI.WriteInteger('CONFIGURACAO_WEBSERVICE', 'Index', FIndexWebService);
 
   FINI.WriteString('CONFIGURACAO_PROXY', 'Host', FHostProxy);
@@ -289,7 +291,7 @@ begin
   FINI.WriteString('CONFIGURACAO_PROXY', 'Usuario', FUserProxy);
   FINI.WriteString('CONFIGURACAO_PROXY', 'Senha', FPassProxy);
 
-  FINI.WriteBool('CONFIGURACAO_CEP', 'ForcarIBGE', FForcarIBGE);
+  FINI.WriteBool('CONFIGURACAO_CEP', 'ForcarIBGE', FTodosEnderecos);
 
   FINI.WriteBool('CONFIGURACAO_IBGE', 'CaseSensitive', FCaseSensitive);
   FINI.WriteString('CONFIGURACAO_IBGE', 'NomeCache', FNomeCache);
@@ -330,7 +332,7 @@ begin
   FPassWebService := FINI.ReadString('CONFIGURACAO_WEBSERVICE', 'Senha', EmptyStr);
   FChaveWebService := FINI.ReadString('CONFIGURACAO_WEBSERVICE', 'Chave', EmptyStr);
   FTimeOutWebService := FINI.ReadInteger('CONFIGURACAO_WEBSERVICE', 'TimeOut', 0);
-  FParseTextWebService := FINI.ReadBool('CONFIGURACAO_WEBSERVICE', 'ParseText', True);
+  FUpperTextWebService := FINI.ReadBool('CONFIGURACAO_WEBSERVICE', 'ParseText', True);
   FIndexWebService := FINI.ReadInteger('CONFIGURACAO_WEBSERVICE', 'Index', 0);
 
   FHostProxy := FINI.ReadString('CONFIGURACAO_PROXY', 'Host', EmptyStr);
@@ -338,7 +340,7 @@ begin
   FUserProxy := FINI.ReadString('CONFIGURACAO_PROXY', 'Usuario', EmptyStr);
   FPassProxy := FINI.ReadString('CONFIGURACAO_PROXY', 'Senha', EmptyStr);
 
-  FForcarIBGE := FINI.ReadBool('CONFIGURACAO_CEP', 'ForcarIBGE', True);
+  FTodosEnderecos := FINI.ReadBool('CONFIGURACAO_CEP', 'ForcarIBGE', True);
 
   FCaseSensitive := FINI.ReadBool('CONFIGURACAO_IBGE', 'CaseSensitive', False);
   FNomeCache := FINI.ReadString('CONFIGURACAO_IBGE', 'NomeCache', EmptyStr);
@@ -357,15 +359,15 @@ begin
   Result:= Self.Create;
 end;
 
-function TController.ParseText(const AValue: Boolean): iWebService;
+function TController.UpperText(const AValue: Boolean): iWebService;
 begin
   Result := Self;
-  FParseTextWebService := AValue;
+  FUpperTextWebService := AValue;
 end;
 
-function TController.ParseText: Boolean;
+function TController.UpperText: Boolean;
 begin
-  Result := FParseTextWebService;
+  Result := FUpperTextWebService;
 end;
 
 function TController.Pass: string;
@@ -415,7 +417,7 @@ function TController.Port(const AValue: string): iProxy;
 begin
   Result := Self;
 
-  if AValue.Trim.IsEmpty then
+  if TSetup4DUtility.IsEmpty(AValue) then
   begin
     FPortProxy := 0;
     Exit;
@@ -448,7 +450,7 @@ function TController.TimeOut(const AValue: string): iWebService;
 begin
   Result := Self;
 
-  if AValue.Trim.IsEmpty then
+  if TSetup4DUtility.IsEmpty(AValue) then
   begin
     FTimeOutWebService := 0;
     Exit;
